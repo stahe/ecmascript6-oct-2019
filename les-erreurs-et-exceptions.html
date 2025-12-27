@@ -1,0 +1,1272 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Introduction au langage ECMASCRIPT6 par l'exemple">
+      
+      
+        <meta name="author" content="Serge Tahé">
+      
+      
+        <link rel="canonical" href="https://stahe.github.io/ecmascript6-oct-2019/les-erreurs-et-exceptions.html">
+      
+      
+        <link rel="prev" href="les-fonctions.html">
+      
+      
+        <link rel="next" href="les-modules-es6.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>9. Les erreurs et exceptions - Introduction au langage ECMASCRIPT6 par l'exemple</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/focus.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#9-les-erreurs-et-exceptions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Introduction au langage ECMASCRIPT6 par l&#39;exemple" class="md-header__button md-logo" aria-label="Introduction au langage ECMASCRIPT6 par l'exemple" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction au langage ECMASCRIPT6 par l'exemple
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9. Les erreurs et exceptions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Introduction au langage ECMASCRIPT6 par l&#39;exemple" class="md-nav__button md-logo" aria-label="Introduction au langage ECMASCRIPT6 par l'exemple" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Introduction au langage ECMASCRIPT6 par l'exemple
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="introduction-au-langage-ecmascript-6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction au langage ECMASCRIPT 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation-dun-environnement-de-travail.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Installation d’un environnement de travail
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-bases-de-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Les bases de Javascript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-tableaux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Les tableaux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-objets-litteraux.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Les objets littéraux
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-chaines-de-caracteres.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Les chaînes de caractères
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="expressions-regulieres.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Expressions régulières
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-fonctions.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Les fonctions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Les erreurs et exceptions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="les-erreurs-et-exceptions.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Les erreurs et exceptions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#91-script-excep-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1. script [excep-01]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#92-script-excep-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2. script [excep-02]
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#93-script-excep-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.3. script [excep-03]
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-modules-es6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Les modules ES6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="programmation-evenementielle-et-fonctions-asynchrones.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Programmation événementielle et fonctions asynchrones
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-fonctions-http-de-javascript.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Les fonctions HTTP de Javascript
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="les-classes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    13. Les classes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="clients-http-javascript-du-service-de-calcul-de-limpot.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    14. Clients HTTP Javascript du service de calcul de l’impôt
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="9-les-erreurs-et-exceptions">9. Les erreurs et exceptions</h1>
+<p><img src="images/10000000000000ED000000BDBBC75AB1.png" style="width:2.511cm;height:2.001cm;" alt="Image" /></p>
+<p>Javascript n’a pas un système d’exceptions très évolué. Il offre néanmoins l’instruction <strong>[throw]</strong> qui permet de signaler une erreur ainsi que la structure try / catch / finally qui permet d’intercepter ces erreurs.</p>
+<h2 id="91-script-excep-01">9.1. script [excep-01]</h2>
+<p>Dans le script qui suit, nous allons afficher la date du moment sous la forme <strong>[heures:minutes:secondes:millisecondes]</strong>. Pour ce faire, nous allons utiliser une bibliothèques jS appelée <strong>[moment.js]</strong>. Nous l’installons, comme d’habitude, avec l’outil <strong>[npm]</strong> :</p>
+<p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" /></p>
+<p>Le code du script est le suivant :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// package moment</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">...</span>
+</code></pre></div></td></tr></table></div>
+<p>Pour savoir comment écrire la ligne <strong>[import]</strong> de la ligne 4, on peut regarder la définition du module <strong>[moment]</strong> :</p>
+<p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" /></p>
+<ul>
+<li>en <strong>[1-2]</strong>, on va à la définition du module ;</li>
+<li>en <strong>[3]</strong>, on a un fichier Typescript, pas Javascript. A l’exécution, ce fichier Typescript est compilé en fichier Javascript avant d’être utilisé ;</li>
+<li>en <strong>[4]</strong>, on cherche les instructions <strong>[export]</strong> (Ctrl-F) ;</li>
+<li>en <strong>[5]</strong>, l’instruction exporte l’objet <strong>[moment]</strong>. Celui-ci peut être importé en ES6 de la façon suivante :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div></li>
+</ul>
+<p>On peut utiliser n’importe quel nom pour importer l’objet <strong>[moment]</strong>, par exemple :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<p>Revenons au code du script :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1">// package moment</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1">// principe du try / catch / finally</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="c1">// date - heure du moment courant</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">  </span><span class="c1">// formatage heure pour avoir les millisecondes</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nx">now</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="s2">&quot;HH:mm:ss:SSS&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">  </span><span class="c1">// les millisecondes</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">milli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">  </span><span class="c1">// affichage</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------itération n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;à&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">);</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">    </span><span class="c1">// nbre variant selon l’heure du moment</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">nbre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">milli</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nbre</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">      </span><span class="c1">// lancer un msg d&#39;erreur</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;erreur&quot;</span><span class="p">;</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">    </span><span class="c1">// si on arrive ici c&#39;est qu&#39;il n&#39;y a pas eu d&#39;erreur</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;pas d&#39;erreur&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">    </span><span class="c1">// si on arrive ici, c&#39;est qu&#39;il y a eu erreur</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur1=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">    </span><span class="c1">// exécuté dans tous les cas erreur ou pas</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;finally&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Commentaires</strong></p>
+<ul>
+<li>ligne 4 : import de la bibliothèque <strong>[moment]</strong> ;</li>
+<li>le principe du script est de boucler 10 fois (ligne 7). A chaque tour de boucle, on récupère l’heure du moment sous la forme <strong>[heures:minutes:secondes:millisecondes]</strong> (lignes 8-13) ;</li>
+<li>si le nombre de millisecondes est pair, on lance un message d’erreur (lignes 19-22) ;</li>
+<li>il s’agit ici de comprendre le fonctionnement du try / catch / finally
+<strong>Exécution</strong></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span>
+<span class="normal"><a href="#__codelineno-4-24">24</a></span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span>
+<span class="normal"><a href="#__codelineno-4-26">26</a></span>
+<span class="normal"><a href="#__codelineno-4-27">27</a></span>
+<span class="normal"><a href="#__codelineno-4-28">28</a></span>
+<span class="normal"><a href="#__codelineno-4-29">29</a></span>
+<span class="normal"><a href="#__codelineno-4-30">30</a></span>
+<span class="normal"><a href="#__codelineno-4-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-01.js&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="mf">17</span><span class="o">:</span><span class="mf">57</span><span class="o">:</span><span class="mo">04</span><span class="o">:</span><span class="mf">440</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="nx">erreur1</span><span class="o">=</span><span class="w"> </span><span class="nx">erreur</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">finally</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="mf">17</span><span class="o">:</span><span class="mf">57</span><span class="o">:</span><span class="mo">04</span><span class="o">:</span><span class="mf">447</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nx">pas</span><span class="w"> </span><span class="nx">d</span><span class="s1">&#39;erreur</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="s1">finally</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="s1">--------------------itération n° 2 à 17:57:04:448</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="s1">erreur1= erreur</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="s1">finally</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="s1">--------------------itération n° 3 à 17:57:04:448</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="s1">erreur1= erreur</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="s1">finally</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="s1">--------------------itération n° 4 à 17:57:04:448</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="s1">erreur1= erreur</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="s1">finally</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="s1">--------------------itération n° 5 à 17:57:04:448</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="s1">erreur1= erreur</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="s1">finally</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="s1">--------------------itération n° 6 à 17:57:04:448</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="s1">erreur1= erreur</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="s1">finally</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="s1">--------------------itération n° 7 à 17:57:04:448</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="s1">erreur1= erreur</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="s1">finally</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="s1">--------------------itération n° 8 à 17:57:04:449</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="s1">pas d&#39;</span><span class="nx">erreur</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="k">finally</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">9</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="mf">17</span><span class="o">:</span><span class="mf">57</span><span class="o">:</span><span class="mo">04</span><span class="o">:</span><span class="mf">449</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="nx">pas</span><span class="w"> </span><span class="nx">d</span><span class="err">&#39;</span><span class="nx">erreur</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="k">finally</span>
+</code></pre></div></td></tr></table></div>
+<p>On voit que la clause <strong>[finally]</strong> est toujours exécutée qu’il y ait erreur ou pas.</p>
+<h2 id="92-script-excep-02">9.2. script [excep-02]</h2>
+<p>Ce script que l’instruction <strong>[throw]</strong> peut lancer n’importe quel type de donnée et que cette donnée est récupérée intégralement par la clause <strong>[catch]</strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span>
+<span class="normal"><a href="#__codelineno-5-38">38</a></span>
+<span class="normal"><a href="#__codelineno-5-39">39</a></span>
+<span class="normal"><a href="#__codelineno-5-40">40</a></span>
+<span class="normal"><a href="#__codelineno-5-41">41</a></span>
+<span class="normal"><a href="#__codelineno-5-42">42</a></span>
+<span class="normal"><a href="#__codelineno-5-43">43</a></span>
+<span class="normal"><a href="#__codelineno-5-44">44</a></span>
+<span class="normal"><a href="#__codelineno-5-45">45</a></span>
+<span class="normal"><a href="#__codelineno-5-46">46</a></span>
+<span class="normal"><a href="#__codelineno-5-47">47</a></span>
+<span class="normal"><a href="#__codelineno-5-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">// on peut &quot;lancer&quot; (throw) à peu près n&#39;importe quoi pour signaler une erreur</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1">// lancer une chaîne de caractères</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;msg d&#39;erreur&quot;</span><span class="p">;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">  </span><span class="c1">// il y a eu erreur</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">}</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="c1">// lancer un tableau</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">  </span><span class="c1">// il y a eu erreur</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="p">}</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="c1">// lancer un objet littéral</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hercule&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pays</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;grèce antique&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">  </span><span class="c1">// il y a eu erreur</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="p">}</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="c1">// lancer un type Error</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">&quot;erreur de connexion au réseau&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="w">  </span><span class="c1">// il y a eu erreur</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="p">}</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="c1">// lancer un type Error</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">&quot;erreur de connexion au réseau&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="w">  </span><span class="c1">// il y a eu erreur - le message est dans [error.message]</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur.message=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type(error)=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Commentaires</strong></p>
+<ul>
+<li>lignes 35, 44 : <strong>[Error]</strong> est une classe Javascript dont le constructeur admet comme 1er paramètre facultatif un message d’erreur. Ce message peut être récupéré dans la propriété <strong>[Error.message]</strong> (ligne 47) ;</li>
+<li>il existe d’autres classes que <strong>[Error]</strong> pour signaler une erreur : [EvalError, InternalError, RangeError, ReferenceError, SyntaxError,  TypeError, URIError) ;
+<strong>Exécution</strong></li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js&quot;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="o">--------------------</span><span class="nx">essai</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">0</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="nx">erreur</span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="nx">msg</span><span class="w"> </span><span class="nx">d</span><span class="s1">&#39;erreur ], type= string</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="s1">--------------------essai n° 1</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="s1">erreur=[ [ 1, 2, 3 ] ], type= object</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="s1">--------------------essai n° 2</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="s1">erreur=[ { nom: &#39;</span><span class="nx">hercule</span><span class="s1">&#39;, pays: &#39;</span><span class="nx">grèce</span><span class="w"> </span><span class="nx">antique</span><span class="err">&#39;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="w"> </span><span class="nx">object</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="o">--------------------</span><span class="nx">essai</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">3</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="nx">erreur</span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="ne">Error</span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">connexion</span><span class="w"> </span><span class="nx">au</span><span class="w"> </span><span class="nx">réseau</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="nx">at</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="o">&lt;</span><span class="nx">anonymous</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Data</span><span class="err">\</span><span class="nx">st</span><span class="o">-</span><span class="mf">2019</span><span class="err">\</span><span class="nx">dev</span><span class="err">\</span><span class="nx">es6</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">exceptions</span><span class="err">\</span><span class="nx">excep</span><span class="o">-</span><span class="mo">02</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">35</span><span class="o">:</span><span class="mf">9</span><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="nx">at</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="o">&lt;</span><span class="nx">anonymous</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="mf">19</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mo">01</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">node_modules</span><span class="err">\</span><span class="nx">esm</span><span class="err">\</span><span class="nx">esm</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">1</span><span class="o">:</span><span class="mf">251206</span><span class="p">)</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="nx">at</span><span class="w"> </span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="mf">19</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mo">01</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">node_modules</span><span class="err">\</span><span class="nx">esm</span><span class="err">\</span><span class="nx">esm</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">1</span><span class="o">:</span><span class="mf">245054</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="nx">at</span><span class="w"> </span><span class="nx">Generator</span><span class="p">.</span><span class="nx">next</span><span class="w"> </span><span class="p">(</span><span class="o">&lt;</span><span class="nx">anonymous</span><span class="o">&gt;</span><span class="p">)</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="nx">at</span><span class="w"> </span><span class="nx">bl</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="mf">19</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mo">01</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">node_modules</span><span class="err">\</span><span class="nx">esm</span><span class="err">\</span><span class="nx">esm</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">1</span><span class="o">:</span><span class="mf">245412</span><span class="p">)</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="nx">at</span><span class="w"> </span><span class="nx">kl</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="mf">19</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mo">01</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">node_modules</span><span class="err">\</span><span class="nx">esm</span><span class="err">\</span><span class="nx">esm</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">1</span><span class="o">:</span><span class="mf">247659</span><span class="p">)</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="nx">at</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">u</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="mf">19</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mo">01</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">node_modules</span><span class="err">\</span><span class="nx">esm</span><span class="err">\</span><span class="nx">esm</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">1</span><span class="o">:</span><span class="mf">287740</span><span class="p">)</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="nx">at</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">o</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="mf">19</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mo">01</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">node_modules</span><span class="err">\</span><span class="nx">esm</span><span class="err">\</span><span class="nx">esm</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">1</span><span class="o">:</span><span class="mf">287137</span><span class="p">)</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="nx">at</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="o">&lt;</span><span class="nx">anonymous</span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="mf">19</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mo">01</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">node_modules</span><span class="err">\</span><span class="nx">esm</span><span class="err">\</span><span class="nx">esm</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">1</span><span class="o">:</span><span class="mf">284879</span><span class="p">)</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="nx">at</span><span class="w"> </span><span class="nb">Object</span><span class="p">.</span><span class="nx">apply</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="o">:</span><span class="err">\</span><span class="nx">Temp</span><span class="err">\</span><span class="mf">19</span><span class="o">-</span><span class="mf">09</span><span class="o">-</span><span class="mo">01</span><span class="err">\</span><span class="nx">javascript</span><span class="err">\</span><span class="nx">node_modules</span><span class="err">\</span><span class="nx">esm</span><span class="err">\</span><span class="nx">esm</span><span class="p">.</span><span class="nx">js</span><span class="o">:</span><span class="mf">1</span><span class="o">:</span><span class="mf">199341</span><span class="p">)</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="w"> </span><span class="nx">object</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="o">--------------------</span><span class="nx">essai</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">4</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="nx">erreur</span><span class="p">.</span><span class="nx">message</span><span class="o">=</span><span class="p">[</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">connexion</span><span class="w"> </span><span class="nx">au</span><span class="w"> </span><span class="nx">réseau</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="nx">type</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="nx">object</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="93-script-excep-03">9.3. script [excep-03]</h2>
+<p>Ce script montre qu’on peut, dans un <strong>[catch]</strong>, différentier le type d’instance <strong>[Error]</strong> interceptée par le <strong>[catch]</strong> :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span>
+<span class="normal"><a href="#__codelineno-7-33">33</a></span>
+<span class="normal"><a href="#__codelineno-7-34">34</a></span>
+<span class="normal"><a href="#__codelineno-7-35">35</a></span>
+<span class="normal"><a href="#__codelineno-7-36">36</a></span>
+<span class="normal"><a href="#__codelineno-7-37">37</a></span>
+<span class="normal"><a href="#__codelineno-7-38">38</a></span>
+<span class="normal"><a href="#__codelineno-7-39">39</a></span>
+<span class="normal"><a href="#__codelineno-7-40">40</a></span>
+<span class="normal"><a href="#__codelineno-7-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="c1">// package moment</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="c1">// différencier l&#39;instance d&#39;Error reçue dans un [catch]</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">  </span><span class="c1">// date - heure du moment courant</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">  </span><span class="c1">// formatage heure pour avoir les millisecondes</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nx">now</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="s2">&quot;HH:mm:ss:SSS&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">  </span><span class="c1">// les millisecondes</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">milli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------itération n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">    </span><span class="c1">// nbre [0, 1, 2]</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">nbre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">milli</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="nx">nbre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="mf">0</span><span class="o">:</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">ReferenceError</span><span class="p">(</span><span class="s2">&quot;erreur 1&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">      </span><span class="k">case</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">RangeError</span><span class="p">(</span><span class="s2">&quot;erreur 2&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">      </span><span class="k">default</span><span class="o">:</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">EvalError</span><span class="p">(</span><span class="s2">&quot;erreur 3&quot;</span><span class="p">);</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">    </span><span class="c1">// il y a eu erreur</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="ne">ReferenceError</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;ReferenceError :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="ne">RangeError</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;RangeError :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="ne">EvalError</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-36" name="__codelineno-7-36"></a><span class="w">          </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;EvalError :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+<a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Exécution</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-03.js&quot;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">0</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="ne">ReferenceError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">1</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">1</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="ne">RangeError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">2</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">2</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="ne">RangeError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">2</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">3</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="ne">RangeError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">2</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">4</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="ne">RangeError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">2</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">5</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="ne">RangeError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">2</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">6</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="ne">EvalError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">3</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">7</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="ne">EvalError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">3</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">8</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="ne">EvalError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">3</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="o">--------------------</span><span class="nx">itération</span><span class="w"> </span><span class="nx">n</span><span class="err">°</span><span class="w"> </span><span class="mf">9</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="ne">EvalError</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">erreur</span><span class="w"> </span><span class="mf">3</span>
+</code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner">
+
+      <div>
+        <a href="https://tahe.developpez.com" target="_blank">
+          https://tahe.developpez.com
+        </a>
+        <br>
+        Ce cours tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
+        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+      </div>
+
+    </div>
+  </div>
+
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="javascripts/focus.js"></script>
+      
+    
+  </body>
+</html>
