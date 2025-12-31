@@ -797,13 +797,13 @@ Le module <strong>[export-01]</strong> est utilisé par le script <strong>[impor
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
 <span class="normal"><a href="#__codelineno-1-7">7</a></span>
 <span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// import d&#39;un objet exporté par défaut</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">export01</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">// utilisation de cet objet</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nx">export01</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1">// on peut importer un export par défaut sous n&#39;importe quel nom</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">import</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="o">//</span> <span class="kn">import</span><span class="w"> </span><span class="nn">d</span><span class="s1">&#39;un objet exporté par défaut</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">export01</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="o">//</span> <span class="n">utilisation</span> <span class="n">de</span> <span class="n">cet</span> <span class="n">objet</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">export01</span><span class="o">.</span><span class="n">do</span><span class="p">();</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="o">//</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">importer</span> <span class="n">un</span> <span class="n">export</span> <span class="n">par</span> <span class="n">défaut</span> <span class="n">sous</span> <span class="n">n</span><span class="s1">&#39;importe quel nom</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">data</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
@@ -813,9 +813,9 @@ Le module <strong>[export-01]</strong> est utilisé par le script <strong>[impor
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="mf">2</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="mf">2</span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>2
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>2
 </code></pre></div></td></tr></table></div>
 <h2 id="102-scripts-import-02-export-02">10.2. scripts [import-02, export-02]</h2>
 <p>Ces scripts montrent un export d’un objet nommé.</p>
@@ -850,20 +850,20 @@ Que l’objet exporté soit nommé ou non ne change rien à l’opération d’i
 <span class="normal"><a href="#__codelineno-4-6">6</a></span>
 <span class="normal"><a href="#__codelineno-4-7">7</a></span>
 <span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1">// import d&#39;un objet exporté par défaut</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">module1</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// utilisation de cet objet</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nx">module1</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// on peut importer un export par défaut sous n&#39;importe quel nom</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">import</span><span class="w"> </span><span class="nx">module2</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">module2</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="o">//</span> <span class="kn">import</span><span class="w"> </span><span class="nn">d</span><span class="s1">&#39;un objet exporté par défaut</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">module1</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="o">//</span> <span class="n">utilisation</span> <span class="n">de</span> <span class="n">cet</span> <span class="n">objet</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">module1</span><span class="o">.</span><span class="n">do</span><span class="p">();</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="o">//</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">importer</span> <span class="n">un</span> <span class="n">export</span> <span class="n">par</span> <span class="n">défaut</span> <span class="n">sous</span> <span class="n">n</span><span class="s1">&#39;importe quel nom</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">module2</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">module2</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\modules\import-02.js&quot;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="mf">2</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="mf">2</span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-02.js&quot;
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>2
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>2
 </code></pre></div></td></tr></table></div>
 <h2 id="103-scripts-import-03-export-03">10.3. scripts [import-03, export-03]</h2>
 <p>Un module peut exporter plusieurs éléments.</p>
@@ -912,16 +912,16 @@ Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</st
 <span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-7-10">10</a></span>
 <span class="normal"><a href="#__codelineno-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="c1">// import d&#39;un module [export03]</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">doSomething</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1">// utilisation des imports</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nx">data</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="nx">doSomething</span><span class="p">();</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1">// autre écriture</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">module</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="c1">// utilisation de l&#39;import</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="nx">module</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="o">//</span> <span class="kn">import</span><span class="w"> </span><span class="nn">d</span><span class="s1">&#39;un module [export03]</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span><span class="n">data</span><span class="p">,</span> <span class="n">doSomething</span><span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="o">//</span> <span class="n">utilisation</span> <span class="n">des</span> <span class="n">imports</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">data</span><span class="o">.</span><span class="n">do</span><span class="p">();</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">doSomething</span><span class="p">();</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="o">//</span> <span class="n">autre</span> <span class="n">écriture</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="kn">import</span><span class="w"> </span><span class="o">*</span> <span class="k">as</span> <span class="n">module</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="o">//</span> <span class="n">utilisation</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;import</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="n">module</span><span class="o">.</span><span class="n">doSomething</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 3 : les <strong>[imports]</strong> se font avec les noms exacts des objets exportés ;</li>
@@ -932,11 +932,11 @@ Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</st
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
 <span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="mf">2</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nx">doSomething</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">{</span><span class="w"> </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="k">do</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nb">Function</span><span class="o">:</span><span class="w"> </span><span class="k">do</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nx">doSomething</span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>2
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>doSomething
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>{ data: 2, do: [Function: do] }
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>doSomething
 </code></pre></div></td></tr></table></div>
 
 

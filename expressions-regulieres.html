@@ -813,62 +813,62 @@
 <span class="normal"><a href="#__codelineno-0-54">54</a></span>
 <span class="normal"><a href="#__codelineno-0-55">55</a></span>
 <span class="normal"><a href="#__codelineno-0-56">56</a></span>
-<span class="normal"><a href="#__codelineno-0-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// type strict pour les paramètres de fonctions</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nx">declare</span><span class="w"> </span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">declare</span> <span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">// expressions régulières en php</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// récupérer les différents champs d&#39;une chaîne</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1">// le modèle : une suite de chiffres entourée de caractères quelconques</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1">// on ne veut récupérer que la suite de chiffres</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nx">$modèle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/(\d+)/&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nv">$modèle</span> <span class="o">=</span> <span class="s2">&quot;/(\d+)/&quot;</span><span class="p">;</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1">// on confronte la chaîne au modèle</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;xyz1234abcd&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;12 34&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;abcd&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;xyz1234abcd&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;12 34&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;abcd&quot;</span><span class="p">);</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1">// le modèle : une suite de chiffres entourée de caractères quelconques</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="c1">// on veut la suite de chiffres ainsi que les champs qui suivent et précèdent</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="nx">$modèle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/^(.*?)(\d+)(.*?)$/&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="nv">$modèle</span> <span class="o">=</span> <span class="s2">&quot;/^(.*?)(\d+)(.*?)$/&quot;</span><span class="p">;</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c1">// on confronte la chaîne au modèle</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;xyz1234abcd&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;12 34&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;abcd&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;xyz1234abcd&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;12 34&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;abcd&quot;</span><span class="p">);</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="c1">// le modèle - une date au format jj/mm/aa</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="nx">$modèle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;10/05/97&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;  04/04/01  &quot;</span><span class="p">);</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;5/1/01&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="nv">$modèle</span> <span class="o">=</span> <span class="s2">&quot;/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;10/05/97&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;  04/04/01  &quot;</span><span class="p">);</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;5/1/01&quot;</span><span class="p">);</span>
 <a id="__codelineno-0-29" name="__codelineno-0-29"></a>
 <a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="c1">// le modèle - un nombre décimal</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="nx">$modèle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*/&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;187.8&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-0.6&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;.6&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;4.&quot;</span><span class="p">);</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; + 4&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="nv">$modèle</span> <span class="o">=</span> <span class="s2">&quot;/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*/&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;187.8&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;-0.6&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;.6&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot;4.&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="s2">&quot; + 4&quot;</span><span class="p">);</span>
 <a id="__codelineno-0-38" name="__codelineno-0-38"></a>
 <a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="c1">// fin</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="nx">exit</span><span class="p">;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="k">exit</span><span class="p">;</span>
 <a id="__codelineno-0-41" name="__codelineno-0-41"></a>
 <a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="c1">// --------------------------------------------------------------------------</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="kd">function</span><span class="w"> </span><span class="nx">compareModele2Chaine</span><span class="p">(</span><span class="nx">string</span><span class="w"> </span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="nx">$chaîne</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">  </span><span class="c1">// compare la chaîne $chaîne au modèle $modèle</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">  </span><span class="c1">// on confronte la chaîne au modèle</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">  </span><span class="nx">$champs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">  </span><span class="nx">$correspond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">preg_match</span><span class="p">(</span><span class="nx">$modèle</span><span class="p">,</span><span class="w"> </span><span class="nx">$chaîne</span><span class="p">,</span><span class="w"> </span><span class="nx">$champs</span><span class="p">);</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">  </span><span class="c1">// affichage résultats</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">  </span><span class="nx">print</span><span class="w"> </span><span class="s2">&quot;\nRésultats($modèle,$chaîne)\n&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">$correspond</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">$i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">$i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">count</span><span class="p">(</span><span class="nx">$champs</span><span class="p">);</span><span class="w"> </span><span class="nx">$i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">      </span><span class="nx">print</span><span class="w"> </span><span class="s2">&quot;champs[$i]=$champs[$i]\n&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">    </span><span class="nx">print</span><span class="w"> </span><span class="s2">&quot;La chaîne [$chaîne] ne correspond pas au modèle [$modèle]\n&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="k">function</span> <span class="nf">compareModele2Chaine</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$modèle</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$chaîne</span><span class="p">)</span><span class="o">:</span> <span class="nx">void</span> <span class="p">{</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>  <span class="c1">// compare la chaîne $chaîne au modèle $modèle</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>  <span class="c1">// on confronte la chaîne au modèle</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>  <span class="nv">$champs</span> <span class="o">=</span> <span class="p">[];</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>  <span class="nv">$correspond</span> <span class="o">=</span> <span class="nb">preg_match</span><span class="p">(</span><span class="nv">$modèle</span><span class="p">,</span> <span class="nv">$chaîne</span><span class="p">,</span> <span class="nv">$champs</span><span class="p">);</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>  <span class="c1">// affichage résultats</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>  <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Résultats(</span><span class="si">$modèle</span><span class="s2">,</span><span class="si">$chaîne</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>  <span class="k">if</span> <span class="p">(</span><span class="nv">$correspond</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>    <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$champs</span><span class="p">);</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>      <span class="k">print</span> <span class="s2">&quot;champs[</span><span class="si">$i</span><span class="s2">]=</span><span class="si">$champs[$i]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a>    <span class="p">}</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a>    <span class="k">print</span> <span class="s2">&quot;La chaîne [</span><span class="si">$chaîne</span><span class="s2">] ne correspond pas au modèle [</span><span class="si">$modèle</span><span class="s2">]</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a>  <span class="p">}</span>
 <a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Nous transposons ce code en Javascript de la façon suivante :</p>
@@ -1083,119 +1083,119 @@
 <span class="normal"><a href="#__codelineno-2-110">110</a></span>
 <span class="normal"><a href="#__codelineno-2-111">111</a></span>
 <span class="normal"><a href="#__codelineno-2-112">112</a></span>
-<span class="normal"><a href="#__codelineno-2-113">113</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\regexp\regexp-01.js&quot;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nx">type</span><span class="w"> </span><span class="nx">d</span><span class="s1">&#39;une expression régulière : object</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="s1">----------- chaîne=xyz1234abcd, modèle=/(\d+)/</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="mf">1234</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="s1">&#39;</span><span class="mf">1234</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="s1">index: 3,</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="s1">input: &#39;</span><span class="nx">xyz1234abcd</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="mf">1234</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="s1">&#39;</span><span class="mf">1234</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="s1">index: 3,</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="s1">input: &#39;</span><span class="nx">xyz1234abcd</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="s1">----------- chaîne=12 34, modèle=/(\d+)/</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="mf">12</span><span class="s1">&#39;, &#39;</span><span class="mf">12</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="mf">12</span><span class="w"> </span><span class="mf">34</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="mf">12</span><span class="s1">&#39;, &#39;</span><span class="mf">12</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="mf">12</span><span class="w"> </span><span class="mf">34</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="s1">----------- chaîne=abcd, modèle=/(\d+)/</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="s1">comparaison avec exec= null</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="s1">comparaison avec match= null</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="s1">----------- chaîne=xyz1234abcd, modèle=/^(.*?)(\d+)(.*?)$/</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="nx">xyz1234abcd</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="s1">&#39;</span><span class="nx">xyz</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="s1">&#39;</span><span class="mf">1234</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="s1">&#39;</span><span class="nx">abcd</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="s1">input: &#39;</span><span class="nx">xyz1234abcd</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="nx">xyz1234abcd</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="s1">&#39;</span><span class="nx">xyz</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="s1">&#39;</span><span class="mf">1234</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="s1">&#39;</span><span class="nx">abcd</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="s1">input: &#39;</span><span class="nx">xyz1234abcd</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="s1">----------- chaîne=12 34, modèle=/^(.*?)(\d+)(.*?)$/</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="mf">12</span><span class="w"> </span><span class="mf">34</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="s1">&#39;&#39;,</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="s1">&#39;</span><span class="mf">12</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="s1">&#39;</span><span class="w"> </span><span class="mf">34</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="s1">input: &#39;</span><span class="mf">12</span><span class="w"> </span><span class="mf">34</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="mf">12</span><span class="w"> </span><span class="mf">34</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="s1">&#39;&#39;,</span>
-<a id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="s1">&#39;</span><span class="mf">12</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="s1">&#39;</span><span class="w"> </span><span class="mf">34</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="s1">input: &#39;</span><span class="mf">12</span><span class="w"> </span><span class="mf">34</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-49" name="__codelineno-2-49"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-50" name="__codelineno-2-50"></a><span class="s1">----------- chaîne=abcd, modèle=/^(.*?)(\d+)(.*?)$/</span>
-<a id="__codelineno-2-51" name="__codelineno-2-51"></a><span class="s1">comparaison avec exec= null</span>
-<a id="__codelineno-2-52" name="__codelineno-2-52"></a><span class="s1">comparaison avec match= null</span>
-<a id="__codelineno-2-53" name="__codelineno-2-53"></a><span class="s1">----------- chaîne=10/05/97, modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
-<a id="__codelineno-2-54" name="__codelineno-2-54"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="mf">10</span><span class="o">/</span><span class="mo">05</span><span class="o">/</span><span class="mf">97</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-55" name="__codelineno-2-55"></a><span class="s1">&#39;</span><span class="mf">10</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-56" name="__codelineno-2-56"></a><span class="s1">&#39;</span><span class="mo">05</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-57" name="__codelineno-2-57"></a><span class="s1">&#39;</span><span class="mf">97</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-58" name="__codelineno-2-58"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-59" name="__codelineno-2-59"></a><span class="s1">input: &#39;</span><span class="mf">10</span><span class="o">/</span><span class="mo">05</span><span class="o">/</span><span class="mf">97</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-60" name="__codelineno-2-60"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-61" name="__codelineno-2-61"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="mf">10</span><span class="o">/</span><span class="mo">05</span><span class="o">/</span><span class="mf">97</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-62" name="__codelineno-2-62"></a><span class="s1">&#39;</span><span class="mf">10</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-63" name="__codelineno-2-63"></a><span class="s1">&#39;</span><span class="mo">05</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-64" name="__codelineno-2-64"></a><span class="s1">&#39;</span><span class="mf">97</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-65" name="__codelineno-2-65"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-66" name="__codelineno-2-66"></a><span class="s1">input: &#39;</span><span class="mf">10</span><span class="o">/</span><span class="mo">05</span><span class="o">/</span><span class="mf">97</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-67" name="__codelineno-2-67"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-68" name="__codelineno-2-68"></a><span class="s1">----------- chaîne= 04/04/01 , modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
-<a id="__codelineno-2-69" name="__codelineno-2-69"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="w"> </span><span class="mo">04</span><span class="o">/</span><span class="mo">04</span><span class="o">/</span><span class="mo">01</span><span class="w"> </span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-70" name="__codelineno-2-70"></a><span class="s1">&#39;</span><span class="mo">04</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-71" name="__codelineno-2-71"></a><span class="s1">&#39;</span><span class="mo">04</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-72" name="__codelineno-2-72"></a><span class="s1">&#39;</span><span class="mo">01</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-73" name="__codelineno-2-73"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-74" name="__codelineno-2-74"></a><span class="s1">input: &#39;</span><span class="w"> </span><span class="mo">04</span><span class="o">/</span><span class="mo">04</span><span class="o">/</span><span class="mo">01</span><span class="w"> </span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-75" name="__codelineno-2-75"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-76" name="__codelineno-2-76"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="w"> </span><span class="mo">04</span><span class="o">/</span><span class="mo">04</span><span class="o">/</span><span class="mo">01</span><span class="w"> </span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-77" name="__codelineno-2-77"></a><span class="s1">&#39;</span><span class="mo">04</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-78" name="__codelineno-2-78"></a><span class="s1">&#39;</span><span class="mo">04</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-79" name="__codelineno-2-79"></a><span class="s1">&#39;</span><span class="mo">01</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-80" name="__codelineno-2-80"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-81" name="__codelineno-2-81"></a><span class="s1">input: &#39;</span><span class="w"> </span><span class="mo">04</span><span class="o">/</span><span class="mo">04</span><span class="o">/</span><span class="mo">01</span><span class="w"> </span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-82" name="__codelineno-2-82"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-83" name="__codelineno-2-83"></a><span class="s1">----------- chaîne=5/1/01, modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/</span>
-<a id="__codelineno-2-84" name="__codelineno-2-84"></a><span class="s1">comparaison avec exec= null</span>
-<a id="__codelineno-2-85" name="__codelineno-2-85"></a><span class="s1">comparaison avec match= null</span>
-<a id="__codelineno-2-86" name="__codelineno-2-86"></a><span class="s1">----------- chaîne=187.8, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<a id="__codelineno-2-87" name="__codelineno-2-87"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="mf">187.8</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-88" name="__codelineno-2-88"></a><span class="s1">&#39;&#39;,</span>
-<a id="__codelineno-2-89" name="__codelineno-2-89"></a><span class="s1">&#39;</span><span class="mf">187.8</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-90" name="__codelineno-2-90"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-91" name="__codelineno-2-91"></a><span class="s1">input: &#39;</span><span class="mf">187.8</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-92" name="__codelineno-2-92"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-93" name="__codelineno-2-93"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="mf">187.8</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-94" name="__codelineno-2-94"></a><span class="s1">&#39;&#39;,</span>
-<a id="__codelineno-2-95" name="__codelineno-2-95"></a><span class="s1">&#39;</span><span class="mf">187.8</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-96" name="__codelineno-2-96"></a><span class="s1">index: 0,</span>
-<a id="__codelineno-2-97" name="__codelineno-2-97"></a><span class="s1">input: &#39;</span><span class="mf">187.8</span><span class="s1">&#39;,</span>
-<a id="__codelineno-2-98" name="__codelineno-2-98"></a><span class="s1">groups: undefined ]</span>
-<a id="__codelineno-2-99" name="__codelineno-2-99"></a><span class="s1">----------- chaîne=-0.6, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<a id="__codelineno-2-100" name="__codelineno-2-100"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="o">-</span><span class="mf">0.6</span><span class="s1">&#39;, &#39;</span><span class="o">-</span><span class="s1">&#39;, &#39;</span><span class="mf">0.6</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="o">-</span><span class="mf">0.6</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-101" name="__codelineno-2-101"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="o">-</span><span class="mf">0.6</span><span class="s1">&#39;, &#39;</span><span class="o">-</span><span class="s1">&#39;, &#39;</span><span class="mf">0.6</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="o">-</span><span class="mf">0.6</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-102" name="__codelineno-2-102"></a><span class="s1">----------- chaîne=4, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<a id="__codelineno-2-103" name="__codelineno-2-103"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="mf">4</span><span class="s1">&#39;, &#39;&#39;, &#39;</span><span class="mf">4</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="mf">4</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-104" name="__codelineno-2-104"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="mf">4</span><span class="s1">&#39;, &#39;&#39;, &#39;</span><span class="mf">4</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="mf">4</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-105" name="__codelineno-2-105"></a><span class="s1">----------- chaîne=.6, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<a id="__codelineno-2-106" name="__codelineno-2-106"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="mf">.6</span><span class="s1">&#39;, &#39;&#39;, &#39;</span><span class="mf">.6</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="mf">.6</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-107" name="__codelineno-2-107"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="mf">.6</span><span class="s1">&#39;, &#39;&#39;, &#39;</span><span class="mf">.6</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="mf">.6</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-108" name="__codelineno-2-108"></a><span class="s1">----------- chaîne=4., modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<a id="__codelineno-2-109" name="__codelineno-2-109"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="mf">4.</span><span class="s1">&#39;, &#39;&#39;, &#39;</span><span class="mf">4.</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="mf">4.</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-110" name="__codelineno-2-110"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="mf">4.</span><span class="s1">&#39;, &#39;&#39;, &#39;</span><span class="mf">4.</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="mf">4.</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-111" name="__codelineno-2-111"></a><span class="s1">----------- chaîne= + 4, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/</span>
-<a id="__codelineno-2-112" name="__codelineno-2-112"></a><span class="s1">comparaison avec exec= [ &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="s1">&#39;, &#39;</span><span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="mf">4</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="s1">&#39;, groups: undefined ]</span>
-<a id="__codelineno-2-113" name="__codelineno-2-113"></a><span class="s1">comparaison avec match= [ &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="s1">&#39;, &#39;</span><span class="o">+</span><span class="s1">&#39;, &#39;</span><span class="mf">4</span><span class="s1">&#39;, index: 0, input: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="err">&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">groups</span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span><span class="w"> </span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-2-113">113</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\regexp\regexp-01.js&quot;
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>type d&#39;une expression régulière : object
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>----------- chaîne=xyz1234abcd, modèle=/(\d+)/
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>comparaison avec exec= [ &#39;1234&#39;,
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>&#39;1234&#39;,
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>index: 3,
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>input: &#39;xyz1234abcd&#39;,
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>groups: undefined ]
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>comparaison avec match= [ &#39;1234&#39;,
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>&#39;1234&#39;,
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>index: 3,
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>input: &#39;xyz1234abcd&#39;,
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>groups: undefined ]
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>----------- chaîne=12 34, modèle=/(\d+)/
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>comparaison avec exec= [ &#39;12&#39;, &#39;12&#39;, index: 0, input: &#39;12 34&#39;, groups: undefined ]
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>comparaison avec match= [ &#39;12&#39;, &#39;12&#39;, index: 0, input: &#39;12 34&#39;, groups: undefined ]
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>----------- chaîne=abcd, modèle=/(\d+)/
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>comparaison avec exec= null
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>comparaison avec match= null
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a>----------- chaîne=xyz1234abcd, modèle=/^(.*?)(\d+)(.*?)$/
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>comparaison avec exec= [ &#39;xyz1234abcd&#39;,
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a>&#39;xyz&#39;,
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a>&#39;1234&#39;,
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a>&#39;abcd&#39;,
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a>index: 0,
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a>input: &#39;xyz1234abcd&#39;,
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a>groups: undefined ]
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a>comparaison avec match= [ &#39;xyz1234abcd&#39;,
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a>&#39;xyz&#39;,
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a>&#39;1234&#39;,
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a>&#39;abcd&#39;,
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a>index: 0,
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a>input: &#39;xyz1234abcd&#39;,
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a>groups: undefined ]
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a>----------- chaîne=12 34, modèle=/^(.*?)(\d+)(.*?)$/
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a>comparaison avec exec= [ &#39;12 34&#39;,
+<a id="__codelineno-2-37" name="__codelineno-2-37"></a>&#39;&#39;,
+<a id="__codelineno-2-38" name="__codelineno-2-38"></a>&#39;12&#39;,
+<a id="__codelineno-2-39" name="__codelineno-2-39"></a>&#39; 34&#39;,
+<a id="__codelineno-2-40" name="__codelineno-2-40"></a>index: 0,
+<a id="__codelineno-2-41" name="__codelineno-2-41"></a>input: &#39;12 34&#39;,
+<a id="__codelineno-2-42" name="__codelineno-2-42"></a>groups: undefined ]
+<a id="__codelineno-2-43" name="__codelineno-2-43"></a>comparaison avec match= [ &#39;12 34&#39;,
+<a id="__codelineno-2-44" name="__codelineno-2-44"></a>&#39;&#39;,
+<a id="__codelineno-2-45" name="__codelineno-2-45"></a>&#39;12&#39;,
+<a id="__codelineno-2-46" name="__codelineno-2-46"></a>&#39; 34&#39;,
+<a id="__codelineno-2-47" name="__codelineno-2-47"></a>index: 0,
+<a id="__codelineno-2-48" name="__codelineno-2-48"></a>input: &#39;12 34&#39;,
+<a id="__codelineno-2-49" name="__codelineno-2-49"></a>groups: undefined ]
+<a id="__codelineno-2-50" name="__codelineno-2-50"></a>----------- chaîne=abcd, modèle=/^(.*?)(\d+)(.*?)$/
+<a id="__codelineno-2-51" name="__codelineno-2-51"></a>comparaison avec exec= null
+<a id="__codelineno-2-52" name="__codelineno-2-52"></a>comparaison avec match= null
+<a id="__codelineno-2-53" name="__codelineno-2-53"></a>----------- chaîne=10/05/97, modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/
+<a id="__codelineno-2-54" name="__codelineno-2-54"></a>comparaison avec exec= [ &#39;10/05/97&#39;,
+<a id="__codelineno-2-55" name="__codelineno-2-55"></a>&#39;10&#39;,
+<a id="__codelineno-2-56" name="__codelineno-2-56"></a>&#39;05&#39;,
+<a id="__codelineno-2-57" name="__codelineno-2-57"></a>&#39;97&#39;,
+<a id="__codelineno-2-58" name="__codelineno-2-58"></a>index: 0,
+<a id="__codelineno-2-59" name="__codelineno-2-59"></a>input: &#39;10/05/97&#39;,
+<a id="__codelineno-2-60" name="__codelineno-2-60"></a>groups: undefined ]
+<a id="__codelineno-2-61" name="__codelineno-2-61"></a>comparaison avec match= [ &#39;10/05/97&#39;,
+<a id="__codelineno-2-62" name="__codelineno-2-62"></a>&#39;10&#39;,
+<a id="__codelineno-2-63" name="__codelineno-2-63"></a>&#39;05&#39;,
+<a id="__codelineno-2-64" name="__codelineno-2-64"></a>&#39;97&#39;,
+<a id="__codelineno-2-65" name="__codelineno-2-65"></a>index: 0,
+<a id="__codelineno-2-66" name="__codelineno-2-66"></a>input: &#39;10/05/97&#39;,
+<a id="__codelineno-2-67" name="__codelineno-2-67"></a>groups: undefined ]
+<a id="__codelineno-2-68" name="__codelineno-2-68"></a>----------- chaîne= 04/04/01 , modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/
+<a id="__codelineno-2-69" name="__codelineno-2-69"></a>comparaison avec exec= [ &#39; 04/04/01 &#39;,
+<a id="__codelineno-2-70" name="__codelineno-2-70"></a>&#39;04&#39;,
+<a id="__codelineno-2-71" name="__codelineno-2-71"></a>&#39;04&#39;,
+<a id="__codelineno-2-72" name="__codelineno-2-72"></a>&#39;01&#39;,
+<a id="__codelineno-2-73" name="__codelineno-2-73"></a>index: 0,
+<a id="__codelineno-2-74" name="__codelineno-2-74"></a>input: &#39; 04/04/01 &#39;,
+<a id="__codelineno-2-75" name="__codelineno-2-75"></a>groups: undefined ]
+<a id="__codelineno-2-76" name="__codelineno-2-76"></a>comparaison avec match= [ &#39; 04/04/01 &#39;,
+<a id="__codelineno-2-77" name="__codelineno-2-77"></a>&#39;04&#39;,
+<a id="__codelineno-2-78" name="__codelineno-2-78"></a>&#39;04&#39;,
+<a id="__codelineno-2-79" name="__codelineno-2-79"></a>&#39;01&#39;,
+<a id="__codelineno-2-80" name="__codelineno-2-80"></a>index: 0,
+<a id="__codelineno-2-81" name="__codelineno-2-81"></a>input: &#39; 04/04/01 &#39;,
+<a id="__codelineno-2-82" name="__codelineno-2-82"></a>groups: undefined ]
+<a id="__codelineno-2-83" name="__codelineno-2-83"></a>----------- chaîne=5/1/01, modèle=/^\s*(\d\d)\/(\d\d)\/(\d\d)\s*$/
+<a id="__codelineno-2-84" name="__codelineno-2-84"></a>comparaison avec exec= null
+<a id="__codelineno-2-85" name="__codelineno-2-85"></a>comparaison avec match= null
+<a id="__codelineno-2-86" name="__codelineno-2-86"></a>----------- chaîne=187.8, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/
+<a id="__codelineno-2-87" name="__codelineno-2-87"></a>comparaison avec exec= [ &#39;187.8&#39;,
+<a id="__codelineno-2-88" name="__codelineno-2-88"></a>&#39;&#39;,
+<a id="__codelineno-2-89" name="__codelineno-2-89"></a>&#39;187.8&#39;,
+<a id="__codelineno-2-90" name="__codelineno-2-90"></a>index: 0,
+<a id="__codelineno-2-91" name="__codelineno-2-91"></a>input: &#39;187.8&#39;,
+<a id="__codelineno-2-92" name="__codelineno-2-92"></a>groups: undefined ]
+<a id="__codelineno-2-93" name="__codelineno-2-93"></a>comparaison avec match= [ &#39;187.8&#39;,
+<a id="__codelineno-2-94" name="__codelineno-2-94"></a>&#39;&#39;,
+<a id="__codelineno-2-95" name="__codelineno-2-95"></a>&#39;187.8&#39;,
+<a id="__codelineno-2-96" name="__codelineno-2-96"></a>index: 0,
+<a id="__codelineno-2-97" name="__codelineno-2-97"></a>input: &#39;187.8&#39;,
+<a id="__codelineno-2-98" name="__codelineno-2-98"></a>groups: undefined ]
+<a id="__codelineno-2-99" name="__codelineno-2-99"></a>----------- chaîne=-0.6, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/
+<a id="__codelineno-2-100" name="__codelineno-2-100"></a>comparaison avec exec= [ &#39;-0.6&#39;, &#39;-&#39;, &#39;0.6&#39;, index: 0, input: &#39;-0.6&#39;, groups: undefined ]
+<a id="__codelineno-2-101" name="__codelineno-2-101"></a>comparaison avec match= [ &#39;-0.6&#39;, &#39;-&#39;, &#39;0.6&#39;, index: 0, input: &#39;-0.6&#39;, groups: undefined ]
+<a id="__codelineno-2-102" name="__codelineno-2-102"></a>----------- chaîne=4, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/
+<a id="__codelineno-2-103" name="__codelineno-2-103"></a>comparaison avec exec= [ &#39;4&#39;, &#39;&#39;, &#39;4&#39;, index: 0, input: &#39;4&#39;, groups: undefined ]
+<a id="__codelineno-2-104" name="__codelineno-2-104"></a>comparaison avec match= [ &#39;4&#39;, &#39;&#39;, &#39;4&#39;, index: 0, input: &#39;4&#39;, groups: undefined ]
+<a id="__codelineno-2-105" name="__codelineno-2-105"></a>----------- chaîne=.6, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/
+<a id="__codelineno-2-106" name="__codelineno-2-106"></a>comparaison avec exec= [ &#39;.6&#39;, &#39;&#39;, &#39;.6&#39;, index: 0, input: &#39;.6&#39;, groups: undefined ]
+<a id="__codelineno-2-107" name="__codelineno-2-107"></a>comparaison avec match= [ &#39;.6&#39;, &#39;&#39;, &#39;.6&#39;, index: 0, input: &#39;.6&#39;, groups: undefined ]
+<a id="__codelineno-2-108" name="__codelineno-2-108"></a>----------- chaîne=4., modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/
+<a id="__codelineno-2-109" name="__codelineno-2-109"></a>comparaison avec exec= [ &#39;4.&#39;, &#39;&#39;, &#39;4.&#39;, index: 0, input: &#39;4.&#39;, groups: undefined ]
+<a id="__codelineno-2-110" name="__codelineno-2-110"></a>comparaison avec match= [ &#39;4.&#39;, &#39;&#39;, &#39;4.&#39;, index: 0, input: &#39;4.&#39;, groups: undefined ]
+<a id="__codelineno-2-111" name="__codelineno-2-111"></a>----------- chaîne= + 4, modèle=/^\s*([+|-]?)\s*(\d+\.\d*|\.\d+|\d+)\s*$/
+<a id="__codelineno-2-112" name="__codelineno-2-112"></a>comparaison avec exec= [ &#39; + 4&#39;, &#39;+&#39;, &#39;4&#39;, index: 0, input: &#39; + 4&#39;, groups: undefined ]
+<a id="__codelineno-2-113" name="__codelineno-2-113"></a>comparaison avec match= [ &#39; + 4&#39;, &#39;+&#39;, &#39;4&#39;, index: 0, input: &#39; + 4&#39;, groups: undefined ]
 </code></pre></div></td></tr></table></div>
 <p>Les méthodes <strong>[regexp.exec]</strong> et <strong>[string.match]</strong> donnent les mêmes résultats :</p>
 <ul>
@@ -1320,25 +1320,25 @@ Les résultats de l’exécution sont les suivants :</li>
 <span class="normal"><a href="#__codelineno-4-16">16</a></span>
 <span class="normal"><a href="#__codelineno-4-17">17</a></span>
 <span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\cours\regexp\regexp-02.js&quot;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nx">type</span><span class="w"> </span><span class="nx">d</span><span class="err">&#39;</span><span class="nx">une</span><span class="w"> </span><span class="nx">expression</span><span class="w"> </span><span class="nx">régulière</span><span class="w"> </span><span class="o">:</span><span class="w">  </span><span class="nx">object</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="nx">xyz1234abcd</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/\d+/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="mf">12</span><span class="w"> </span><span class="mf">34</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/\d+/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="nx">abcd</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/\d+/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">false</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="nx">xyz1234abcd</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^.*?\d+.*?$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="mf">12</span><span class="w"> </span><span class="mf">34</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^.*?\d+.*?$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="nx">abcd</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^.*?\d+.*?$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">false</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="mf">10</span><span class="o">/</span><span class="mo">05</span><span class="o">/</span><span class="mf">97</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*\d\d\/\d\d\/\d\d\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="w">  </span><span class="mo">04</span><span class="o">/</span><span class="mo">04</span><span class="o">/</span><span class="mo">01</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*\d\d\/\d\d\/\d\d\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="mf">5</span><span class="o">/</span><span class="mf">1</span><span class="o">/</span><span class="mo">01</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*\d\d\/\d\d\/\d\d\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">false</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="mf">187.8</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=-</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="mf">.6</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="mf">4.</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="o">-----------</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">=</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="nx">modèle</span><span class="o">=</span><span class="sr">/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/</span><span class="p">,</span><span class="w"> </span><span class="nx">correspond</span><span class="o">=</span><span class="kc">true</span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\cours\regexp\regexp-02.js&quot;
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>type d&#39;une expression régulière :  object
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>----------- chaîne=xyz1234abcd, modèle=/\d+/, correspond=true
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>----------- chaîne=12 34, modèle=/\d+/, correspond=true
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>----------- chaîne=abcd, modèle=/\d+/, correspond=false
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>----------- chaîne=xyz1234abcd, modèle=/^.*?\d+.*?$/, correspond=true
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>----------- chaîne=12 34, modèle=/^.*?\d+.*?$/, correspond=true
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>----------- chaîne=abcd, modèle=/^.*?\d+.*?$/, correspond=false
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>----------- chaîne=10/05/97, modèle=/^\s*\d\d\/\d\d\/\d\d\s*$/, correspond=true
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>----------- chaîne=  04/04/01  , modèle=/^\s*\d\d\/\d\d\/\d\d\s*$/, correspond=true
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>----------- chaîne=5/1/01, modèle=/^\s*\d\d\/\d\d\/\d\d\s*$/, correspond=false
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>----------- chaîne=187.8, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>----------- chaîne=-0.6, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>----------- chaîne=4, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>----------- chaîne=.6, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>----------- chaîne=4., modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a>----------- chaîne= + 4, modèle=/^\s*[+|-]?\s*\d+\.\d*|\.\d+|\d+\s*$/, correspond=true
 <a id="__codelineno-4-18" name="__codelineno-4-18"></a>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="p">[</span><span class="nx">Done</span><span class="p">]</span><span class="w"> </span><span class="nx">exited</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">code</span><span class="o">=</span><span class="mf">0</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="mf">0.269</span><span class="w"> </span><span class="nx">seconds</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>[Done] exited with code=0 in 0.269 seconds
 </code></pre></div></td></tr></table></div>
 
 
