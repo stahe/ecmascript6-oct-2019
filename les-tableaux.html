@@ -870,9 +870,9 @@
 <ul>
 <li>ligne 4 : un tableau vide ;</li>
 <li>ligne 8 : un tableau n’a pas de taille fixe. C’est simplement une suite d’éléments indexée par un n°. On peut initialiser l’élément n° 3 même si les éléments <strong>[0, 1, 2]</strong> ne sont pas encore définis ;</li>
-<li>lignes 16-24 : un tableau Javascript a un comportement analogue à celui du tableau PHP ;
- <strong>Exécution</strong></li>
+<li>lignes 16-24 : un tableau Javascript a un comportement analogue à celui du tableau PHP ;</li>
 </ul>
+<p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1021,28 +1021,22 @@
 <ul>
 <li>la différence entre tableaux PHP et tableaux Javascript est illustrée par les lignes 3 et 24 :</li>
 <li>la ligne 3 déclare la variable <strong>[tab]</strong> comme une constante ;</li>
-<li>
-<p>la ligne 24 modifie l’élément tab<strong>[5]</strong> ;
-Ligne 3, c’est le pointeur qui pointe sur le tableau qui est déclaré constant, ce n’est pas le tableau lui-même. Celui-ci peut être modifié.</p>
-</li>
-<li>
-<p>lignes 14-16 : le tableau <strong>[tab]</strong> est parcouru à l’aide d’une méthode <strong>[forEach]</strong> du tableau <strong>[tab]</strong>. Cette méthode reçoit en paramètre la définition d’une fonction, qu’on pourrait appeler une fonction littérale. Cette fonction paramètre reçoit un paramètre : l’élément courant du tableau <strong>[tab]</strong>. La fonction est appelée pour chaque élément du tableau. Ce type d’écriture est courant en Javascript ;</p>
-</li>
+<li>la ligne 24 modifie l’élément tab<strong>[5]</strong> ;</li>
+</ul>
+<p>Ligne 3, c’est le pointeur qui pointe sur le tableau qui est déclaré constant, ce n’est pas le tableau lui-même. Celui-ci peut être modifié.</p>
+<ul>
+<li>lignes 14-16 : le tableau <strong>[tab]</strong> est parcouru à l’aide d’une méthode <strong>[forEach]</strong> du tableau <strong>[tab]</strong>. Cette méthode reçoit en paramètre la définition d’une fonction, qu’on pourrait appeler une fonction littérale. Cette fonction paramètre reçoit un paramètre : l’élément courant du tableau <strong>[tab]</strong>. La fonction est appelée pour chaque élément du tableau. Ce type d’écriture est courant en Javascript ;</li>
 <li>lignes 9-10 : on utilise une autre syntaxe pour définir la fonction paramètre. Au lieu d’écrire :</li>
-<li>
-<p><strong>function(p1, p2, …, pn){….}</strong>
-on écrit :</p>
-</li>
-<li>
-<p><strong>(p1,p2, ..,pn)=&gt;{.…}</strong>. On appelle cela, la notation « flèche » ou « arrow » ;</p>
-</li>
-<li>
-<p>le reste du code est expliqué par les commentaires ;
-De ce script, on notera que :</p>
-</li>
-<li>
-<p>un tableau est un objet référencé par un pointeur ;</p>
-</li>
+<li><strong>function(p1, p2, …, pn){….}</strong></li>
+</ul>
+<p>on écrit :</p>
+<ul>
+<li><strong>(p1,p2, ..,pn)=&gt;{.…}</strong>. On appelle cela, la notation « flèche » ou « arrow » ;</li>
+<li>le reste du code est expliqué par les commentaires ;</li>
+</ul>
+<p>De ce script, on notera que :</p>
+<ul>
+<li>un tableau est un objet référencé par un pointeur ;</li>
 <li>que cet objet a des méthodes <strong>[forEach, pop, push, shift, unshift]</strong> ;</li>
 </ul>
 <h2 id="44-script-tab-04">4.4. script [tab-04]</h2>
@@ -1214,9 +1208,9 @@ De ce script, on notera que :</p>
 <li>ligne 50 : lorsque l’ordre naturel ne convient pas, il faut passer à la méthode <strong>[sort]</strong> une fonction à deux paramètres (e1,e2) qui rend :</li>
 <li>+1 si e1 doit être classé après e2 ;</li>
 <li>-1 si e1 doit être classé avant e2 ;</li>
-<li>0 si les deux éléments doivent avoir le même classement ;
-La fonction passée en paramètre à la méthode <strong>[sort]</strong> est appelée de façon répétée par celle-ci pour comparer deux éléments du tableau ;</li>
+<li>0 si les deux éléments doivent avoir le même classement ;</li>
 </ul>
+<p>La fonction passée en paramètre à la méthode <strong>[sort]</strong> est appelée de façon répétée par celle-ci pour comparer deux éléments du tableau ;</p>
 
 
 

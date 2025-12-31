@@ -1310,9 +1310,9 @@
 <li>authentification avec <strong>[admin, admin]</strong> ;</li>
 <li>demande trois calculs d’impôts ;</li>
 <li>demande la liste des simulations ;</li>
-<li>supprime l’une d’elles ;
-Le code est le suivant :</li>
+<li>supprime l’une d’elles ;</li>
 </ul>
+<p>Le code est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1430,9 +1430,9 @@ Le code est le suivant :</li>
 <li>lignes 23-30 : trois calculs d’impôt sont demandés en parallèle. Grâce à <strong>[await Promise.all]</strong>, l’exécution est bloquée tant que les trois résultats n’ont pas été tous obtenus ;</li>
 <li>lignes 31-34 : liste des simulations ;</li>
 <li>lignes 35-38 : suppression d’une simulation ;</li>
-<li>lignes 39-42 : gestion de l’éventuelle exception ;
-Les résultats de l’exécution sont les suivants :</li>
+<li>lignes 39-42 : gestion de l’éventuelle exception ;</li>
 </ul>
+<p>Les résultats de l’exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">  3</a></span>
@@ -2155,9 +2155,9 @@ Les résultats de l’exécution sont les suivants :</li>
 <li>lignes 19-26 : le constructeur de la classe PHP. Parce que nous avons dit qu’on construisait une couche <strong>[métier]</strong> indépendante de la couche <strong>[dao]</strong>, nous ferons en Javascript deux modifications à ce constructeur :</li>
 <li>il ne recevra pas une instance de la couche <strong>[dao]</strong> (il n’en a plus besoin) ;</li>
 <li>il ne demandera pas les données fiscales de l’administration <strong>[taxAdminData]</strong> à la couche <strong>[dao]</strong> : c’est le code appelant qui transmettra cette donnée au constructeur ;</li>
-<li>lignes 197-122 : nous n’implémenterons pas la méthode <strong>[executeBatchImpots]</strong> dont le but final était d’enregistrer des résultats de simulations dans un fichier texte. Nous voulons un code qui fonctionne à la fois sous <strong>[node.js]</strong> et dans un navigateur. Or sauvegarder des données sur le système de fichiers de la machine exécutant le navigateur client n’est pas possible ;
-Avec ces restrictions, le code de la classe Javascript <strong>[Métier]</strong> est le suivant :</li>
+<li>lignes 197-122 : nous n’implémenterons pas la méthode <strong>[executeBatchImpots]</strong> dont le but final était d’enregistrer des résultats de simulations dans un fichier texte. Nous voulons un code qui fonctionne à la fois sous <strong>[node.js]</strong> et dans un navigateur. Or sauvegarder des données sur le système de fichiers de la machine exécutant le navigateur client n’est pas possible ;</li>
 </ul>
+<p>Avec ces restrictions, le code de la classe Javascript <strong>[Métier]</strong> est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">  3</a></span>
@@ -2785,9 +2785,9 @@ Avec ces restrictions, le code de la classe Javascript <strong>[Métier]</strong
 <p>Le serveur de calcul de l’impôt doit implémenter une nouvelle action. Nous allons le faire sur la version 14 du serveur. L’action à implémenter a les caractéristiques suivantes :</p>
 <ul>
 <li>elle est demandée par une opération <strong>[get /main.php?action=get-admindata]</strong> ;</li>
-<li>elle rend la chaîne jSON d’un objet encapsulant les données de l’administration fiscale ;
-Nous allons revoir comment ajouter une action à notre serveur.</li>
+<li>elle rend la chaîne jSON d’un objet encapsulant les données de l’administration fiscale ;</li>
 </ul>
+<p>Nous allons revoir comment ajouter une action à notre serveur.</p>
 <p>La modification se fera sous Netbeans :</p>
 <p><img src="images/10000000000005AA0000026A0A027AAB.png" style="width:15.35cm;height:6.541cm;" alt="Image" /></p>
 <p>En <strong>[2]</strong>, nous modifions le fichier <strong>[config.json]</strong> pour ajouter la nouvelle action :</p>
@@ -2954,9 +2954,9 @@ Nous allons revoir comment ajouter une action à notre serveur.</li>
 <p>La modification consiste :</p>
 <ul>
 <li>ligne 67 : ajouter l’action <strong>[get-admindata]</strong> et l’associer à un contrôleur ;</li>
-<li>ligne 36 : déclarer ce contrôleur dans la liste des classes à charger par l’application PHP ;
-La phase suivante est d’implémenter le contrôleur <strong>[AdminDataController]</strong> <strong>[3]</strong> :</li>
+<li>ligne 36 : déclarer ce contrôleur dans la liste des classes à charger par l’application PHP ;</li>
 </ul>
+<p>La phase suivante est d’implémenter le contrôleur <strong>[AdminDataController]</strong> <strong>[3]</strong> :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
@@ -3129,16 +3129,16 @@ La phase suivante est d’implémenter le contrôleur <strong>[AdminDataControll
 <li>lignes 25-34 : on vérifie que l’action <strong>[get-admindata]</strong> du client est syntaxiquement correcte ;</li>
 <li>lignes 37-74 : on récupère un objet <strong>[TaxAdminData]</strong> trouvé soit :</li>
 <li>lignes 56-59 : dans la base de données si on ne l’a pas trouvé dans le cache <strong>[redis]</strong> ;</li>
-<li>lignes 70-73 : dans le cache <strong>[redis]</strong> ;
-Ce code reprend celui du contrôleur <strong>[CalculerImpotController]</strong> expliqué dans l’article <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><u>lien</u></u></a>. En effet, ce contrôleur devait lui aussi récupérer l’objet <strong>[TaxAdminData]</strong> encapsulant les données de l’administration fiscale.</li>
+<li>lignes 70-73 : dans le cache <strong>[redis]</strong> ;</li>
 </ul>
+<p>Ce code reprend celui du contrôleur <strong>[CalculerImpotController]</strong> expliqué dans l’article <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><u>lien</u></u></a>. En effet, ce contrôleur devait lui aussi récupérer l’objet <strong>[TaxAdminData]</strong> encapsulant les données de l’administration fiscale.</p>
 <p>Lors des tests du client Javascript, la forme jSON de <strong>[TaxAdminData]</strong> a posé problème lorsque cet objet était trouvé dans le cache <strong>[redis]</strong>. Pour le comprendre, examinons sous quelle forme cet objet est stocké dans <strong>[redis]</strong> :</p>
 <p><img src="images/1000000000000425000002C5D5F37389.png" style="width:9.831cm;height:6.561cm;" alt="Image" /></p>
 <p><img src="images/1000000000000A29000002E9D4535C0C.png" style="width:17.2cm;height:4.931cm;" alt="Image" /></p>
 <ul>
-<li>en <strong>[5-7]</strong>, on voit que des valeurs numériques ont été stockées sous forme de chaînes de caractères. PHP s’en est accommodé car l’opérateur + dans les calculs entre nombres et chaînes provoque implicitement un changement de type de la chaîne vers un nombre. Mais Javascript fait le contraire : l’opérateur + dans les calculs entre nombres et chaînes provoque implicitement un changement de type du nombre vers une chaîne de caractères. Les calculs de la classe Javascript <strong>[Métier]</strong> sont alors erronés ;
-Pour remédier à ce problème, nous modifions la méthode <strong>[TaxAdminData.setFromArrayOfAttributes]</strong> utilisée ligne 71 du contrôleur pour instancier un objet <strong>[TaxAdminData]</strong> (cf. <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><u>article</u></u></a>) à partir de la chaîne jSON trouvée dans le cache <strong>[redis]</strong> :</li>
+<li>en <strong>[5-7]</strong>, on voit que des valeurs numériques ont été stockées sous forme de chaînes de caractères. PHP s’en est accommodé car l’opérateur + dans les calculs entre nombres et chaînes provoque implicitement un changement de type de la chaîne vers un nombre. Mais Javascript fait le contraire : l’opérateur + dans les calculs entre nombres et chaînes provoque implicitement un changement de type du nombre vers une chaîne de caractères. Les calculs de la classe Javascript <strong>[Métier]</strong> sont alors erronés ;</li>
 </ul>
+<p>Pour remédier à ce problème, nous modifions la méthode <strong>[TaxAdminData.setFromArrayOfAttributes]</strong> utilisée ligne 71 du contrôleur pour instancier un objet <strong>[TaxAdminData]</strong> (cf. <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><u>article</u></u></a>) à partir de la chaîne jSON trouvée dans le cache <strong>[redis]</strong> :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">  3</a></span>
@@ -3357,9 +3357,9 @@ Pour remédier à ce problème, nous modifions la méthode <strong>[TaxAdminData
 <li>lignes 85-86 : si ce n’est pas le cas, une exception est lancée ;</li>
 <li>lignes 32-65 : la fonction <strong>[check]</strong> fait un peu plus que nécessaire. Elle traite aussi bien des tableaux que des valeurs uniques. Or ici, elle n’est appelée que pour vérifier une valeur de type <strong>[string]</strong>. Elle rend un objet avec les propriétés <strong>[erreur, value]</strong> où :</li>
 <li><strong>[erreur]</strong> est un booléen signalant une erreur ou non ;</li>
-<li><strong>[value]</strong> est le paramètre <strong>[value]</strong> de la ligne 32, transformée en nombre ou tableau de nombres selon les cas ;
-La classe <strong>[BaseEntity]</strong> qui pouvait avoir un attribut nommé <strong>[arrayOfAttributes]</strong> est modifiée pour ne plus avoir celui-ci : il pollue en effet la chaîne jSON de <strong>[TaxAdminData]</strong>. La classe est réécrite de la façon suivante :</li>
+<li><strong>[value]</strong> est le paramètre <strong>[value]</strong> de la ligne 32, transformée en nombre ou tableau de nombres selon les cas ;</li>
 </ul>
+<p>La classe <strong>[BaseEntity]</strong> qui pouvait avoir un attribut nommé <strong>[arrayOfAttributes]</strong> est modifiée pour ne plus avoir celui-ci : il pollue en effet la chaîne jSON de <strong>[TaxAdminData]</strong>. La classe est réécrite de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -3502,9 +3502,9 @@ La classe <strong>[BaseEntity]</strong> qui pouvait avoir un attribut nommé <st
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 20 : l’attribut <strong>[\$this→arrayOfAttributes]</strong> a été transformée en variable qui doit être désormais passée à la méthode <strong>[checkForAllAttributes]</strong>, ligne 38 qui auparavant opérait sur l’attribut <strong>[\$this→arrayOfAttributes]</strong> ;
-A cause de ce changement sur <strong>[BaseEntity]</strong>, la classe <strong>[Database]</strong> doit être également légèrement modifiée :</li>
+<li>ligne 20 : l’attribut <strong>[\$this→arrayOfAttributes]</strong> a été transformée en variable qui doit être désormais passée à la méthode <strong>[checkForAllAttributes]</strong>, ligne 38 qui auparavant opérait sur l’attribut <strong>[\$this→arrayOfAttributes]</strong> ;</li>
 </ul>
+<p>A cause de ce changement sur <strong>[BaseEntity]</strong>, la classe <strong>[Database]</strong> doit être également légèrement modifiée :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -3729,9 +3729,9 @@ A cause de ce changement sur <strong>[BaseEntity]</strong>, la classe <strong>[D
 <li>ligne 38 : on n’a plus besoin de la couche <strong>[dao]</strong>. On a tous les éléments pour faire travailler la couche <strong>[métier]</strong> du client Javascript ;</li>
 <li>lignes 41-46 : on fait trois calculs d’impôt dont on cumule les résultats dans un tableau <strong>[simulations]</strong> ;</li>
 <li>ligne 49 : on affiche le tableau des simulations ;</li>
-<li>ligne 52 : on supprime l’une d’elles ;
-Les résultats de l’exécution du script principal sont les suivants :</li>
+<li>ligne 52 : on supprime l’une d’elles ;</li>
 </ul>
+<p>Les résultats de l’exécution du script principal sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -3946,9 +3946,9 @@ Les résultats de l’exécution du script principal sont les suivants :</li>
 <li><strong>[webpack]</strong> : chef d’orchestre. C’est <strong>[webpack]</strong> qui fait appel à Babel pour faire la transpilation des codes ES6 → ES5 puis lui qui assemble la totalité des fichiers résultants dans un unique fichier ;</li>
 <li><strong>[webpack-cli]</strong> : nécessaire à <strong>[webpack]</strong> ;</li>
 <li><strong>[@webpack-cli/init]</strong> : utilisé pour configurer <strong>[webpack]</strong> ;</li>
-<li><strong>[webpack-dev-server]</strong> : fournit un serveur web de développement opérant par défaut sur le port 8080. Lorsque les fichiers sources sont modifiés, recharge automatiquement l’application web ;
-Les dépendances du projet sont installées de la façon suivante dans un terminal de <strong>[VSCode]</strong> :</li>
+<li><strong>[webpack-dev-server]</strong> : fournit un serveur web de développement opérant par défaut sur le port 8080. Lorsque les fichiers sources sont modifiés, recharge automatiquement l’application web ;</li>
 </ul>
+<p>Les dépendances du projet sont installées de la façon suivante dans un terminal de <strong>[VSCode]</strong> :</p>
 <p>npm --save-dev install @babel/core @babel/preset-env babel-loader webpack webpack-cli webpack-dev-server @webpack-cli/init</p>
 <p><img src="images/10000000000008DC000000F377F51916.png" style="width:15.001cm;height:1.611cm;" alt="Image" /></p>
 <p>Après l’installation des dépendances, le fichier <strong>[package.json]</strong> a évolué de la façon suivante :</p>
@@ -3995,16 +3995,14 @@ Les dépendances du projet sont installées de la façon suivante dans un termin
 <a id="__codelineno-13-21" name="__codelineno-13-21"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>
-<p>lignes 12-19 : les dépendances du projet sont des <strong>[devDependencies]</strong> : on en a besoin pendant la phase de développement mais plus dans la phase de production. En effet, en production, c’est le fichier <strong>[dist/main.js]</strong> qui est utilisé. Il est codé en ES5 et n’a plus besoin des outils de transpilation de code ES6 vers du code ES5 ;
-Il nous faut ajouter deux dépendances au projet :</p>
-</li>
-<li>
-<p><strong>[core-js]</strong> : contient des « polyfills » pour ECMAScript 2019. Un polyfill permet d’exécuter un code récent, comme ECMAScript 2019 (sept 2019), sur des navigateurs anciens ;</p>
-</li>
-<li><strong>[regenerator-runtime]</strong> : selon le site de la bibliothèque --&gt; <strong>[Source transformer enabling ECMAScript 6 generator functions in JavaScript-of-today]</strong> ;
-Ces deux dépendances remplacent, à partir de Babel 7, la dépendance <strong>[@babel/polyfill]</strong> qui jouait auparavant ce rôle et qui est maintenant (sept 2019) dépréciée. Elles sont installées de la façon suivante :</li>
+<li>lignes 12-19 : les dépendances du projet sont des <strong>[devDependencies]</strong> : on en a besoin pendant la phase de développement mais plus dans la phase de production. En effet, en production, c’est le fichier <strong>[dist/main.js]</strong> qui est utilisé. Il est codé en ES5 et n’a plus besoin des outils de transpilation de code ES6 vers du code ES5 ;</li>
 </ul>
+<p>Il nous faut ajouter deux dépendances au projet :</p>
+<ul>
+<li><strong>[core-js]</strong> : contient des « polyfills » pour ECMAScript 2019. Un polyfill permet d’exécuter un code récent, comme ECMAScript 2019 (sept 2019), sur des navigateurs anciens ;</li>
+<li><strong>[regenerator-runtime]</strong> : selon le site de la bibliothèque --&gt; <strong>[Source transformer enabling ECMAScript 6 generator functions in JavaScript-of-today]</strong> ;</li>
+</ul>
+<p>Ces deux dépendances remplacent, à partir de Babel 7, la dépendance <strong>[@babel/polyfill]</strong> qui jouait auparavant ce rôle et qui est maintenant (sept 2019) dépréciée. Elles sont installées de la façon suivante :</p>
 <p><img src="images/1000000000000688000000E16129B75A.png" style="width:15.491cm;height:2.08cm;" alt="Image" /></p>
 <p>Le fichier <strong>[package.json]</strong> évolue alors de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
@@ -4084,9 +4082,9 @@ Ces deux dépendances remplacent, à partir de Babel 7, la dépendance <strong>[
 <p><strong>[webpack]</strong> est l’outil qui va piloter :</p>
 <ul>
 <li>la transpilation ES6 → ES5 de tous les fichiers Javascript du projet ;</li>
-<li>l’assemblage des fichiers générés dans un unique fichier ;
-Cet outil est piloté par un fichier de configuration <strong>[webpack.config.js]</strong> qui peut être généré grâce à une dépendance nommée <strong>[@webpack-cli/init]</strong> (sept 2019). Celle-ci a été installée avec les autres au paragraphe <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-14.docx#webpack"><u><u>lien</u></u></a>.</li>
+<li>l’assemblage des fichiers générés dans un unique fichier ;</li>
 </ul>
+<p>Cet outil est piloté par un fichier de configuration <strong>[webpack.config.js]</strong> qui peut être généré grâce à une dépendance nommée <strong>[@webpack-cli/init]</strong> (sept 2019). Celle-ci a été installée avec les autres au paragraphe <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-14.docx#webpack"><u><u>lien</u></u></a>.</p>
 <p>Nous exécutons la commande <strong>[npx webpack-cli init]</strong> dans un terminal <strong>[VSCode]</strong> :</p>
 <p><img src="images/10000000000005800000013B31577607.png" style="width:14.9cm;height:3.331cm;" alt="Image" /></p>
 <p>Après avoir répondu aux différentes questions (dont on peut accepter la plupart des réponses proposées par défaut), un fichier <strong>[webpack.config.js]</strong> est généré à la racine du projet <strong>[4]</strong> :</p>
@@ -4264,9 +4262,9 @@ Cet outil est piloté par un fichier de configuration <strong>[webpack.config.js
 <li>ligne 32 : le script d’entrée est ici <strong>[src/index.js]</strong>. Nous serons amenés à changer cela ;</li>
 <li>ligne 36 : le dossier où seront tockées les produits de <strong>[webpack]</strong> sera le dossier <strong>[dist]</strong> ;</li>
 <li>ligne 46 : on voit que <strong>[webpack]</strong> utilise <strong>[babel-loader]</strong>, une des dépendances que nous avons installées ;</li>
-<li>ligne 54 : on voit que <strong>[webpack]</strong> utilise <strong>[@babel-preset/env]</strong>, une des dépendances que nous avons installées ;
-L’initialisation de <strong>[webpack]</strong> a modifié le fichier <strong>[package.json]</strong> (il demande l’autorisation) :</li>
+<li>ligne 54 : on voit que <strong>[webpack]</strong> utilise <strong>[@babel-preset/env]</strong>, une des dépendances que nous avons installées ;</li>
 </ul>
+<p>L’initialisation de <strong>[webpack]</strong> a modifié le fichier <strong>[package.json]</strong> (il demande l’autorisation) :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
@@ -4329,9 +4327,9 @@ L’initialisation de <strong>[webpack]</strong> a modifié le fichier <strong>[
 <li>ligne 8 : la tâche <strong>[npm]</strong> qui permet de compiler le projet ;</li>
 <li>ligne 9 : la tâche <strong>[npm]</strong> qui permet de l’exécuter ;</li>
 <li>ligne 18 : ?</li>
-<li>ligne 19 : permet la génération d’un fichier <strong>[dist/index.html]</strong> embarquant automatiquement le script <strong>[dist/main.js]</strong> généré par <strong>[webpack]</strong> et c’est celui-ci qui est exploité lorsque le projet est exécuté ;
-Enfin la configuration de <strong>[webpack]</strong> a généré un fichier <strong>[src/index.js]</strong> :</li>
+<li>ligne 19 : permet la génération d’un fichier <strong>[dist/index.html]</strong> embarquant automatiquement le script <strong>[dist/main.js]</strong> généré par <strong>[webpack]</strong> et c’est celui-ci qui est exploité lorsque le projet est exécuté ;</li>
 </ul>
+<p>Enfin la configuration de <strong>[webpack]</strong> a généré un fichier <strong>[src/index.js]</strong> :</p>
 <p><img src="images/100000000000014900000213A422A6BF.png" style="width:3.051cm;height:4.911cm;" alt="Image" /></p>
 <p>Le contenu de <strong>[index.js]</strong> est le suivant (sept 2019) :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello World from your main file!&quot;</span><span class="p">);</span>
@@ -4352,9 +4350,9 @@ Enfin la configuration de <strong>[webpack]</strong> a généré un fichier <str
 <p><img src="images/10000000000006230000017F03E69FAC.png" style="width:16.631cm;height:4.051cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[1-3]</strong>, on compile le projet ;</li>
-<li>en <strong>[4]</strong> : le projet est compilé dans <strong>[dist/main.hash.js]</strong> et une page <strong>[dist/index.html]</strong> est créée ;
-La page <strong>[index.html]</strong> générée est la suivante :</li>
+<li>en <strong>[4]</strong> : le projet est compilé dans <strong>[dist/main.hash.js]</strong> et une page <strong>[dist/index.html]</strong> est créée ;</li>
 </ul>
+<p>La page <strong>[index.html]</strong> générée est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
 <span class="normal"><a href="#__codelineno-20-3">3</a></span>
@@ -4383,15 +4381,13 @@ La page <strong>[index.html]</strong> générée est la suivante :</li>
 <li>en <strong>[3]</strong>, le corps de la page <strong>[dist/index.html]</strong> est vide ;</li>
 <li>en <strong>[4]</strong>, l’onglet <strong>[console]</strong> des outils de développement du navigateur, ici Firefox (F12) ;</li>
 <li>en <strong>[5]</strong>, le résultat de l’exécution du fichier <strong>[src/index.js]</strong>. On rappelle que le contenu de celui-ci était le suivant :</li>
-<li>
-<p>console.log("Hello World from your main file!");
-Maintenant, changeons ce contenu en la ligne suivante :</p>
-</li>
-<li>
-<p>console.log("Bonjour le monde");
-Automatiquement (sans recompiler), de nouveaux fichiers <strong>[main.js, index.html]</strong> sont générés et le nouveau fichier <strong>[index.html]</strong> chargé dans le navigateur :</p>
-</li>
+<li>console.log("Hello World from your main file!");</li>
 </ul>
+<p>Maintenant, changeons ce contenu en la ligne suivante :</p>
+<ol>
+<li>console.log("Bonjour le monde");</li>
+</ol>
+<p>Automatiquement (sans recompiler), de nouveaux fichiers <strong>[main.js, index.html]</strong> sont générés et le nouveau fichier <strong>[index.html]</strong> chargé dans le navigateur :</p>
 <p><img src="images/10000000000003C9000002EC78CFC868.png" style="width:8.981cm;height:6.931cm;" alt="Image" /></p>
 <p>Il n’est pas nécessaire d’exécuter la tâche <strong>[build]</strong> avant la tâche <strong>[start]</strong> : cette dernière fait d’abord la compilation du projet. Elle ne stocke pas les produits de cette compilation dans le dossier <strong>[dist]</strong>. Pour s’en apercevoir, il suffit de supprimer ce dossier. On verra alors que la tâche <strong>[start]</strong> compile et exécute le projet sans créer le dossier <strong>[dist]</strong>. Elle semble stocker ses produits <strong>[index.html, main.hash.js]</strong> dans un dossier propre à <strong>[webpackdev-server]</strong>. Ce comportement est suffisant pour nos tests.</p>
 <p>Lorsque le serveur de développement est lancé, toute modification sauvegardée d’un des fichiers du projet provoque une recompilation. Pour cette raison, nous inhibons le mode <strong>[Auto Save]</strong> de <strong>[VSCode]</strong>. En effet, nous ne voulons pas de recompilation dès qu’on tape des caractères dans un des fichiers du projet. Nous ne voulons de recompilation qu’au moment des sauvegardes des modifications :</p>
@@ -4553,24 +4549,22 @@ Automatiquement (sans recompiler), de nouveaux fichiers <strong>[main.js, index.
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>aux lignes <strong>[24-26]</strong>, <strong>[31-33]</strong>, <strong>[38-40]</strong>, on teste le code <strong>[response.état]</strong> envoyé dans la réponse jSON du serveur. Si ce code dénote une erreur, une exception est lancée avec pour message d’erreur la chaîne jSON de la réponse du serveur <strong>[response.réponse]</strong> ;
-Ceci fait, nous exécutons le projet <strong>[5-6]</strong>.</li>
+<li>aux lignes <strong>[24-26]</strong>, <strong>[31-33]</strong>, <strong>[38-40]</strong>, on teste le code <strong>[response.état]</strong> envoyé dans la réponse jSON du serveur. Si ce code dénote une erreur, une exception est lancée avec pour message d’erreur la chaîne jSON de la réponse du serveur <strong>[response.réponse]</strong> ;</li>
 </ul>
+<p>Ceci fait, nous exécutons le projet <strong>[5-6]</strong>.</p>
 <p>La page <strong>[index.html]</strong> est alors générée et chargée dans le navigateur :</p>
 <p><img src="images/100000000000043C00000331B95B20C9.png" style="width:10.041cm;height:7.571cm;" alt="Image" /></p>
 <ul>
-<li>
-<p>en <strong>[7]</strong>, on voit que l’action <strong>[init-session]</strong> n’a pu aller à son terme à cause d’un problème <strong>[CORS]</strong> (Cross-Origin Resource Sharing) ;
-Le problème CORS vient de la relation client / serveur :</p>
-</li>
-<li>
-<p>notre client Javascript a été téléchargée sur la machine <strong>[http://localhost:8080]</strong>;</p>
-</li>
+<li>en <strong>[7]</strong>, on voit que l’action <strong>[init-session]</strong> n’a pu aller à son terme à cause d’un problème <strong>[CORS]</strong> (Cross-Origin Resource Sharing) ;</li>
+</ul>
+<p>Le problème CORS vient de la relation client / serveur :</p>
+<ul>
+<li>notre client Javascript a été téléchargée sur la machine <strong>[http://localhost:8080]</strong>;</li>
 <li>le serveur de calcul d’impôt s’exécute sur la machine <strong>[http://localhost:80]</strong>;</li>
 <li>le client et le serveur ne sont pas alors dans les mêmes domaines (même machine mais pas même port);</li>
-<li>le navigateur qui exécute le client Javascript chargé à partir de la machine <strong>[http://localhost:8080]</strong> bloque toute requête qui n’a pas pour cible <strong>[http://localhost:80]</strong>. C’est une mesure de sécurité. Aussi bloque-t-il la requête du client vers le serveur qui opère sur la machine <strong>[http://localhost:80]</strong>;
-En fait, le navigateur ne bloque pas totalement la requête. Il attend en fait que le serveur lui ‘dise’ qu’il accepte les requêtes inter-domaines. S’il obtient cette autorisation, le navigateur transmettra alors la requête inter-domaines.</li>
+<li>le navigateur qui exécute le client Javascript chargé à partir de la machine <strong>[http://localhost:8080]</strong> bloque toute requête qui n’a pas pour cible <strong>[http://localhost:80]</strong>. C’est une mesure de sécurité. Aussi bloque-t-il la requête du client vers le serveur qui opère sur la machine <strong>[http://localhost:80]</strong>;</li>
 </ul>
+<p>En fait, le navigateur ne bloque pas totalement la requête. Il attend en fait que le serveur lui ‘dise’ qu’il accepte les requêtes inter-domaines. S’il obtient cette autorisation, le navigateur transmettra alors la requête inter-domaines.</p>
 <p>Le serveur donne son autorisation en envoyant des entêtes HTTP particuliers :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
 <span class="normal"><a href="#__codelineno-22-2">2</a></span>
@@ -4584,24 +4578,22 @@ En fait, le navigateur ne bloque pas totalement la requête. Il attend en fait q
 <li>ligne 1 : le client Javascript opère sur le domaine <strong>[http://localhost:8080]</strong>. Le serveur doit explicitement répondre qu’il accepte ce domaine ;</li>
 <li>ligne 2 : le client Javascript va utiliser dans ses requêtes les entêtes HTTP <strong>[Accept, Content-Type]</strong> :</li>
 <li><strong>[Accept]</strong> : cet entête est envoyé dans toute requête ;</li>
-<li>
-<p><strong>[Content-Type]</strong> : cet entête est utilisé dans les opérations POST pour indiquer le type des paramètres du POST ;
-Le serveur doit explicitement accepter ces deux entêtes HTTP ;</p>
-</li>
-<li>
-<p>ligne 3 :  le client Javascript va utiliser des requêtes GET et POST. Le serveur doit explicitement accepter ces deux types de requêtes ;</p>
-</li>
-<li>ligne 4 : le client Javascript va envoyer des cookies de session. Le serveur les accepte avec l’entête de la ligne 4 ;
-Il nous faut donc modifier le serveur. Nous faisons cela dans <strong>[Netbeans]</strong>. Le problème des CORS est un problème rencontré uniquement en mode développement. En production, le client et le serveur travailleront dans le même domaine <strong>[http://localhost:80]</strong> et il n’y aura pas de problème CORS. Il nous faut donc un moyen d’autoriser ou pas les requêtes CORS par configuration du serveur.</li>
+<li><strong>[Content-Type]</strong> : cet entête est utilisé dans les opérations POST pour indiquer le type des paramètres du POST ;</li>
 </ul>
+<p>Le serveur doit explicitement accepter ces deux entêtes HTTP ;</p>
+<ul>
+<li>ligne 3 :  le client Javascript va utiliser des requêtes GET et POST. Le serveur doit explicitement accepter ces deux types de requêtes ;</li>
+<li>ligne 4 : le client Javascript va envoyer des cookies de session. Le serveur les accepte avec l’entête de la ligne 4 ;</li>
+</ul>
+<p>Il nous faut donc modifier le serveur. Nous faisons cela dans <strong>[Netbeans]</strong>. Le problème des CORS est un problème rencontré uniquement en mode développement. En production, le client et le serveur travailleront dans le même domaine <strong>[http://localhost:80]</strong> et il n’y aura pas de problème CORS. Il nous faut donc un moyen d’autoriser ou pas les requêtes CORS par configuration du serveur.</p>
 <p><img src="images/10000000000005C40000024FB2CC2F86.png" style="width:15.62cm;height:6.25cm;" alt="Image" /></p>
 <p>Les modifications du serveur se font à trois endroits :</p>
 <ul>
 <li><strong>[1, 4]</strong> : dans le fichier de configuration <strong>[config.json]</strong> pour y mettre un booléen qui contrôlera l’acceptation ou non des requêtes inter-domaines ;</li>
 <li><strong>[2]</strong> : dans la classe <strong>[ParentResponse]</strong> qui envoie la réponse au client Javascript. C’est elle qui enverra les entêtes CORS attendus par le navigateur client ;</li>
-<li><strong>[3]</strong> : dans les classes <strong>[HtmlResponse, JsonResponse, XmlResponse]</strong> qui génèrent les réponses pour respectivement les sessions <strong>[html, json, xml]</strong>. Ces classes doivent passer à leur classe parente <strong>[2]</strong>, le booléen <strong>[corsAllowed]</strong> trouvé en <strong>[4]</strong>. Cela se fait en <strong>[5]</strong>, en passant le tableau image du fichier jSON <strong>[2]</strong> ;
-La classe <strong>[ParentResponse]</strong> <strong>[2]</strong> évolue de la façon suivante :</li>
+<li><strong>[3]</strong> : dans les classes <strong>[HtmlResponse, JsonResponse, XmlResponse]</strong> qui génèrent les réponses pour respectivement les sessions <strong>[html, json, xml]</strong>. Ces classes doivent passer à leur classe parente <strong>[2]</strong>, le booléen <strong>[corsAllowed]</strong> trouvé en <strong>[4]</strong>. Cela se fait en <strong>[5]</strong>, en passant le tableau image du fichier jSON <strong>[2]</strong> ;</li>
 </ul>
+<p>La classe <strong>[ParentResponse]</strong> <strong>[2]</strong> évolue de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
@@ -4719,21 +4711,21 @@ La classe <strong>[ParentResponse]</strong> <strong>[2]</strong> évolue de la f
 <li>lignes 32-36 : on ajoute les entêtes CORS aux entêtes déjà présents dans le tableau <strong>[\$headers]</strong> ;</li>
 <li>lignes 45-49 : la façon dont le navigateur client demande les autorisations CORS peut différer selon le client exécuté. Il arrive parfois que le navigateur client demande ces autorisations avec une commande HTTP <strong>[OPTIONS]</strong>. C’est une nouveauté pour notre serveur qui a été construit pour servir uniquement les commandes <strong>[GET, POST]</strong>. Dans le cas d’une commande <strong>[OPTIONS]</strong>, le serveur génère actuellement une réponse d’erreur. Lignes 46-49, nous corrigeons cela au dernier moment : si ligne 46, nous constatons que la commande courante est une commande <strong>[OPTIONS]</strong>, alors on génère pour le client :</li>
 <li>lignes 47, 51 : une réponse <strong>[\$content]</strong> vide ;</li>
-<li>ligne 48 : un code de statut de 200 indiquant que la commande est réussie. La seule chose importante pour cette commande est l’envoi des entêtes CORS des lignes 33-36. C’est ce qu’attend le navigateur client ;
-Une fois le serveur ainsi corrigé, le client Javascript s’exécute mieux mais fait apparaître une nouvelle erreur :</li>
+<li>ligne 48 : un code de statut de 200 indiquant que la commande est réussie. La seule chose importante pour cette commande est l’envoi des entêtes CORS des lignes 33-36. C’est ce qu’attend le navigateur client ;</li>
 </ul>
+<p>Une fois le serveur ainsi corrigé, le client Javascript s’exécute mieux mais fait apparaître une nouvelle erreur :</p>
 <p><img src="images/10000000000003FE0000047C70774234.png" style="width:8.12cm;height:9.111cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[1]</strong>, la session jSON est correctement initialisée ;</li>
-<li>en <strong>[2]</strong>, l’action <strong>[authentifier-utilisateur]</strong> échoue : le serveur indique qu’il n’y a pas de session en cours. Cela signifie que le client Javascript ne lui pas renvoyé correctement le cookie de session qu’il a envoyé lors de l’action <strong>[init-session]</strong> ;
-Examinons les échanges réseau qui ont eu lieu :</li>
+<li>en <strong>[2]</strong>, l’action <strong>[authentifier-utilisateur]</strong> échoue : le serveur indique qu’il n’y a pas de session en cours. Cela signifie que le client Javascript ne lui pas renvoyé correctement le cookie de session qu’il a envoyé lors de l’action <strong>[init-session]</strong> ;</li>
 </ul>
+<p>Examinons les échanges réseau qui ont eu lieu :</p>
 <p><img src="images/1000000000000612000002355B56FFBF.png" style="width:16.451cm;height:5.98cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[4]</strong>, la requête <strong>[init-session]</strong>. Elle s’est bien déroulée avec un code 200 pour le statut de la réponse ;</li>
-<li>en <strong>[5]</strong>, la requête <strong>[authentifier-utilisateur]</strong>. Celle-ci échoue avec un code 400 (Bad Request) <strong>[6]</strong> pour le statut de la réponse ;
-Si on examine les entêtes HTTP <strong>[7]</strong> de la requête <strong>[5]</strong>, on peut voir que le client Javascript n’a pas envoyé l’entête HTTP <strong>[Cookie]</strong> qui lui aurait permis de renvoyer le cookie de session envoyé initialement par le serveur. C’est la raison pour laquelle celui-ci déclare qu’il n’y a pas de session.</li>
+<li>en <strong>[5]</strong>, la requête <strong>[authentifier-utilisateur]</strong>. Celle-ci échoue avec un code 400 (Bad Request) <strong>[6]</strong> pour le statut de la réponse ;</li>
 </ul>
+<p>Si on examine les entêtes HTTP <strong>[7]</strong> de la requête <strong>[5]</strong>, on peut voir que le client Javascript n’a pas envoyé l’entête HTTP <strong>[Cookie]</strong> qui lui aurait permis de renvoyer le cookie de session envoyé initialement par le serveur. C’est la raison pour laquelle celui-ci déclare qu’il n’y a pas de session.</p>
 <p>Pour que le client envoie le cookie de session, il faut ajouter une configuration à l’objet <strong>[axios]</strong> :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
@@ -4959,9 +4951,9 @@ Si on examine les entêtes HTTP <strong>[7]</strong> de la requête <strong>[5]<
 <p>Dans le dossier [src], nous avons ajouté deux fichiers :</p>
 <ul>
 <li>la classe [Dao3] que nous venons de présenter ;</li>
-<li>le fichier [main3] chargée de lancer la nouvelle version ;
-Le fichier [main3] reste identique au fichier [main] de la version précédente mais il utilise désormais la classe [Dao3] :</li>
+<li>le fichier [main3] chargée de lancer la nouvelle version ;</li>
 </ul>
+<p>Le fichier [main3] reste identique au fichier [main] de la version précédente mais il utilise désormais la classe [Dao3] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-26-3"> 3</a></span>

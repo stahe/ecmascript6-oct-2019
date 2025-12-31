@@ -1269,9 +1269,9 @@
 <li>ligne 82 : en Javascript, il n’est pas possible d’indiquer le type des paramètres d’une fonction ;</li>
 <li>ligne 91 : l’opérateur <strong>[typeof]</strong> permet de connaître le type d’une donnée. Il y en a quatre : nombre, chaîne de caractères, booléen et objet. On notera qu’en Javascript on n’a pas de type <strong>[integer]</strong> ni de type <strong>[tableau]</strong>. Comme il a été dit, les tableaux sont manipulés via des pointeurs et tombe dans la catégorie des objets ;</li>
 <li>lignes 50-59 : comme en PHP, Javascript a deux opérateurs de comparaison, == et ‘===’ avec la même signification qu’en PHP. ESLint signale le plus souvent l’opérateur == comme une erreur possible. On utilisera systématiquement l’opérateur ‘===’ ;</li>
-<li>ligne 79 : on aurait pu mettre l’instruction <strong>[return]</strong> mais ESLint émet l’avertissement que <strong>[return]</strong> ne doit s’utiliser que dans une fonction ;
-Exécutons ce code :</li>
+<li>ligne 79 : on aurait pu mettre l’instruction <strong>[return]</strong> mais ESLint émet l’avertissement que <strong>[return]</strong> ne doit s’utiliser que dans une fonction ;</li>
 </ul>
+<p>Exécutons ce code :</p>
 <p><img src="images/100000000000033C00000192E8D1CF4C.png" style="width:8.76cm;height:4.25cm;" alt="Image" /></p>
 <p>Les résultats de l’exécution :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -1385,9 +1385,9 @@ Exécutons ce code :</li>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="nx">doSomething</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>la variable <strong>[count]</strong> déclarée en-dehors de la fonction <strong>[doSomething]</strong> est pourtant connue dans cette fonction. C’est une différence fondamentale avec PHP ;
-<strong>Exécution</strong></li>
+<li>la variable <strong>[count]</strong> déclarée en-dehors de la fonction <strong>[doSomething]</strong> est pourtant connue dans cette fonction. C’est une différence fondamentale avec PHP ;</li>
 </ul>
+<p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
@@ -1517,9 +1517,9 @@ Exécutons ce code :</li>
 <ul>
 <li>ligne 5 : la variable <strong>[count]</strong> n’est connue que dans le bloc de code dans laquelle elle est déclarée (lignes 3-7) ;</li>
 <li>ligne 14 : la constante <strong>[count2]</strong> n’est connue que dans le bloc de code dans laquelle elle est déclarée (lignes 12-16) ;</li>
-<li>ligne 23 : la variable <strong>[count3]</strong> est connue en-dehors du bloc de code dans laquelle elle est déclarée (lignes 21-25) ;
-ESLint déclare les erreurs suivantes :</li>
+<li>ligne 23 : la variable <strong>[count3]</strong> est connue en-dehors du bloc de code dans laquelle elle est déclarée (lignes 21-25) ;</li>
 </ul>
+<p>ESLint déclare les erreurs suivantes :</p>
 <p><img src="images/100000000000053400000459582F975E.png" style="width:10.581cm;height:8.841cm;" alt="Image" /></p>
 <p>Pour ces raisons de portée de bloc, nous n’utiliserons par la suite que les mots clés <strong>[let]</strong> et <strong>[const]</strong>.</p>
 <h2 id="37-script-bases-07">3.7. script [bases-07]</h2>

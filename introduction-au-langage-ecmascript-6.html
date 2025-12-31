@@ -700,45 +700,41 @@
 <li>[<a href="https://tahe.developpez.com/tutoriels-cours/php7">Introduction au langage </a><a href="https://tahe.developpez.com/tutoriels-cours/php7"><strong><em>*PHP7</em></strong>*</a><a href="https://tahe.developpez.com/tutoriels-cours/php7"> par l’exemple</a>] ;</li>
 <li>[<a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6">Introduction au langage </a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"><strong><em>*ECMASCRIPT 6</em></strong>*</a><a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6"> par l’exemple</a>]. <strong>C’est le document présent</strong> ;</li>
 <li>[<a href="https://tahe.developpez.com/tutoriels-cours/vuejs">Introduction au framework </a><a href="https://tahe.developpez.com/tutoriels-cours/vuejs"><strong><em>*VUE.JS</em></strong>*</a><a href="https://tahe.developpez.com/tutoriels-cours/vuejs"> par l’exemple</a>] ;</li>
-<li>
-<p>[<a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs">Introduction au framework </a><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"><strong><em>*NUXT.JS</em></strong>*</a><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"> par l’exemple</a>] ;
-Ce sont tous des documents pour <strong>débutants</strong>. Les articles ont une suite logique mais <strong>sont faiblement couplés</strong> :</p>
-</li>
-<li>
-<p>le document [1] présente le langage PHP 7. Le lecteur seulement intéressé par le langage PHP et pas par le langage Javascript des articles suivants s’arrêtera là ;</p>
-</li>
+<li>[<a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs">Introduction au framework </a><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"><strong><em>*NUXT.JS</em></strong>*</a><a href="https://tahe.developpez.com/tutoriels-cours/nuxtjs"> par l’exemple</a>] ;</li>
+</ol>
+<p>Ce sont tous des documents pour <strong>débutants</strong>. Les articles ont une suite logique mais <strong>sont faiblement couplés</strong> :</p>
+<ul>
+<li>le document [1] présente le langage PHP 7. Le lecteur seulement intéressé par le langage PHP et pas par le langage Javascript des articles suivants s’arrêtera là ;</li>
 <li>les documents [2-4] visent à construire un client Javascript au serveur de calcul de l’impôt développé dans le document [1] ;</li>
 <li>les frameworks Javascript [vue.js] et [nuxt.js] des articles 3 et 4 nécessitent de connaître le Javascript des dernières versions d’ECMASCRIPT, celles de la version 6. Le document [2] est donc destiné à ceux qui ne connaissent pas cette version de Javascript. Il fait référence au serveur de calcul de l’impôt construit dans le document [1]. Le lecteur de [2] aura alors parfois besoin de se référer au document [1] ;</li>
 <li>une fois ECMASCRIPT 6 maîtrisé, on peut aborder le framework VUE.JS qui permet de construire des clients Javascript s’exécutant dans un navigateur en mode SPA (Single Page Application). C’est le document [3]. Il fait référence à la fois au serveur de calcul de l’impôt construit dans le document [1] et au code du client Javascript autonome construit en [2]. Le lecteur de [3] aura alors parfois besoin de se référer aux documents [1] et [2] ;</li>
-<li>
-<p>une fois VUE.JS maîtrisé, on peut aborder le framework NUXT.JS qui permet de construire des clients Javascript s’exécutant dans un navigateur en mode SSR (Server Side Rendered). Il fait référence à la fois au serveur de calcul de l’impôt construit dans le document [1], au code du client Javascript autonome construit en [2] ainsi qu’à l’application [vue.js] développée dans le document [3]. Le lecteur de [4] aura alors parfois besoin de se référer aux documents [1] [2] et [3] ;
-La dernière version du serveur de calcul de l’impôt développée dans le document [1] peut être améliorée de diverses manières :</p>
-</li>
-<li>
-<p>la version écrite est centrée sur le serveur. La tendance est désormais (juillet 2019) au client / serveur :</p>
-</li>
+<li>une fois VUE.JS maîtrisé, on peut aborder le framework NUXT.JS qui permet de construire des clients Javascript s’exécutant dans un navigateur en mode SSR (Server Side Rendered). Il fait référence à la fois au serveur de calcul de l’impôt construit dans le document [1], au code du client Javascript autonome construit en [2] ainsi qu’à l’application [vue.js] développée dans le document [3]. Le lecteur de [4] aura alors parfois besoin de se référer aux documents [1] [2] et [3] ;</li>
+</ul>
+<p>La dernière version du serveur de calcul de l’impôt développée dans le document [1] peut être améliorée de diverses manières :</p>
+<ul>
+<li>la version écrite est centrée sur le serveur. La tendance est désormais (juillet 2019) au client / serveur :</li>
 <li>le serveur fonctionne en service jSON ;</li>
 <li>une page statique ou non est le point d’entrée de l’application web. Cette page contient du HTML /CSS mais aussi du Javascript ;</li>
 <li>les autres pages de l’application web sont obtenues dynamiquement par le Javascript :</li>
 <li>la page HTML peut être obtenue par assemblage de fragments statiques, fournis par le même serveur qui a fourni la page d’accueil ou bien entièrement construite par le Javascript ;</li>
-<li>ces différentes pages affichent des données qui sont demandées au service jSON ;
-Ainsi le travail est réparti sur le client et le serveur. Le serveur ainsi déchargé peut servir davantage d’utilisateurs.</li>
-</ol>
+<li>ces différentes pages affichent des données qui sont demandées au service jSON ;</li>
+</ul>
+<p>Ainsi le travail est réparti sur le client et le serveur. Le serveur ainsi déchargé peut servir davantage d’utilisateurs.</p>
 <p>L’architecture correspondant à ce modèle est le suivant :</p>
 <p><img src="images/100000000000074A0000024541501B05.png" style="width:14.81cm;height:4.612cm;" alt="Image" /></p>
 <p><strong>JS</strong> : Javascript</p>
 <p>Le code javascript est client :</p>
 <ul>
 <li>d’un service de pages ou fragments statiques ou non ;</li>
-<li>d’un service jSON ;
-Le code Javascript est donc un client jSON et à ce titre peut être organisé en couches <strong>[UI, métier, dao]</strong> (UI : User Interface) comme l’ont été nos clients jSON écrits en PHP. Au final, le navigateur ne charge qu’une unique page, la page d’accueil. Toutes les autres sont obtenues et construites par le Javascript. On appelle ce type d’application <strong>SPA</strong> : <strong>S</strong>ingle <strong>P</strong>age <strong>A</strong>pplication ou encore <strong>APU</strong> : <strong>A</strong>pplication à <strong>P</strong>age <strong>U</strong>nique.</li>
+<li>d’un service jSON ;</li>
 </ul>
+<p>Le code Javascript est donc un client jSON et à ce titre peut être organisé en couches <strong>[UI, métier, dao]</strong> (UI : User Interface) comme l’ont été nos clients jSON écrits en PHP. Au final, le navigateur ne charge qu’une unique page, la page d’accueil. Toutes les autres sont obtenues et construites par le Javascript. On appelle ce type d’application <strong>SPA</strong> : <strong>S</strong>ingle <strong>P</strong>age <strong>A</strong>pplication ou encore <strong>APU</strong> : <strong>A</strong>pplication à <strong>P</strong>age <strong>U</strong>nique.</p>
 <p>Ce type d’application fait également partie des applications dites <strong>AJAX</strong> : <strong>A</strong>synchronous <strong>J</strong>avascript <strong>A</strong>nd <strong>X</strong>ML</p>
 <ul>
 <li><strong>Asynchronous</strong> : parce que les appels du client Javascript au serveur jSON sont asynchrones ;</li>
-<li><strong>XML</strong> : parce que XML était la technologie utilisée avant l’avènement du jSON. On a cependant gardé l’acronyme AJAX ;
-Nous allons étudier une telle architecture dans les chapitres à venir. Côté client, nous utiliserons le framework Javascript <strong>[Vue.js]</strong> <strong>[https://vuejs.org/]</strong> pour écrire le client Javascript du serveur jSON PHP que nous avons écrit dans le document [1].</li>
+<li><strong>XML</strong> : parce que XML était la technologie utilisée avant l’avènement du jSON. On a cependant gardé l’acronyme AJAX ;</li>
 </ul>
+<p>Nous allons étudier une telle architecture dans les chapitres à venir. Côté client, nous utiliserons le framework Javascript <strong>[Vue.js]</strong> <strong>[https://vuejs.org/]</strong> pour écrire le client Javascript du serveur jSON PHP que nous avons écrit dans le document [1].</p>
 <p><strong>[Vue.js]</strong> est un framework Javascript. Pour le comprendre, il faut maîtriser ce langage. Nous présentons dans ce document la norme ECMAScript 6 qui est la normalisation la plus récente (en 2019) de ce langage. On trouvera l’historique et le rôle d’ECMAScript sur Wikipedia <strong>[https://fr.wikipedia.org/wiki/ECMAScript]</strong>.</p>
 <p>Ce document propose une liste de <strong>scripts console</strong> Javascript dans différents domaines (structures du langage, accès aux bases de données, au réseau internet, programmation en couches, programmation par interfaces). Le document se termine avec deux applications :</p>
 <p><strong>Une application console</strong> qui sera un client du serveur de calcul de l’impôt construit dans le document [1]. Ce client aura la même architecture que celle du client console PHP construit dans le document [1] :</p>
@@ -746,9 +742,9 @@ Nous allons étudier une telle architecture dans les chapitres à venir. Côté 
 <ul>
 <li>les couches [7-9] seront celles du client Javascript s’exécutant dans une console ;</li>
 <li>les couches [1-4] sont celles du serveur PHP 7 construit dans le document [1] ;</li>
-<li>contrairement au client PHP console construit dans le document [1], il n’y aura pas d’interactions avec le système de fichiers local [6] ;
-On a là une application client / serveur où le client est une application console. Une seconde application sera écrite où le code des couches [7-9] <strong>sera porté dans un navigateur</strong>. Nous serons alors prêts à aborder les frameworks Javascript des navigateurs dans les documents [3] et [4].</li>
+<li>contrairement au client PHP console construit dans le document [1], il n’y aura pas d’interactions avec le système de fichiers local [6] ;</li>
 </ul>
+<p>On a là une application client / serveur où le client est une application console. Une seconde application sera écrite où le code des couches [7-9] <strong>sera porté dans un navigateur</strong>. Nous serons alors prêts à aborder les frameworks Javascript des navigateurs dans les documents [3] et [4].</p>
 <p>Les scripts de ce document sont commentés et leur exécution console reproduite. Des explications supplémentaires sont parfois fournies. Le document nécessite une lecture active : pour comprendre un script, il faut à la fois lire son code, ses commentaires et ses résultats d'exécution.</p>
 <p>Les exemples du document sont disponibles |<a href="https://tahe.developpez.com/tutoriels-cours/ecmascript6/documents/ecmascript6.rar"><strong><em>*ici</em></strong>*</a><strong>|</strong>.</p>
 <p>L’application serveur PHP 7 peut être testée |<a href="https://sergetahe.com/apps/impot/serveur-php7/"><strong><em>*ici</em></strong>*</a><strong>|</strong>.</p>

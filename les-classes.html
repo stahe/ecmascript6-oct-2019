@@ -845,9 +845,9 @@
 <li>lignes 9-12 : on donne de l’extérieur des propriétés à la fonction f ;</li>
 <li>ligne 14 : utilisation de la function (objet) f. Notez qu’on n’écrit pas <strong>[f()]</strong> mais simplement <strong>[f]</strong>. On a là la notation d’un objet ;</li>
 <li>lignes 17-22 : on définit une fonction <strong>[g]</strong> comme si c’était une classe avec propriétés et méthodes ;</li>
-<li>ligne 24 : la fonction <strong>[g]</strong> est instanciée par <strong>[new g()]</strong> ;
-<strong>Résultats de l’exécution</strong></li>
+<li>ligne 24 : la fonction <strong>[g]</strong> est instanciée par <strong>[new g()]</strong> ;</li>
 </ul>
+<p><strong>Résultats de l’exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;
@@ -954,9 +954,9 @@
 <li>ligne 2 : le mot clé <strong>[class]</strong> désigne une classe ;</li>
 <li>lignes 5-9 : le mot clé <strong>[constructor]</strong> désigne le constructeur de la classe. Il ne peut y en avoir qu’un au plus. Il sert à construire et initialiser une instance de la classe. Notez qu’il n’y a pas de déclaration des propriétés <strong>[nom, prénom, âge]</strong> ;</li>
 <li>lignes 11-36 : propriétés de la classe. On retrouve ici des choses déjà vues dans le paragraphe des objets 4, page 43. Seule la syntaxe diffère ;</li>
-<li>ligne 41 : création d’un objet de type <strong>[Personne]</strong>. A partir de maintenant l’objet <strong>[personne]</strong> s’utilise comme un objet littéral. <strong>[typeof (personne)]</strong> vaut « object » et l’expression <strong>[personne instanceof (Personne)]</strong> est vraie. Il est donc possible de connaître le type exact d’une instance de classe ;
-<strong>Résultats de l’exécution</strong></li>
+<li>ligne 41 : création d’un objet de type <strong>[Personne]</strong>. A partir de maintenant l’objet <strong>[personne]</strong> s’utilise comme un objet littéral. <strong>[typeof (personne)]</strong> vaut « object » et l’expression <strong>[personne instanceof (Personne)]</strong> est vraie. Il est donc possible de connaître le type exact d’une instance de classe ;</li>
 </ul>
+<p><strong>Résultats de l’exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-01.js&quot;
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>personne= {&quot;_nom&quot;:&quot;Poirot&quot;,&quot;_prénom&quot;:&quot;Hercule&quot;,&quot;_âge&quot;:66} object true
@@ -1043,9 +1043,9 @@
 <a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Personne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 39 : nous exportons la classe <strong>[Personne]</strong> pour que des scripts puissent l’importer ;
-Le script <strong>[class-02]</strong> crée une classe <strong>[Enseignant]</strong> dérivée de la classe <strong>[Personne]</strong> :</li>
+<li>ligne 39 : nous exportons la classe <strong>[Personne]</strong> pour que des scripts puissent l’importer ;</li>
 </ul>
+<p>Le script <strong>[class-02]</strong> crée une classe <strong>[Enseignant]</strong> dérivée de la classe <strong>[Personne]</strong> :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -1115,9 +1115,9 @@ Le script <strong>[class-02]</strong> crée une classe <strong>[Enseignant]</str
 <li>ligne 10 : on initialise la propriété <strong>[_discipline]</strong> qui lui appartient à la classe <strong>[Enseignant]</strong> ;</li>
 <li>lignes 14-19 : le getter et le setter de la propriété <strong>[_discipline]</strong> ;</li>
 <li>ligne 25 : on crée un objet de type <strong>[Enseignant]</strong> ;</li>
-<li>ligne 26 : on utilise la méthode <strong>[enseignant.toString()]</strong>. La classe <strong>[Enseignant]</strong> n’a pas cette méthode. C’est alors celle de sa classe parent qui est automatiquement utilisée. Cette méthode rend l’expression <strong>[JSON.stringify(this)]</strong> où <strong>[this]</strong> va être ici un objet <strong>[Enseignant]</strong> et non un objet <strong>[Personne]</strong>. C’est qu’on appelle en programmation objet, le polymorphisme des classes. Un grand mot pour Javascript qui n’est pas un langage orienté objets. Néanmoins, Javascript fait ici ce qu’on attend de lui : il affiche bien un enseignant ;
-Les résultats de l’exécution sont les suivants :</li>
+<li>ligne 26 : on utilise la méthode <strong>[enseignant.toString()]</strong>. La classe <strong>[Enseignant]</strong> n’a pas cette méthode. C’est alors celle de sa classe parent qui est automatiquement utilisée. Cette méthode rend l’expression <strong>[JSON.stringify(this)]</strong> où <strong>[this]</strong> va être ici un objet <strong>[Enseignant]</strong> et non un objet <strong>[Personne]</strong>. C’est qu’on appelle en programmation objet, le polymorphisme des classes. Un grand mot pour Javascript qui n’est pas un langage orienté objets. Néanmoins, Javascript fait ici ce qu’on attend de lui : il affiche bien un enseignant ;</li>
 </ul>
+<p>Les résultats de l’exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-02.js&quot;
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>enseignant= {&quot;_nom&quot;:&quot;Poirot&quot;,&quot;_prénom&quot;:&quot;Hercule&quot;,&quot;_âge&quot;:66,&quot;_discipline&quot;:&quot;détective&quot;} object true
@@ -1252,9 +1252,9 @@ Les résultats de l’exécution sont les suivants :</li>
 <a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="n">export</span> <span class="n">default</span> <span class="n">Enseignant</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 24 : la classe <strong>[Enseignant]</strong> est exportée pour que d’autres scripts puissent l’importer ;
-Le script <strong>[class-04]</strong> est le suivant :</li>
+<li>ligne 24 : la classe <strong>[Enseignant]</strong> est exportée pour que d’autres scripts puissent l’importer ;</li>
 </ul>
+<p>Le script <strong>[class-04]</strong> est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -1300,9 +1300,9 @@ Le script <strong>[class-04]</strong> est le suivant :</li>
 <ul>
 <li>ligne 6 : la fonction <strong>[show]</strong> attend un type <strong>[Personne]</strong> ou dérivé ;</li>
 <li>ligne 8 : on affiche la chaîne du paramètre et son type. On va trouver <strong>[object]</strong> ;</li>
-<li>lignes 10-16 : on est capable de savoir si c’est un type <strong>[Personne]</strong> ou un type <strong>[Enseignant]</strong>. Le code peut donc être adapté au type réel du paramètre ;
-Les résultats de l’exécution sont les suivants :</li>
+<li>lignes 10-16 : on est capable de savoir si c’est un type <strong>[Personne]</strong> ou un type <strong>[Enseignant]</strong>. Le code peut donc être adapté au type réel du paramètre ;</li>
 </ul>
+<p>Les résultats de l’exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
 <span class="normal"><a href="#__codelineno-11-3">3</a></span>
