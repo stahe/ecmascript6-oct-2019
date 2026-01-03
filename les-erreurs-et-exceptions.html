@@ -6,13 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Introduction au langage ECMASCRIPT6 par l'exemple">
       
-      
-        <meta name="author" content="Serge Tahé">
-      
-      
-        <link rel="canonical" href="https://stahe.github.io/ecmascript6-oct-2019/les-erreurs-et-exceptions.html">
       
       
         <link rel="prev" href="les-fonctions.html">
@@ -197,18 +191,6 @@
       
     
     
-      <div class="md-header__source">
-        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-      </div>
-    
   </nav>
   
 </header>
@@ -244,18 +226,6 @@
     </a>
     Introduction au langage ECMASCRIPT6 par l'exemple
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -760,16 +730,13 @@
                   
 
 
-  
-  
-
 
 <h1 id="9-les-erreurs-et-exceptions">9. Les erreurs et exceptions</h1>
-<p><img src="images/10000000000000ED000000BDBBC75AB1.png" style="width:2.511cm;height:2.001cm;" alt="Image" /></p>
+<p><img src="images/10000000000000ED000000BDBBC75AB1.png" style="width:2.511cm;" /></p>
 <p>Javascript n’a pas un système d’exceptions très évolué. Il offre néanmoins l’instruction <strong>[throw]</strong> qui permet de signaler une erreur ainsi que la structure try / catch / finally qui permet d’intercepter ces erreurs.</p>
 <h2 id="91-script-excep-01">9.1. script [excep-01]</h2>
 <p>Dans le script qui suit, nous allons afficher la date du moment sous la forme <strong>[heures:minutes:secondes:millisecondes]</strong>. Pour ce faire, nous allons utiliser une bibliothèques jS appelée <strong>[moment.js]</strong>. Nous l’installons, comme d’habitude, avec l’outil <strong>[npm]</strong> :</p>
-<p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" /></p>
+<p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;" /></p>
 <p>Le code du script est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -784,15 +751,23 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="o">...</span>
 </code></pre></div></td></tr></table></div>
 <p>Pour savoir comment écrire la ligne <strong>[import]</strong> de la ligne 4, on peut regarder la définition du module <strong>[moment]</strong> :</p>
-<p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" /></p>
+<p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;" /></p>
 <ul>
-<li>en <strong>[1-2]</strong>, on va à la définition du module ;</li>
-<li>en <strong>[3]</strong>, on a un fichier Typescript, pas Javascript. A l’exécution, ce fichier Typescript est compilé en fichier Javascript avant d’être utilisé ;</li>
-<li>en <strong>[4]</strong>, on cherche les instructions <strong>[export]</strong> (Ctrl-F) ;</li>
-<li>en <strong>[5]</strong>, l’instruction exporte l’objet <strong>[moment]</strong>. Celui-ci peut être importé en ES6 de la façon suivante :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">moment</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div></li>
+<li>
+<p>en <strong>[1-2]</strong>, on va à la définition du module ;</p>
+</li>
+<li>
+<p>en <strong>[3]</strong>, on a un fichier Typescript, pas Javascript. A l’exécution, ce fichier Typescript est compilé en fichier Javascript avant d’être utilisé ;</p>
+</li>
+<li>
+<p>en <strong>[4]</strong>, on cherche les instructions <strong>[export]</strong> (Ctrl-F) ;</p>
+</li>
+<li>
+<p>en <strong>[5]</strong>, l’instruction exporte l’objet <strong>[moment]</strong>. Celui-ci peut être importé en ES6 de la façon suivante :</p>
+</li>
 </ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">moment</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <p>On peut utiliser n’importe quel nom pour importer l’objet <strong>[moment]</strong>, par exemple :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">m</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
@@ -863,10 +838,18 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 4 : import de la bibliothèque <strong>[moment]</strong> ;</li>
-<li>le principe du script est de boucler 10 fois (ligne 7). A chaque tour de boucle, on récupère l’heure du moment sous la forme <strong>[heures:minutes:secondes:millisecondes]</strong> (lignes 8-13) ;</li>
-<li>si le nombre de millisecondes est pair, on lance un message d’erreur (lignes 19-22) ;</li>
-<li>il s’agit ici de comprendre le fonctionnement du try / catch / finally</li>
+<li>
+<p>ligne 4 : import de la bibliothèque <strong>[moment]</strong> ;</p>
+</li>
+<li>
+<p>le principe du script est de boucler 10 fois (ligne 7). A chaque tour de boucle, on récupère l’heure du moment sous la forme <strong>[heures:minutes:secondes:millisecondes]</strong> (lignes 8-13) ;</p>
+</li>
+<li>
+<p>si le nombre de millisecondes est pair, on lance un message d’erreur (lignes 19-22) ;</p>
+</li>
+<li>
+<p>il s’agit ici de comprendre le fonctionnement du try / catch / finally</p>
+</li>
 </ul>
 <p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
@@ -1032,8 +1015,12 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 35, 44 : <strong>[Error]</strong> est une classe Javascript dont le constructeur admet comme 1er paramètre facultatif un message d’erreur. Ce message peut être récupéré dans la propriété <strong>[Error.message]</strong> (ligne 47) ;</li>
-<li>il existe d’autres classes que <strong>[Error]</strong> pour signaler une erreur : [EvalError, InternalError, RangeError, ReferenceError, SyntaxError,  TypeError, URIError) ;</li>
+<li>
+<p>lignes 35, 44 : <strong>[Error]</strong> est une classe Javascript dont le constructeur admet comme 1er paramètre facultatif un message d’erreur. Ce message peut être récupéré dans la propriété <strong>[Error.message]</strong> (ligne 47) ;</p>
+</li>
+<li>
+<p>il existe d’autres classes que <strong>[Error]</strong> pour signaler une erreur : [EvalError, InternalError, RangeError, ReferenceError, SyntaxError,  TypeError, URIError) ;</p>
+</li>
 </ul>
 <p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>

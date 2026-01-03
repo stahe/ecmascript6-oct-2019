@@ -6,13 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Introduction au langage ECMASCRIPT6 par l'exemple">
       
-      
-        <meta name="author" content="Serge Tahé">
-      
-      
-        <link rel="canonical" href="https://stahe.github.io/ecmascript6-oct-2019/les-classes.html">
       
       
         <link rel="prev" href="les-fonctions-http-de-javascript.html">
@@ -197,18 +191,6 @@
       
     
     
-      <div class="md-header__source">
-        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-      </div>
-    
   </nav>
   
 </header>
@@ -244,18 +226,6 @@
     </a>
     Introduction au langage ECMASCRIPT6 par l'exemple
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -782,12 +752,9 @@
                   
 
 
-  
-  
-
 
 <h1 id="13-les-classes">13. Les classes</h1>
-<p><img src="images/10000000000000EF000001677C3D49DE.png" style="width:2.851cm;height:4.271cm;" alt="Image" /></p>
+<p><img src="images/10000000000000EF000001677C3D49DE.png" style="width:2.851cm;" /></p>
 <p>Nous introduisons ici les classes d’ECMAScript 6. Tout d’abord nous montrons que les fonctions peuvent être déjà utilisées comme des classes.</p>
 <h2 id="131-script-class-00">13.1. script [class-00]</h2>
 <p>Le script suivant montre une utilisation inhabituelle de fonctions. On les utilise ici comme des objets.</p>
@@ -841,11 +808,21 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 5-7 : le corps de la fonction f ne définit aucune propriété ;</li>
-<li>lignes 9-12 : on donne de l’extérieur des propriétés à la fonction f ;</li>
-<li>ligne 14 : utilisation de la function (objet) f. Notez qu’on n’écrit pas <strong>[f()]</strong> mais simplement <strong>[f]</strong>. On a là la notation d’un objet ;</li>
-<li>lignes 17-22 : on définit une fonction <strong>[g]</strong> comme si c’était une classe avec propriétés et méthodes ;</li>
-<li>ligne 24 : la fonction <strong>[g]</strong> est instanciée par <strong>[new g()]</strong> ;</li>
+<li>
+<p>lignes 5-7 : le corps de la fonction f ne définit aucune propriété ;</p>
+</li>
+<li>
+<p>lignes 9-12 : on donne de l’extérieur des propriétés à la fonction f ;</p>
+</li>
+<li>
+<p>ligne 14 : utilisation de la function (objet) f. Notez qu’on n’écrit pas <strong>[f()]</strong> mais simplement <strong>[f]</strong>. On a là la notation d’un objet ;</p>
+</li>
+<li>
+<p>lignes 17-22 : on définit une fonction <strong>[g]</strong> comme si c’était une classe avec propriétés et méthodes ;</p>
+</li>
+<li>
+<p>ligne 24 : la fonction <strong>[g]</strong> est instanciée par <strong>[new g()]</strong> ;</p>
+</li>
 </ul>
 <p><strong>Résultats de l’exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -951,10 +928,18 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 2 : le mot clé <strong>[class]</strong> désigne une classe ;</li>
-<li>lignes 5-9 : le mot clé <strong>[constructor]</strong> désigne le constructeur de la classe. Il ne peut y en avoir qu’un au plus. Il sert à construire et initialiser une instance de la classe. Notez qu’il n’y a pas de déclaration des propriétés <strong>[nom, prénom, âge]</strong> ;</li>
-<li>lignes 11-36 : propriétés de la classe. On retrouve ici des choses déjà vues dans le paragraphe des objets 4, page 43. Seule la syntaxe diffère ;</li>
-<li>ligne 41 : création d’un objet de type <strong>[Personne]</strong>. A partir de maintenant l’objet <strong>[personne]</strong> s’utilise comme un objet littéral. <strong>[typeof (personne)]</strong> vaut « object » et l’expression <strong>[personne instanceof (Personne)]</strong> est vraie. Il est donc possible de connaître le type exact d’une instance de classe ;</li>
+<li>
+<p>ligne 2 : le mot clé <strong>[class]</strong> désigne une classe ;</p>
+</li>
+<li>
+<p>lignes 5-9 : le mot clé <strong>[constructor]</strong> désigne le constructeur de la classe. Il ne peut y en avoir qu’un au plus. Il sert à construire et initialiser une instance de la classe. Notez qu’il n’y a pas de déclaration des propriétés <strong>[nom, prénom, âge]</strong> ;</p>
+</li>
+<li>
+<p>lignes 11-36 : propriétés de la classe. On retrouve ici des choses déjà vues dans le paragraphe des objets 4, page . Seule la syntaxe diffère ;</p>
+</li>
+<li>
+<p>ligne 41 : création d’un objet de type <strong>[Personne]</strong>. A partir de maintenant l’objet <strong>[personne]</strong> s’utilise comme un objet littéral. <strong>[typeof (personne)]</strong> vaut « object » et l’expression <strong>[personne instanceof (Personne)]</strong> est vraie. Il est donc possible de connaître le type exact d’une instance de classe ;</p>
+</li>
 </ul>
 <p><strong>Résultats de l’exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -1108,14 +1093,30 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 2 : on importe la classe <strong>[Personne]</strong> à partir du module <strong>[Personne.js]</strong> qui se trouve dans le même dossier que <strong>[class-02]</strong> ;</li>
-<li>ligne 5 : la classe <strong>[Enseignant]</strong> étend (hérite de) la classe <strong>[Personne]</strong> avec le mot clé <strong>[extends]</strong> : elle lui ajoute une propriété <strong>[_discipline]</strong> avec les getter / setter qui vont avec ;</li>
-<li>lignes 8-11 : le constructeur de la classe <strong>[Enseignant]</strong> reçoit quatre valeurs pour initialiser les quatre propriétés de la classe ;</li>
-<li>ligne 9 : le mot clé <strong>[super]</strong> appelle le constructeur de la classe parent <strong>[Personne]</strong> qui va donc initialiser les propriétés <strong>[_nom, _prénom, _âge]</strong> ;</li>
-<li>ligne 10 : on initialise la propriété <strong>[_discipline]</strong> qui lui appartient à la classe <strong>[Enseignant]</strong> ;</li>
-<li>lignes 14-19 : le getter et le setter de la propriété <strong>[_discipline]</strong> ;</li>
-<li>ligne 25 : on crée un objet de type <strong>[Enseignant]</strong> ;</li>
-<li>ligne 26 : on utilise la méthode <strong>[enseignant.toString()]</strong>. La classe <strong>[Enseignant]</strong> n’a pas cette méthode. C’est alors celle de sa classe parent qui est automatiquement utilisée. Cette méthode rend l’expression <strong>[JSON.stringify(this)]</strong> où <strong>[this]</strong> va être ici un objet <strong>[Enseignant]</strong> et non un objet <strong>[Personne]</strong>. C’est qu’on appelle en programmation objet, le polymorphisme des classes. Un grand mot pour Javascript qui n’est pas un langage orienté objets. Néanmoins, Javascript fait ici ce qu’on attend de lui : il affiche bien un enseignant ;</li>
+<li>
+<p>ligne 2 : on importe la classe <strong>[Personne]</strong> à partir du module <strong>[Personne.js]</strong> qui se trouve dans le même dossier que <strong>[class-02]</strong> ;</p>
+</li>
+<li>
+<p>ligne 5 : la classe <strong>[Enseignant]</strong> étend (hérite de) la classe <strong>[Personne]</strong> avec le mot clé <strong>[extends]</strong> : elle lui ajoute une propriété <strong>[_discipline]</strong> avec les getter / setter qui vont avec ;</p>
+</li>
+<li>
+<p>lignes 8-11 : le constructeur de la classe <strong>[Enseignant]</strong> reçoit quatre valeurs pour initialiser les quatre propriétés de la classe ;</p>
+</li>
+<li>
+<p>ligne 9 : le mot clé <strong>[super]</strong> appelle le constructeur de la classe parent <strong>[Personne]</strong> qui va donc initialiser les propriétés <strong>[_nom, _prénom, _âge]</strong> ;</p>
+</li>
+<li>
+<p>ligne 10 : on initialise la propriété <strong>[_discipline]</strong> qui lui appartient à la classe <strong>[Enseignant]</strong> ;</p>
+</li>
+<li>
+<p>lignes 14-19 : le getter et le setter de la propriété <strong>[_discipline]</strong> ;</p>
+</li>
+<li>
+<p>ligne 25 : on crée un objet de type <strong>[Enseignant]</strong> ;</p>
+</li>
+<li>
+<p>ligne 26 : on utilise la méthode <strong>[enseignant.toString()]</strong>. La classe <strong>[Enseignant]</strong> n’a pas cette méthode. C’est alors celle de sa classe parent qui est automatiquement utilisée. Cette méthode rend l’expression <strong>[JSON.stringify(this)]</strong> où <strong>[this]</strong> va être ici un objet <strong>[Enseignant]</strong> et non un objet <strong>[Personne]</strong>. C’est qu’on appelle en programmation objet, le polymorphisme des classes. Un grand mot pour Javascript qui n’est pas un langage orienté objets. Néanmoins, Javascript fait ici ce qu’on attend de lui : il affiche bien un enseignant ;</p>
+</li>
 </ul>
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
@@ -1298,9 +1299,15 @@
 <a id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="n">show</span><span class="p">(</span><span class="n">new</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">&quot;Marple&quot;</span><span class="p">,</span> <span class="s2">&quot;Miss&quot;</span><span class="p">,</span> <span class="mi">70</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 6 : la fonction <strong>[show]</strong> attend un type <strong>[Personne]</strong> ou dérivé ;</li>
-<li>ligne 8 : on affiche la chaîne du paramètre et son type. On va trouver <strong>[object]</strong> ;</li>
-<li>lignes 10-16 : on est capable de savoir si c’est un type <strong>[Personne]</strong> ou un type <strong>[Enseignant]</strong>. Le code peut donc être adapté au type réel du paramètre ;</li>
+<li>
+<p>ligne 6 : la fonction <strong>[show]</strong> attend un type <strong>[Personne]</strong> ou dérivé ;</p>
+</li>
+<li>
+<p>ligne 8 : on affiche la chaîne du paramètre et son type. On va trouver <strong>[object]</strong> ;</p>
+</li>
+<li>
+<p>lignes 10-16 : on est capable de savoir si c’est un type <strong>[Personne]</strong> ou un type <strong>[Enseignant]</strong>. Le code peut donc être adapté au type réel du paramètre ;</p>
+</li>
 </ul>
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
