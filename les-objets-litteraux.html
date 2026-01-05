@@ -6,13 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Introduction au langage Java et à l'écosystème Spring au travers d'une étude de cas">
+        <meta name="description" content="Introduction au langage ECMASCRIPT6 par l'exemple">
       
       
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/java-spring-dec-2015/les-objets-litteraux.html">
+        <link rel="canonical" href="https://stahe.github.io/ecmascript6-oct-2019/les-objets-litteraux.html">
       
       
         <link rel="prev" href="les-tableaux.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>5. Les objets littéraux - Introduction au langage Java et à l'écosystème Spring au travers d'une étude de cas</title>
+        <title>5. Les objets littéraux - Introduction au langage ECMASCRIPT6 par l'exemple</title>
       
     
     
@@ -60,6 +60,20 @@
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBZC3JVJNR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // CORRECTION ICI : Utilisation de guillemets doubles pour entourer le titre qui contient une apostrophe
+    var siteName = "Introduction au langage ECMASCRIPT6 par l'exemple";
+
+    gtag('config', 'G-EBZC3JVJNR', {
+        'page_title': siteName
+    });
+    console.log("[GA Debug] page_title forced to: " + siteName);
+  </script>
 
     
     
@@ -98,7 +112,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Introduction au langage Java et à l&#39;écosystème Spring au travers d&#39;une étude de cas" class="md-header__button md-logo" aria-label="Introduction au langage Java et à l'écosystème Spring au travers d'une étude de cas" data-md-component="logo">
+    <a href="index.html" title="Introduction au langage ECMASCRIPT6 par l&#39;exemple" class="md-header__button md-logo" aria-label="Introduction au langage ECMASCRIPT6 par l'exemple" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -112,7 +126,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Introduction au langage Java et à l'écosystème Spring au travers d'une étude de cas
+            Introduction au langage ECMASCRIPT6 par l'exemple
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -198,7 +212,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/stahe/java-spring-dec-2015" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -236,17 +250,17 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Introduction au langage Java et à l&#39;écosystème Spring au travers d&#39;une étude de cas" class="md-nav__button md-logo" aria-label="Introduction au langage Java et à l'écosystème Spring au travers d'une étude de cas" data-md-component="logo">
+    <a href="index.html" title="Introduction au langage ECMASCRIPT6 par l&#39;exemple" class="md-nav__button md-logo" aria-label="Introduction au langage ECMASCRIPT6 par l'exemple" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Introduction au langage Java et à l'écosystème Spring au travers d'une étude de cas
+    Introduction au langage ECMASCRIPT6 par l'exemple
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/stahe/java-spring-dec-2015" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -856,26 +870,26 @@
 <span class="normal"><a href="#__codelineno-0-19">19</a></span>
 <span class="normal"><a href="#__codelineno-0-20">20</a></span>
 <span class="normal"><a href="#__codelineno-0-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">// un objet vide</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj1</span><span class="o">=</span><span class="p">{};</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">// on peut créer dynamiquement les propriétés de l&#39;objet</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nx">obj1</span><span class="p">.</span><span class="nx">prop1</span><span class="o">=</span><span class="s2">&quot;abcd&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;obj1=&#39;</span><span class="p">,</span><span class="nx">obj1</span><span class="p">);</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// autre propriété</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nx">obj1</span><span class="p">.</span><span class="nx">prop2</span><span class="o">=</span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">];</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;obj1=&quot;</span><span class="p">,</span><span class="nx">obj1</span><span class="p">);</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">// autre propriété avec une notation différente</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nx">obj1</span><span class="p">[</span><span class="s1">&#39;prop3&#39;</span><span class="p">]</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;obj1=&quot;</span><span class="p">,</span><span class="nx">obj1</span><span class="p">);</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1">// obj1 est une référence sur l&#39;objet (pointeur), pas l&#39;objet lui-même</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj2</span><span class="o">=</span><span class="nx">obj1</span><span class="p">;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="c1">// obj2 et obj1 pointent sur le même objet</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="nx">obj2</span><span class="p">.</span><span class="nx">prop1</span><span class="o">=</span><span class="s2">&quot;xyzt&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;obj1=&quot;</span><span class="p">,</span><span class="nx">obj1</span><span class="p">);</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;obj2=&quot;</span><span class="p">,</span><span class="nx">obj2</span><span class="p">);</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="c1">// les propriété peuvent être des variables</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="kd">const</span><span class="w"> </span><span class="nx">var1</span><span class="o">=</span><span class="s1">&#39;prop1&#39;</span><span class="p">;</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;prop1=&#39;</span><span class="p">,</span><span class="nx">obj1</span><span class="p">[</span><span class="nx">var1</span><span class="p">]);</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">//</span> <span class="n">un</span> <span class="n">objet</span> <span class="n">vide</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">const</span> <span class="n">obj1</span><span class="o">=</span><span class="p">{};</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="o">//</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">créer</span> <span class="n">dynamiquement</span> <span class="n">les</span> <span class="n">propriétés</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;objet</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">obj1</span><span class="o">.</span><span class="n">prop1</span><span class="o">=</span><span class="s2">&quot;abcd&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;obj1=&#39;</span><span class="p">,</span><span class="n">obj1</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="o">//</span> <span class="n">autre</span> <span class="n">propriété</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">obj1</span><span class="o">.</span><span class="n">prop2</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;obj1=&quot;</span><span class="p">,</span><span class="n">obj1</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="o">//</span> <span class="n">autre</span> <span class="n">propriété</span> <span class="n">avec</span> <span class="n">une</span> <span class="n">notation</span> <span class="n">différente</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">obj1</span><span class="p">[</span><span class="s1">&#39;prop3&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">true</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;obj1=&quot;</span><span class="p">,</span><span class="n">obj1</span><span class="p">);</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="o">//</span> <span class="n">obj1</span> <span class="n">est</span> <span class="n">une</span> <span class="n">référence</span> <span class="n">sur</span> <span class="n">l</span><span class="s1">&#39;objet (pointeur), pas l&#39;</span><span class="n">objet</span> <span class="n">lui</span><span class="o">-</span><span class="n">même</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="n">const</span> <span class="n">obj2</span><span class="o">=</span><span class="n">obj1</span><span class="p">;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="o">//</span> <span class="n">obj2</span> <span class="n">et</span> <span class="n">obj1</span> <span class="n">pointent</span> <span class="n">sur</span> <span class="n">le</span> <span class="n">même</span> <span class="n">objet</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">obj2</span><span class="o">.</span><span class="n">prop1</span><span class="o">=</span><span class="s2">&quot;xyzt&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;obj1=&quot;</span><span class="p">,</span><span class="n">obj1</span><span class="p">);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;obj2=&quot;</span><span class="p">,</span><span class="n">obj2</span><span class="p">);</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="o">//</span> <span class="n">les</span> <span class="n">propriété</span> <span class="n">peuvent</span> <span class="n">être</span> <span class="n">des</span> <span class="n">variables</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="n">const</span> <span class="n">var1</span><span class="o">=</span><span class="s1">&#39;prop1&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;prop1=&#39;</span><span class="p">,</span><span class="n">obj1</span><span class="p">[</span><span class="n">var1</span><span class="p">]);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -884,13 +898,13 @@
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-01.js&quot;
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>obj1=[object Object]
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>obj1= { prop1: &#39;abcd&#39;, prop2: [ 1, 2, 3 ] }
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>obj1= { prop1: &#39;abcd&#39;, prop2: [ 1, 2, 3 ], prop3: true }
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>obj1= { prop1: &#39;xyzt&#39;, prop2: [ 1, 2, 3 ], prop3: true }
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>obj2= { prop1: &#39;xyzt&#39;, prop2: [ 1, 2, 3 ], prop3: true }
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>prop1= xyzt
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="s2">&quot;c:\Temp</span><span class="se">\1</span><span class="s2">9-09-01\javascript\objets\obj-01.js&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">obj1</span><span class="o">=</span><span class="p">[</span><span class="nb">object</span> <span class="n">Object</span><span class="p">]</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">obj1</span><span class="o">=</span> <span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span> <span class="p">}</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">obj1</span><span class="o">=</span> <span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="s1">&#39;abcd&#39;</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">],</span> <span class="n">prop3</span><span class="p">:</span> <span class="n">true</span> <span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">obj1</span><span class="o">=</span> <span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="s1">&#39;xyzt&#39;</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">],</span> <span class="n">prop3</span><span class="p">:</span> <span class="n">true</span> <span class="p">}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">obj2</span><span class="o">=</span> <span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="s1">&#39;xyzt&#39;</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">],</span> <span class="n">prop3</span><span class="p">:</span> <span class="n">true</span> <span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">prop1</span><span class="o">=</span> <span class="n">xyzt</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
@@ -929,40 +943,40 @@
 <span class="normal"><a href="#__codelineno-2-26">26</a></span>
 <span class="normal"><a href="#__codelineno-2-27">27</a></span>
 <span class="normal"><a href="#__codelineno-2-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1">// un objet à plusieurs niveaux</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;martin&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">  </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span><span class="nx">père</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;paul&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">  </span><span class="nx">mère</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;micheline&quot;</span><span class="p">,</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="o">//</span> <span class="n">un</span> <span class="n">objet</span> <span class="n">à</span> <span class="n">plusieurs</span> <span class="n">niveaux</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">const</span> <span class="n">personne</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>  <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;martin&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>  <span class="n">âge</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>  <span class="n">père</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;paul&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="n">âge</span><span class="p">:</span> <span class="mi">45</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>  <span class="p">},</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>  <span class="n">mère</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>    <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;micheline&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="n">âge</span><span class="p">:</span> <span class="mi">42</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>  <span class="p">}</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="p">}</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="c1">// accès aux propriétés</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;prénom personne=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">prénom</span><span class="p">);</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;prénom mère=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">mère</span><span class="p">.</span><span class="nx">prénom</span><span class="p">);</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="nx">personne</span><span class="p">.</span><span class="nx">mère</span><span class="p">.</span><span class="nx">âge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">40</span><span class="p">;</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;âge mère=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">mère</span><span class="p">.</span><span class="nx">âge</span><span class="p">);</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="c1">// console.log sait afficher des objets</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;personne=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">);</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;mère=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">mère</span><span class="p">);</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="c1">// on peut aussi afficher la chaîne jSON de l&#39;objet</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="kd">let</span><span class="w"> </span><span class="nx">json</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">personne</span><span class="p">);</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;jSON=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">json</span><span class="p">);</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="c1">// on peut relire le jSON</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="kd">let</span><span class="w"> </span><span class="nx">personne2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;père=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne2</span><span class="p">.</span><span class="nx">père</span><span class="p">);</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="o">//</span> <span class="n">accès</span> <span class="n">aux</span> <span class="n">propriétés</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;prénom personne=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="o">.</span><span class="n">prénom</span><span class="p">);</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;prénom mère=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="o">.</span><span class="n">mère</span><span class="o">.</span><span class="n">prénom</span><span class="p">);</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="n">personne</span><span class="o">.</span><span class="n">mère</span><span class="o">.</span><span class="n">âge</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;âge mère=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="o">.</span><span class="n">mère</span><span class="o">.</span><span class="n">âge</span><span class="p">);</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="o">//</span> <span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="n">sait</span> <span class="n">afficher</span> <span class="n">des</span> <span class="n">objets</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;personne=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="p">);</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;mère=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="o">.</span><span class="n">mère</span><span class="p">);</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="o">//</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">aussi</span> <span class="n">afficher</span> <span class="n">la</span> <span class="n">chaîne</span> <span class="n">jSON</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;objet</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="n">let</span> <span class="n">json</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">personne</span><span class="p">);</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;jSON=&quot;</span><span class="p">,</span> <span class="n">json</span><span class="p">);</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="o">//</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">relire</span> <span class="n">le</span> <span class="n">jSON</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="n">let</span> <span class="n">personne2</span> <span class="o">=</span> <span class="n">JSON</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;père=&quot;</span><span class="p">,</span> <span class="n">personne2</span><span class="o">.</span><span class="n">père</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>ligne 24 : transformation d’un objet Javascript en chaîne jSON ;</li>
-<li>ligne 27 : transformation d’une chaîne jSON en objet Javascript ;</li>
+<li>ligne 27 : transformation d’une chaîne jSON en objet Javascript ;
+<strong>Exécution</strong></li>
 </ul>
-<p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -973,17 +987,17 @@
 <span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-02.js&quot;
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>prénom personne= martin
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>prénom mère= micheline
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>âge mère= 40
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>personne= { &#39;prénom&#39;: &#39;martin&#39;,
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>&#39;âge&#39;: 12,
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>&#39;père&#39;: { &#39;prénom&#39;: &#39;paul&#39;, &#39;âge&#39;: 45 },
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>&#39;mère&#39;: { &#39;prénom&#39;: &#39;micheline&#39;, &#39;âge&#39;: 40 } }
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>mère= { &#39;prénom&#39;: &#39;micheline&#39;, &#39;âge&#39;: 40 }
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>jSON= {&quot;prénom&quot;:&quot;martin&quot;,&quot;âge&quot;:12,&quot;père&quot;:{&quot;prénom&quot;:&quot;paul&quot;,&quot;âge&quot;:45},&quot;mère&quot;:{&quot;prénom&quot;:&quot;micheline&quot;,&quot;âge&quot;:40}}
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>père= { &#39;prénom&#39;: &#39;paul&#39;, &#39;âge&#39;: 45 }
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="s2">&quot;c:\Temp</span><span class="se">\1</span><span class="s2">9-09-01\javascript\objets\obj-02.js&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">prénom</span> <span class="n">personne</span><span class="o">=</span> <span class="n">martin</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">prénom</span> <span class="n">mère</span><span class="o">=</span> <span class="n">micheline</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">âge</span> <span class="n">mère</span><span class="o">=</span> <span class="mi">40</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">personne</span><span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;martin&#39;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="s1">&#39;âge&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="s1">&#39;père&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;paul&#39;</span><span class="p">,</span> <span class="s1">&#39;âge&#39;</span><span class="p">:</span> <span class="mi">45</span> <span class="p">},</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="s1">&#39;mère&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;micheline&#39;</span><span class="p">,</span> <span class="s1">&#39;âge&#39;</span><span class="p">:</span> <span class="mi">40</span> <span class="p">}</span> <span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">mère</span><span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;micheline&#39;</span><span class="p">,</span> <span class="s1">&#39;âge&#39;</span><span class="p">:</span> <span class="mi">40</span> <span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">jSON</span><span class="o">=</span> <span class="p">{</span><span class="s2">&quot;prénom&quot;</span><span class="p">:</span><span class="s2">&quot;martin&quot;</span><span class="p">,</span><span class="s2">&quot;âge&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;père&quot;</span><span class="p">:{</span><span class="s2">&quot;prénom&quot;</span><span class="p">:</span><span class="s2">&quot;paul&quot;</span><span class="p">,</span><span class="s2">&quot;âge&quot;</span><span class="p">:</span><span class="mi">45</span><span class="p">},</span><span class="s2">&quot;mère&quot;</span><span class="p">:{</span><span class="s2">&quot;prénom&quot;</span><span class="p">:</span><span class="s2">&quot;micheline&quot;</span><span class="p">,</span><span class="s2">&quot;âge&quot;</span><span class="p">:</span><span class="mi">40</span><span class="p">}}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">père</span><span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;paul&#39;</span><span class="p">,</span> <span class="s1">&#39;âge&#39;</span><span class="p">:</span> <span class="mi">45</span> <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
@@ -1014,28 +1028,28 @@
 <span class="normal"><a href="#__codelineno-4-21">21</a></span>
 <span class="normal"><a href="#__codelineno-4-22">22</a></span>
 <span class="normal"><a href="#__codelineno-4-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1">// getters et setters d&#39;un objet</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="c1">// getter</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">nom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;getter nom&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_nom</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="c1">// setter</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="nx">set</span><span class="w"> </span><span class="nx">nom</span><span class="p">(</span><span class="nx">unNom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;setter nom&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">unNom</span><span class="p">;</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="o">//</span> <span class="n">getters</span> <span class="n">et</span> <span class="n">setters</span> <span class="n">d</span><span class="s1">&#39;un objet</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">const</span> <span class="n">personne</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>  <span class="o">//</span> <span class="n">getter</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>  <span class="n">get</span> <span class="n">nom</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;getter nom&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">_nom</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>  <span class="p">},</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>  <span class="o">//</span> <span class="n">setter</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>  <span class="nb">set</span> <span class="n">nom</span><span class="p">(</span><span class="n">unNom</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;setter nom&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>    <span class="n">this</span><span class="o">.</span><span class="n">_nom</span> <span class="o">=</span> <span class="n">unNom</span><span class="p">;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>  <span class="p">}</span>
 <a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="p">};</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="c1">// setter</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="nx">personne</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hercule&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="c1">// getter</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">personne</span><span class="p">.</span><span class="nx">nom</span><span class="p">);</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="c1">// l&#39;objet lui-même</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;personne=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">);</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="c1">// ça n&#39;empêche pas d&#39;accéder à la propriété [_nom] directement</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="nx">personne</span><span class="p">.</span><span class="nx">_nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;xyz&quot;</span><span class="p">;</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;personne=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">);</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="o">//</span> <span class="n">setter</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="n">personne</span><span class="o">.</span><span class="n">nom</span> <span class="o">=</span> <span class="s2">&quot;Hercule&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="o">//</span> <span class="n">getter</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">personne</span><span class="o">.</span><span class="n">nom</span><span class="p">);</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="o">//</span> <span class="n">l</span><span class="s1">&#39;objet lui-même</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;personne=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="p">);</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="o">//</span> <span class="n">ça</span> <span class="n">n</span><span class="s1">&#39;empêche pas d&#39;</span><span class="n">accéder</span> <span class="n">à</span> <span class="n">la</span> <span class="n">propriété</span> <span class="p">[</span><span class="n">_nom</span><span class="p">]</span> <span class="n">directement</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="n">personne</span><span class="o">.</span><span class="n">_nom</span> <span class="o">=</span> <span class="s2">&quot;xyz&quot;</span><span class="p">;</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;personne=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
@@ -1044,20 +1058,20 @@
 <li>lignes 10-13 : définition d’un <strong>[setter]</strong>, une fonction qui affecte généralement la valeur reçue à une propriété de l’objet mais qui en fait peut faire n’importe quoi. Le mot clé <strong>[function]</strong> est remplacé par le mot clé <strong>[set]</strong>. Le <strong>[setter]</strong> peut être utilisé pour vérifier la validité de la valeur passée en paramètre au <strong>[setter]</strong> ;</li>
 <li>ligne 16 : la fonction <strong>[set nom]</strong> va être appelée implicitement ;</li>
 <li>ligne 18 : la fonction <strong>[get nom]</strong> va être appelée implicitement ;</li>
-<li>ligne 22 : montre que l’utilisation des getter / setter dépend de la bonne volonté du développeur. Si celui-ci connaît le nom de la propriété gérée par ceux-ci, il peut y accéder directement ;</li>
+<li>ligne 22 : montre que l’utilisation des getter / setter dépend de la bonne volonté du développeur. Si celui-ci connaît le nom de la propriété gérée par ceux-ci, il peut y accéder directement ;
+<strong>Exécution</strong></li>
 </ul>
-<p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-03.js&quot;
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>setter nom
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>getter nom
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>Hercule
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>personne= { nom: [Getter/Setter], _nom: &#39;Hercule&#39; }
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>personne= { nom: [Getter/Setter], _nom: &#39;xyz&#39; }
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="s2">&quot;c:\Temp</span><span class="se">\1</span><span class="s2">9-09-01\javascript\objets\obj-03.js&quot;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">setter</span> <span class="n">nom</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">getter</span> <span class="n">nom</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">Hercule</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">personne</span><span class="o">=</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="p">[</span><span class="n">Getter</span><span class="o">/</span><span class="n">Setter</span><span class="p">],</span> <span class="n">_nom</span><span class="p">:</span> <span class="s1">&#39;Hercule&#39;</span> <span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">personne</span><span class="o">=</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="p">[</span><span class="n">Getter</span><span class="o">/</span><span class="n">Setter</span><span class="p">],</span> <span class="n">_nom</span><span class="p">:</span> <span class="s1">&#39;xyz&#39;</span> <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>On notera lignes 5-6, que <strong>[console.log]</strong> affiche également les propriétés qui sont des fonctions.</p>
 <h2 id="54-script-obj-04">5.4. script [obj-04]</h2>
@@ -1089,43 +1103,43 @@
 <span class="normal"><a href="#__codelineno-6-25">25</a></span>
 <span class="normal"><a href="#__codelineno-6-26">26</a></span>
 <span class="normal"><a href="#__codelineno-6-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1">// les noms des propriétés d&#39;un objet  peuvent être littéraux [nom], être entourés d&#39;apostrophes [&#39;nom&#39;]</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1">// ou de guillements [&quot;nom&quot;]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="o">//</span> <span class="n">les</span> <span class="n">noms</span> <span class="n">des</span> <span class="n">propriétés</span> <span class="n">d</span><span class="s1">&#39;un objet  peuvent être littéraux [nom], être entourés d&#39;</span><span class="n">apostrophes</span> <span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">]</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="o">//</span> <span class="n">ou</span> <span class="n">de</span> <span class="n">guillements</span> <span class="p">[</span><span class="s2">&quot;nom&quot;</span><span class="p">]</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="c1">// littéraux</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;martin&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jean&quot;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="o">//</span> <span class="n">littéraux</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">const</span> <span class="n">obj1</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>  <span class="n">nom</span><span class="p">:</span> <span class="s2">&quot;martin&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>  <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;jean&quot;</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">};</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;prénom=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">obj1</span><span class="p">.</span><span class="nx">prénom</span><span class="p">);</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;prénom=&quot;</span><span class="p">,</span> <span class="n">obj1</span><span class="o">.</span><span class="n">prénom</span><span class="p">);</span>
 <a id="__codelineno-6-11" name="__codelineno-6-11"></a>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="c1">// entourés d&#39;apostrophes</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">  </span><span class="s1">&#39;nom&#39;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;martin&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">  </span><span class="s1">&#39;prénom&#39;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jean&quot;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="o">//</span> <span class="n">entourés</span> <span class="n">d</span><span class="s1">&#39;apostrophes</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="n">const</span> <span class="n">obj2</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>  <span class="s1">&#39;nom&#39;</span><span class="p">:</span> <span class="s2">&quot;martin&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>  <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s2">&quot;jean&quot;</span>
 <a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="p">};</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;nom=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">obj2</span><span class="p">.</span><span class="nx">nom</span><span class="p">);</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;nom=&quot;</span><span class="p">,</span> <span class="n">obj2</span><span class="o">.</span><span class="n">nom</span><span class="p">);</span>
 <a id="__codelineno-6-18" name="__codelineno-6-18"></a>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="c1">// entourés de guillemets</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">  </span><span class="s2">&quot;nom&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;martin&quot;</span><span class="p">,</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">  </span><span class="s2">&quot;prénom&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jean&quot;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="o">//</span> <span class="n">entourés</span> <span class="n">de</span> <span class="n">guillemets</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="n">const</span> <span class="n">obj3</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a>  <span class="s2">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;martin&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a>  <span class="s2">&quot;prénom&quot;</span><span class="p">:</span> <span class="s2">&quot;jean&quot;</span>
 <a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="p">};</span>
 <a id="__codelineno-6-24" name="__codelineno-6-24"></a>
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="c1">// deux syntaxes possibles pour accéder à la propriété [nom]</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;nom=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">obj3</span><span class="p">.</span><span class="nx">nom</span><span class="p">);</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;nom=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">obj3</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">]);</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="o">//</span> <span class="n">deux</span> <span class="n">syntaxes</span> <span class="n">possibles</span> <span class="n">pour</span> <span class="n">accéder</span> <span class="n">à</span> <span class="n">la</span> <span class="n">propriété</span> <span class="p">[</span><span class="n">nom</span><span class="p">]</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;nom=&quot;</span><span class="p">,</span> <span class="n">obj3</span><span class="o">.</span><span class="n">nom</span><span class="p">);</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;nom=&quot;</span><span class="p">,</span> <span class="n">obj3</span><span class="p">[</span><span class="s1">&#39;nom&#39;</span><span class="p">]);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
 <span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-04.js&quot;
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>prénom= jean
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>nom= martin
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>nom= martin
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>nom= martin
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="s2">&quot;c:\Temp</span><span class="se">\1</span><span class="s2">9-09-01\javascript\objets\obj-04.js&quot;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">prénom</span><span class="o">=</span> <span class="n">jean</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">nom</span><span class="o">=</span> <span class="n">martin</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">nom</span><span class="o">=</span> <span class="n">martin</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">nom</span><span class="o">=</span> <span class="n">martin</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="55-script-obj-05">5.5. script [obj-05]</h2>
 <p>Le script montre que les propriétés d’un objet littéral peuvent être des fonctions. On est alors très proche de l’objet instance de classe, où on a des propriétés et des méthodes.</p>
@@ -1154,46 +1168,46 @@
 <span class="normal"><a href="#__codelineno-8-23">23</a></span>
 <span class="normal"><a href="#__codelineno-8-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="c1">// un objet peut avoir des propriétés de type [function]</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="c1">// propriétés</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;martin&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">  </span><span class="nx">père</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;paul&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">  </span><span class="nx">mère</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;micheline&quot;</span><span class="p">,</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">  </span><span class="c1">// méthode</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">  </span><span class="nx">toString</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="o">//</span> <span class="n">un</span> <span class="n">objet</span> <span class="n">peut</span> <span class="n">avoir</span> <span class="n">des</span> <span class="n">propriétés</span> <span class="n">de</span> <span class="nb">type</span> <span class="p">[</span><span class="n">function</span><span class="p">]</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">const</span> <span class="n">personne</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>  <span class="o">//</span> <span class="n">propriétés</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>  <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;martin&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>  <span class="n">âge</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>  <span class="n">père</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>    <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;paul&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="n">âge</span><span class="p">:</span> <span class="mi">45</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>  <span class="p">},</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>  <span class="n">mère</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>    <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;micheline&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a>    <span class="n">âge</span><span class="p">:</span> <span class="mi">42</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>  <span class="p">},</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>  <span class="o">//</span> <span class="n">méthode</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>  <span class="n">toString</span><span class="p">:</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>    <span class="k">return</span> <span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>  <span class="p">}</span>
 <a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="p">}</span>
 <a id="__codelineno-8-21" name="__codelineno-8-21"></a>
-<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="c1">// usage</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;personne=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">);</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;personne.toString=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="o">//</span> <span class="n">usage</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;personne=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="p">);</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;personne.toString=&quot;</span><span class="p">,</span> <span class="n">personne</span><span class="o">.</span><span class="n">toString</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 17-19 : une méthode interne à l’objet. Dans celle-ci, on accède aux propriétés de l’objet via le mot clé <strong>[this]</strong> (ligne 18). <strong>[this]</strong> désigne l’objet lui-même, <strong>[this.prénom]</strong>, la propriété <strong>[prénom]</strong> de celui-ci ;</li>
+<li>lignes 17-19 : une méthode interne à l’objet. Dans celle-ci, on accède aux propriétés de l’objet via le mot clé <strong>[this]</strong> (ligne 18). <strong>[this]</strong> désigne l’objet lui-même, <strong>[this.prénom]</strong>, la propriété <strong>[prénom]</strong> de celui-ci ;
+<strong>Exécution</strong></li>
 </ul>
-<p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
 <span class="normal"><a href="#__codelineno-9-5">5</a></span>
 <span class="normal"><a href="#__codelineno-9-6">6</a></span>
-<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-05.js&quot;
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>personne= { &#39;prénom&#39;: &#39;martin&#39;,
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>&#39;âge&#39;: 12,
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>&#39;père&#39;: { &#39;prénom&#39;: &#39;paul&#39;, &#39;âge&#39;: 45 },
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>&#39;mère&#39;: { &#39;prénom&#39;: &#39;micheline&#39;, &#39;âge&#39;: 42 },
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>toString: [Function: toString] }
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a>personne.toString= {&quot;prénom&quot;:&quot;martin&quot;,&quot;âge&quot;:12,&quot;père&quot;:{&quot;prénom&quot;:&quot;paul&quot;,&quot;âge&quot;:45},&quot;mère&quot;:{&quot;prénom&quot;:&quot;micheline&quot;,&quot;âge&quot;:42}}
+<span class="normal"><a href="#__codelineno-9-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="s2">&quot;c:\Temp</span><span class="se">\1</span><span class="s2">9-09-01\javascript\objets\obj-05.js&quot;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">personne</span><span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;martin&#39;</span><span class="p">,</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="s1">&#39;âge&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="s1">&#39;père&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;paul&#39;</span><span class="p">,</span> <span class="s1">&#39;âge&#39;</span><span class="p">:</span> <span class="mi">45</span> <span class="p">},</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="s1">&#39;mère&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;micheline&#39;</span><span class="p">,</span> <span class="s1">&#39;âge&#39;</span><span class="p">:</span> <span class="mi">42</span> <span class="p">},</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">toString</span><span class="p">:</span> <span class="p">[</span><span class="n">Function</span><span class="p">:</span> <span class="n">toString</span><span class="p">]</span> <span class="p">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="n">personne</span><span class="o">.</span><span class="n">toString</span><span class="o">=</span> <span class="p">{</span><span class="s2">&quot;prénom&quot;</span><span class="p">:</span><span class="s2">&quot;martin&quot;</span><span class="p">,</span><span class="s2">&quot;âge&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;père&quot;</span><span class="p">:{</span><span class="s2">&quot;prénom&quot;</span><span class="p">:</span><span class="s2">&quot;paul&quot;</span><span class="p">,</span><span class="s2">&quot;âge&quot;</span><span class="p">:</span><span class="mi">45</span><span class="p">},</span><span class="s2">&quot;mère&quot;</span><span class="p">:{</span><span class="s2">&quot;prénom&quot;</span><span class="p">:</span><span class="s2">&quot;micheline&quot;</span><span class="p">,</span><span class="s2">&quot;âge&quot;</span><span class="p">:</span><span class="mi">42</span><span class="p">}}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="56-script-obj-06">5.6. script [obj-06]</h2>
 <p>Ce script montre comment avoir accès aux propriétés d’un objet lorsqu’on ne connaît pas a priori le nom de celles-ci.</p>
@@ -1246,51 +1260,51 @@
 <span class="normal"><a href="#__codelineno-10-47">47</a></span>
 <span class="normal"><a href="#__codelineno-10-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="c1">// un objet peut avoir des propriétés de type [function]</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="c1">// propriétés</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;martin&quot;</span><span class="p">,</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">  </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">  </span><span class="nx">père</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;paul&quot;</span><span class="p">,</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">  </span><span class="nx">mère</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;micheline&quot;</span><span class="p">,</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">  </span><span class="c1">// méthode</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">  </span><span class="nx">toString</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="o">//</span> <span class="n">un</span> <span class="n">objet</span> <span class="n">peut</span> <span class="n">avoir</span> <span class="n">des</span> <span class="n">propriétés</span> <span class="n">de</span> <span class="nb">type</span> <span class="p">[</span><span class="n">function</span><span class="p">]</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">let</span> <span class="n">personne</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>  <span class="o">//</span> <span class="n">propriétés</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>  <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;martin&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>  <span class="n">âge</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>  <span class="n">père</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>    <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;paul&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>    <span class="n">âge</span><span class="p">:</span> <span class="mi">45</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>  <span class="p">},</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>  <span class="n">mère</span><span class="p">:</span> <span class="p">{</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a>    <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;micheline&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a>    <span class="n">âge</span><span class="p">:</span> <span class="mi">42</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a>  <span class="p">},</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a>  <span class="o">//</span> <span class="n">méthode</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a>  <span class="n">toString</span><span class="p">:</span> <span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a>    <span class="k">return</span> <span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a>  <span class="p">}</span>
 <a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="p">}</span>
 <a id="__codelineno-10-21" name="__codelineno-10-21"></a>
-<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="c1">// usage</span>
-<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">personne</span><span class="p">);</span>
-<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="c1">// propriétés</span>
-<a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-----------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">personne</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-27" name="__codelineno-10-27"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">personne</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-28" name="__codelineno-10-28"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">personne</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-<a id="__codelineno-10-29" name="__codelineno-10-29"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
-<a id="__codelineno-10-30" name="__codelineno-10-30"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="o">//</span> <span class="n">usage</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">personne</span><span class="p">);</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="o">//</span> <span class="n">propriétés</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;-----------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="k">for</span> <span class="p">(</span><span class="n">const</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">personne</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-10-27" name="__codelineno-10-27"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">personne</span><span class="o">.</span><span class="n">hasOwnProperty</span><span class="p">(</span><span class="n">key</span><span class="p">))</span> <span class="p">{</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28"></a>    <span class="n">const</span> <span class="n">element</span> <span class="o">=</span> <span class="n">personne</span><span class="p">[</span><span class="n">key</span><span class="p">];</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">);</span>
+<a id="__codelineno-10-30" name="__codelineno-10-30"></a>  <span class="p">}</span>
 <a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="p">}</span>
-<a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="c1">// pour échapper à l&#39;avertissement eslint (1)</span>
-<a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-----------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-10-34" name="__codelineno-10-34"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">personne</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-35" name="__codelineno-10-35"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">personne</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-36" name="__codelineno-10-36"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">personne</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-<a id="__codelineno-10-37" name="__codelineno-10-37"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
-<a id="__codelineno-10-38" name="__codelineno-10-38"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="o">//</span> <span class="n">pour</span> <span class="n">échapper</span> <span class="n">à</span> <span class="n">l</span><span class="s1">&#39;avertissement eslint (1)</span>
+<a id="__codelineno-10-33" name="__codelineno-10-33"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;-----------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-34" name="__codelineno-10-34"></a><span class="k">for</span> <span class="p">(</span><span class="n">const</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">personne</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-10-35" name="__codelineno-10-35"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">Object</span><span class="o">.</span><span class="n">prototype</span><span class="o">.</span><span class="n">hasOwnProperty</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">personne</span><span class="p">,</span> <span class="n">key</span><span class="p">))</span> <span class="p">{</span>
+<a id="__codelineno-10-36" name="__codelineno-10-36"></a>    <span class="n">const</span> <span class="n">element</span> <span class="o">=</span> <span class="n">personne</span><span class="p">[</span><span class="n">key</span><span class="p">];</span>
+<a id="__codelineno-10-37" name="__codelineno-10-37"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">);</span>
+<a id="__codelineno-10-38" name="__codelineno-10-38"></a>  <span class="p">}</span>
 <a id="__codelineno-10-39" name="__codelineno-10-39"></a><span class="p">}</span>
-<a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="c1">// pour échapper à l&#39;avertissement eslint (2)</span>
-<a id="__codelineno-10-41" name="__codelineno-10-41"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-----------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-10-42" name="__codelineno-10-42"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">personne</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-43" name="__codelineno-10-43"></a><span class="w">  </span><span class="c1">// eslint-disable-next-line no-prototype-builtins</span>
-<a id="__codelineno-10-44" name="__codelineno-10-44"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">personne</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-45" name="__codelineno-10-45"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">personne</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-<a id="__codelineno-10-46" name="__codelineno-10-46"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
-<a id="__codelineno-10-47" name="__codelineno-10-47"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-40" name="__codelineno-10-40"></a><span class="o">//</span> <span class="n">pour</span> <span class="n">échapper</span> <span class="n">à</span> <span class="n">l</span><span class="s1">&#39;avertissement eslint (2)</span>
+<a id="__codelineno-10-41" name="__codelineno-10-41"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;-----------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-42" name="__codelineno-10-42"></a><span class="k">for</span> <span class="p">(</span><span class="n">const</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">personne</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-10-43" name="__codelineno-10-43"></a>  <span class="o">//</span> <span class="n">eslint</span><span class="o">-</span><span class="n">disable</span><span class="o">-</span><span class="nb">next</span><span class="o">-</span><span class="n">line</span> <span class="n">no</span><span class="o">-</span><span class="n">prototype</span><span class="o">-</span><span class="n">builtins</span>
+<a id="__codelineno-10-44" name="__codelineno-10-44"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">personne</span><span class="o">.</span><span class="n">hasOwnProperty</span><span class="p">(</span><span class="n">key</span><span class="p">))</span> <span class="p">{</span>
+<a id="__codelineno-10-45" name="__codelineno-10-45"></a>    <span class="n">const</span> <span class="n">element</span> <span class="o">=</span> <span class="n">personne</span><span class="p">[</span><span class="n">key</span><span class="p">];</span>
+<a id="__codelineno-10-46" name="__codelineno-10-46"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">);</span>
+<a id="__codelineno-10-47" name="__codelineno-10-47"></a>  <span class="p">}</span>
 <a id="__codelineno-10-48" name="__codelineno-10-48"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
@@ -1335,66 +1349,66 @@
 <span class="normal"><a href="#__codelineno-11-29">29</a></span>
 <span class="normal"><a href="#__codelineno-11-30">30</a></span>
 <span class="normal"><a href="#__codelineno-11-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="c1">// déstructuration</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="o">//</span> <span class="n">déstructuration</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3"></a>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="c1">// littéraux</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;martin&quot;</span><span class="p">,</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jean&quot;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="o">//</span> <span class="n">littéraux</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="n">const</span> <span class="n">obj1</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>  <span class="n">nom</span><span class="p">:</span> <span class="s2">&quot;martin&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>  <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;jean&quot;</span>
 <a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="p">};</span>
 <a id="__codelineno-11-9" name="__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="c1">// déstructuration obj1 dans variables [n,p]</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">n</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj1</span><span class="p">;</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;n=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">n</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;p=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">);</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="o">//</span> <span class="n">déstructuration</span> <span class="n">obj1</span> <span class="n">dans</span> <span class="n">variables</span> <span class="p">[</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">]</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="n">const</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="n">n</span><span class="p">,</span> <span class="n">prénom</span><span class="p">:</span> <span class="n">p</span> <span class="p">}</span> <span class="o">=</span> <span class="n">obj1</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;n=&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;p=&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">);</span>
 <a id="__codelineno-11-13" name="__codelineno-11-13"></a>
-<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="c1">// déstructuration obj1 dans variables [n2,p2]</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">({</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">n2</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">p2</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;f-n2=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">n2</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;f-p2=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">p2</span><span class="p">);</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="o">//</span> <span class="n">déstructuration</span> <span class="n">obj1</span> <span class="n">dans</span> <span class="n">variables</span> <span class="p">[</span><span class="n">n2</span><span class="p">,</span><span class="n">p2</span><span class="p">]</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="n">function</span> <span class="n">f</span><span class="p">({</span> <span class="n">nom</span><span class="p">:</span> <span class="n">n2</span><span class="p">,</span> <span class="n">prénom</span><span class="p">:</span> <span class="n">p2</span> <span class="p">})</span> <span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;f-n2=&quot;</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="s2">&quot;f-p2=&quot;</span><span class="p">,</span> <span class="n">p2</span><span class="p">);</span>
 <a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="p">}</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="nx">f</span><span class="p">(</span><span class="nx">obj1</span><span class="p">);</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="n">f</span><span class="p">(</span><span class="n">obj1</span><span class="p">);</span>
 <a id="__codelineno-11-19" name="__codelineno-11-19"></a>
-<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="c1">// déstructuration obj1 dans variables [nom,prénom]</span>
-<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="kd">function</span><span class="w"> </span><span class="nx">g</span><span class="p">({</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">prénom</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;g-nom=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;g-prénom=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="p">);</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="o">//</span> <span class="n">déstructuration</span> <span class="n">obj1</span> <span class="n">dans</span> <span class="n">variables</span> <span class="p">[</span><span class="n">nom</span><span class="p">,</span><span class="n">prénom</span><span class="p">]</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="n">function</span> <span class="n">g</span><span class="p">({</span> <span class="n">nom</span><span class="p">:</span> <span class="n">nom</span><span class="p">,</span> <span class="n">prénom</span><span class="p">:</span> <span class="n">prénom</span> <span class="p">})</span> <span class="p">{</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;g-nom=&quot;</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="s2">&quot;g-prénom=&quot;</span><span class="p">,</span> <span class="n">prénom</span><span class="p">);</span>
 <a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="p">}</span>
-<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="nx">g</span><span class="p">(</span><span class="nx">obj1</span><span class="p">);</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="n">g</span><span class="p">(</span><span class="n">obj1</span><span class="p">);</span>
 <a id="__codelineno-11-25" name="__codelineno-11-25"></a>
-<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="c1">// déstructuration obj1 dans variables [nom,prénom]</span>
-<a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="c1">// avec notation raccourcie équivalente à h({nom:nom,prénom:prénom})</span>
-<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="kd">function</span><span class="w"> </span><span class="nx">h</span><span class="p">({</span><span class="w"> </span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;h-nom=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;h-prénom=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="p">);</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="o">//</span> <span class="n">déstructuration</span> <span class="n">obj1</span> <span class="n">dans</span> <span class="n">variables</span> <span class="p">[</span><span class="n">nom</span><span class="p">,</span><span class="n">prénom</span><span class="p">]</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="o">//</span> <span class="n">avec</span> <span class="n">notation</span> <span class="n">raccourcie</span> <span class="n">équivalente</span> <span class="n">à</span> <span class="n">h</span><span class="p">({</span><span class="n">nom</span><span class="p">:</span><span class="n">nom</span><span class="p">,</span><span class="n">prénom</span><span class="p">:</span><span class="n">prénom</span><span class="p">})</span>
+<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="n">function</span> <span class="n">h</span><span class="p">({</span> <span class="n">nom</span><span class="p">,</span> <span class="n">prénom</span> <span class="p">})</span> <span class="p">{</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;h-nom=&quot;</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="s2">&quot;h-prénom=&quot;</span><span class="p">,</span> <span class="n">prénom</span><span class="p">);</span>
 <a id="__codelineno-11-30" name="__codelineno-11-30"></a><span class="p">}</span>
-<a id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="nx">h</span><span class="p">(</span><span class="nx">obj1</span><span class="p">);</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="n">h</span><span class="p">(</span><span class="n">obj1</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 11 : ce sont les accolades {} qui permettent la déstructuration. La syntaxe</li>
+<li>ligne 11 : ce sont les accolades {} qui permettent la déstructuration. La syntaxe
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">const</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="n">n</span><span class="p">,</span> <span class="n">prénom</span><span class="p">:</span> <span class="n">p</span> <span class="p">}</span> <span class="o">=</span> <span class="n">obj1</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>const { nom: n, prénom: p } = obj1
-</code></pre></div></td></tr></table></div>
 <p>crée deux variables [n] et [p] et est équivalente à :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
-<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>const n = obj1.nom
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a>const p = obj1.prénom
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">const</span> <span class="n">n</span> <span class="o">=</span> <span class="n">obj1</span><span class="o">.</span><span class="n">nom</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">const</span> <span class="n">p</span> <span class="o">=</span> <span class="n">obj1</span><span class="o">.</span><span class="n">prénom</span>
 </code></pre></div></td></tr></table></div>
 <p>La déclaration pourrait se lire de la façon suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>const { nom =&gt; n, prénom =&gt; p } = obj1
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">const</span> <span class="p">{</span> <span class="n">nom</span> <span class="o">=&gt;</span> <span class="n">n</span><span class="p">,</span> <span class="n">prénom</span> <span class="o">=&gt;</span> <span class="n">p</span> <span class="p">}</span> <span class="o">=</span> <span class="n">obj1</span>
 </code></pre></div></td></tr></table></div>
 <p>pour rappeler que les valeurs des attributs [nom, prénom] vont dans les variables [n, p] ;</p>
 <ul>
 <li>l’opération de déstructuration se répète aux lignes 15, 21 et 28. A chaque fois, c’est la présence des accolades {} qui indique qu’il va y avoir déstructuration d’un objet dans des variables ;</li>
-<li>la ligne 28 peut être déconcertante. C’est un raccourci pour la notation :</li>
+<li>la ligne 28 peut être déconcertante. C’est un raccourci pour la notation :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">function</span> <span class="n">h</span><span class="p">({</span> <span class="n">nom</span> <span class="p">:</span> <span class="n">nom</span><span class="p">,</span> <span class="n">prénom</span> <span class="p">:</span> <span class="n">prénom</span> <span class="p">})</span>
+</code></pre></div></td></tr></table></div></li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">h</span><span class="p">({</span><span class="w"> </span><span class="nx">nom</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">prénom</span><span class="w"> </span><span class="p">})</span>
-</code></pre></div></td></tr></table></div>
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span>
 <span class="normal"><a href="#__codelineno-16-3">3</a></span>
-<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>n= martin p= jean
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a>f-n2= martin f-p2= jean
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a>g-nom= martin g-prénom= jean
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a>h-nom= martin h-prénom= jean
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">n</span><span class="o">=</span> <span class="n">martin</span> <span class="n">p</span><span class="o">=</span> <span class="n">jean</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">f</span><span class="o">-</span><span class="n">n2</span><span class="o">=</span> <span class="n">martin</span> <span class="n">f</span><span class="o">-</span><span class="n">p2</span><span class="o">=</span> <span class="n">jean</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="n">g</span><span class="o">-</span><span class="n">nom</span><span class="o">=</span> <span class="n">martin</span> <span class="n">g</span><span class="o">-</span><span class="n">prénom</span><span class="o">=</span> <span class="n">jean</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="n">h</span><span class="o">-</span><span class="n">nom</span><span class="o">=</span> <span class="n">martin</span> <span class="n">h</span><span class="o">-</span><span class="n">prénom</span><span class="o">=</span> <span class="n">jean</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="58-script-obj-08">5.8. script [obj-08]</h2>
 <p>Le script [obj-08] montre comment obtenir une copie d’un objet :</p>
@@ -1414,27 +1428,27 @@
 <span class="normal"><a href="#__codelineno-17-14">14</a></span>
 <span class="normal"><a href="#__codelineno-17-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="s1">&#39;use strict&#39;</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2"></a>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="c1">// clônage d&#39;objets</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;martin&quot;</span><span class="p">,</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;jean&quot;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="o">//</span> <span class="n">clônage</span> <span class="n">d</span><span class="s1">&#39;objets</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="n">const</span> <span class="n">obj1</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>  <span class="n">nom</span><span class="p">:</span> <span class="s2">&quot;martin&quot;</span><span class="p">,</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>  <span class="n">prénom</span><span class="p">:</span> <span class="s2">&quot;jean&quot;</span>
 <a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="p">};</span>
 <a id="__codelineno-17-8" name="__codelineno-17-8"></a>
-<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="c1">// clône (copie) de obj1 avec l&#39;opérateur de spread</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">obj1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="o">//</span> <span class="n">clône</span> <span class="p">(</span><span class="n">copie</span><span class="p">)</span> <span class="n">de</span> <span class="n">obj1</span> <span class="n">avec</span> <span class="n">l</span><span class="s1">&#39;opérateur de spread</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="n">const</span> <span class="n">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="o">...</span><span class="n">obj1</span> <span class="p">}</span>
 <a id="__codelineno-17-11" name="__codelineno-17-11"></a>
-<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="c1">// vérifications</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="c1">// obj2 pointe sur une copie de obj1</span>
-<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;obj2===obj1 :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">obj1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">obj2</span><span class="p">)</span>
-<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;obj2=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">obj2</span><span class="p">)</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="o">//</span> <span class="n">vérifications</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="o">//</span> <span class="n">obj2</span> <span class="n">pointe</span> <span class="n">sur</span> <span class="n">une</span> <span class="n">copie</span> <span class="n">de</span> <span class="n">obj1</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;obj2===obj1 :&quot;</span><span class="p">,</span> <span class="n">obj1</span> <span class="o">===</span> <span class="n">obj2</span><span class="p">)</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;obj2=&quot;</span><span class="p">,</span> <span class="n">obj2</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 10 : l’opération de copie de l’objet [obj1]. L’opérateur ... est appelé opérateur de spread ;</li>
+<li>ligne 10 : l’opération de copie de l’objet [obj1]. L’opérateur ... est appelé opérateur de spread ;
+Les résultats de l’exécution sont les suivants :</li>
 </ul>
-<p>Les résultats de l’exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
-<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>obj2===obj1 : false
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a>obj2= { nom: &#39;martin&#39;, &#39;prénom&#39;: &#39;jean&#39; }
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">obj2</span><span class="o">===</span><span class="n">obj1</span> <span class="p">:</span> <span class="n">false</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">obj2</span><span class="o">=</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">&#39;martin&#39;</span><span class="p">,</span> <span class="s1">&#39;prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;jean&#39;</span> <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : montre que les références [obj1] et [obj2] ne pointent pas sur le même objet ;</li>
@@ -1450,6 +1464,8 @@
 
 
 
+
+  
 
 
 
@@ -1497,7 +1513,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
