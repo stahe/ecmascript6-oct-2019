@@ -65,14 +65,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // CORRECTION ICI : Utilisation de guillemets doubles pour entourer le titre qui contient une apostrophe
     var siteName = "Introduction au langage ECMASCRIPT6 par l'exemple";
-
     gtag('config', 'G-EBZC3JVJNR', {
         'page_title': siteName
     });
-    console.log("[GA Debug] page_title forced to: " + siteName);
   </script>
 
     
@@ -789,20 +785,20 @@
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
 <span class="normal"><a href="#__codelineno-0-5">5</a></span>
 <span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">//</span> <span class="n">export</span> <span class="n">par</span> <span class="n">défaut</span> <span class="n">d</span><span class="s1">&#39;un objet non nommé</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">export</span> <span class="n">default</span> <span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>  <span class="n">data</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>  <span class="n">do</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>  <span class="p">}</span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// export par défaut d&#39;un objet non nommé</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="k">do</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">};</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>les lignes <strong>[2-7]</strong> définissent un objet non nommé avec les propriétés <strong>[data, do]</strong> ;</li>
-<li>ligne 2 : l’instruction <strong>[export default]</strong> exporte cet objet. Celui-ci pourra donc être importé ;
-Le module <strong>[export-01]</strong> est utilisé par le script <strong>[import-01]</strong> de la façon suivante :</li>
+<li>ligne 2 : l’instruction <strong>[export default]</strong> exporte cet objet. Celui-ci pourra donc être importé ;</li>
 </ul>
+<p>Le module <strong>[export-01]</strong> est utilisé par le script <strong>[import-01]</strong> de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -811,20 +807,20 @@ Le module <strong>[export-01]</strong> est utilisé par le script <strong>[impor
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
 <span class="normal"><a href="#__codelineno-1-7">7</a></span>
 <span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="o">//</span> <span class="kn">import</span><span class="w"> </span><span class="nn">d</span><span class="s1">&#39;un objet exporté par défaut</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">export01</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="o">//</span> <span class="n">utilisation</span> <span class="n">de</span> <span class="n">cet</span> <span class="n">objet</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">export01</span><span class="o">.</span><span class="n">do</span><span class="p">();</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="o">//</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">importer</span> <span class="n">un</span> <span class="n">export</span> <span class="n">par</span> <span class="n">défaut</span> <span class="n">sous</span> <span class="n">n</span><span class="s1">&#39;importe quel nom</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">data</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// import d&#39;un objet exporté par défaut</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">export01</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">// utilisation de cet objet</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nx">export01</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1">// on peut importer un export par défaut sous n&#39;importe quel nom</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">import</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>les lignes 3 et 7 importent l’objet exporté par défaut du module <strong>[export-01]</strong> sous deux noms différents ;</li>
-<li>une fois un objet importé, on peut l’utiliser comme s’il avait été défini localement dans le script ;
-<strong>Exécution</strong></li>
+<li>une fois un objet importé, on peut l’utiliser comme s’il avait été défini localement dans le script ;</li>
 </ul>
+<p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">r</span> <span class="n">esm</span> <span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span>
@@ -842,20 +838,20 @@ Le module <strong>[export-01]</strong> est utilisé par le script <strong>[impor
 <span class="normal"><a href="#__codelineno-3-6">6</a></span>
 <span class="normal"><a href="#__codelineno-3-7">7</a></span>
 <span class="normal"><a href="#__codelineno-3-8">8</a></span>
-<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">//</span> <span class="n">export</span> <span class="n">par</span> <span class="n">défaut</span> <span class="n">d</span><span class="s1">&#39;un objet nommé</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">const</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>  <span class="n">data</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>  <span class="n">do</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>  <span class="p">}</span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// export par défaut d&#39;un objet nommé</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="k">do</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">};</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="o">//</span> <span class="n">export</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">export</span> <span class="n">default</span> <span class="n">data</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1">// export</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 9 : on exporte l’objet <strong>[data]</strong> ;
-Que l’objet exporté soit nommé ou non ne change rien à l’opération d’import. Le script <strong>[import-02]</strong> est le suivant :</li>
+<li>ligne 9 : on exporte l’objet <strong>[data]</strong> ;</li>
 </ul>
+<p>Que l’objet exporté soit nommé ou non ne change rien à l’opération d’import. Le script <strong>[import-02]</strong> est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -864,13 +860,13 @@ Que l’objet exporté soit nommé ou non ne change rien à l’opération d’i
 <span class="normal"><a href="#__codelineno-4-6">6</a></span>
 <span class="normal"><a href="#__codelineno-4-7">7</a></span>
 <span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="o">//</span> <span class="kn">import</span><span class="w"> </span><span class="nn">d</span><span class="s1">&#39;un objet exporté par défaut</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">module1</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="o">//</span> <span class="n">utilisation</span> <span class="n">de</span> <span class="n">cet</span> <span class="n">objet</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">module1</span><span class="o">.</span><span class="n">do</span><span class="p">();</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="o">//</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">importer</span> <span class="n">un</span> <span class="n">export</span> <span class="n">par</span> <span class="n">défaut</span> <span class="n">sous</span> <span class="n">n</span><span class="s1">&#39;importe quel nom</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">module2</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">module2</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1">// import d&#39;un objet exporté par défaut</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">module1</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// utilisation de cet objet</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nx">module1</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// on peut importer un export par défaut sous n&#39;importe quel nom</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">import</span><span class="w"> </span><span class="nx">module2</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">module2</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
@@ -895,26 +891,26 @@ Que l’objet exporté soit nommé ou non ne change rien à l’opération d’i
 <span class="normal"><a href="#__codelineno-6-11">11</a></span>
 <span class="normal"><a href="#__codelineno-6-12">12</a></span>
 <span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="o">//</span> <span class="n">multi</span><span class="o">-</span><span class="n">exports</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="o">//</span> <span class="n">export</span> <span class="n">objet</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">const</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>  <span class="n">data</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  <span class="n">do</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>  <span class="p">}</span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// multi-exports</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1">// export objet</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="k">do</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">};</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="o">//</span> <span class="n">export</span> <span class="n">fonction</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="n">export</span> <span class="p">{</span> <span class="n">data</span> <span class="p">};</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="n">function</span> <span class="n">doSomething</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;doSomething&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1">// export fonction</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomething</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;doSomething&quot;</span><span class="p">);</span>
 <a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="p">}</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="n">export</span> <span class="p">{</span> <span class="n">doSomething</span> <span class="p">};</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">doSomething</span><span class="w"> </span><span class="p">};</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 10 et 14 : export de deux éléments. L’export d’un élément se fait avec la syntaxe <strong>[export {élément}]</strong> ;
-Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</strong> de la façon suivante :</li>
+<li>lignes 10 et 14 : export de deux éléments. L’export d’un élément se fait avec la syntaxe <strong>[export {élément}]</strong> ;</li>
 </ul>
+<p>Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</strong> de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
@@ -926,22 +922,22 @@ Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</st
 <span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-7-10">10</a></span>
 <span class="normal"><a href="#__codelineno-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="o">//</span> <span class="kn">import</span><span class="w"> </span><span class="nn">d</span><span class="s1">&#39;un module [export03]</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">{</span><span class="n">data</span><span class="p">,</span> <span class="n">doSomething</span><span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="o">//</span> <span class="n">utilisation</span> <span class="n">des</span> <span class="n">imports</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">data</span><span class="o">.</span><span class="n">do</span><span class="p">();</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="n">doSomething</span><span class="p">();</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="o">//</span> <span class="n">autre</span> <span class="n">écriture</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="kn">import</span><span class="w"> </span><span class="o">*</span> <span class="k">as</span> <span class="n">module</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="o">//</span> <span class="n">utilisation</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;import</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">module</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="n">module</span><span class="o">.</span><span class="n">doSomething</span><span class="p">();</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="c1">// import d&#39;un module [export03]</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">doSomething</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1">// utilisation des imports</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nx">data</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="nx">doSomething</span><span class="p">();</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1">// autre écriture</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">module</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="c1">// utilisation de l&#39;import</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="nx">module</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 3 : les <strong>[imports]</strong> se font avec les noms exacts des objets exportés ;</li>
-<li>ligne 8 : on peut importer tous les objets exportés dans un objet nommé (ici <strong>[module]</strong>) ;
-<strong>Exécution</strong></li>
+<li>ligne 8 : on peut importer tous les objets exportés dans un objet nommé (ici <strong>[module]</strong>) ;</li>
 </ul>
+<p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
@@ -991,7 +987,7 @@ Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</st
           https://tahe.developpez.com
         </a>
         <br>
-        Ce cours tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
         <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
         Partage dans les Mêmes Conditions 3.0 non transposé</em>.
       </div>

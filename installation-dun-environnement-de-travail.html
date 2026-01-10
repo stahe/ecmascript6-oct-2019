@@ -65,14 +65,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // CORRECTION ICI : Utilisation de guillemets doubles pour entourer le titre qui contient une apostrophe
     var siteName = "Introduction au langage ECMASCRIPT6 par l'exemple";
-
     gtag('config', 'G-EBZC3JVJNR', {
         'page_title': siteName
     });
-    console.log("[GA Debug] page_title forced to: " + siteName);
   </script>
 
     
@@ -855,9 +851,9 @@
 <li>un serveur web Apache. Nous l&#x27;utiliserons pour l&#x27;écriture de scripts web en PHP ;</li>
 <li>le SGBD MySQL ;</li>
 <li>le langage de script PHP ;</li>
-<li>un serveur Redis implémentant un cache pour des applications web :
-Laragon peut être téléchargé (mars 2019) à l&#x27;adresse suivante :</li>
+<li>un serveur Redis implémentant un cache pour des applications web :</li>
 </ul>
+<p>Laragon peut être téléchargé (mars 2019) à l&#x27;adresse suivante :</p>
 <p><a href="https://laragon.org/download/"><u><u>https://laragon.org/download/</u></u></a></p>
 <p><img src="images/10000000000005AC000003184BDF25EA.png" style="width:9.602cm;height:5.241cm;" alt="Image" /></p>
 <p><img src="images/100000000000086200000337E13872C5.png" style="width:14.191cm;height:5.441cm;" alt="Image" /></p>
@@ -867,9 +863,9 @@ Laragon peut être téléchargé (mars 2019) à l&#x27;adresse suivante :</li>
 </ul>
 <p><img src="images/100000000000083D000003996FDD348B.png" style="width:16.74cm;height:7.31cm;" alt="Image" /></p>
 <ul>
-<li>en <strong>[6]</strong> le dossier d&#x27;installation de PHP ;
-Le lancement de <strong>[Laragon]</strong> affiche la fenêtre suivante :</li>
+<li>en <strong>[6]</strong> le dossier d&#x27;installation de PHP ;</li>
 </ul>
+<p>Le lancement de <strong>[Laragon]</strong> affiche la fenêtre suivante :</p>
 <p><img src="images/10000000000004F800000346ED7C4AFF.png" style="width:10.101cm;height:6.651cm;" alt="Image" /></p>
 <ul>
 <li><strong>[1]</strong> : le menu principal de Laragon ;</li>
@@ -877,9 +873,9 @@ Le lancement de <strong>[Laragon]</strong> affiche la fenêtre suivante :</li>
 <li><strong>[3]</strong> : le bouton <strong>[WEB]</strong> affiche la page web <strong>[http://localhost]</strong> qui correspond au fichier PHP <strong>[&lt;laragon&gt;/www/index.php]</strong> où &lt;laragon&gt; est le dossier d’installation de Laragon ;</li>
 <li><strong>[4]</strong> : le bouton <strong>[Database]</strong> permet de gérer le SGBD MySQL avec l’outil <strong>[phpMyAdmin]</strong>. Il faut auparavant installer celui-ci ;</li>
 <li><strong>[5]</strong> : le bouton <strong>[Terminal]</strong> ouvre un terminal de commandes ;</li>
-<li><strong>[6]</strong> : le bouton <strong>[Root]</strong> ouvre un explorateur Windows positionné sur le dossier <strong>[&lt;laragon&gt;/www]</strong> qui est la racine du site web <strong>[http://localhost]</strong>. C’est là qu’il faut placer toutes les applications web gérées par le serveur Apache de Laragon ;
-Ouvrons un terminal Laragon <strong>[5]</strong> :</li>
+<li><strong>[6]</strong> : le bouton <strong>[Root]</strong> ouvre un explorateur Windows positionné sur le dossier <strong>[&lt;laragon&gt;/www]</strong> qui est la racine du site web <strong>[http://localhost]</strong>. C’est là qu’il faut placer toutes les applications web gérées par le serveur Apache de Laragon ;</li>
 </ul>
+<p>Ouvrons un terminal Laragon <strong>[5]</strong> :</p>
 <p><img src="images/1000000000000745000002AC1D4C0E92.png" style="width:14.772cm;height:5.43cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[1]</strong>, le type du terminal. Trois types de terminaux sont disponibles en <strong>[6]</strong> ;</li>
@@ -920,9 +916,9 @@ Ouvrons un terminal Laragon <strong>[5]</strong> :</li>
 <ul>
 <li>en <strong>[14]</strong>, les résultats dans la fenêtre <strong>[output]</strong> de Netbeans ;</li>
 <li>en <strong>[15]</strong>, on crée un nouveau script ;</li>
-<li>en <strong>[16]</strong>, le nouveau script ;
-Le lecteur pourra créer tous les scripts qui vont suivre dans différents dossiers du même projet PHP. Les codes source des scripts de ce document sont disponibles sous la forme de l’arborescence Netbeans suivante :</li>
+<li>en <strong>[16]</strong>, le nouveau script ;</li>
 </ul>
+<p>Le lecteur pourra créer tous les scripts qui vont suivre dans différents dossiers du même projet PHP. Les codes source des scripts de ce document sont disponibles sous la forme de l’arborescence Netbeans suivante :</p>
 <p><img src="images/1000000000000644000002E5AEA38430.png" style="width:14.851cm;height:6.861cm;" alt="Image" /></p>
 <p>Les scripts de ce document sont placés dans l’arborescence du projet <strong>[scripts-console]</strong> <strong>[1]</strong>. Nous allons utiliser également des bibliothèques PHP qui seront placées dans le dossier <strong>[&lt;laragon-lite&gt;/www/vendor]</strong> <strong>[2]</strong> où &lt;laragon-lite&gt; est le dossier d’installation du logiciel Laragon. Pour que Netbeans reconnaisse les bibliothèques de <strong>[2]</strong> comme faisant partie du projet <strong>[scripts-console]</strong>, il nous faut inclure le dossier <strong>[vendor]</strong> <strong>[2]</strong> dans la branche <strong>[Include Path]</strong> <strong>[3]</strong> du projet. Nous allons configurer Netbeans pour que le dossier <strong>[&lt;laragon-lite&gt;/www/vendor]</strong> <strong>[2]</strong> soit inclus dans tout nouveau projet PHP et pas seulement dans le projet <strong>[scripts-console]</strong> :</p>
 <p><img src="images/10000000000007C4000002C3270A2133.png" style="width:18.41cm;height:6.55cm;" alt="Image" /></p>
@@ -940,9 +936,9 @@ Le lecteur pourra créer tous les scripts qui vont suivre dans différents dossi
 <ul>
 <li>en <strong>[12]</strong>, un code utilise la classe <strong>[PhpMimeMailParser\Parser]</strong> de la bibliothèque <strong>[vendor/php-mime-mail-parser]</strong> ;</li>
 <li>en <strong>[13]</strong>, Netbeans propose les méthodes de cette classe ;</li>
-<li>en <strong>[14-15]</strong>, Netbeans affiche la documentation de la méthode sélectionnée ;
-La notion d’<strong>[Include Path]</strong> est ici propre à Netbeans. PHP a également cette notion mais ce sont a priori deux notions différentes.</li>
+<li>en <strong>[14-15]</strong>, Netbeans affiche la documentation de la méthode sélectionnée ;</li>
 </ul>
+<p>La notion d’<strong>[Include Path]</strong> est ici propre à Netbeans. PHP a également cette notion mais ce sont a priori deux notions différentes.</p>
 <p>Maintenant que l&#x27;environnement de travail a été installé, nous pouvons aborder les bases de PHP.</p>
 <h2 id="22-environnement-de-travail-pour-javascript">2.2. Environnement de travail pour JavaScript</h2>
 <p>Ces outils peuvent être installés à partir de Laragon (cf. paragraphe <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx#laragon"><u><u>lien</u></u></a>) :</p>
@@ -966,18 +962,18 @@ La notion d’<strong>[Include Path]</strong> est ici propre à Netbeans. PHP a 
 <p><img src="images/1000000000000477000001CB92EE6B4A.png" style="width:10.591cm;height:4.25cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[1]</strong>, le chemin du fichier <strong>[settings.json]</strong>. Une façon de revenir à la configuration par défaut est de supprimer ce fichier ;</li>
-<li>en <strong>[2]</strong>, les configurations que nous venons de faire ;
-Maintenant, ouvrons un terminal à l’intérieur de <strong>[VSCode]</strong> <strong>[1-2]</strong> :</li>
+<li>en <strong>[2]</strong>, les configurations que nous venons de faire ;</li>
 </ul>
+<p>Maintenant, ouvrons un terminal à l’intérieur de <strong>[VSCode]</strong> <strong>[1-2]</strong> :</p>
 <p><img src="images/100000000000062D000000FD7AF2926B.png" style="width:14.641cm;height:2.341cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[3]</strong>, le type de terminal ouvert, ici PowerShell ;</li>
 <li>en <strong>[4]</strong>, on peut taper des commandes Windows ;</li>
 <li>en <strong>[6]</strong>, on peut ouvrir d’autres terminaux ;</li>
 <li>en <strong>[5]</strong>, la liste des terminaux ouverts ;</li>
-<li>en <strong>[7]</strong>, supprime le terminal actif ;
-Nous utiliserons le terminal de <strong>[VSCode]</strong> pour installer des packages (bibliothèques) Javascript avec l’outil <strong>[npm]</strong> (Node Package Manager). Demandons, comme nous l’avons fait précédemment dans un terminal Laragon, la version de <strong>[npm]</strong> installée :</li>
+<li>en <strong>[7]</strong>, supprime le terminal actif ;</li>
 </ul>
+<p>Nous utiliserons le terminal de <strong>[VSCode]</strong> pour installer des packages (bibliothèques) Javascript avec l’outil <strong>[npm]</strong> (Node Package Manager). Demandons, comme nous l’avons fait précédemment dans un terminal Laragon, la version de <strong>[npm]</strong> installée :</p>
 <p><img src="images/10000000000007ED00000209842B66FC.png" style="width:16.11cm;height:4.13cm;" alt="Image" /></p>
 <p>On voit que la commande <strong>[npm]</strong> n’a pas été reconnue. Cela signifie qu’elle n’appartient pas au PATH (liste des dossiers à explorer pour chercher un exécutable, ici <strong>[npm]</strong>) du terminal. On peut connaître le PATH utilisé par le terminal :</p>
 <p><img src="images/10000000000007FF0000014E9059DCF6.png" style="width:16.251cm;height:2.65cm;" alt="Image" /></p>
@@ -987,15 +983,15 @@ Nous utiliserons le terminal de <strong>[VSCode]</strong> pour installer des pac
 <p><img src="images/1000000000000751000002CCD6AEAFB8.png" style="width:14.862cm;height:5.68cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[1]</strong> : on tape la commande <strong>[path]</strong> ;</li>
-<li>en <strong>[2]</strong> : la liste des dossiers du PATH. On y voit le dossier <strong>[node-v10]</strong> <strong>[2]</strong>, ce qui nous garantit que les exécutables <strong>[node]</strong> et <strong>[npm]</strong> seront trouvés ;
-<strong>[VSCode]</strong> est lancé à partir d’un terminal Laragon avec la commande <strong>[code]</strong> :</li>
+<li>en <strong>[2]</strong> : la liste des dossiers du PATH. On y voit le dossier <strong>[node-v10]</strong> <strong>[2]</strong>, ce qui nous garantit que les exécutables <strong>[node]</strong> et <strong>[npm]</strong> seront trouvés ;</li>
 </ul>
+<p><strong>[VSCode]</strong> est lancé à partir d’un terminal Laragon avec la commande <strong>[code]</strong> :</p>
 <p><img src="images/10000000000006240000015D9AFE81A9.png" style="width:14.56cm;height:3.23cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[2]</strong>, on ouvre un terminal PowerShell dans <strong>[VSCode]</strong> ;</li>
-<li>en <strong>[3-4]</strong>, on voit que les exécutables <strong>[node]</strong> et <strong>[npm]</strong> sont accessibles ;
-<strong>Note</strong> : il ne faut pas fermer le terminal Laragon qui a lancé l’environnement de développement <strong>[VSCode]</strong>, sinon VSCode lui-même se ferme.</li>
+<li>en <strong>[3-4]</strong>, on voit que les exécutables <strong>[node]</strong> et <strong>[npm]</strong> sont accessibles ;</li>
 </ul>
+<p><strong>Note</strong> : il ne faut pas fermer le terminal Laragon qui a lancé l’environnement de développement <strong>[VSCode]</strong>, sinon VSCode lui-même se ferme.</p>
 <p>Nous allons faire une dernière configuration : nous allons changer le terminal par défaut de <strong>[VSCode]</strong> :</p>
 <p><img src="images/10000000000007D40000014B0FA726FE.png" style="width:15.911cm;height:2.631cm;" alt="Image" /></p>
 <p><img src="images/1000000000000423000001451BF4678C.png" style="width:9.812cm;height:3.01cm;" alt="Image" /></p>
@@ -1030,17 +1026,19 @@ Nous utiliserons le terminal de <strong>[VSCode]</strong> pour installer des pac
 <p><img src="images/10000000000005F4000000FA91BA1D06.png" style="width:18.151cm;height:2.98cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[8-9]</strong> : on exécute le programme Javascript ;</li>
-<li>le résultat apparaît dans la console d’exécution <strong>[10]</strong>. On voit en <strong>[11]</strong> la commande qui a été exécutée : c’est l’application <strong>[node]</strong> qui a exécuté le script <strong>[test-01.js]</strong>. C’est parce que cet exécutable est dans le PATH de <strong>[VSCode]</strong> que cela a pu être possible, sinon on aurait eu une erreur indiquant que la commande <strong>[node]</strong> n’était pas connue ;
-Procédons de la même façon pour exécuter un second script <strong>[test-02.js]</strong> :</li>
+<li>le résultat apparaît dans la console d’exécution <strong>[10]</strong>. On voit en <strong>[11]</strong> la commande qui a été exécutée : c’est l’application <strong>[node]</strong> qui a exécuté le script <strong>[test-01.js]</strong>. C’est parce que cet exécutable est dans le PATH de <strong>[VSCode]</strong> que cela a pu être possible, sinon on aurait eu une erreur indiquant que la commande <strong>[node]</strong> n’était pas connue ;</li>
 </ul>
+<p>Procédons de la même façon pour exécuter un second script <strong>[test-02.js]</strong> :</p>
 <p><img src="images/10000000000006BB000003E9B21EBE8A.png" style="width:13.681cm;height:7.94cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[1-3]</strong>, on définit le nouveau script. L’instruction <strong>[use strict]</strong> de la ligne 1 demande une vérification stricte de la syntaxe. Dans ce contexte, toute variable doit être déclarée avec l’un des mots clés <strong>[let, const, var]</strong>. Ce n’est pas le cas de la variable <strong>[x]</strong> de la ligne 2 ;</li>
-<li>lorsqu’on exécute ce code par <strong>[Ctrl-F5]</strong>, on obtient l’erreur <strong>[5]</strong>. Il est possible d’être averti de ce type d’erreur avant l’exécution. C’est préférable. Nous allons faire deux choses :</li>
+<li>lorsqu’on exécute ce code par <strong>[Ctrl-F5]</strong>, on obtient l’erreur <strong>[5]</strong>. Il est possible d’être averti de ce type d’erreur avant l’exécution. C’est préférable. Nous allons faire deux choses :<ul>
 <li>installer avec <strong>[npm]</strong> une bibliothèque appelée <strong>[eslint]</strong> qui vérifie que la syntaxe du script est conforme à la norme ECMAScript 6 ;</li>
-<li>installer une extension à Visual Studio Code, appelée elle-aussi ESLINT qui facilite l’utilisation de la bibliothèque <strong>[eslint]</strong> au sein de <strong>[VSCode]</strong> ;
-Installons tout d’abord la bibliothèque Javascript <strong>[eslint]</strong> à l’aide de l’outil <strong>[npm]</strong>. Pour installer une bibliothèque (on dit un package) <strong>[npm]</strong>, il faut connaître son nom exact. Si ce n’est pas le cas, on peut aller sur le site de <strong>[npm]</strong> à l’URL (2019) <strong>[https://www.npmjs.com/]</strong> :</li>
+<li>installer une extension à Visual Studio Code, appelée elle-aussi ESLINT qui facilite l’utilisation de la bibliothèque <strong>[eslint]</strong> au sein de <strong>[VSCode]</strong> ;</li>
 </ul>
+</li>
+</ul>
+<p>Installons tout d’abord la bibliothèque Javascript <strong>[eslint]</strong> à l’aide de l’outil <strong>[npm]</strong>. Pour installer une bibliothèque (on dit un package) <strong>[npm]</strong>, il faut connaître son nom exact. Si ce n’est pas le cas, on peut aller sur le site de <strong>[npm]</strong> à l’URL (2019) <strong>[https://www.npmjs.com/]</strong> :</p>
 <p><img src="images/10000000000005EE00000222D0B899C3.png" style="width:16.061cm;height:5.781cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[3]</strong>, les packages commençant par <strong>[esl]</strong> ;</li>
@@ -1050,23 +1048,25 @@ Installons tout d’abord la bibliothèque Javascript <strong>[eslint]</strong>�
 <ul>
 <li>en <strong>[7]</strong>, la commande <strong>[npm]</strong> pour installer le package <strong>[eslint]</strong> ;</li>
 <li>en <strong>[8]</strong>, la configuration du package ;</li>
-<li>en <strong>[9]</strong>, son utilisation pour vérifier la syntaxe d’un script Javascript ;
-Nous installons le package <strong>[eslint]</strong> dans une fenêtre <strong>[Terminal]</strong> de <strong>[VSCode]</strong>. Tout d’abord, il nous faut créer un fichier <strong>[package.json]</strong> à la racine du dossier de travail de <strong>[VSCode]</strong>. Ce fichier contiendra la liste des packages jS utilisés par le projet <strong>[VSCode]</strong> :</li>
+<li>en <strong>[9]</strong>, son utilisation pour vérifier la syntaxe d’un script Javascript ;</li>
 </ul>
+<p>Nous installons le package <strong>[eslint]</strong> dans une fenêtre <strong>[Terminal]</strong> de <strong>[VSCode]</strong>. Tout d’abord, il nous faut créer un fichier <strong>[package.json]</strong> à la racine du dossier de travail de <strong>[VSCode]</strong>. Ce fichier contiendra la liste des packages jS utilisés par le projet <strong>[VSCode]</strong> :</p>
 <p><img src="images/100000000000064100000169A1FABEA2.png" style="width:16.941cm;height:3.821cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[1]</strong>, cliquer droit dans l’explorateur de projet (pas sur le dossier tests) ;</li>
 <li>en <strong>[3-4]</strong>, on crée le fichier <strong>[package.json]</strong> à la racine du projet <strong>[javascript]</strong>, au même niveau que le dossier <strong>[tests]</strong> (mais pas dans <strong>[tests]</strong>) ;</li>
-<li>en <strong>[4-6]</strong>, on met dans le fichier <strong>[package.json]</strong> un objet jSON vide ;
-Puis on ouvre un terminal <strong>[VSCode]</strong> pour installer <strong>[eslint]</strong> :</li>
+<li>en <strong>[4-6]</strong>, on met dans le fichier <strong>[package.json]</strong> un objet jSON vide ;</li>
 </ul>
+<p>Puis on ouvre un terminal <strong>[VSCode]</strong> pour installer <strong>[eslint]</strong> :</p>
 <p><img src="images/100000000000062900000110F59B17DB.png" style="width:16.691cm;height:2.881cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[2]</strong>, on est à la racine du projet <strong>[javascript]</strong> ;</li>
 <li>en <strong>[3]</strong>, la commande qui installe le package <strong>[eslint]</strong> ;</li>
-<li>après exécution,</li>
+<li>après exécution,<ul>
 <li>en <strong>[4-5]</strong>, le fichier <strong>[package.json]</strong> a été modifié. Ligne 3, on trouve la version de <strong>[eslint]</strong> installée. Ligne 2, <strong>[devDependencies]</strong> correspond à l’argument <strong>[--save-dev]</strong> de l’installation. Cet argument signifie que la dépendance installée doit être inscrite dans le fichier <strong>[package.json]</strong> comme élément de la propriété <strong>[devDependencies]</strong>. Cette propriété liste les dépendances du projet dont on a besoin en mode développement mais pas en mode production. En effet, on a besoin de la dépendance <strong>[eslint]</strong> uniquement en développement pour vérifier que le code écrit respecte la norme ECMAScript ;</li>
 <li>en <strong>[6]</strong>, un dossier <strong>[node_modules]</strong> est apparu dans le projet. C’est le dossier où sont installées les dépendances du projet ;</li>
+</ul>
+</li>
 </ul>
 <p><img src="images/10000000000001A700000393F9E4EDBB.png" style="width:3.92cm;height:8.471cm;" alt="Image" /></p>
 <ul>
@@ -1076,7 +1076,8 @@ Puis on ouvre un terminal <strong>[VSCode]</strong> pour installer <strong>[esli
 <ul>
 <li><strong>[1-2]</strong>, dans un terminal <strong>[VSCode]</strong> on émet la commande de configuration du package <strong>[eslint]</strong>. Celle-ci va poser diverses questions <strong>[3]</strong> pour savoir comment on souhaite utiliser <strong>[eslint]</strong>. Dans le doute, laissez les options proposées par défaut. Pour sélectionner une option, utilisez les flèches haute et basse du clavier pour choisir l’option puis validez celle-ci ;</li>
 <li>en <strong>[4]</strong>, un fichier <strong>[.eslintrc.js]</strong> a été créé à la racine du projet ;</li>
-<li>en <strong>[6]</strong>, le contenu du fichier. Vous pouvez en copier le contenu dans votre propre fichier ;
+<li>en <strong>[6]</strong>, le contenu du fichier. Vous pouvez en copier le contenu dans votre propre fichier ;</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -1093,54 +1094,53 @@ Puis on ouvre un terminal <strong>[VSCode]</strong> pour installer <strong>[esli
 <span class="normal"><a href="#__codelineno-0-14">14</a></span>
 <span class="normal"><a href="#__codelineno-0-15">15</a></span>
 <span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">module</span><span class="o">.</span><span class="n">exports</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>  <span class="s2">&quot;env&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="s2">&quot;browser&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="s2">&quot;es6&quot;</span><span class="p">:</span> <span class="n">true</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>  <span class="p">},</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>  <span class="s2">&quot;extends&quot;</span><span class="p">:</span> <span class="s2">&quot;eslint:recommended&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>  <span class="s2">&quot;globals&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="s2">&quot;Atomics&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="s2">&quot;SharedArrayBuffer&quot;</span><span class="p">:</span> <span class="s2">&quot;readonly&quot;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>  <span class="p">},</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>  <span class="s2">&quot;parserOptions&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="s2">&quot;ecmaVersion&quot;</span><span class="p">:</span> <span class="mi">2018</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="s2">&quot;sourceType&quot;</span><span class="p">:</span> <span class="s2">&quot;module&quot;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>  <span class="p">},</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>  <span class="s2">&quot;rules&quot;</span><span class="p">:</span> <span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>  <span class="p">}</span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="s2">&quot;env&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="s2">&quot;browser&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="s2">&quot;es6&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="s2">&quot;extends&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;eslint:recommended&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="s2">&quot;globals&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="s2">&quot;Atomics&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="s2">&quot;SharedArrayBuffer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readonly&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="s2">&quot;parserOptions&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="s2">&quot;ecmaVersion&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2018</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="s2">&quot;sourceType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;module&quot;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="s2">&quot;rules&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">};</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+</code></pre></div></td></tr></table></div>
 <p>Tout ceci n’est pas suffisant pour signaler les erreurs du fichier <strong>[test-02.js]</strong> :</p>
 <p><img src="images/10000000000005D20000013B8E6ACD0B.png" style="width:15.77cm;height:3.331cm;" alt="Image" /></p>
 <ul>
 <li>il faut taper la commande <strong>[2-3]</strong> pour que le fichier <strong>[tests/test-02.js]</strong> soit analysé ;</li>
-<li>en <strong>[4]</strong>, l’erreur sur la variable non déclarée est détectée ;
-Nous allons ajouter à <strong>[VSCode]</strong> une extension qui va permettre de voir les erreurs Javascript en temps réel. Cette extension s’appuie sur le package <strong>[eslint]</strong> que nous avons installé :</li>
+<li>en <strong>[4]</strong>, l’erreur sur la variable non déclarée est détectée ;</li>
 </ul>
+<p>Nous allons ajouter à <strong>[VSCode]</strong> une extension qui va permettre de voir les erreurs Javascript en temps réel. Cette extension s’appuie sur le package <strong>[eslint]</strong> que nous avons installé :</p>
 <p><img src="images/10000000000004EF000001CF056C9AF9.png" style="width:13.371cm;height:4.901cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[3-5]</strong>, nous installons l’extension appelée <strong>[ESLint]</strong> ;</li>
 </ul>
 <p><img src="images/10000000000003F4000002F6870BF687.png" style="width:10.711cm;height:8.021cm;" alt="Image" /></p>
 <ul>
-<li>en <strong>[1]</strong>, une page d’informations sur l’extension nouvellement installée ;
-en <strong>[2]</strong>, on voit que le mode de vérification de <strong>[ESLint]</strong> est <strong>[type]</strong>, ce qui signifie que la syntaxe des scripts jS sera vérifiée en même temps que la frappe du texte ;</li>
+<li>en <strong>[1]</strong>, une page d’informations sur l’extension nouvellement installée ;</li>
 </ul>
+<p>en <strong>[2]</strong>, on voit que le mode de vérification de <strong>[ESLint]</strong> est <strong>[type]</strong>, ce qui signifie que la syntaxe des scripts jS sera vérifiée en même temps que la frappe du texte ;</p>
 <p>ESLint peut être configuré via le fichier de configuration général de <strong>[VSCode]</strong> :</p>
 <p><img src="images/10000000000005E00000029178AD06F1.png" style="width:15.922cm;height:6.95cm;" alt="Image" /></p>
 <ul>
-<li>en <strong>[6-7]</strong>, la configuration de <strong>[ESLint]</strong>. C’est ici que vous pourrez la modifier ;
-Revenons maintenant au fichier <strong>[test-02.js]</strong> :</li>
+<li>en <strong>[6-7]</strong>, la configuration de <strong>[ESLint]</strong>. C’est ici que vous pourrez la modifier ;</li>
 </ul>
+<p>Revenons maintenant au fichier <strong>[test-02.js]</strong> :</p>
 <p><img src="images/100000000000051B0000016E5E5A6757.png" style="width:13.831cm;height:3.871cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[3-4]</strong>, les erreurs sur la variable <strong>[x]</strong> sont désormais signalées ;</li>
 <li>en <strong>[5]</strong> : le nombre d’erreurs ESLint dans le fichier ;</li>
-<li>en <strong>[6]</strong>, indique que dans le dossier <strong>[tests]</strong>, il y a des fichiers erronés ;
-Si on corrige l’erreur, les avertissements d’ESLint disparaissent :</li>
+<li>en <strong>[6]</strong>, indique que dans le dossier <strong>[tests]</strong>, il y a des fichiers erronés ;</li>
 </ul>
+<p>Si on corrige l’erreur, les avertissements d’ESLint disparaissent :</p>
 <p><img src="images/10000000000003C60000022CE53950D1.png" style="width:10.221cm;height:5.882cm;" alt="Image" /></p>
 <p>Installons maintenant une extension appelée <strong>[Code Runner]</strong> :</p>
 <p><img src="images/1000000000000636000001F9E6EC2E6A.png" style="width:16.83cm;height:5.34cm;" alt="Image" /></p>
@@ -1159,9 +1159,9 @@ Si on corrige l’erreur, les avertissements d’ESLint disparaissent :</li>
 <ul>
 <li>en <strong>[2]</strong>, on ajoute la virgule derrière le dernier élément du fichier <strong>[settings.json]</strong> <strong>[1]</strong> ;</li>
 <li>en <strong>[3]</strong>, on colle ce qu’on a copié en <strong>[5-6]</strong> précédemment : c’est la liste des commandes permettant d’exécuter les différents langages supportés par <strong>[VSCode]</strong> ;</li>
-<li>en <strong>[4]</strong>, la commande permettant d’exécuter les fichiers Javascript. Celle-ci ne fonctionne que si <strong>[node]</strong> est dans le PATH de <strong>[VSCode]</strong>. Si ce n’est pas le cas, on peut mettre le chemin complet de l’exécutable <strong>[5]</strong> ;
-Ceci fait sauvegardons la configuration (Ctrl-S). Avec l’extension <strong>[Code Runner]</strong>, les fichiers Javascript peuvent être exécutés avec un clic droit sur le code <strong>[6]</strong> (ci-dessus) :</li>
+<li>en <strong>[4]</strong>, la commande permettant d’exécuter les fichiers Javascript. Celle-ci ne fonctionne que si <strong>[node]</strong> est dans le PATH de <strong>[VSCode]</strong>. Si ce n’est pas le cas, on peut mettre le chemin complet de l’exécutable <strong>[5]</strong> ;</li>
 </ul>
+<p>Ceci fait sauvegardons la configuration (Ctrl-S). Avec l’extension <strong>[Code Runner]</strong>, les fichiers Javascript peuvent être exécutés avec un clic droit sur le code <strong>[6]</strong> (ci-dessus) :</p>
 <p><img src="images/10000000000006E50000023DEA861245.png" style="width:14.011cm;height:4.552cm;" alt="Image" /></p>
 <h3 id="223-quelques-commandes-vscode-utiles">2.2.3. Quelques commandes [VSCode] utiles</h3>
 <ul>
@@ -1224,7 +1224,7 @@ Ceci fait sauvegardons la configuration (Ctrl-S). Avec l’extension <strong>[Co
           https://tahe.developpez.com
         </a>
         <br>
-        Ce cours tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
         <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
         Partage dans les Mêmes Conditions 3.0 non transposé</em>.
       </div>

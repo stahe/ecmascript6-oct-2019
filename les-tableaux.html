@@ -65,14 +65,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // CORRECTION ICI : Utilisation de guillemets doubles pour entourer le titre qui contient une apostrophe
     var siteName = "Introduction au langage ECMASCRIPT6 par l'exemple";
-
     gtag('config', 'G-EBZC3JVJNR', {
         'page_title': siteName
     });
-    console.log("[GA Debug] page_title forced to: " + siteName);
   </script>
 
     
@@ -806,25 +802,25 @@
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
 <span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">//</span> <span class="n">un</span> <span class="n">tableau</span> <span class="n">est</span> <span class="n">un</span> <span class="n">objet</span> <span class="n">manipulé</span> <span class="n">via</span> <span class="n">son</span> <span class="n">adresse</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">const</span> <span class="n">tab1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="o">//</span> <span class="n">copie</span> <span class="n">d</span><span class="s1">&#39;adresses</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">const</span> <span class="n">tab2</span> <span class="o">=</span> <span class="n">tab1</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="o">//</span> <span class="n">tab1</span> <span class="n">et</span> <span class="n">tab2</span> <span class="n">pointent</span> <span class="n">sur</span> <span class="n">le</span> <span class="n">même</span> <span class="n">tableau</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab1===tab2 :&quot;</span><span class="p">,</span> <span class="n">tab1</span> <span class="o">===</span> <span class="n">tab2</span><span class="p">);</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="o">//</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">modifier</span> <span class="n">le</span> <span class="n">tableau</span> <span class="n">en</span> <span class="n">passant</span> <span class="n">indifféremment</span> <span class="n">par</span> <span class="n">tab1</span> <span class="n">ou</span> <span class="n">tab2</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="n">tab2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab1=&quot;</span><span class="p">,</span> <span class="n">tab1</span><span class="p">);</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab2=&quot;</span><span class="p">,</span> <span class="n">tab2</span><span class="p">);</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// un tableau est un objet manipulé via son adresse</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">// copie d&#39;adresses</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab1</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// tab1 et tab2 pointent sur le même tableau</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab1===tab2 :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">tab2</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1">// on peut modifier le tableau en passant indifféremment par tab1 ou tab2</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nx">tab2</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab1=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab1</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab2=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab2</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="s2">&quot;c:\Temp</span><span class="se">\1</span><span class="s2">9-09-01\javascript</span><span class="se">\t</span><span class="s2">ableaux</span><span class="se">\t</span><span class="s2">ab-01.js&quot;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">tab1</span><span class="o">===</span><span class="n">tab2</span> <span class="p">:</span> <span class="n">true</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">tab1</span><span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">tab2</span><span class="o">=</span> <span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span> <span class="p">]</span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-01.js&quot;
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>tab1===tab2 : true
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>tab1= [ 1, 10, 3 ]
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>tab2= [ 1, 10, 3 ]
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
@@ -858,35 +854,35 @@
 <span class="normal"><a href="#__codelineno-2-23">23</a></span>
 <span class="normal"><a href="#__codelineno-2-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="o">//</span> <span class="n">tableau</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">const</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[];</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="s2">&quot;, longueur=[&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="s2">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="o">//</span> <span class="n">initialisation</span> <span class="n">d</span><span class="s1">&#39;un élément</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">tab</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">tab</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;huit&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="o">//</span> <span class="n">tableau</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="s2">&quot;, longueur=[&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="s2">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="o">//</span> <span class="n">toString</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab.toString=[&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="o">.</span><span class="n">toString</span><span class="p">(),</span> <span class="s2">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="o">//</span> <span class="n">les</span> <span class="n">clés</span> <span class="n">du</span> <span class="n">tableau</span> <span class="n">sont</span> <span class="n">ses</span> <span class="n">indices</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">key</span> <span class="n">of</span> <span class="n">tab</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="p">{</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;clé=[&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="s2">&quot;], valeur=[&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="s2">&quot;]&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// tableau</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;, longueur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1">// initialisation d&#39;un élément</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nx">tab</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nx">tab</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;huit&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1">// tableau</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;, longueur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">// toString</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab.toString=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1">// les clés du tableau sont ses indices</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">keys</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;clé=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], valeur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">[</span><span class="nx">key</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
 <a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="p">}</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="o">//</span> <span class="n">les</span> <span class="n">valeurs</span> <span class="n">du</span> <span class="n">tableau</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">value</span> <span class="n">of</span> <span class="n">tab</span><span class="o">.</span><span class="n">values</span><span class="p">())</span> <span class="p">{</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;valeur=[&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="s2">&quot;]&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="c1">// les valeurs du tableau</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;valeur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
 <a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 4 : un tableau vide ;</li>
 <li>ligne 8 : un tableau n’a pas de taille fixe. C’est simplement une suite d’éléments indexée par un n°. On peut initialiser l’élément n° 3 même si les éléments <strong>[0, 1, 2]</strong> ne sont pas encore définis ;</li>
-<li>lignes 16-24 : un tableau Javascript a un comportement analogue à celui du tableau PHP ;
- <strong>Exécution</strong></li>
+<li>lignes 16-24 : un tableau Javascript a un comportement analogue à celui du tableau PHP ;</li>
 </ul>
+<p><strong>Exécution</strong></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -976,87 +972,86 @@
 <span class="normal"><a href="#__codelineno-4-53">53</a></span>
 <span class="normal"><a href="#__codelineno-4-54">54</a></span>
 <span class="normal"><a href="#__codelineno-4-55">55</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="o">//</span> <span class="n">un</span> <span class="n">tableau</span> <span class="n">peut</span> <span class="n">contenir</span> <span class="n">différents</span> <span class="n">types</span> <span class="n">de</span> <span class="n">données</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">const</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;un&quot;</span><span class="p">,</span> <span class="s2">&quot;deux&quot;</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span> <span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="s2">&quot;abc&quot;</span> <span class="p">}];</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="o">//</span> <span class="n">console</span><span class="o">.</span><span class="n">log</span> <span class="n">sait</span> <span class="n">afficher</span> <span class="n">le</span> <span class="n">contenu</span> <span class="n">d</span><span class="s1">&#39;un tableau</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">show</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="o">//</span> <span class="n">parcours</span> <span class="n">du</span> <span class="n">tableau</span> <span class="n">avec</span> <span class="n">foreach</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">tab</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">element</span> <span class="o">=&gt;</span> <span class="p">{</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">typeof</span> <span class="p">(</span><span class="n">element</span><span class="p">));</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1">// un tableau peut contenir différents types de données</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;un&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;deux&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prop1</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">prop2</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;abc&quot;</span><span class="w"> </span><span class="p">}];</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// console.log sait afficher le contenu d&#39;un tableau</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nx">show</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="nx">show</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="c1">// parcours du tableau avec foreach</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">});</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">show</span><span class="p">(</span><span class="s2">&quot;2b&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="o">//</span> <span class="n">une</span> <span class="n">autre</span> <span class="n">écriture</span> <span class="n">pour</span> <span class="n">faire</span> <span class="n">la</span> <span class="n">même</span> <span class="n">chose</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="n">tab</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="n">function</span> <span class="p">(</span><span class="n">element</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="n">typeof</span> <span class="p">(</span><span class="n">element</span><span class="p">));</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;2b&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1">// une autre écriture pour faire la même chose</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
 <a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">});</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="o">//</span> <span class="n">parcours</span> <span class="n">du</span> <span class="n">tableau</span> <span class="n">avec</span> <span class="k">for</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">tab</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;i=&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;tab[i]=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="nx">show</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="c1">// parcours du tableau avec for</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;i=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab[i]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 <a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="p">}</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="n">show</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="o">//</span> <span class="n">modification</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="n">tab</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="o">//</span> <span class="n">affichage</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="o">//</span> <span class="n">on</span> <span class="n">enlève</span> <span class="n">le</span> <span class="n">dernier</span> <span class="n">élément</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="n">let</span> <span class="n">element</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="n">show</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="o">//</span> <span class="n">on</span> <span class="n">ajoute</span> <span class="n">un</span> <span class="n">élément</span> <span class="n">à</span> <span class="n">la</span> <span class="n">fin</span> <span class="n">du</span> <span class="n">tableau</span>
-<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="n">tab</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="s1">&#39;xyz&#39;</span><span class="p">);</span>
-<a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="n">show</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
-<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="o">//</span> <span class="n">on</span> <span class="n">ajoute</span> <span class="n">un</span> <span class="n">élément</span> <span class="n">au</span> <span class="n">début</span> <span class="n">du</span> <span class="n">tableau</span>
-<a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="n">tab</span><span class="o">.</span><span class="n">unshift</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-<a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="n">show</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
-<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="o">//</span> <span class="n">on</span> <span class="n">enlève</span> <span class="n">le</span> <span class="mi">1</span><span class="n">er</span> <span class="n">élément</span> <span class="n">du</span> <span class="n">tableau</span>
-<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="n">element</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">shift</span><span class="p">();</span>
-<a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="n">show</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span>
-<a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="o">//</span> <span class="n">on</span> <span class="n">enlève</span> <span class="n">l</span><span class="s1">&#39;élément n° 2 du tableau</span>
-<a id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="n">element</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="n">show</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
-<a id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="o">//</span> <span class="n">on</span> <span class="n">enlève</span> <span class="n">du</span> <span class="n">tableau</span> <span class="n">deux</span> <span class="n">éléments</span> <span class="n">à</span> <span class="n">partir</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;élément n° 1</span>
-<a id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="n">element</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">splice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">,</span> <span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="nx">show</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="c1">// modification tab[i]</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="nx">tab</span><span class="p">[</span><span class="mf">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="c1">// affichage</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="nx">show</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="c1">// on enlève le dernier élément</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="kd">let</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="nx">show</span><span class="p">(</span><span class="mf">6</span><span class="p">);</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="c1">// on ajoute un élément à la fin du tableau</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;xyz&#39;</span><span class="p">);</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="nx">show</span><span class="p">(</span><span class="mf">7</span><span class="p">);</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="c1">// on ajoute un élément au début du tableau</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="mf">1000</span><span class="p">);</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="nx">show</span><span class="p">(</span><span class="mf">8</span><span class="p">);</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="c1">// on enlève le 1er élément du tableau</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="nx">show</span><span class="p">(</span><span class="mf">9</span><span class="p">);</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="c1">// on enlève l&#39;élément n° 2 du tableau</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="nx">show</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="c1">// on enlève du tableau deux éléments à partir de l&#39;élément n° 1</span>
+<a id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
 <a id="__codelineno-4-51" name="__codelineno-4-51"></a>
-<a id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="o">//</span> <span class="n">fonction</span>
-<a id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="n">function</span> <span class="n">show</span><span class="p">(</span><span class="n">param</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-4-54" name="__codelineno-4-54"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="n">param</span><span class="p">,</span> <span class="s2">&quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="c1">// fonction</span>
+<a id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="kd">function</span><span class="w"> </span><span class="nx">show</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]&quot;</span><span class="p">);</span>
 <a id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>la différence entre tableaux PHP et tableaux Javascript est illustrée par les lignes 3 et 24 :</li>
+<li>la différence entre tableaux PHP et tableaux Javascript est illustrée par les lignes 3 et 24 :<ul>
 <li>la ligne 3 déclare la variable <strong>[tab]</strong> comme une constante ;</li>
-<li>
-<p>la ligne 24 modifie l’élément tab<strong>[5]</strong> ;
-Ligne 3, c’est le pointeur qui pointe sur le tableau qui est déclaré constant, ce n’est pas le tableau lui-même. Celui-ci peut être modifié.</p>
+<li>la ligne 24 modifie l’élément tab<strong>[5]</strong> ;</li>
+</ul>
 </li>
-<li>
-<p>lignes 14-16 : le tableau <strong>[tab]</strong> est parcouru à l’aide d’une méthode <strong>[forEach]</strong> du tableau <strong>[tab]</strong>. Cette méthode reçoit en paramètre la définition d’une fonction, qu’on pourrait appeler une fonction littérale. Cette fonction paramètre reçoit un paramètre : l’élément courant du tableau <strong>[tab]</strong>. La fonction est appelée pour chaque élément du tableau. Ce type d’écriture est courant en Javascript ;</p>
+</ul>
+<p>Ligne 3, c’est le pointeur qui pointe sur le tableau qui est déclaré constant, ce n’est pas le tableau lui-même. Celui-ci peut être modifié.</p>
+<ul>
+<li>lignes 14-16 : le tableau <strong>[tab]</strong> est parcouru à l’aide d’une méthode <strong>[forEach]</strong> du tableau <strong>[tab]</strong>. Cette méthode reçoit en paramètre la définition d’une fonction, qu’on pourrait appeler une fonction littérale. Cette fonction paramètre reçoit un paramètre : l’élément courant du tableau <strong>[tab]</strong>. La fonction est appelée pour chaque élément du tableau. Ce type d’écriture est courant en Javascript ;</li>
+<li>lignes 9-10 : on utilise une autre syntaxe pour définir la fonction paramètre. Au lieu d’écrire :<ul>
+<li><strong>function(p1, p2, …, pn){….}</strong></li>
+</ul>
 </li>
-<li>lignes 9-10 : on utilise une autre syntaxe pour définir la fonction paramètre. Au lieu d’écrire :</li>
-<li>
-<p><strong>function(p1, p2, …, pn){….}</strong>
-on écrit :</p>
-</li>
-<li>
-<p><strong>(p1,p2, ..,pn)=&gt;{.…}</strong>. On appelle cela, la notation « flèche » ou « arrow » ;</p>
-</li>
-<li>
-<p>le reste du code est expliqué par les commentaires ;
-De ce script, on notera que :</p>
-</li>
-<li>
-<p>un tableau est un objet référencé par un pointeur ;</p>
-</li>
+</ul>
+<p>on écrit :</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>* **(p1,p2, ..,pn)=&amp;gt;{.…}**. On appelle cela, la notation « flèche » ou « arrow » ;
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>le reste du code est expliqué par les commentaires ;</li>
+</ul>
+<p>De ce script, on notera que :</p>
+<ul>
+<li>un tableau est un objet référencé par un pointeur ;</li>
 <li>que cet objet a des méthodes <strong>[forEach, pop, push, shift, unshift]</strong> ;</li>
 </ul>
 <h2 id="44-script-tab-04">4.4. script [tab-04]</h2>
@@ -1122,69 +1117,69 @@ De ce script, on notera que :</p>
 <span class="normal"><a href="#__codelineno-5-59">59</a></span>
 <span class="normal"><a href="#__codelineno-5-60">60</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="o">//</span> <span class="n">méthode</span> <span class="n">de</span> <span class="n">manipulation</span> <span class="n">de</span> <span class="n">tableaux</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">// méthode de manipulation de tableaux</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="o">//</span> <span class="n">un</span> <span class="n">tableau</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">const</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[];</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>  <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1">// un tableau</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">  </span><span class="nx">tab</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="o">//</span> <span class="n">affichage</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="o">//</span> <span class="nb">map</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="n">const</span> <span class="n">tab2</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">element</span> <span class="o">=&gt;</span> <span class="p">{</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a>  <span class="k">return</span> <span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="n">element</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="n">element</span> <span class="o">*</span> <span class="n">element</span> <span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="c1">// affichage</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="c1">// map</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prop1</span><span class="o">:</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">prop2</span><span class="o">:</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">});</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="o">//</span> <span class="n">affichage</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span> <span class="n">tab</span><span class="p">);</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab2=&quot;</span><span class="p">,</span> <span class="n">tab2</span><span class="p">);</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="o">//</span> <span class="n">reduce</span> <span class="n">sans</span> <span class="n">valeur</span> <span class="n">initiale</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="n">const</span> <span class="n">somme</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">reduce</span><span class="p">((</span><span class="n">accumulator</span><span class="p">,</span> <span class="n">currentValue</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">accumulator</span> <span class="o">+</span> <span class="n">currentValue</span><span class="p">);</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;somme tab=&quot;</span><span class="p">,</span> <span class="n">somme</span><span class="p">);</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="o">//</span> <span class="n">reduce</span> <span class="n">avec</span> <span class="n">valeur</span> <span class="n">initiale</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="n">const</span> <span class="n">somme2</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">reduce</span><span class="p">((</span><span class="n">accumulator</span><span class="p">,</span> <span class="n">currentValue</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">accumulator</span> <span class="o">+</span> <span class="n">currentValue</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;somme2 tab=&quot;</span><span class="p">,</span> <span class="n">somme2</span><span class="p">);</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="o">//</span> <span class="nb">filter</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="n">const</span> <span class="n">tab4</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">filter</span><span class="p">((</span><span class="n">element</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">element</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a>    <span class="k">return</span> <span class="n">element</span><span class="p">;</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29"></a>  <span class="p">}</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="c1">// affichage</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab2=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab2</span><span class="p">);</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="c1">// reduce sans valeur initiale</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="kd">const</span><span class="w"> </span><span class="nx">somme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">);</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;somme tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">somme</span><span class="p">);</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="c1">// reduce avec valeur initiale</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="kd">const</span><span class="w"> </span><span class="nx">somme2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;somme2 tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">somme2</span><span class="p">);</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="c1">// filter</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="p">;</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="p">});</span>
-<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab4=&quot;</span><span class="p">,</span> <span class="n">tab4</span><span class="p">);</span>
-<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="o">//</span> <span class="n">find</span>
-<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="n">const</span> <span class="n">element1</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">find</span><span class="p">((</span><span class="n">element</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">element</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;élément1=&quot;</span><span class="p">,</span> <span class="n">element1</span><span class="p">);</span>
-<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="o">//</span> <span class="n">findIndex</span>
-<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="n">const</span> <span class="n">index1</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">findIndex</span><span class="p">((</span><span class="n">element</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="n">element</span> <span class="o">===</span> <span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;index1 20=&quot;</span><span class="p">,</span> <span class="n">index1</span><span class="p">);</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="o">//</span> <span class="n">indexOf</span>
-<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="n">const</span> <span class="n">index2</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="mi">30</span><span class="p">);</span>
-<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;index2 30=&quot;</span><span class="p">,</span> <span class="n">index2</span><span class="p">);</span>
-<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="n">const</span> <span class="n">index3</span> <span class="o">=</span> <span class="n">tab</span><span class="o">.</span><span class="n">indexOf</span><span class="p">(</span><span class="mi">31</span><span class="p">);</span>
-<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;index3 31=&quot;</span><span class="p">,</span> <span class="n">index3</span><span class="p">);</span>
-<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="o">//</span> <span class="n">lastIndexOf</span>
-<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="n">const</span> <span class="n">index4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">lastIndexOf</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;index4 4=&quot;</span><span class="p">,</span> <span class="n">index4</span><span class="p">);</span>
-<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="o">//</span> <span class="n">sort</span>
-<a id="__codelineno-5-47" name="__codelineno-5-47"></a><span class="n">const</span> <span class="n">tab5</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">();</span>
-<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab5=&quot;</span><span class="p">,</span> <span class="n">tab5</span><span class="p">);</span>
-<a id="__codelineno-5-49" name="__codelineno-5-49"></a><span class="o">//</span> <span class="n">sort</span> <span class="n">inverse</span>
-<a id="__codelineno-5-50" name="__codelineno-5-50"></a><span class="n">const</span> <span class="n">tab6</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">((</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-<a id="__codelineno-5-51" name="__codelineno-5-51"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">e1</span> <span class="o">&gt;</span> <span class="n">e2</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-5-52" name="__codelineno-5-52"></a>    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-5-53" name="__codelineno-5-53"></a>  <span class="p">}</span>
-<a id="__codelineno-5-54" name="__codelineno-5-54"></a>  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">e1</span> <span class="o">===</span> <span class="n">e2</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-5-55" name="__codelineno-5-55"></a>    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-5-56" name="__codelineno-5-56"></a>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-5-57" name="__codelineno-5-57"></a>    <span class="k">return</span> <span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-5-58" name="__codelineno-5-58"></a>  <span class="p">}</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab4=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab4</span><span class="p">);</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="c1">// find</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">));</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément1=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element1</span><span class="p">);</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="c1">// findIndex</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">20</span><span class="p">));</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;index1 20=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">index1</span><span class="p">);</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="c1">// indexOf</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="mf">30</span><span class="p">);</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;index2 30=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">index2</span><span class="p">);</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="mf">31</span><span class="p">);</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;index3 31=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">index3</span><span class="p">);</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="c1">// lastIndexOf</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">].</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
+<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;index4 4=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">index4</span><span class="p">);</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="c1">// sort</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">].</span><span class="nx">sort</span><span class="p">();</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab5=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab5</span><span class="p">);</span>
+<a id="__codelineno-5-49" name="__codelineno-5-49"></a><span class="c1">// sort inverse</span>
+<a id="__codelineno-5-50" name="__codelineno-5-50"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">].</span><span class="nx">sort</span><span class="p">((</span><span class="nx">e1</span><span class="p">,</span><span class="w"> </span><span class="nx">e2</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-51" name="__codelineno-5-51"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">e1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">e2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-52" name="__codelineno-5-52"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+<a id="__codelineno-5-53" name="__codelineno-5-53"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-54" name="__codelineno-5-54"></a><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">e1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">e2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-55" name="__codelineno-5-55"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-5-56" name="__codelineno-5-56"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-57" name="__codelineno-5-57"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">+</span><span class="mf">1</span><span class="p">;</span>
+<a id="__codelineno-5-58" name="__codelineno-5-58"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-5-59" name="__codelineno-5-59"></a><span class="p">});</span>
-<a id="__codelineno-5-60" name="__codelineno-5-60"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;tab6=&quot;</span><span class="p">,</span> <span class="n">tab6</span><span class="p">);</span>
+<a id="__codelineno-5-60" name="__codelineno-5-60"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab6=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab6</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>
-<p>lignes 13-15 : la méthode <strong>[map]</strong> admet une fonction de transformation comme paramètre. Celle-ci est appelée de façon répétée pour chaque élément du tableau. Elle est chargée de transformer celui-ci en autre chose, ici un objet avec les propriétés <strong>[prop1, prop2]</strong>. La méthode <strong>[map]</strong> rend un nouveau tableau. L’ancien n’est pas modifié :
+<li>lignes 13-15 : la méthode <strong>[map]</strong> admet une fonction de transformation comme paramètre. Celle-ci est appelée de façon répétée pour chaque élément du tableau. Elle est chargée de transformer celui-ci en autre chose, ici un objet avec les propriétés <strong>[prop1, prop2]</strong>. La méthode <strong>[map]</strong> rend un nouveau tableau. L’ancien n’est pas modifié :</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -1195,42 +1190,46 @@ De ce script, on notera que :</p>
 <span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">tab</span><span class="o">=</span> <span class="p">[</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">90</span> <span class="p">]</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">tab2</span><span class="o">=</span> <span class="p">[</span> <span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">0</span> <span class="p">},</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">100</span> <span class="p">},</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">400</span> <span class="p">},</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">900</span> <span class="p">},</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">1600</span> <span class="p">},</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">2500</span> <span class="p">},</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">3600</span> <span class="p">},</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">4900</span> <span class="p">},</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">6400</span> <span class="p">},</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="p">{</span> <span class="n">prop1</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="n">prop2</span><span class="p">:</span> <span class="mi">8100</span> <span class="p">}</span> <span class="p">]</span>
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p>ligne 20 : la méthode <strong>[reduce]</strong> admet pour paramètre une fonction à deux paramètres appelée de façon répétée pour chaque élément du tableau. Cette fonction admet deux paramètres :</p>
-</li>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>tab= [ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>tab2= [ { prop1: 0, prop2: 0 },
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>{ prop1: 10, prop2: 100 },
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>{ prop1: 20, prop2: 400 },
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>{ prop1: 30, prop2: 900 },
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>{ prop1: 40, prop2: 1600 },
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>{ prop1: 50, prop2: 2500 },
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>{ prop1: 60, prop2: 3600 },
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>{ prop1: 70, prop2: 4900 },
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>{ prop1: 80, prop2: 6400 },
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>{ prop1: 90, prop2: 8100 } ]
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>ligne 20 : la méthode <strong>[reduce]</strong> admet pour paramètre une fonction à deux paramètres appelée de façon répétée pour chaque élément du tableau. Cette fonction admet deux paramètres :<ul>
 <li><strong>[currentValue]</strong> est l’élément courant du tableau ;</li>
 <li><strong>[accumulator]</strong> est le dernier résultat obtenu par la fonction. Si aucune valeur initiale n’est prévue pour cet accumulateur, alors celle-ci sera 0 ;</li>
 <li>la 1ère fois que la fonction d’accumulation est appelée, elle rend <strong>[0+tab[0]</strong>]. C’est cette valeur qui est affectée à l’accumulateur ;</li>
 <li>la seconde fois, elle rend accumulateur+tab<strong>[1]</strong>, donc tab<strong>[0]</strong>+tab<strong>[1]</strong> ;</li>
 <li>la troisème fois, elle rend accumulateur+tab<strong>[2]</strong>, donc tab<strong>[0]</strong>+tab<strong>[1]</strong>+tab<strong>[2]</strong> ;</li>
 <li>etc. Au final, l’accumulateur représentera la somme de tous les éléments du tableau <strong>[tab]</strong> ;</li>
-<li>ligne 26 : la méthode <strong>[filter]</strong> a pour paramètre une fonction de filtrage. Celle-ci est appelée de façon répétée pour chaque élément du tableau et reçoit celui-ci en paramètre. Elle doit rendre :</li>
+</ul>
+</li>
+<li>ligne 26 : la méthode <strong>[filter]</strong> a pour paramètre une fonction de filtrage. Celle-ci est appelée de façon répétée pour chaque élément du tableau et reçoit celui-ci en paramètre. Elle doit rendre :<ul>
 <li><strong>[true]</strong> si l’élément doit être gardé ;</li>
 <li><strong>[false]</strong> sinon ;</li>
+</ul>
+</li>
 <li>ligne 33 : la méthode <strong>[find]</strong> a pour paramètre une fonction de recherche. Celle-ci est appelée de façon répétée pour chaque élément du tableau et reçoit celui-ci en paramètre. Elle doit rendre <strong>[true]</strong> si l’élément reçu satisfait le critère de recherche. Celle-ci s’arrête alors. La méthode <strong>[find]</strong> rend donc 0 ou 1 élément ;</li>
 <li>ligne 36 : la méthode <strong>[findIndex]</strong> fonctionne comme la méthode <strong>[find]</strong> mais au lieu de rendre l’élément trouvé, elle rend son index dans le tableau ;</li>
 <li>lignes 39, 41, la méthode <strong>[indexOf(valeur)]</strong> recherche <strong>[valeur]</strong> dans le tableau et rend son index, ou -1 s’il n’est pas trouvé ;</li>
 <li>ligne 44 : la méthode <strong>[lastIndexOf(valeur)]</strong> fonctionne comme la méthode <strong>[indexOf(valeur)]</strong> mais commence sa recherche par la fin du tableau ;</li>
 <li>ligne 47 : la méthode <strong>[sort]</strong> sans paramètres rend un tableau trié dans l’ordre naturel (nombres, chaînes) ;</li>
-<li>ligne 50 : lorsque l’ordre naturel ne convient pas, il faut passer à la méthode <strong>[sort]</strong> une fonction à deux paramètres (e1,e2) qui rend :</li>
+<li>ligne 50 : lorsque l’ordre naturel ne convient pas, il faut passer à la méthode <strong>[sort]</strong> une fonction à deux paramètres (e1,e2) qui rend :<ul>
 <li>+1 si e1 doit être classé après e2 ;</li>
 <li>-1 si e1 doit être classé avant e2 ;</li>
-<li>0 si les deux éléments doivent avoir le même classement ;
-La fonction passée en paramètre à la méthode <strong>[sort]</strong> est appelée de façon répétée par celle-ci pour comparer deux éléments du tableau ;</li>
+<li>0 si les deux éléments doivent avoir le même classement ;</li>
 </ul>
+</li>
+</ul>
+<p>La fonction passée en paramètre à la méthode <strong>[sort]</strong> est appelée de façon répétée par celle-ci pour comparer deux éléments du tableau ;</p>
 
 
 
@@ -1270,7 +1269,7 @@ La fonction passée en paramètre à la méthode <strong>[sort]</strong> est app
           https://tahe.developpez.com
         </a>
         <br>
-        Ce cours tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
         <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
         Partage dans les Mêmes Conditions 3.0 non transposé</em>.
       </div>
