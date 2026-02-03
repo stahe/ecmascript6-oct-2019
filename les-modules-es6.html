@@ -774,180 +774,142 @@
   
 
 
+<p><a id="refheadingtoc225368640539168"></a></p>
 <h1 id="10-les-modules-es6">10. Les modules ES6</h1>
 <p><img src="images/10000000000000FC0000013E566BAA86.png" style="width:2.671cm;height:3.372cm;" alt="Image" /></p>
 <p>Les modules ES6 permettent de construire des applications Javascript structurées en modules indépendants et réutilisables.</p>
+<p><a id="refheadingtoc225370640539168"></a></p>
 <h2 id="101-scripts-import-01-export-01">10.1. scripts [import-01, export-01]</h2>
 <p>Le script <strong>[import-01]</strong> va utiliser le module <strong>[export-01]</strong>. Celui-ci est défini de la façon suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// export par défaut d&#39;un objet non nommé</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="k">do</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">};</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line">// export par défaut d&#x27;un objet non nommé</span>
+<span class="odt-code-line"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line">  data: 2,</span>
+<span class="odt-code-line">  do() {</span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">};</span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>les lignes <strong>[2-7]</strong> définissent un objet non nommé avec les propriétés <strong>[data, do]</strong> ;</li>
 <li>ligne 2 : l’instruction <strong>[export default]</strong> exporte cet objet. Celui-ci pourra donc être importé ;</li>
 </ul>
 <p>Le module <strong>[export-01]</strong> est utilisé par le script <strong>[import-01]</strong> de la façon suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// import d&#39;un objet exporté par défaut</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">export01</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="c1">// utilisation de cet objet</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nx">export01</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1">// on peut importer un export par défaut sous n&#39;importe quel nom</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">import</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-01&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// import d&#x27;un objet exporté par défaut</span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> export01 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// utilisation de cet objet</span>
+<span class="odt-code-line">export01.do();</span>
+<span class="odt-code-line">// on peut importer un export par défaut sous n&#x27;importe quel nom</span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> data </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">console.log(data.data);</span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>les lignes 3 et 7 importent l’objet exporté par défaut du module <strong>[export-01]</strong> sous deux noms différents ;</li>
 <li>une fois un objet importé, on peut l’utiliser comme s’il avait été défini localement dans le script ;</li>
 </ul>
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">r</span> <span class="n">esm</span> <span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="mi">2</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="mi">2</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span></span>
+<span class="odt-code-line">2</span>
+<span class="odt-code-line">2</span>
+</code></pre></div>
+
+<p><a id="refheadingtoc225372640539168"></a></p>
 <h2 id="102-scripts-import-02-export-02">10.2. scripts [import-02, export-02]</h2>
 <p>Ces scripts montrent un export d’un objet nommé.</p>
 <p>Le script <strong>[export-02]</strong> est le suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span>
-<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// export par défaut d&#39;un objet nommé</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="k">do</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">};</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1">// export</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line">// export par défaut d&#x27;un objet nommé</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span>
+<span class="odt-code-line">  data: 2,</span>
+<span class="odt-code-line">  do() {</span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line">// export</span>
+<span class="odt-code-line"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> data;</span></span>
+</code></pre></div>
+
 <ul>
 <li>ligne 9 : on exporte l’objet <strong>[data]</strong> ;</li>
 </ul>
 <p>Que l’objet exporté soit nommé ou non ne change rien à l’opération d’import. Le script <strong>[import-02]</strong> est le suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1">// import d&#39;un objet exporté par défaut</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="nx">module1</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// utilisation de cet objet</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nx">module1</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// on peut importer un export par défaut sous n&#39;importe quel nom</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="k">import</span><span class="w"> </span><span class="nx">module2</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-02&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">module2</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// import d&#x27;un objet exporté par défaut</span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> module1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// utilisation de cet objet</span>
+<span class="odt-code-line">module1.do();</span>
+<span class="odt-code-line">// on peut importer un export par défaut sous n&#x27;importe quel nom</span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> module2 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">console.log(module2.data);</span>
+</code></pre></div>
+
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">r</span> <span class="n">esm</span> <span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\modules\import-02.js&quot;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="mi">2</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="mi">2</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-02.js&quot;</span></span>
+<span class="odt-code-line">2</span>
+<span class="odt-code-line">2</span>
+</code></pre></div>
+
+<p><a id="refheadingtoc225374640539168"></a></p>
 <h2 id="103-scripts-import-03-export-03">10.3. scripts [import-03, export-03]</h2>
 <p>Un module peut exporter plusieurs éléments.</p>
 <p>Le script <strong>[export-03]</strong> est le suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span>
-<span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// multi-exports</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1">// export objet</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="k">do</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">};</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1">// export fonction</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="p">};</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomething</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;doSomething&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="p">}</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="k">export</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">doSomething</span><span class="w"> </span><span class="p">};</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line">// multi-exports</span>
+<span class="odt-code-line">// export objet</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span>
+<span class="odt-code-line">  data: 2,</span>
+<span class="odt-code-line">  do() {</span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line">// export fonction</span>
+<span class="odt-code-line"><span style="color:#0000ff">export</span><span style="color:#000000"> { data };</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomething() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;doSomething&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span style="color:#0000ff">export</span><span style="color:#000000"> { doSomething };</span></span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>lignes 10 et 14 : export de deux éléments. L’export d’un élément se fait avec la syntaxe <strong>[export {élément}]</strong> ;</li>
 </ul>
 <p>Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</strong> de la façon suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="c1">// import d&#39;un module [export03]</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">doSomething</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1">// utilisation des imports</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="nx">data</span><span class="p">.</span><span class="k">do</span><span class="p">();</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="nx">doSomething</span><span class="p">();</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1">// autre écriture</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="k">import</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">module</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./export-03&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="c1">// utilisation de l&#39;import</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">module</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="nx">module</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// import d&#x27;un module <span style="font-weight:bold">[export03]</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> {data, doSomething} </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// utilisation des imports</span>
+<span class="odt-code-line">data.do();</span>
+<span class="odt-code-line">doSomething();</span>
+<span class="odt-code-line">// autre écriture</span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> * </span><span style="color:#0000ff">as</span><span style="color:#000000"> module </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// utilisation de l&#x27;import</span>
+<span class="odt-code-line">console.log(module.data);</span>
+<span class="odt-code-line">module.doSomething();</span>
+</code></pre></div>
+
 <ul>
 <li>ligne 3 : les <strong>[imports]</strong> se font avec les noms exacts des objets exportés ;</li>
 <li>ligne 8 : on peut importer tous les objets exportés dans un objet nommé (ici <strong>[module]</strong>) ;</li>
 </ul>
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
-<span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span>
-<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="o">-</span><span class="n">r</span> <span class="n">esm</span> <span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="mi">2</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">doSomething</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">{</span> <span class="n">data</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="n">do</span><span class="p">:</span> <span class="p">[</span><span class="n">Function</span><span class="p">:</span> <span class="n">do</span><span class="p">]</span> <span class="p">}</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">doSomething</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;</span></span>
+<span class="odt-code-line">2</span>
+<span class="odt-code-line">doSomething</span>
+<span class="odt-code-line">{ data: 2, do: <span style="font-weight:bold">[Function: do]</span> }</span>
+<span class="odt-code-line">doSomething</span>
+</code></pre></div>
 
 
 
@@ -1005,7 +967,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>

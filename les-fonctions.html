@@ -796,331 +796,205 @@
   
 
 
+<p><a id="refheadingtoc2042413980233556"></a></p>
 <h1 id="8-les-fonctions">8. Les fonctions</h1>
 <p><img src="images/10000000000000E0000000E3B1A0C324.png" style="width:2.371cm;height:2.401cm;" alt="Image" /></p>
+<p><a id="refheadingtoc2042433980233556"></a></p>
 <h2 id="81-script-func-01">8.1. script [func-01]</h2>
 <p>Le script s’intéresse au mode de passage des paramètres d’une fonction :</p>
 <ul>
 <li>passage par valeur pour nombres, chaînes et booléens ;</li>
 <li>passage par référence pour les tableaux, objets littéraux et fonctions ;</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span>
-<span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span>
-<span class="normal"><a href="#__codelineno-0-42">42</a></span>
-<span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span>
-<span class="normal"><a href="#__codelineno-0-45">45</a></span>
-<span class="normal"><a href="#__codelineno-0-46">46</a></span>
-<span class="normal"><a href="#__codelineno-0-47">47</a></span>
-<span class="normal"><a href="#__codelineno-0-48">48</a></span>
-<span class="normal"><a href="#__codelineno-0-49">49</a></span>
-<span class="normal"><a href="#__codelineno-0-50">50</a></span>
-<span class="normal"><a href="#__codelineno-0-51">51</a></span>
-<span class="normal"><a href="#__codelineno-0-52">52</a></span>
-<span class="normal"><a href="#__codelineno-0-53">53</a></span>
-<span class="normal"><a href="#__codelineno-0-54">54</a></span>
-<span class="normal"><a href="#__codelineno-0-55">55</a></span>
-<span class="normal"><a href="#__codelineno-0-56">56</a></span>
-<span class="normal"><a href="#__codelineno-0-57">57</a></span>
-<span class="normal"><a href="#__codelineno-0-58">58</a></span>
-<span class="normal"><a href="#__codelineno-0-59">59</a></span>
-<span class="normal"><a href="#__codelineno-0-60">60</a></span>
-<span class="normal"><a href="#__codelineno-0-61">61</a></span>
-<span class="normal"><a href="#__codelineno-0-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">// mode de passage des paramètres d&#39;une fonction</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// -----------------------nombre - passage par valeur</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomethingWithNumber</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nx">param</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[param inside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[type]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">param</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;[passage par référence]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">count</span><span class="p">);</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1">// code d&#39;appel</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="kd">let</span><span class="w"> </span><span class="nx">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nx">doSomethingWithNumber</span><span class="p">(</span><span class="nx">count</span><span class="p">);</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[count outside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">count</span><span class="p">);</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1">// --------------------- chaîne - passage par valeur</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomethingWithString</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="nx">param</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s2">&quot; xyz&quot;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[param inside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[type]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">param</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;[passage par référence]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">text</span><span class="p">);</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">}</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="c1">// code d&#39;appel</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="kd">let</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;abcd&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="nx">doSomethingWithString</span><span class="p">(</span><span class="nx">text</span><span class="p">);</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[text outside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">text</span><span class="p">);</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="c1">// --------------------- booléen - passage par valeur</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomethingWithBoolean</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span><span class="nx">param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="nx">param</span><span class="p">;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[param inside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[type]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">param</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;[passage par référence]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">bool</span><span class="p">);</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="p">}</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="c1">// code d&#39;appel</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="kd">let</span><span class="w"> </span><span class="nx">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="nx">doSomethingWithBoolean</span><span class="p">(</span><span class="nx">bool</span><span class="p">);</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;bool [outside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">bool</span><span class="p">);</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="c1">// --------------------- tableau - passage par référence</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomethingWithArray</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">  </span><span class="nx">param</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mf">1000</span><span class="p">);</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[param inside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[type]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">param</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;[passage par référence]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="p">}</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="c1">// code d&#39;appel</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">];</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="nx">doSomethingWithArray</span><span class="p">(</span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[tab outside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="c1">// --------------------- objet - passage par référence</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomethingWithObject</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">  </span><span class="nx">param</span><span class="p">.</span><span class="nx">unePropriétéNouvelle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;xyz&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[param inside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[type]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">param</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;[passage par référence]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">obj</span><span class="p">);</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="p">}</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="c1">// code d&#39;appel</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">];</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="nx">doSomethingWithObject</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[obj outside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">obj</span><span class="p">);</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="c1">// --------------------- fonction - passage par référence</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomethingWithFunction</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">  </span><span class="c1">// une chose plutôt bizarre qui marche pourtant</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">  </span><span class="nx">param</span><span class="p">.</span><span class="nx">unePropriétéNouvelle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;xyz&quot;</span><span class="p">;</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[param inside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;[type]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">param</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;[passage par référence]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">f</span><span class="p">);</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="p">}</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="c1">// code d&#39;appel</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="kd">const</span><span class="w"> </span><span class="nx">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="nx">doSomethingWithFunction</span><span class="p">(</span><span class="nx">f</span><span class="p">);</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[f outside function]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">f</span><span class="p">,</span><span class="w"> </span><span class="nx">f</span><span class="p">.</span><span class="nx">unePropriétéNouvelle</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">f</span><span class="p">));</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// mode de passage des paramètres d&#x27;une fonction</span>
+<span class="odt-code-line">// -----------------------nombre - passage par valeur</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithNumber(param) {</span></span>
+<span class="odt-code-line">  param++;</span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === count);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// code d&#x27;appel</span>
+<span class="odt-code-line"><span style="color:#0000ff">let</span><span style="color:#000000"> count = 10;</span></span>
+<span class="odt-code-line">doSomethingWithNumber(count);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[count outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, count);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- chaîne - passage par valeur</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithString(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  param += </span><span style="color:#a31515">&quot; xyz&quot;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === text);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// code d&#x27;appel</span>
+<span class="odt-code-line"><span style="color:#0000ff">let</span><span style="color:#000000"> text = </span><span style="color:#a31515">&quot;abcd&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">doSomethingWithString(text);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[text outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, text);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- booléen - passage par valeur</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithBoolean(param) {</span></span>
+<span class="odt-code-line">  param = !param;</span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === bool);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// code d&#x27;appel</span>
+<span class="odt-code-line"><span style="color:#0000ff">let</span><span style="color:#000000"> bool = </span><span style="color:#0000ff">true</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">doSomethingWithBoolean(bool);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;bool </span><span style="font-weight:bold;color:#a31515">[outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, bool);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- tableau - passage par référence</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithArray(param) {</span></span>
+<span class="odt-code-line">  param.push(1000);</span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === tab);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// code d&#x27;appel</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">doSomethingWithArray(tab);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[tab outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- objet - passage par référence</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithObject(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  param.unePropriétéNouvelle = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === obj);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// code d&#x27;appel</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> obj = </span><span style="font-weight:bold;color:#000000">[10, 20, 30]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">doSomethingWithObject(obj);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[obj outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, obj);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// --------------------- fonction - passage par référence</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomethingWithFunction(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// une chose plutôt bizarre qui marche pourtant</span></span>
+<span class="odt-code-line"><span style="color:#000000">  param.unePropriétéNouvelle = </span><span style="color:#a31515">&quot;xyz&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[param inside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param, </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[type]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (param), </span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[passage par référence]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, param === f);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// code d&#x27;appel</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> f = x =&gt; x + 4;</span></span>
+<span class="odt-code-line">doSomethingWithFunction(f);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[f outside function]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, f, f.unePropriétéNouvelle, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (f));</span></span>
+</code></pre></div>
+
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\fonctions\func-01.js&quot;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">[</span><span class="nx">param</span><span class="w"> </span><span class="nx">inside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">11</span><span class="w"> </span><span class="p">[</span><span class="nx">type</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">[</span><span class="nx">passage</span><span class="w"> </span><span class="nx">par</span><span class="w"> </span><span class="nx">référence</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">[</span><span class="nx">count</span><span class="w"> </span><span class="nx">outside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="mf">10</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">[</span><span class="nx">param</span><span class="w"> </span><span class="nx">inside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nx">abcd</span><span class="w"> </span><span class="nx">xyz</span><span class="w"> </span><span class="p">[</span><span class="nx">type</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">[</span><span class="nx">passage</span><span class="w"> </span><span class="nx">par</span><span class="w"> </span><span class="nx">référence</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">[</span><span class="nx">text</span><span class="w"> </span><span class="nx">outside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nx">abcd</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">[</span><span class="nx">param</span><span class="w"> </span><span class="nx">inside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">[</span><span class="nx">type</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kr">boolean</span><span class="w"> </span><span class="p">[</span><span class="nx">passage</span><span class="w"> </span><span class="nx">par</span><span class="w"> </span><span class="nx">référence</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nx">bool</span><span class="w"> </span><span class="p">[</span><span class="nx">outside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">[</span><span class="nx">param</span><span class="w"> </span><span class="nx">inside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="nx">type</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="p">[</span><span class="nx">passage</span><span class="w"> </span><span class="nx">par</span><span class="w"> </span><span class="nx">référence</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">[</span><span class="nx">tab</span><span class="w"> </span><span class="nx">outside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">1000</span><span class="w"> </span><span class="p">]</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">[</span><span class="nx">param</span><span class="w"> </span><span class="nx">inside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;unePropriétéNouvelle&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;xyz&#39;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">[</span><span class="nx">type</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="p">[</span><span class="nx">passage</span><span class="w"> </span><span class="nx">par</span><span class="w"> </span><span class="nx">référence</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="p">[</span><span class="nx">obj</span><span class="w"> </span><span class="nx">outside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;unePropriétéNouvelle&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;xyz&#39;</span><span class="w"> </span><span class="p">]</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="p">[</span><span class="nx">param</span><span class="w"> </span><span class="nx">inside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="p">[</span><span class="nx">type</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">[</span><span class="nx">passage</span><span class="w"> </span><span class="nx">par</span><span class="w"> </span><span class="nx">référence</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="p">[</span><span class="nx">f</span><span class="w"> </span><span class="nx">outside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">4</span><span class="w"> </span><span class="nx">xyz</span><span class="w"> </span><span class="kd">function</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\fonctions\func-01.js&quot;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= 11 <span style="font-weight:bold">[type]</span>= number <span style="font-weight:bold">[passage par référence]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[count outside function]</span>= 10</span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= abcd xyz <span style="font-weight:bold">[type]</span>= string <span style="font-weight:bold">[passage par référence]</span>= false</span>
+<span class="odt-code-line"><span style="font-weight:bold">[text outside function]</span>= abcd</span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= false <span style="font-weight:bold">[type]</span>= boolean <span style="font-weight:bold">[passage par référence]</span>= false</span>
+<span class="odt-code-line">bool <span style="font-weight:bold">[outside function]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, 1000 ]</span> <span style="font-weight:bold">[type]</span>= object <span style="font-weight:bold">[passage par référence]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[tab outside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, 1000 ]</span></span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, &#x27;unePropriétéNouvelle&#x27;: &#x27;xyz&#x27; ]</span> <span style="font-weight:bold">[type]</span>= object <span style="font-weight:bold">[passage par référence]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[obj outside function]</span>= <span style="font-weight:bold">[ 10, 20, 30, &#x27;unePropriétéNouvelle&#x27;: &#x27;xyz&#x27; ]</span></span>
+<span class="odt-code-line"><span style="font-weight:bold">[param inside function]</span>= x =&gt; x + 4 <span style="font-weight:bold">[type]</span>= function <span style="font-weight:bold">[passage par référence]</span>= true</span>
+<span class="odt-code-line"><span style="font-weight:bold">[f outside function]</span>= x =&gt; x + 4 xyz function</span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042453980233556"></a></p>
 <h2 id="82-script-func-02">8.2. script [func-02]</h2>
 <p>Le script suivant montre que le type <strong>[function]</strong> est un type de donnée comme un autre et qu’une variable peut avoir ce type. Il montre également deux façons de définir une fonction :</p>
 <ul>
 <li>l’une avec le mot clé <strong>[function]</strong> ;</li>
 <li>l’autre avec la notation « flèche » =&gt; ;</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1">// on peut affecter une fonction à une variable</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">variable1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">};</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;typeof(variable1)=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">variable1</span><span class="p">));</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1">// la variable peut ensuite s&#39;utiliser comme une fonction</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;variable1(10,12)=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">variable1</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">));</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1">// la définition de la fonction peut se faire avec la notation =&gt;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">variable2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">c</span><span class="p">;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">};</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;variable2(10,12,14)=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">variable2</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="mf">14</span><span class="p">));</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="c1">// on peut ne pas mettre les accolades s&#39;il n&#39;y a qu&#39;une expression dans le code de la fonction</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="c1">// cette expression est alors la valeur de retour de la fonction</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="kd">const</span><span class="w"> </span><span class="nx">variable3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">c</span><span class="p">;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;variable3(10,12,14)=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">variable3</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="mf">14</span><span class="p">));</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line">&#x27;use strict&#x27;;</span>
+<span class="odt-code-line">// on peut affecter une fonction à une variable</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span> variable1 = <span style="color:#0000ff">function</span> (a, b) {</span>
+<span class="odt-code-line"><span style="color:#0000ff">  return</span> a + b;</span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line">console.log(&quot;typeof(variable1)=&quot;, <span style="color:#0000ff">typeof</span> (variable1));</span>
+<span class="odt-code-line">// la variable peut ensuite s&#x27;utiliser comme une fonction</span>
+<span class="odt-code-line">console.log(&quot;variable1(10,12)=&quot;, variable1(10, 12));</span>
+<span class="odt-code-line">// la définition de la fonction peut se faire avec la notation =&gt;</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span> variable2 = (a, b, c) =&gt; {</span>
+<span class="odt-code-line"><span style="color:#0000ff">  return</span> a - b + c;</span>
+<span class="odt-code-line">};</span>
+<span class="odt-code-line">console.log(&quot;variable2(10,12,14)=&quot;, variable2(10, 12, 14));</span>
+<span class="odt-code-line">// on peut ne pas mettre les accolades s&#x27;il n&#x27;y a qu&#x27;une expression dans le code de la fonction</span>
+<span class="odt-code-line">// cette expression est alors la valeur de retour de la fonction</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span> variable3 = (a, b, c) =&gt; a + b + c;</span>
+<span class="odt-code-line">console.log(&quot;variable3(10,12,14)=&quot;, variable3(10, 12, 14));</span>
+</code></pre></div>
+
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">[</span><span class="nx">Running</span><span class="p">]</span><span class="w"> </span><span class="nx">C</span><span class="o">:</span><span class="err">\</span><span class="nx">myprograms</span><span class="err">\</span><span class="nx">laragon</span><span class="o">-</span><span class="nx">lite</span><span class="err">\</span><span class="nx">bin</span><span class="err">\</span><span class="nx">nodejs</span><span class="err">\</span><span class="nx">node</span><span class="o">-</span><span class="nx">v10</span><span class="err">\</span><span class="nx">node</span><span class="p">.</span><span class="nx">exe</span><span class="w"> </span><span class="o">-</span><span class="nx">r</span><span class="w"> </span><span class="nx">esm</span><span class="w"> </span><span class="s2">&quot;c:\Data\st-2019\dev\es6\javascript\fonctions\func-02.js&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="ow">typeof</span><span class="p">(</span><span class="nx">variable1</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="kd">function</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nx">variable1</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="mf">12</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="mf">22</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nx">variable2</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="mf">12</span><span class="p">,</span><span class="mf">14</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="mf">12</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nx">variable3</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="mf">12</span><span class="p">,</span><span class="mf">14</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="mf">36</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\fonctions\func-02.js&quot;</span>
+<span class="odt-code-line">typeof(variable1)= function</span>
+<span class="odt-code-line">variable1(10,12)= 22</span>
+<span class="odt-code-line">variable2(10,12,14)= 12</span>
+<span class="odt-code-line">variable3(10,12,14)= 36</span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042473980233556"></a></p>
 <h2 id="83-script-func-03">8.3. script [func-03]</h2>
 <p>Ce script revient sur la possibilté de passer une fonction en paramètre à une autre fonction. Ce procédé est abondamment utilisé dans les frameworks Javascript.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span>
-<span class="normal"><a href="#__codelineno-4-17">17</a></span>
-<span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span>
-<span class="normal"><a href="#__codelineno-4-20">20</a></span>
-<span class="normal"><a href="#__codelineno-4-21">21</a></span>
-<span class="normal"><a href="#__codelineno-4-22">22</a></span>
-<span class="normal"><a href="#__codelineno-4-23">23</a></span>
-<span class="normal"><a href="#__codelineno-4-24">24</a></span>
-<span class="normal"><a href="#__codelineno-4-25">25</a></span>
-<span class="normal"><a href="#__codelineno-4-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1">// les paramètres d&#39;une fonction peuvent être de type [fonction]</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// fonction f1</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f1</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span><span class="w"> </span><span class="nx">param2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">param1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">param2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="c1">// fonction f2</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f2</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span><span class="w"> </span><span class="nx">param2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">param1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">param2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">20</span><span class="p">;</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">}</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="c1">// fonction g avec une fonction f en paramètre</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="kd">function</span><span class="w"> </span><span class="nx">g</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span><span class="w"> </span><span class="nx">param2</span><span class="p">,</span><span class="w"> </span><span class="nx">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span><span class="w"> </span><span class="nx">param2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="p">}</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="c1">// utilisations de g</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">f1</span><span class="p">));</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">f2</span><span class="p">));</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="c1">// le paramètre effectif de type fonction peut être passé en direct - forme 1</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span><span class="w"> </span><span class="nx">param2</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">param1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">param2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="p">}));</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="c1">// le paramètre effectif de type fonction peut être passé en direct - forme 2</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span><span class="w"> </span><span class="nx">param2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">param1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">param2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">40</span><span class="p">;</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="p">}));</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// les paramètres d&#x27;une fonction peuvent être de type <span style="font-weight:bold">[fonction]</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// fonction f1</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> f1(param1, param2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 10;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// fonction f2</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> f2(param1, param2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 20;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// fonction g avec une fonction f en paramètre</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> g(param1, param2, f) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> f(param1, param2) + 100;</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// utilisations de g</span>
+<span class="odt-code-line">console.log(g(0, 10, f1));</span>
+<span class="odt-code-line">console.log(g(0, 10, f2));</span>
+<span class="odt-code-line">// le paramètre effectif de type fonction peut être passé en direct - forme 1</span>
+<span class="odt-code-line">console.log(g(0, 10, (param1, param2) =&gt; {</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 30;</span></span>
+<span class="odt-code-line">}));</span>
+<span class="odt-code-line">// le paramètre effectif de type fonction peut être passé en direct - forme 2</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(g(0, 10, </span><span style="color:#0000ff">function</span><span style="color:#000000"> (param1, param2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> param1 + param2 + 40;</span></span>
+<span class="odt-code-line">}));</span>
+</code></pre></div>
+
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\fonctions\func-03.js&quot;
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>120
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>130
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>140
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>150
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\fonctions\func-03.js&quot;</span></span>
+<span class="odt-code-line">120</span>
+<span class="odt-code-line">130</span>
+<span class="odt-code-line">140</span>
+<span class="odt-code-line">150</span>
+</code></pre></div>
+
+<p><a id="refheadingtoc259303196815120"></a></p>
 <h2 id="84-script-func-04">8.4. script [func-04]</h2>
 <p>Le script suivant montre qu’une fonction Javascript peut se comporter comme une classe :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span>
-<span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span>
-<span class="normal"><a href="#__codelineno-6-15">15</a></span>
-<span class="normal"><a href="#__codelineno-6-16">16</a></span>
-<span class="normal"><a href="#__codelineno-6-17">17</a></span>
-<span class="normal"><a href="#__codelineno-6-18">18</a></span>
-<span class="normal"><a href="#__codelineno-6-19">19</a></span>
-<span class="normal"><a href="#__codelineno-6-20">20</a></span>
-<span class="normal"><a href="#__codelineno-6-21">21</a></span>
-<span class="normal"><a href="#__codelineno-6-22">22</a></span>
-<span class="normal"><a href="#__codelineno-6-23">23</a></span>
-<span class="normal"><a href="#__codelineno-6-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1">// une fonction peut être utilisée comme un objet</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1">// une coquille vide</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">}</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1">// à qui on attribue des propriétés de l&#39;extérieur</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="nx">f</span><span class="p">.</span><span class="nx">prop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;val1&quot;</span><span class="p">;</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="nx">f</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prop1</span><span class="p">);</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="p">}</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="c1">// utilisation de f</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="nx">f</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a>
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="c1">// une fonction g fonctionnant comme une classe</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="kd">function</span><span class="w"> </span><span class="nx">g</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">prop2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;val2&quot;</span><span class="p">;</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prop2</span><span class="p">);</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="p">}</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="c1">// instanciation de la fonction avec [new]</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="ow">new</span><span class="w"> </span><span class="nx">g</span><span class="p">().</span><span class="nx">show</span><span class="p">();</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// une fonction peut être utilisée comme un objet</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// une coquille vide</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> f() {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// à qui on attribue des propriétés de l&#x27;extérieur</span>
+<span class="odt-code-line"><span style="color:#000000">f.prop1 = </span><span style="color:#a31515">&quot;val1&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">f.show = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop1);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// utilisation de f</span>
+<span class="odt-code-line">f.show();</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// une fonction g fonctionnant comme une classe</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> g() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2 = </span><span style="color:#a31515">&quot;val2&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">this</span><span style="color:#000000">.show = </span><span style="color:#0000ff">function</span><span style="color:#000000"> () {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.prop2);</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// instanciation de la fonction avec <span style="font-weight:bold">[new]</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">new</span><span style="color:#000000"> g().show();</span></span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>lignes 5-7 : le corps de la fonction f ne définit aucune propriété ;</li>
@@ -1130,45 +1004,34 @@
 <li>ligne 24 : la fonction <strong>[g]</strong> est instanciée par <strong>[new g()]</strong> ;</li>
 </ul>
 <p><strong>Résultats de l’exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>val1
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>val2
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;</span></span>
+<span class="odt-code-line">val1</span>
+<span class="odt-code-line">val2</span>
+</code></pre></div>
+
 <p>ES6 a introduit la notion de classe qui nous permet désormais d’éviter de passer par des fonctions pour avoir des classes.</p>
+<p><a id="refheadingtoc5458671626043720"></a></p>
 <h2 id="85-script-func-05">8.5. script [func-05]</h2>
 <p>Le script [func-05] montre l’usage d’un opérateur appelé [rest operator] :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-8-10">10</a></span>
-<span class="normal"><a href="#__codelineno-8-11">11</a></span>
-<span class="normal"><a href="#__codelineno-8-12">12</a></span>
-<span class="normal"><a href="#__codelineno-8-13">13</a></span>
-<span class="normal"><a href="#__codelineno-8-14">14</a></span>
-<span class="normal"><a href="#__codelineno-8-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="c1">// rest operator</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">arg1</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">otherArgs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="c1">// 1er argument</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;arg1=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">arg1</span><span class="p">);</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">  </span><span class="c1">// les autres arguments</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">  </span><span class="nx">otherArgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;otherArguments[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">  </span><span class="p">});</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="p">}</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a>
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="c1">// appel</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="nx">f</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;deux&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;trois&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">})</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// rest operator</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> f(arg1, ...otherArgs) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// 1er argument</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;arg1=&quot;</span><span style="color:#000000">, arg1);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// les autres arguments</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span>
+<span class="odt-code-line">  otherArgs.forEach(element =&gt; {</span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;otherArguments[&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;]=&quot;</span><span style="color:#000000">, element);</span></span>
+<span class="odt-code-line">    i++;</span>
+<span class="odt-code-line">  });</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// appel</span>
+<span class="odt-code-line"><span style="color:#000000">f(1, </span><span style="color:#a31515">&quot;deux&quot;</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;trois&quot;</span><span style="color:#000000">, { x: 2, y: 3 })</span></span>
+</code></pre></div>
+
 <ul>
 <li>ligne 3 : la notation [...otherArgs] fait qu’avec un appel de type f(param1, param2, param3) on aura ligne 3 :<ul>
 <li>arg1=param1</li>
@@ -1177,13 +1040,13 @@
 </li>
 </ul>
 <p>Les résultats de l’application sont les suivants :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>arg1= 1
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>otherArguments[ 0 ]= deux
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>otherArguments[ 1 ]= trois
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>otherArguments[ 2 ]= { x: 2, y: 3 }
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>arg1= 1
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>otherArguments[ 0 ]= deux
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>otherArguments[ 1 ]= trois
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>otherArguments[ 2 ]= { x: 2, y: 3 }
 </code></pre></div></td></tr></table></div>
 
 
@@ -1242,7 +1105,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>

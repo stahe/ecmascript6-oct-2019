@@ -839,12 +839,19 @@
 <li><strong>[node.js]</strong> pour les exécuter ;</li>
 <li><strong>[npm]</strong> pour télécharger et installer les bibliothèques Javascript dont nous aurons besoin ;</li>
 </ul>
+<p><a id="toc42690579"></a>
+<a id="toc42690193"></a></p>
 <h2 id="21-environnement-de-travail-pour-le-serveur-web">2.1. Environnement de travail pour le serveur web</h2>
 <p>Les scripts PHP ont été écrits et testés dans l&#x27;environnement suivant :</p>
 <ul>
 <li>un environnement serveur web Apache / SGBD MySQL / PHP 7.3 appelé <strong>Laragon ;</strong></li>
 <li>l&#x27;IDE de développement <strong>Netbeans 10.0 ;</strong></li>
 </ul>
+<p><a id="installationdelaragon"></a>
+<a id="refheadingtoc45843531951845"></a>
+<a id="toc42690194"></a>
+<a id="toc42690580"></a>
+<a id="laragon"></a></p>
 <h3 id="211-installation-de-laragon">2.1.1. Installation de Laragon</h3>
 <p>Laragon est un package réunissant plusieurs logiciels :</p>
 <ul>
@@ -854,7 +861,7 @@
 <li>un serveur Redis implémentant un cache pour des applications web :</li>
 </ul>
 <p>Laragon peut être téléchargé (mars 2019) à l&#x27;adresse suivante :</p>
-<p><a href="https://laragon.org/download/"><u><u>https://laragon.org/download/</u></u></a></p>
+<p><a href="https://laragon.org/download/"><u><span style="color: #0563c1">https://laragon.org/download/</span></u></a></p>
 <p><img src="images/10000000000005AC000003184BDF25EA.png" style="width:9.602cm;height:5.241cm;" alt="Image" /></p>
 <p><img src="images/100000000000086200000337E13872C5.png" style="width:14.191cm;height:5.441cm;" alt="Image" /></p>
 <p><img src="images/100000000000088C0000033343F79C47.png" style="width:14.47cm;height:5.421cm;" alt="Image" /></p>
@@ -882,6 +889,10 @@
 <li>en <strong>[2, 3]</strong> : le dossier courant ;</li>
 <li>en <strong>[4]</strong>, on tape la commande <strong>[echo %PATH%]</strong> qui affiche la liste des dossiers explorés lors de la recherche d’un exécutable. Tous les principaux dossiers de Laragon sont inclus dans ce chemin des exécutables, ce qui ne serait pas le cas si on ouvrait une fenêtre de commandes <strong>[cmd]</strong> dans Windows. Dans ce document, lorsqu’on est amené à taper des commandes pour installer tel ou tel logiciel, c’est en général dans un terminal Laragon que ces commandes sont tapées ;</li>
 </ul>
+<p><a id="installationdelide"></a>
+<a id="refheadingtoc45845531951845"></a>
+<a id="toc42690195"></a>
+<a id="toc42690581"></a></p>
 <h3 id="212-installation-de-lide-netbeans-100">2.1.2. Installation de l&#x27;IDE Netbeans 10.0</h3>
 <p>L&#x27;IDE Netbeans 10.0 peut être téléchargé à l&#x27;adresse suivante (mars 2019) :</p>
 <p><a href="https://netbeans.apache.org/download/index.html">https://netbeans.apache.org/download/index.HTML</a></p>
@@ -941,9 +952,9 @@
 <p>La notion d’<strong>[Include Path]</strong> est ici propre à Netbeans. PHP a également cette notion mais ce sont a priori deux notions différentes.</p>
 <p>Maintenant que l&#x27;environnement de travail a été installé, nous pouvons aborder les bases de PHP.</p>
 <h2 id="22-environnement-de-travail-pour-javascript">2.2. Environnement de travail pour JavaScript</h2>
-<p>Ces outils peuvent être installés à partir de Laragon (cf. paragraphe <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx#laragon"><u><u>lien</u></u></a>) :</p>
+<p>Ces outils peuvent être installés à partir de Laragon (cf. paragraphe <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx#laragon"><u><span style="color: #0563c1">lien</span></u></a>) :</p>
 <p><img src="images/100000000000056B0000046C43F6DAF0.png" style="width:12.84cm;height:10.48cm;" alt="Image" /></p>
-<p>En <strong>[4]</strong>, on installe <strong>[node.js]</strong>. Une fois l’installation terminée, on ouvre un terminal Laragon (cf. paragraphe <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx#laragon"><u><u>lien</u></u></a>) et on demande la version de <strong>[node.js]</strong> installée (1) ainsi que celle de <strong>[npm]</strong> (2) :</p>
+<p>En <strong>[4]</strong>, on installe <strong>[node.js]</strong>. Une fois l’installation terminée, on ouvre un terminal Laragon (cf. paragraphe <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-02.docx#laragon"><u><span style="color: #0563c1">lien</span></u></a>) et on demande la version de <strong>[node.js]</strong> installée (1) ainsi que celle de <strong>[npm]</strong> (2) :</p>
 <p><img src="images/100000000000082E000003C2B0ACC9CF.png" style="width:16.62cm;height:7.64cm;" alt="Image" /></p>
 <p>Ensuite nous installons Visual Studio Code appelé fréquemment <strong>[code]</strong> ou <strong>[VSCode]</strong> <strong>[3-6]</strong>. Ceci fait, nous pouvons lancer cet outil de développement :</p>
 <p><img src="images/1000000000000416000001E820D7CD65.png" style="width:9.692cm;height:4.522cm;" alt="Image" /></p>
@@ -1078,40 +1089,26 @@
 <li>en <strong>[4]</strong>, un fichier <strong>[.eslintrc.js]</strong> a été créé à la racine du projet ;</li>
 <li>en <strong>[6]</strong>, le contenu du fichier. Vous pouvez en copier le contenu dans votre propre fichier ;</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="s2">&quot;env&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="s2">&quot;browser&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="s2">&quot;es6&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="s2">&quot;extends&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;eslint:recommended&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="s2">&quot;globals&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="s2">&quot;Atomics&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readonly&quot;</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="s2">&quot;SharedArrayBuffer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;readonly&quot;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="s2">&quot;parserOptions&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="s2">&quot;ecmaVersion&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">2018</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="s2">&quot;sourceType&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;module&quot;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="s2">&quot;rules&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">};</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line">module.exports = {</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&quot;env&quot;</span><span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;browser&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">true</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;es6&quot;</span><span style="color:#000000">: </span><span style="color:#0000ff">true</span></span>
+<span class="odt-code-line">  },</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&quot;extends&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;eslint:recommended&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&quot;globals&quot;</span><span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;Atomics&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;readonly&quot;</span><span style="color:#000000">,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;SharedArrayBuffer&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;readonly&quot;</span></span>
+<span class="odt-code-line">  },</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&quot;parserOptions&quot;</span><span style="color:#000000">: {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;ecmaVersion&quot;</span><span style="color:#000000">: 2018,</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#a31515">&quot;sourceType&quot;</span><span style="color:#000000">: </span><span style="color:#a31515">&quot;module&quot;</span></span>
+<span class="odt-code-line">  },</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#a31515">&quot;rules&quot;</span><span style="color:#000000">: {</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">};</span>
+</code></pre></div>
+
 <p>Tout ceci n’est pas suffisant pour signaler les erreurs du fichier <strong>[test-02.js]</strong> :</p>
 <p><img src="images/10000000000005D20000013B8E6ACD0B.png" style="width:15.77cm;height:3.331cm;" alt="Image" /></p>
 <ul>
@@ -1126,8 +1123,8 @@
 <p><img src="images/10000000000003F4000002F6870BF687.png" style="width:10.711cm;height:8.021cm;" alt="Image" /></p>
 <ul>
 <li>en <strong>[1]</strong>, une page d’informations sur l’extension nouvellement installée ;</li>
+<li>en <strong>[2]</strong>, on voit que le mode de vérification de <strong>[ESLint]</strong> est <strong>[type]</strong>, ce qui signifie que la syntaxe des scripts jS sera vérifiée en même temps que la frappe du texte ;</li>
 </ul>
-<p>en <strong>[2]</strong>, on voit que le mode de vérification de <strong>[ESLint]</strong> est <strong>[type]</strong>, ce qui signifie que la syntaxe des scripts jS sera vérifiée en même temps que la frappe du texte ;</p>
 <p>ESLint peut être configuré via le fichier de configuration général de <strong>[VSCode]</strong> :</p>
 <p><img src="images/10000000000005E00000029178AD06F1.png" style="width:15.922cm;height:6.95cm;" alt="Image" /></p>
 <ul>
@@ -1242,7 +1239,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>

@@ -785,248 +785,156 @@
   
 
 
+<p><a id="refheadingtoc2041993980233556"></a></p>
 <h1 id="4-les-tableaux">4. Les tableaux</h1>
 <p><img src="images/10000000000000F7000000DA0354C5DC.png" style="width:2.611cm;height:2.311cm;" alt="Image" /></p>
+<p><a id="refheadingtoc2042013980233556"></a></p>
 <h2 id="41-script-tab-01">4.1. script [tab-01]</h2>
 <p>Le script suivant illustre certaines caractéristiques des tableaux Javascript. Ceux-ci ressemblent aux tableaux PHP avec cependant une grande différence : ils sont manipulés via des pointeurs et sont considérés comme des objets.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// un tableau est un objet manipulé via son adresse</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">// copie d&#39;adresses</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab1</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// tab1 et tab2 pointent sur le même tableau</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab1===tab2 :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">tab2</span><span class="p">);</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1">// on peut modifier le tableau en passant indifféremment par tab1 ou tab2</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nx">tab2</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab1=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab1</span><span class="p">);</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab2=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab2</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// un tableau est un objet manipulé via son adresse</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab1 = </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// copie d&#x27;adresses</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab1;</span></span>
+<span class="odt-code-line">// tab1 et tab2 pointent sur le même tableau</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1===tab2 :&quot;</span><span style="color:#000000">, tab1 === tab2);</span></span>
+<span class="odt-code-line">// on peut modifier le tableau en passant indifféremment par tab1 ou tab2</span>
+<span class="odt-code-line">tab2<span style="font-weight:bold">[1]</span> = 10;</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab1=&quot;</span><span style="color:#000000">, tab1);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span>
+</code></pre></div>
+
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-01.js&quot;
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>tab1===tab2 : true
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>tab1= [ 1, 10, 3 ]
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>tab2= [ 1, 10, 3 ]
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-01.js&quot;</span></span>
+<span class="odt-code-line">tab1===tab2 : true</span>
+<span class="odt-code-line">tab1= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span>
+<span class="odt-code-line">tab2= <span style="font-weight:bold">[ 1, 10, 3 ]</span></span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>la ligne 2 des résultats montre que <strong>[tab1]</strong> et <strong>[tab2]</strong> sont deux entités égales, en fait deux pointeurs égaux ;</li>
 <li>les lignes 4 et 5 des résultats montrent que ces deux pointeurs pointent sur le même tableau ;</li>
 </ul>
+<p><a id="refheadingtoc2042033980233556"></a></p>
 <h2 id="42-script-tab-02">4.2. script [tab-02]</h2>
 <p>Ce script montre que le tableau Javascript est différent des tableaux des langages compilés.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// tableau</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;, longueur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="c1">// initialisation d&#39;un élément</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nx">tab</span><span class="p">[</span><span class="mf">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nx">tab</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;huit&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1">// tableau</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;, longueur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">// toString</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab.toString=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="c1">// les clés du tableau sont ses indices</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">keys</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;clé=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], valeur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">[</span><span class="nx">key</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="p">}</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;-------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="c1">// les valeurs du tableau</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">values</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;valeur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// tableau</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = [];</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, longueur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// initialisation d&#x27;un élément</span>
+<span class="odt-code-line">tab<span style="font-weight:bold">[3]</span> = 100;</span>
+<span class="odt-code-line"><span style="color:#000000">tab</span><span style="font-weight:bold;color:#000000">[1]</span><span style="color:#000000"> = </span><span style="color:#a31515">&quot;huit&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// tableau</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab, </span><span style="color:#a31515">&quot;, longueur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.length, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// toString</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab.toString=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab.toString(), &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// les clés du tableau sont ses indices</span>
+<span class="odt-code-line"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> key </span><span style="color:#0000ff">of</span><span style="color:#000000"> tab.keys()) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;clé=</span><span style="font-weight:bold;color:#a31515">[&quot;, key, &quot;]</span><span style="color:#a31515">, valeur=</span><span style="font-weight:bold;color:#a31515">[&quot;, tab[key]</span><span style="color:#000000">, </span><span style="color:#a31515">&quot;]&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;-------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// les valeurs du tableau</span>
+<span class="odt-code-line"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> value </span><span style="color:#0000ff">of</span><span style="color:#000000"> tab.values()) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;valeur=</span><span style="font-weight:bold;color:#a31515">[&quot;, value, &quot;]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
 <ul>
 <li>ligne 4 : un tableau vide ;</li>
 <li>ligne 8 : un tableau n’a pas de taille fixe. C’est simplement une suite d’éléments indexée par un n°. On peut initialiser l’élément n° 3 même si les éléments <strong>[0, 1, 2]</strong> ne sont pas encore définis ;</li>
 <li>lignes 16-24 : un tableau Javascript a un comportement analogue à celui du tableau PHP ;</li>
 </ul>
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">[</span><span class="n">Running</span><span class="p">]</span> <span class="n">C</span><span class="p">:</span>\<span class="n">myprograms</span>\<span class="n">laragon</span><span class="o">-</span><span class="n">lite</span>\<span class="nb">bin</span>\<span class="n">nodejs</span>\<span class="n">node</span><span class="o">-</span><span class="n">v10</span>\<span class="n">node</span><span class="o">.</span><span class="n">exe</span> <span class="s2">&quot;c:\Temp</span><span class="se">\1</span><span class="s2">9-09-01\javascript</span><span class="se">\t</span><span class="s2">ableaux</span><span class="se">\t</span><span class="s2">ab-02.js&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">tab</span><span class="o">=</span> <span class="p">[]</span> <span class="p">,</span> <span class="n">longueur</span><span class="o">=</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="o">-------------------------------</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">tab</span><span class="o">=</span> <span class="p">[</span> <span class="o">&lt;</span><span class="mi">1</span> <span class="n">empty</span> <span class="n">item</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;huit&#39;</span><span class="p">,</span> <span class="o">&lt;</span><span class="mi">1</span> <span class="n">empty</span> <span class="n">item</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">100</span> <span class="p">]</span> <span class="p">,</span> <span class="n">longueur</span><span class="o">=</span><span class="p">[</span> <span class="mi">4</span> <span class="p">]</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="o">-------------------------------</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">tab</span><span class="o">.</span><span class="n">toString</span><span class="o">=</span><span class="p">[</span> <span class="p">,</span><span class="n">huit</span><span class="p">,,</span><span class="mi">100</span> <span class="p">]</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="o">-------------------------------</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">clé</span><span class="o">=</span><span class="p">[</span> <span class="mi">0</span> <span class="p">],</span> <span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="n">undefined</span> <span class="p">]</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">clé</span><span class="o">=</span><span class="p">[</span> <span class="mi">1</span> <span class="p">],</span> <span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="n">huit</span> <span class="p">]</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">clé</span><span class="o">=</span><span class="p">[</span> <span class="mi">2</span> <span class="p">],</span> <span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="n">undefined</span> <span class="p">]</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">clé</span><span class="o">=</span><span class="p">[</span> <span class="mi">3</span> <span class="p">],</span> <span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="mi">100</span> <span class="p">]</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="o">-------------------------------</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="n">undefined</span> <span class="p">]</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="n">huit</span> <span class="p">]</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="n">undefined</span> <span class="p">]</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="mi">100</span> <span class="p">]</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-02.js&quot;</span></span>
+<span class="odt-code-line">tab= <span style="font-weight:bold">[] , longueur=[ 0 ]</span></span>
+<span class="odt-code-line">-------------------------------</span>
+<span class="odt-code-line">tab= <span style="font-weight:bold">[ &lt;1 empty item&gt;, &#x27;huit&#x27;, &lt;1 empty item&gt;, 100 ]</span> , longueur=<span style="font-weight:bold">[ 4 ]</span></span>
+<span class="odt-code-line">-------------------------------</span>
+<span class="odt-code-line">tab.toString=<span style="font-weight:bold">[ ,huit,,100 ]</span></span>
+<span class="odt-code-line">-------------------------------</span>
+<span class="odt-code-line">clé=<span style="font-weight:bold">[ 0 ]</span>, valeur=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">clé=<span style="font-weight:bold">[ 1 ]</span>, valeur=<span style="font-weight:bold">[ huit ]</span></span>
+<span class="odt-code-line">clé=<span style="font-weight:bold">[ 2 ]</span>, valeur=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">clé=<span style="font-weight:bold">[ 3 ]</span>, valeur=<span style="font-weight:bold">[ 100 ]</span></span>
+<span class="odt-code-line">-------------------------------</span>
+<span class="odt-code-line">valeur=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">valeur=<span style="font-weight:bold">[ huit ]</span></span>
+<span class="odt-code-line">valeur=<span style="font-weight:bold">[ undefined ]</span></span>
+<span class="odt-code-line">valeur=<span style="font-weight:bold">[ 100 ]</span></span>
+</code></pre></div>
+
+<p><a id="refheadingtoc2042053980233556"></a></p>
 <h2 id="43-script-tab-03">4.3. script [tab-03]</h2>
 <p>Ce script montre différentes méthodes de l’objet <strong>[tableau]</strong>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span>
-<span class="normal"><a href="#__codelineno-4-17">17</a></span>
-<span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span>
-<span class="normal"><a href="#__codelineno-4-20">20</a></span>
-<span class="normal"><a href="#__codelineno-4-21">21</a></span>
-<span class="normal"><a href="#__codelineno-4-22">22</a></span>
-<span class="normal"><a href="#__codelineno-4-23">23</a></span>
-<span class="normal"><a href="#__codelineno-4-24">24</a></span>
-<span class="normal"><a href="#__codelineno-4-25">25</a></span>
-<span class="normal"><a href="#__codelineno-4-26">26</a></span>
-<span class="normal"><a href="#__codelineno-4-27">27</a></span>
-<span class="normal"><a href="#__codelineno-4-28">28</a></span>
-<span class="normal"><a href="#__codelineno-4-29">29</a></span>
-<span class="normal"><a href="#__codelineno-4-30">30</a></span>
-<span class="normal"><a href="#__codelineno-4-31">31</a></span>
-<span class="normal"><a href="#__codelineno-4-32">32</a></span>
-<span class="normal"><a href="#__codelineno-4-33">33</a></span>
-<span class="normal"><a href="#__codelineno-4-34">34</a></span>
-<span class="normal"><a href="#__codelineno-4-35">35</a></span>
-<span class="normal"><a href="#__codelineno-4-36">36</a></span>
-<span class="normal"><a href="#__codelineno-4-37">37</a></span>
-<span class="normal"><a href="#__codelineno-4-38">38</a></span>
-<span class="normal"><a href="#__codelineno-4-39">39</a></span>
-<span class="normal"><a href="#__codelineno-4-40">40</a></span>
-<span class="normal"><a href="#__codelineno-4-41">41</a></span>
-<span class="normal"><a href="#__codelineno-4-42">42</a></span>
-<span class="normal"><a href="#__codelineno-4-43">43</a></span>
-<span class="normal"><a href="#__codelineno-4-44">44</a></span>
-<span class="normal"><a href="#__codelineno-4-45">45</a></span>
-<span class="normal"><a href="#__codelineno-4-46">46</a></span>
-<span class="normal"><a href="#__codelineno-4-47">47</a></span>
-<span class="normal"><a href="#__codelineno-4-48">48</a></span>
-<span class="normal"><a href="#__codelineno-4-49">49</a></span>
-<span class="normal"><a href="#__codelineno-4-50">50</a></span>
-<span class="normal"><a href="#__codelineno-4-51">51</a></span>
-<span class="normal"><a href="#__codelineno-4-52">52</a></span>
-<span class="normal"><a href="#__codelineno-4-53">53</a></span>
-<span class="normal"><a href="#__codelineno-4-54">54</a></span>
-<span class="normal"><a href="#__codelineno-4-55">55</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1">// un tableau peut contenir différents types de données</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;un&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;deux&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prop1</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">prop2</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;abc&quot;</span><span class="w"> </span><span class="p">}];</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="c1">// console.log sait afficher le contenu d&#39;un tableau</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="nx">show</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="nx">show</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="c1">// parcours du tableau avec foreach</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">});</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="nx">show</span><span class="p">(</span><span class="s2">&quot;2b&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="c1">// une autre écriture pour faire la même chose</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">});</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="nx">show</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="c1">// parcours du tableau avec for</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;i=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab[i]=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="p">}</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="nx">show</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="c1">// modification tab[i]</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="nx">tab</span><span class="p">[</span><span class="mf">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="c1">// affichage</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="nx">show</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="c1">// on enlève le dernier élément</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="kd">let</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="nx">show</span><span class="p">(</span><span class="mf">6</span><span class="p">);</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="c1">// on ajoute un élément à la fin du tableau</span>
-<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;xyz&#39;</span><span class="p">);</span>
-<a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="nx">show</span><span class="p">(</span><span class="mf">7</span><span class="p">);</span>
-<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="c1">// on ajoute un élément au début du tableau</span>
-<a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="mf">1000</span><span class="p">);</span>
-<a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="nx">show</span><span class="p">(</span><span class="mf">8</span><span class="p">);</span>
-<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="c1">// on enlève le 1er élément du tableau</span>
-<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
-<a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="nx">show</span><span class="p">(</span><span class="mf">9</span><span class="p">);</span>
-<a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="c1">// on enlève l&#39;élément n° 2 du tableau</span>
-<a id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
-<a id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="nx">show</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span>
-<a id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="c1">// on enlève du tableau deux éléments à partir de l&#39;élément n° 1</span>
-<a id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
-<a id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-4-51" name="__codelineno-4-51"></a>
-<a id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="c1">// fonction</span>
-<a id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="kd">function</span><span class="w"> </span><span class="nx">show</span><span class="p">(</span><span class="nx">param</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">// un tableau peut contenir différents types de données</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = </span><span style="font-weight:bold;color:#000000">[1, 2, &quot;un&quot;, &quot;deux&quot;, true, [10, 20]</span><span style="color:#000000">, { prop1: 10, prop2: </span><span style="color:#a31515">&quot;abc&quot;</span><span style="color:#000000"> }];</span></span>
+<span class="odt-code-line">// console.log sait afficher le contenu d&#x27;un tableau</span>
+<span class="odt-code-line">show(1);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(2);</span>
+<span class="odt-code-line">// parcours du tableau avec foreach</span>
+<span class="odt-code-line">tab.forEach(element =&gt; {</span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (element));</span></span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line"><span style="color:#000000">show(</span><span style="color:#a31515">&quot;2b&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">// une autre écriture pour faire la même chose</span>
+<span class="odt-code-line"><span style="color:#000000">tab.forEach(</span><span style="color:#0000ff">function</span><span style="color:#000000"> (element) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (element));</span></span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line">show(3);</span>
+<span class="odt-code-line">// parcours du tableau avec for</span>
+<span class="odt-code-line"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; tab.length; i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;i=&quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;tab</span><span style="font-weight:bold;color:#a31515">[i]</span><span style="color:#a31515">=&quot;</span><span style="color:#000000">, tab</span><span style="font-weight:bold;color:#000000">[i]</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">show(4);</span>
+<span class="odt-code-line">// modification tab<span style="font-weight:bold">[i]</span></span>
+<span class="odt-code-line">tab<span style="font-weight:bold">[5]</span> = [];</span>
+<span class="odt-code-line">// affichage</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(5);</span>
+<span class="odt-code-line">// on enlève le dernier élément</span>
+<span class="odt-code-line"><span style="color:#0000ff">let</span><span style="color:#000000"> element = tab.pop(tab);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(6);</span>
+<span class="odt-code-line">// on ajoute un élément à la fin du tableau</span>
+<span class="odt-code-line"><span style="color:#000000">tab.push(</span><span style="color:#a31515">&#x27;xyz&#x27;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(7);</span>
+<span class="odt-code-line">// on ajoute un élément au début du tableau</span>
+<span class="odt-code-line">tab.unshift(1000);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(8);</span>
+<span class="odt-code-line">// on enlève le 1er élément du tableau</span>
+<span class="odt-code-line">element = tab.shift();</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(9);</span>
+<span class="odt-code-line">// on enlève l&#x27;élément n° 2 du tableau</span>
+<span class="odt-code-line">element = tab.splice(2, 1);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">show(10);</span>
+<span class="odt-code-line">// on enlève du tableau deux éléments à partir de l&#x27;élément n° 1</span>
+<span class="odt-code-line">element = tab.splice(1, 2);</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément=&quot;</span><span style="color:#000000">, element, </span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// fonction</span>
+<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> show(param) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[&quot;, param, &quot;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>la différence entre tableaux PHP et tableaux Javascript est illustrée par les lignes 3 et 24 :<ul>
@@ -1044,9 +952,11 @@
 </li>
 </ul>
 <p>on écrit :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>* **(p1,p2, ..,pn)=&amp;gt;{.…}**. On appelle cela, la notation « flèche » ou « arrow » ;
-</code></pre></div></td></tr></table></div>
 <ul>
+<li>(suite)<ul>
+<li><strong>(p1,p2, ..,pn)=&gt;{.…}</strong>. On appelle cela, la notation « flèche » ou « arrow » ;</li>
+</ul>
+</li>
 <li>le reste du code est expliqué par les commentaires ;</li>
 </ul>
 <p>De ce script, on notera que :</p>
@@ -1054,154 +964,90 @@
 <li>un tableau est un objet référencé par un pointeur ;</li>
 <li>que cet objet a des méthodes <strong>[forEach, pop, push, shift, unshift]</strong> ;</li>
 </ul>
+<p><a id="refheadingtoc2042073980233556"></a></p>
 <h2 id="44-script-tab-04">4.4. script [tab-04]</h2>
 <p>Ce script présente d’autres méthodes des objets tableau.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span>
-<span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span>
-<span class="normal"><a href="#__codelineno-5-27">27</a></span>
-<span class="normal"><a href="#__codelineno-5-28">28</a></span>
-<span class="normal"><a href="#__codelineno-5-29">29</a></span>
-<span class="normal"><a href="#__codelineno-5-30">30</a></span>
-<span class="normal"><a href="#__codelineno-5-31">31</a></span>
-<span class="normal"><a href="#__codelineno-5-32">32</a></span>
-<span class="normal"><a href="#__codelineno-5-33">33</a></span>
-<span class="normal"><a href="#__codelineno-5-34">34</a></span>
-<span class="normal"><a href="#__codelineno-5-35">35</a></span>
-<span class="normal"><a href="#__codelineno-5-36">36</a></span>
-<span class="normal"><a href="#__codelineno-5-37">37</a></span>
-<span class="normal"><a href="#__codelineno-5-38">38</a></span>
-<span class="normal"><a href="#__codelineno-5-39">39</a></span>
-<span class="normal"><a href="#__codelineno-5-40">40</a></span>
-<span class="normal"><a href="#__codelineno-5-41">41</a></span>
-<span class="normal"><a href="#__codelineno-5-42">42</a></span>
-<span class="normal"><a href="#__codelineno-5-43">43</a></span>
-<span class="normal"><a href="#__codelineno-5-44">44</a></span>
-<span class="normal"><a href="#__codelineno-5-45">45</a></span>
-<span class="normal"><a href="#__codelineno-5-46">46</a></span>
-<span class="normal"><a href="#__codelineno-5-47">47</a></span>
-<span class="normal"><a href="#__codelineno-5-48">48</a></span>
-<span class="normal"><a href="#__codelineno-5-49">49</a></span>
-<span class="normal"><a href="#__codelineno-5-50">50</a></span>
-<span class="normal"><a href="#__codelineno-5-51">51</a></span>
-<span class="normal"><a href="#__codelineno-5-52">52</a></span>
-<span class="normal"><a href="#__codelineno-5-53">53</a></span>
-<span class="normal"><a href="#__codelineno-5-54">54</a></span>
-<span class="normal"><a href="#__codelineno-5-55">55</a></span>
-<span class="normal"><a href="#__codelineno-5-56">56</a></span>
-<span class="normal"><a href="#__codelineno-5-57">57</a></span>
-<span class="normal"><a href="#__codelineno-5-58">58</a></span>
-<span class="normal"><a href="#__codelineno-5-59">59</a></span>
-<span class="normal"><a href="#__codelineno-5-60">60</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">// méthode de manipulation de tableaux</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="c1">// un tableau</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">  </span><span class="nx">tab</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="c1">// affichage</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="c1">// map</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prop1</span><span class="o">:</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">prop2</span><span class="o">:</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="p">});</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="c1">// affichage</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab2=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab2</span><span class="p">);</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="c1">// reduce sans valeur initiale</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="kd">const</span><span class="w"> </span><span class="nx">somme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">);</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;somme tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">somme</span><span class="p">);</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="c1">// reduce avec valeur initiale</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="kd">const</span><span class="w"> </span><span class="nx">somme2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulator</span><span class="p">,</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">accumulator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">currentValue</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">);</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;somme2 tab=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">somme2</span><span class="p">);</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="c1">// filter</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="p">;</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="p">});</span>
-<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab4=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab4</span><span class="p">);</span>
-<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="c1">// find</span>
-<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="kd">const</span><span class="w"> </span><span class="nx">element1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">20</span><span class="p">));</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;élément1=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">element1</span><span class="p">);</span>
-<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="c1">// findIndex</span>
-<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">20</span><span class="p">));</span>
-<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;index1 20=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">index1</span><span class="p">);</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="c1">// indexOf</span>
-<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="mf">30</span><span class="p">);</span>
-<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;index2 30=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">index2</span><span class="p">);</span>
-<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="mf">31</span><span class="p">);</span>
-<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;index3 31=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">index3</span><span class="p">);</span>
-<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="c1">// lastIndexOf</span>
-<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">].</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
-<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;index4 4=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">index4</span><span class="p">);</span>
-<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="c1">// sort</span>
-<a id="__codelineno-5-47" name="__codelineno-5-47"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">].</span><span class="nx">sort</span><span class="p">();</span>
-<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab5=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab5</span><span class="p">);</span>
-<a id="__codelineno-5-49" name="__codelineno-5-49"></a><span class="c1">// sort inverse</span>
-<a id="__codelineno-5-50" name="__codelineno-5-50"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">].</span><span class="nx">sort</span><span class="p">((</span><span class="nx">e1</span><span class="p">,</span><span class="w"> </span><span class="nx">e2</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-51" name="__codelineno-5-51"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">e1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">e2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-52" name="__codelineno-5-52"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
-<a id="__codelineno-5-53" name="__codelineno-5-53"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-5-54" name="__codelineno-5-54"></a><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">e1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">e2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-55" name="__codelineno-5-55"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-5-56" name="__codelineno-5-56"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-57" name="__codelineno-5-57"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">+</span><span class="mf">1</span><span class="p">;</span>
-<a id="__codelineno-5-58" name="__codelineno-5-58"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-5-59" name="__codelineno-5-59"></a><span class="p">});</span>
-<a id="__codelineno-5-60" name="__codelineno-5-60"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;tab6=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tab6</span><span class="p">);</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// méthode de manipulation de tableaux</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// un tableau</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab = [];</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span>
+<span class="odt-code-line">  tab<span style="font-weight:bold">[i]</span> = i * 10;</span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// affichage</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line">// map</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab2 = tab.map(element =&gt; {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">return</span><span style="color:#000000"> { prop1: element, prop2: element * element }</span></span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line">// affichage</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab=&quot;</span><span style="color:#000000">, tab);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab2=&quot;</span><span style="color:#000000">, tab2);</span></span>
+<span class="odt-code-line">// reduce sans valeur initiale</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> somme = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme tab=&quot;</span><span style="color:#000000">, somme);</span></span>
+<span class="odt-code-line">// reduce avec valeur initiale</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> somme2 = tab.reduce((accumulator, currentValue) =&gt; accumulator + currentValue, 10);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;somme2 tab=&quot;</span><span style="color:#000000">, somme2);</span></span>
+<span class="odt-code-line">// filter</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab4 = tab.filter((element) =&gt; {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (element &gt; 50) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> element;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab4=&quot;</span><span style="color:#000000">, tab4);</span></span>
+<span class="odt-code-line">// find</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> element1 = tab.find((element) =&gt; (element &gt; 20));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;élément1=&quot;</span><span style="color:#000000">, element1);</span></span>
+<span class="odt-code-line">// findIndex</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> index1 = tab.findIndex((element) =&gt; (element === 20));</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index1 20=&quot;</span><span style="color:#000000">, index1);</span></span>
+<span class="odt-code-line">// indexOf</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> index2 = tab.indexOf(30);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index2 30=&quot;</span><span style="color:#000000">, index2);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> index3 = tab.indexOf(31);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index3 31=&quot;</span><span style="color:#000000">, index3);</span></span>
+<span class="odt-code-line">// lastIndexOf</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> index4 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.lastIndexOf(4);</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;index4 4=&quot;</span><span style="color:#000000">, index4);</span></span>
+<span class="odt-code-line">// sort</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab5 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort();</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab5=&quot;</span><span style="color:#000000">, tab5);</span></span>
+<span class="odt-code-line">// sort inverse</span>
+<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tab6 = </span><span style="font-weight:bold;color:#000000">[4, 5, 4, 2]</span><span style="color:#000000">.sort((e1, e2) =&gt; {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">if</span><span style="color:#000000"> (e1 &gt; e2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> -1;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">else</span><span style="color:#000000"> </span><span style="color:#0000ff">if</span><span style="color:#000000"> (e1 === e2) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">  } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">return</span><span style="color:#000000"> +1;</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">});</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;tab6=&quot;</span><span style="color:#000000">, tab6);</span></span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>lignes 13-15 : la méthode <strong>[map]</strong> admet une fonction de transformation comme paramètre. Celle-ci est appelée de façon répétée pour chaque élément du tableau. Elle est chargée de transformer celui-ci en autre chose, ici un objet avec les propriétés <strong>[prop1, prop2]</strong>. La méthode <strong>[map]</strong> rend un nouveau tableau. L’ancien n’est pas modifié :</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>tab= [ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>tab2= [ { prop1: 0, prop2: 0 },
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>{ prop1: 10, prop2: 100 },
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>{ prop1: 20, prop2: 400 },
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>{ prop1: 30, prop2: 900 },
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>{ prop1: 40, prop2: 1600 },
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>{ prop1: 50, prop2: 2500 },
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>{ prop1: 60, prop2: 3600 },
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>{ prop1: 70, prop2: 4900 },
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>{ prop1: 80, prop2: 6400 },
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>{ prop1: 90, prop2: 8100 } ]
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line">tab= <span style="font-weight:bold">[ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]</span></span>
+<span class="odt-code-line">tab2= [ { prop1: 0, prop2: 0 },</span>
+<span class="odt-code-line">{ prop1: 10, prop2: 100 },</span>
+<span class="odt-code-line">{ prop1: 20, prop2: 400 },</span>
+<span class="odt-code-line">{ prop1: 30, prop2: 900 },</span>
+<span class="odt-code-line">{ prop1: 40, prop2: 1600 },</span>
+<span class="odt-code-line">{ prop1: 50, prop2: 2500 },</span>
+<span class="odt-code-line">{ prop1: 60, prop2: 3600 },</span>
+<span class="odt-code-line">{ prop1: 70, prop2: 4900 },</span>
+<span class="odt-code-line">{ prop1: 80, prop2: 6400 },</span>
+<span class="odt-code-line">{ prop1: 90, prop2: 8100 } ]</span>
+</code></pre></div>
+
 <ul>
 <li>ligne 20 : la méthode <strong>[reduce]</strong> admet pour paramètre une fonction à deux paramètres appelée de façon répétée pour chaque élément du tableau. Cette fonction admet deux paramètres :<ul>
 <li><strong>[currentValue]</strong> est l’élément courant du tableau ;</li>
@@ -1287,7 +1133,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>

@@ -774,25 +774,24 @@
   
 
 
+<p><a id="refheadingtoc2042493980233556"></a></p>
 <h1 id="9-les-erreurs-et-exceptions">9. Les erreurs et exceptions</h1>
 <p><img src="images/10000000000000ED000000BDBBC75AB1.png" style="width:2.511cm;height:2.001cm;" alt="Image" /></p>
 <p>Javascript n’a pas un système d’exceptions très évolué. Il offre néanmoins l’instruction <strong>[throw]</strong> qui permet de signaler une erreur ainsi que la structure try / catch / finally qui permet d’intercepter ces erreurs.</p>
+<p><a id="refheadingtoc2042513980233556"></a></p>
 <h2 id="91-script-excep-01">9.1. script [excep-01]</h2>
 <p>Dans le script qui suit, nous allons afficher la date du moment sous la forme <strong>[heures:minutes:secondes:millisecondes]</strong>. Pour ce faire, nous allons utiliser une bibliothèques jS appelée <strong>[moment.js]</strong>. Nous l’installons, comme d’habitude, avec l’outil <strong>[npm]</strong> :</p>
 <p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" /></p>
 <p>Le code du script est le suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">//</span> <span class="n">package</span> <span class="n">moment</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">moment</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="o">...</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// package moment</span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">...</span>
+</code></pre></div>
+
 <p>Pour savoir comment écrire la ligne <strong>[import]</strong> de la ligne 4, on peut regarder la définition du module <strong>[moment]</strong> :</p>
 <p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" /></p>
 <ul>
@@ -801,76 +800,51 @@
 <li>en <strong>[4]</strong>, on cherche les instructions <strong>[export]</strong> (Ctrl-F) ;</li>
 <li>en <strong>[5]</strong>, l’instruction exporte l’objet <strong>[moment]</strong>. Celui-ci peut être importé en ES6 de la façon suivante :</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">moment</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
+</code></pre></div>
+
 <p>On peut utiliser n’importe quel nom pour importer l’objet <strong>[moment]</strong>, par exemple :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">m</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> m </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
+</code></pre></div>
+
 <p>Revenons au code du script :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span>
-<span class="normal"><a href="#__codelineno-3-27">27</a></span>
-<span class="normal"><a href="#__codelineno-3-28">28</a></span>
-<span class="normal"><a href="#__codelineno-3-29">29</a></span>
-<span class="normal"><a href="#__codelineno-3-30">30</a></span>
-<span class="normal"><a href="#__codelineno-3-31">31</a></span>
-<span class="normal"><a href="#__codelineno-3-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1">// package moment</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1">// principe du try / catch / finally</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="c1">// date - heure du moment courant</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">  </span><span class="c1">// formatage heure pour avoir les millisecondes</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nx">now</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="s2">&quot;HH:mm:ss:SSS&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">  </span><span class="c1">// les millisecondes</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">milli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">  </span><span class="c1">// affichage</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------itération n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;à&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">);</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">    </span><span class="c1">// nbre variant selon l’heure du moment</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">nbre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">milli</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nbre</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">      </span><span class="c1">// lancer un msg d&#39;erreur</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;erreur&quot;</span><span class="p">;</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">    </span><span class="c1">// si on arrive ici c&#39;est qu&#39;il n&#39;y a pas eu d&#39;erreur</span>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;pas d&#39;erreur&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">    </span><span class="c1">// si on arrive ici, c&#39;est qu&#39;il y a eu erreur</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur1=&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">    </span><span class="c1">// exécuté dans tous les cas erreur ou pas</span>
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;finally&quot;</span><span class="p">)</span>
-<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// package moment</span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// principe du try / catch / finally</span>
+<span class="odt-code-line"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// date - heure du moment courant</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// formatage heure pour avoir les millisecondes</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> time = moment(now).format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// les millisecondes</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> milli = Number(time.substr(time.length - 3));</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// affichage</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;à&quot;</span><span style="color:#000000">, time);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// nbre </span><span style="color:#008000">variant selon l’heure du moment</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 2;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (nbre === 0) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008000">// lancer un msg d&#x27;erreur</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;erreur&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// si on arrive ici c&#x27;est qu&#x27;il n&#x27;y a pas eu d&#x27;erreur</span></span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;pas d&#x27;erreur&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// si on arrive ici, c&#x27;est qu&#x27;il y a eu erreur</span></span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur1=&quot;</span><span style="color:#000000">, error);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  } </span><span style="color:#0000ff">finally</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// exécuté dans tous les cas erreur ou pas</span></span>
+<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;finally&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>ligne 4 : import de la bibliothèque <strong>[moment]</strong> ;</li>
@@ -879,342 +853,196 @@
 <li>il s’agit ici de comprendre le fonctionnement du try / catch / finally</li>
 </ul>
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span>
-<span class="normal"><a href="#__codelineno-4-17">17</a></span>
-<span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span>
-<span class="normal"><a href="#__codelineno-4-20">20</a></span>
-<span class="normal"><a href="#__codelineno-4-21">21</a></span>
-<span class="normal"><a href="#__codelineno-4-22">22</a></span>
-<span class="normal"><a href="#__codelineno-4-23">23</a></span>
-<span class="normal"><a href="#__codelineno-4-24">24</a></span>
-<span class="normal"><a href="#__codelineno-4-25">25</a></span>
-<span class="normal"><a href="#__codelineno-4-26">26</a></span>
-<span class="normal"><a href="#__codelineno-4-27">27</a></span>
-<span class="normal"><a href="#__codelineno-4-28">28</a></span>
-<span class="normal"><a href="#__codelineno-4-29">29</a></span>
-<span class="normal"><a href="#__codelineno-4-30">30</a></span>
-<span class="normal"><a href="#__codelineno-4-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-01.js&quot;
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>--------------------itération n° 0 à 17:57:04:440
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>erreur1= erreur
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>finally
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>--------------------itération n° 1 à 17:57:04:447
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>pas d&#39;erreur
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>finally
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>--------------------itération n° 2 à 17:57:04:448
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>erreur1= erreur
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>finally
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>--------------------itération n° 3 à 17:57:04:448
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>erreur1= erreur
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>finally
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a>--------------------itération n° 4 à 17:57:04:448
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a>erreur1= erreur
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a>finally
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a>--------------------itération n° 5 à 17:57:04:448
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a>erreur1= erreur
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a>finally
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a>--------------------itération n° 6 à 17:57:04:448
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a>erreur1= erreur
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a>finally
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a>--------------------itération n° 7 à 17:57:04:448
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a>erreur1= erreur
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a>finally
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a>--------------------itération n° 8 à 17:57:04:449
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a>pas d&#39;erreur
-<a id="__codelineno-4-28" name="__codelineno-4-28"></a>finally
-<a id="__codelineno-4-29" name="__codelineno-4-29"></a>--------------------itération n° 9 à 17:57:04:449
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a>pas d&#39;erreur
-<a id="__codelineno-4-31" name="__codelineno-4-31"></a>finally
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-01.js&quot;</span></span>
+<span class="odt-code-line">--------------------itération n° 0 à 17:57:04:440</span>
+<span class="odt-code-line">erreur1= erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 1 à 17:57:04:447</span>
+<span class="odt-code-line">pas d&#x27;erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 2 à 17:57:04:448</span>
+<span class="odt-code-line">erreur1= erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 3 à 17:57:04:448</span>
+<span class="odt-code-line">erreur1= erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 4 à 17:57:04:448</span>
+<span class="odt-code-line">erreur1= erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 5 à 17:57:04:448</span>
+<span class="odt-code-line">erreur1= erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 6 à 17:57:04:448</span>
+<span class="odt-code-line">erreur1= erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 7 à 17:57:04:448</span>
+<span class="odt-code-line">erreur1= erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 8 à 17:57:04:449</span>
+<span class="odt-code-line">pas d&#x27;erreur</span>
+<span class="odt-code-line">finally</span>
+<span class="odt-code-line">--------------------itération n° 9 à 17:57:04:449</span>
+<span class="odt-code-line">pas d&#x27;erreur</span>
+<span class="odt-code-line">finally</span>
+</code></pre></div>
+
 <p>On voit que la clause <strong>[finally]</strong> est toujours exécutée qu’il y ait erreur ou pas.</p>
+<p><a id="refheadingtoc225364640539168"></a></p>
 <h2 id="92-script-excep-02">9.2. script [excep-02]</h2>
 <p>Ce script que l’instruction <strong>[throw]</strong> peut lancer n’importe quel type de donnée et que cette donnée est récupérée intégralement par la clause <strong>[catch]</strong>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-5-10">10</a></span>
-<span class="normal"><a href="#__codelineno-5-11">11</a></span>
-<span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span>
-<span class="normal"><a href="#__codelineno-5-14">14</a></span>
-<span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span>
-<span class="normal"><a href="#__codelineno-5-17">17</a></span>
-<span class="normal"><a href="#__codelineno-5-18">18</a></span>
-<span class="normal"><a href="#__codelineno-5-19">19</a></span>
-<span class="normal"><a href="#__codelineno-5-20">20</a></span>
-<span class="normal"><a href="#__codelineno-5-21">21</a></span>
-<span class="normal"><a href="#__codelineno-5-22">22</a></span>
-<span class="normal"><a href="#__codelineno-5-23">23</a></span>
-<span class="normal"><a href="#__codelineno-5-24">24</a></span>
-<span class="normal"><a href="#__codelineno-5-25">25</a></span>
-<span class="normal"><a href="#__codelineno-5-26">26</a></span>
-<span class="normal"><a href="#__codelineno-5-27">27</a></span>
-<span class="normal"><a href="#__codelineno-5-28">28</a></span>
-<span class="normal"><a href="#__codelineno-5-29">29</a></span>
-<span class="normal"><a href="#__codelineno-5-30">30</a></span>
-<span class="normal"><a href="#__codelineno-5-31">31</a></span>
-<span class="normal"><a href="#__codelineno-5-32">32</a></span>
-<span class="normal"><a href="#__codelineno-5-33">33</a></span>
-<span class="normal"><a href="#__codelineno-5-34">34</a></span>
-<span class="normal"><a href="#__codelineno-5-35">35</a></span>
-<span class="normal"><a href="#__codelineno-5-36">36</a></span>
-<span class="normal"><a href="#__codelineno-5-37">37</a></span>
-<span class="normal"><a href="#__codelineno-5-38">38</a></span>
-<span class="normal"><a href="#__codelineno-5-39">39</a></span>
-<span class="normal"><a href="#__codelineno-5-40">40</a></span>
-<span class="normal"><a href="#__codelineno-5-41">41</a></span>
-<span class="normal"><a href="#__codelineno-5-42">42</a></span>
-<span class="normal"><a href="#__codelineno-5-43">43</a></span>
-<span class="normal"><a href="#__codelineno-5-44">44</a></span>
-<span class="normal"><a href="#__codelineno-5-45">45</a></span>
-<span class="normal"><a href="#__codelineno-5-46">46</a></span>
-<span class="normal"><a href="#__codelineno-5-47">47</a></span>
-<span class="normal"><a href="#__codelineno-5-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">// on peut &quot;lancer&quot; (throw) à peu près n&#39;importe quoi pour signaler une erreur</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1">// lancer une chaîne de caractères</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="s2">&quot;msg d&#39;erreur&quot;</span><span class="p">;</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">  </span><span class="c1">// il y a eu erreur</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">}</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="c1">// lancer un tableau</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">  </span><span class="c1">// il y a eu erreur</span>
-<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="p">}</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="c1">// lancer un objet littéral</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;hercule&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">pays</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;grèce antique&quot;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">  </span><span class="c1">// il y a eu erreur</span>
-<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
-<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="p">}</span>
-<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="c1">// lancer un type Error</span>
-<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">&quot;erreur de connexion au réseau&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="w">  </span><span class="c1">// il y a eu erreur</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
-<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="p">}</span>
-<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="c1">// lancer un type Error</span>
-<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;--------------------essai n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">);</span>
-<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">&quot;erreur de connexion au réseau&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="w">  </span><span class="c1">// il y a eu erreur - le message est dans [error.message]</span>
-<a id="__codelineno-5-47" name="__codelineno-5-47"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;erreur.message=[&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;], type(error)=&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
-<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// on peut &quot;lancer&quot; (throw) à peu près n&#x27;importe quoi pour signaler une erreur</span>
+<span class="odt-code-line"><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
+<span class="odt-code-line">// lancer une chaîne de caractères</span>
+<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;msg d&#x27;erreur&quot;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// lancer un tableau</span>
+<span class="odt-code-line">i++;</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span></span>
+<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// lancer un objet littéral</span>
+<span class="odt-code-line">i++;</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> { nom: </span><span style="color:#a31515">&quot;hercule&quot;</span><span style="color:#000000">, pays: </span><span style="color:#a31515">&quot;grèce antique&quot;</span><span style="color:#000000"> }</span></span>
+<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// lancer un type Error</span>
+<span class="odt-code-line">i++;</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Error(</span><span style="color:#a31515">&quot;erreur de connexion au réseau&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
+<span class="odt-code-line">}</span>
+<span class="odt-code-line">// lancer un type Error</span>
+<span class="odt-code-line">i++;</span>
+<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Error(</span><span style="color:#a31515">&quot;erreur de connexion au réseau&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur - le message est dans </span><span style="font-weight:bold;color:#008000">[error.message]</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur.message=</span><span style="font-weight:bold;color:#a31515">[&quot;, error.message, &quot;]</span><span style="color:#a31515">, type(error)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
 <p><strong>Commentaires</strong></p>
 <ul>
 <li>lignes 35, 44 : <strong>[Error]</strong> est une classe Javascript dont le constructeur admet comme 1er paramètre facultatif un message d’erreur. Ce message peut être récupéré dans la propriété <strong>[Error.message]</strong> (ligne 47) ;</li>
 <li>il existe d’autres classes que <strong>[Error]</strong> pour signaler une erreur : [EvalError, InternalError, RangeError, ReferenceError, SyntaxError,  TypeError, URIError) ;</li>
 </ul>
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-6-10">10</a></span>
-<span class="normal"><a href="#__codelineno-6-11">11</a></span>
-<span class="normal"><a href="#__codelineno-6-12">12</a></span>
-<span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span>
-<span class="normal"><a href="#__codelineno-6-15">15</a></span>
-<span class="normal"><a href="#__codelineno-6-16">16</a></span>
-<span class="normal"><a href="#__codelineno-6-17">17</a></span>
-<span class="normal"><a href="#__codelineno-6-18">18</a></span>
-<span class="normal"><a href="#__codelineno-6-19">19</a></span>
-<span class="normal"><a href="#__codelineno-6-20">20</a></span>
-<span class="normal"><a href="#__codelineno-6-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js&quot;
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>--------------------essai n° 0
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>erreur=[ msg d&#39;erreur ], type= string
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>--------------------essai n° 1
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>erreur=[ [ 1, 2, 3 ] ], type= object
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>--------------------essai n° 2
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>erreur=[ { nom: &#39;hercule&#39;, pays: &#39;grèce antique&#39; } ], type= object
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>--------------------essai n° 3
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a>erreur=[ Error: erreur de connexion au réseau
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>at Object.&lt;anonymous&gt; (c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js:35:9)
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a>at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:251206)
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>at c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:245054
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a>at Generator.next (&lt;anonymous&gt;)
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a>at bl (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:245412)
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a>at kl (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:247659)
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a>at Object.u (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287740)
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a>at Object.o (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287137)
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a>at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:284879)
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a>at Object.apply (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:199341) ], type= object
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a>--------------------essai n° 4
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a>erreur.message=[ erreur de connexion au réseau ], type(error)= object
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js&quot;</span></span>
+<span class="odt-code-line">--------------------essai n° 0</span>
+<span class="odt-code-line">erreur=<span style="font-weight:bold">[ msg d&#x27;erreur ]</span>, type= string</span>
+<span class="odt-code-line">--------------------essai n° 1</span>
+<span class="odt-code-line">erreur=<span style="font-weight:bold">[ [ 1, 2, 3 ]</span> ], type= object</span>
+<span class="odt-code-line">--------------------essai n° 2</span>
+<span class="odt-code-line">erreur=<span style="font-weight:bold">[ { nom: &#x27;hercule&#x27;, pays: &#x27;grèce antique&#x27; } ]</span>, type= object</span>
+<span class="odt-code-line">--------------------essai n° 3</span>
+<span class="odt-code-line">erreur=[ Error: erreur de connexion au réseau</span>
+<span class="odt-code-line">at Object.&lt;anonymous&gt; (c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js:35:9)</span>
+<span class="odt-code-line">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:251206)</span>
+<span class="odt-code-line">at c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:245054</span>
+<span class="odt-code-line">at Generator.next (&lt;anonymous&gt;)</span>
+<span class="odt-code-line">at bl (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:245412)</span>
+<span class="odt-code-line">at kl (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:247659)</span>
+<span class="odt-code-line">at Object.u (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287740)</span>
+<span class="odt-code-line">at Object.o (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287137)</span>
+<span class="odt-code-line">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:284879)</span>
+<span class="odt-code-line">at Object.apply (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:199341) ], type= object</span>
+<span class="odt-code-line">--------------------essai n° 4</span>
+<span class="odt-code-line">erreur.message=<span style="font-weight:bold">[ erreur de connexion au réseau ]</span>, type(error)= object</span>
+</code></pre></div>
+
+<p><a id="refheadingtoc225366640539168"></a></p>
 <h2 id="93-script-excep-03">9.3. script [excep-03]</h2>
 <p>Ce script montre qu’on peut, dans un <strong>[catch]</strong>, différentier le type d’instance <strong>[Error]</strong> interceptée par le <strong>[catch]</strong> :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-7-10">10</a></span>
-<span class="normal"><a href="#__codelineno-7-11">11</a></span>
-<span class="normal"><a href="#__codelineno-7-12">12</a></span>
-<span class="normal"><a href="#__codelineno-7-13">13</a></span>
-<span class="normal"><a href="#__codelineno-7-14">14</a></span>
-<span class="normal"><a href="#__codelineno-7-15">15</a></span>
-<span class="normal"><a href="#__codelineno-7-16">16</a></span>
-<span class="normal"><a href="#__codelineno-7-17">17</a></span>
-<span class="normal"><a href="#__codelineno-7-18">18</a></span>
-<span class="normal"><a href="#__codelineno-7-19">19</a></span>
-<span class="normal"><a href="#__codelineno-7-20">20</a></span>
-<span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span>
-<span class="normal"><a href="#__codelineno-7-23">23</a></span>
-<span class="normal"><a href="#__codelineno-7-24">24</a></span>
-<span class="normal"><a href="#__codelineno-7-25">25</a></span>
-<span class="normal"><a href="#__codelineno-7-26">26</a></span>
-<span class="normal"><a href="#__codelineno-7-27">27</a></span>
-<span class="normal"><a href="#__codelineno-7-28">28</a></span>
-<span class="normal"><a href="#__codelineno-7-29">29</a></span>
-<span class="normal"><a href="#__codelineno-7-30">30</a></span>
-<span class="normal"><a href="#__codelineno-7-31">31</a></span>
-<span class="normal"><a href="#__codelineno-7-32">32</a></span>
-<span class="normal"><a href="#__codelineno-7-33">33</a></span>
-<span class="normal"><a href="#__codelineno-7-34">34</a></span>
-<span class="normal"><a href="#__codelineno-7-35">35</a></span>
-<span class="normal"><a href="#__codelineno-7-36">36</a></span>
-<span class="normal"><a href="#__codelineno-7-37">37</a></span>
-<span class="normal"><a href="#__codelineno-7-38">38</a></span>
-<span class="normal"><a href="#__codelineno-7-39">39</a></span>
-<span class="normal"><a href="#__codelineno-7-40">40</a></span>
-<span class="normal"><a href="#__codelineno-7-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="o">//</span> <span class="n">package</span> <span class="n">moment</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">moment</span> <span class="kn">from</span><span class="w"> </span><span class="s1">&#39;moment&#39;</span><span class="p">;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="o">//</span> <span class="n">différencier</span> <span class="n">l</span><span class="s1">&#39;instance d&#39;</span><span class="n">Error</span> <span class="n">reçue</span> <span class="n">dans</span> <span class="n">un</span> <span class="p">[</span><span class="n">catch</span><span class="p">]</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>  <span class="o">//</span> <span class="n">date</span> <span class="o">-</span> <span class="n">heure</span> <span class="n">du</span> <span class="n">moment</span> <span class="n">courant</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>  <span class="n">const</span> <span class="n">now</span> <span class="o">=</span> <span class="n">Date</span><span class="o">.</span><span class="n">now</span><span class="p">();</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>  <span class="o">//</span> <span class="n">formatage</span> <span class="n">heure</span> <span class="n">pour</span> <span class="n">avoir</span> <span class="n">les</span> <span class="n">millisecondes</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>  <span class="n">const</span> <span class="n">time</span> <span class="o">=</span> <span class="n">moment</span><span class="p">(</span><span class="n">now</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;HH:mm:ss:SSS&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12"></a>  <span class="o">//</span> <span class="n">les</span> <span class="n">millisecondes</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a>  <span class="n">const</span> <span class="n">milli</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">substr</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">3</span><span class="p">));</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;--------------------itération n° &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15"></a>  <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a>    <span class="o">//</span> <span class="n">nbre</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a>    <span class="n">const</span> <span class="n">nbre</span> <span class="o">=</span> <span class="n">milli</span> <span class="o">%</span> <span class="mi">3</span><span class="p">;</span>
-<a id="__codelineno-7-18" name="__codelineno-7-18"></a>    <span class="n">switch</span> <span class="p">(</span><span class="n">nbre</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a>      <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="ne">ReferenceError</span><span class="p">(</span><span class="s2">&quot;erreur 1&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a>      <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
-<a id="__codelineno-7-22" name="__codelineno-7-22"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RangeError</span><span class="p">(</span><span class="s2">&quot;erreur 2&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-23" name="__codelineno-7-23"></a>      <span class="n">default</span><span class="p">:</span>
-<a id="__codelineno-7-24" name="__codelineno-7-24"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">EvalError</span><span class="p">(</span><span class="s2">&quot;erreur 3&quot;</span><span class="p">);</span>
-<a id="__codelineno-7-25" name="__codelineno-7-25"></a>    <span class="p">}</span>
-<a id="__codelineno-7-26" name="__codelineno-7-26"></a>  <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-7-27" name="__codelineno-7-27"></a>    <span class="o">//</span> <span class="n">il</span> <span class="n">y</span> <span class="n">a</span> <span class="n">eu</span> <span class="n">erreur</span>
-<a id="__codelineno-7-28" name="__codelineno-7-28"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="n">instanceof</span> <span class="ne">ReferenceError</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-7-29" name="__codelineno-7-29"></a>      <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;ReferenceError :&quot;</span><span class="p">,</span> <span class="n">error</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
-<a id="__codelineno-7-30" name="__codelineno-7-30"></a>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-7-31" name="__codelineno-7-31"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="n">instanceof</span> <span class="n">RangeError</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-7-32" name="__codelineno-7-32"></a>        <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;RangeError :&quot;</span><span class="p">,</span> <span class="n">error</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33"></a>      <span class="p">}</span>
-<a id="__codelineno-7-34" name="__codelineno-7-34"></a>      <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-7-35" name="__codelineno-7-35"></a>        <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="n">instanceof</span> <span class="n">EvalError</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-7-36" name="__codelineno-7-36"></a>          <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;EvalError :&quot;</span><span class="p">,</span> <span class="n">error</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
-<a id="__codelineno-7-37" name="__codelineno-7-37"></a>        <span class="p">}</span>
-<a id="__codelineno-7-38" name="__codelineno-7-38"></a>      <span class="p">}</span>
-<a id="__codelineno-7-39" name="__codelineno-7-39"></a>    <span class="p">}</span>
-<a id="__codelineno-7-40" name="__codelineno-7-40"></a>  <span class="p">}</span>
-<a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
+<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// package moment</span>
+<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">// différencier l&#x27;instance d&#x27;Error reçue dans un <span style="font-weight:bold">[catch]</span></span>
+<span class="odt-code-line"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// date - heure du moment courant</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// formatage heure pour avoir les millisecondes</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> time = moment(now).format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// les millisecondes</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> milli = Number(time.substr(time.length - 3));</span></span>
+<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i);</span></span>
+<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// nbre </span><span style="font-weight:bold;color:#008000">[0, 1, 2]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 3;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">switch</span><span style="color:#000000"> (nbre) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">case</span><span style="color:#000000"> 0:</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> ReferenceError(</span><span style="color:#a31515">&quot;erreur 1&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">case</span><span style="color:#000000"> 1:</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> RangeError(</span><span style="color:#a31515">&quot;erreur 2&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">default</span><span style="color:#000000">:</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> EvalError(</span><span style="color:#a31515">&quot;erreur 3&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// il y a eu erreur</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> ReferenceError) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;ReferenceError :&quot;</span><span style="color:#000000">, error.message);</span></span>
+<span class="odt-code-line"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> RangeError) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        console.log(</span><span style="color:#a31515">&quot;RangeError :&quot;</span><span style="color:#000000">, error.message);</span></span>
+<span class="odt-code-line">      }</span>
+<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> EvalError) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">          console.log(</span><span style="color:#a31515">&quot;EvalError :&quot;</span><span style="color:#000000">, error.message);</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line">      }</span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line">  }</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
 <p><strong>Exécution</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-8-10">10</a></span>
-<span class="normal"><a href="#__codelineno-8-11">11</a></span>
-<span class="normal"><a href="#__codelineno-8-12">12</a></span>
-<span class="normal"><a href="#__codelineno-8-13">13</a></span>
-<span class="normal"><a href="#__codelineno-8-14">14</a></span>
-<span class="normal"><a href="#__codelineno-8-15">15</a></span>
-<span class="normal"><a href="#__codelineno-8-16">16</a></span>
-<span class="normal"><a href="#__codelineno-8-17">17</a></span>
-<span class="normal"><a href="#__codelineno-8-18">18</a></span>
-<span class="normal"><a href="#__codelineno-8-19">19</a></span>
-<span class="normal"><a href="#__codelineno-8-20">20</a></span>
-<span class="normal"><a href="#__codelineno-8-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>[Running] C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-03.js&quot;
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>--------------------itération n° 0
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>ReferenceError : erreur 1
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a>--------------------itération n° 1
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a>RangeError : erreur 2
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>--------------------itération n° 2
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a>RangeError : erreur 2
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a>--------------------itération n° 3
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a>RangeError : erreur 2
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a>--------------------itération n° 4
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a>RangeError : erreur 2
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a>--------------------itération n° 5
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a>RangeError : erreur 2
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a>--------------------itération n° 6
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a>EvalError : erreur 3
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a>--------------------itération n° 7
-<a id="__codelineno-8-17" name="__codelineno-8-17"></a>EvalError : erreur 3
-<a id="__codelineno-8-18" name="__codelineno-8-18"></a>--------------------itération n° 8
-<a id="__codelineno-8-19" name="__codelineno-8-19"></a>EvalError : erreur 3
-<a id="__codelineno-8-20" name="__codelineno-8-20"></a>--------------------itération n° 9
-<a id="__codelineno-8-21" name="__codelineno-8-21"></a>EvalError : erreur 3
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
+<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-03.js&quot;</span></span>
+<span class="odt-code-line">--------------------itération n° 0</span>
+<span class="odt-code-line">ReferenceError : erreur 1</span>
+<span class="odt-code-line">--------------------itération n° 1</span>
+<span class="odt-code-line">RangeError : erreur 2</span>
+<span class="odt-code-line">--------------------itération n° 2</span>
+<span class="odt-code-line">RangeError : erreur 2</span>
+<span class="odt-code-line">--------------------itération n° 3</span>
+<span class="odt-code-line">RangeError : erreur 2</span>
+<span class="odt-code-line">--------------------itération n° 4</span>
+<span class="odt-code-line">RangeError : erreur 2</span>
+<span class="odt-code-line">--------------------itération n° 5</span>
+<span class="odt-code-line">RangeError : erreur 2</span>
+<span class="odt-code-line">--------------------itération n° 6</span>
+<span class="odt-code-line">EvalError : erreur 3</span>
+<span class="odt-code-line">--------------------itération n° 7</span>
+<span class="odt-code-line">EvalError : erreur 3</span>
+<span class="odt-code-line">--------------------itération n° 8</span>
+<span class="odt-code-line">EvalError : erreur 3</span>
+<span class="odt-code-line">--------------------itération n° 9</span>
+<span class="odt-code-line">EvalError : erreur 3</span>
+</code></pre></div>
 
 
 
@@ -1272,7 +1100,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
