@@ -960,21 +960,21 @@
 <p><a id="refheadingtoc225420640539168"></a></p>
 <h2 id="141-introduction">14.1. Introduction</h2>
 <p>Nous nous proposons ici d’écrire un client <strong>[node.js]</strong> de la version 14 du service de calcul de l’impôt. L’architecture client / serveur sera la suivante :</p>
-<p><img src="images/1000000000000551000001A055C7BE76.png" style="width:14.401cm;height:4.4cm;" alt="Image" /></p>
+<p><img src="images/1000000000000551000001A055C7BE76.png" style="width:14.401cm;height:4.4cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000551000001A055C7BE76.png" /></p>
 <p>Nous étudierons deux versions du client :</p>
 <ul>
 <li>la version 1 du client aura la structure <strong>[main, dao]</strong> en couches suivante :</li>
 </ul>
-<p><img src="images/10000000000005B5000001AEE02F53BD.png" style="width:15.461cm;height:4.552cm;" alt="Image" /></p>
+<p><img src="images/10000000000005B5000001AEE02F53BD.png" style="width:15.461cm;height:4.552cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005B5000001AEE02F53BD.png" /></p>
 <ul>
 <li>la version 2 du client aura une structure <strong>[main, métier, dao]</strong>. La couche <strong>[métier]</strong> du serveur sera déportée sur le client :</li>
 </ul>
-<p><img src="images/10000000000005D4000001ADD25A3E45.png" style="width:15.791cm;height:4.541cm;" alt="Image" /></p>
+<p><img src="images/10000000000005D4000001ADD25A3E45.png" style="width:15.791cm;height:4.541cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D4000001ADD25A3E45.png" /></p>
 <p><a id="refheadingtoc225422640539168"></a></p>
 <h2 id="142-client-http-1">14.2. Client HTTP 1</h2>
-<p><img src="images/10000000000000DB000000B5A9A61CA0.png" style="width:2.611cm;height:2.162cm;" alt="Image" /></p>
+<p><img src="images/10000000000000DB000000B5A9A61CA0.png" style="width:2.611cm;height:2.162cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000DB000000B5A9A61CA0.png" /></p>
 <p>Comme nous l’avons dit, le client HTTP 1 implémente l’architecture client / serveur suivante :</p>
-<p><img src="images/10000000000005C3000001A876F4498E.png" style="width:15.611cm;height:4.492cm;" alt="Image" /></p>
+<p><img src="images/10000000000005C3000001A876F4498E.png" style="width:15.611cm;height:4.492cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C3000001A876F4498E.png" /></p>
 <p>Nous implémenterons :</p>
 <ul>
 <li>la couche <strong>[dao]</strong> sous la forme d’une classe ;</li>
@@ -1380,9 +1380,9 @@
 
 <p><a id="refheadingtoc225428640539168"></a></p>
 <h2 id="143-client-http-2">14.3. Client HTTP 2</h2>
-<p><img src="images/10000000000000F100000110AEDD632E.png" style="width:2.871cm;height:3.241cm;" alt="Image" /></p>
+<p><img src="images/10000000000000F100000110AEDD632E.png" style="width:2.871cm;height:3.241cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F100000110AEDD632E.png" /></p>
 <p>L’architecture du client HTTP2 est la suivante :</p>
-<p><img src="images/10000000000005DF000001B235DF3AAD.png" style="width:13.921cm;height:4.021cm;" alt="Image" /></p>
+<p><img src="images/10000000000005DF000001B235DF3AAD.png" style="width:13.921cm;height:4.021cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DF000001B235DF3AAD.png" /></p>
 <p>On a déporté la couche <strong>[métier]</strong> du serveur vers le client Javascript. Contrairement à ce que nous avons pu faire dans le cours PHP7, la couche <strong>[main]</strong> n’aura pas ici à passer par la couche <strong>[métier]</strong> pour atteindre la couche <strong>[dao]</strong>. Nous utiliserons ces deux couches comme des centres de compétences :</p>
 <ul>
 <li>la couche <strong>[main]</strong> passe par la couche <strong>[dao]</strong> dès qu’elle a besoin de données qui sont sur le serveur ;</li>
@@ -1824,7 +1824,7 @@
 </ul>
 <p><a id="refheadingtoc225432640539168"></a></p>
 <h3 id="1432-la-classe-javascript-dao2">14.3.2. La classe Javascript [Dao2]</h3>
-<p><img src="images/10000000000005DF000001A53E81FA2B.png" style="width:15.911cm;height:4.462cm;" alt="Image" /></p>
+<p><img src="images/10000000000005DF000001A53E81FA2B.png" style="width:15.911cm;height:4.462cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DF000001A53E81FA2B.png" /></p>
 <p>La classe <strong>[Dao2]</strong> implémente la couche <strong>[dao]</strong> du client Javascript ci-dessus de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
@@ -1965,7 +1965,7 @@
 </ul>
 <p>Nous allons revoir comment ajouter une action à notre serveur.</p>
 <p>La modification se fera sous Netbeans :</p>
-<p><img src="images/10000000000005AA0000026A0A027AAB.png" style="width:15.35cm;height:6.541cm;" alt="Image" /></p>
+<p><img src="images/10000000000005AA0000026A0A027AAB.png" style="width:15.35cm;height:6.541cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AA0000026A0A027AAB.png" /></p>
 <p>En <strong>[2]</strong>, nous modifions le fichier <strong>[config.json]</strong> pour ajouter la nouvelle action :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">{</span>
@@ -2158,8 +2158,8 @@
 </ul>
 <p><span style="color: #000000">Ce code reprend celui du contrôleur </span><strong><span style="color: #000000">[CalculerImpotController]</span></strong><span style="color: #000000"> expliqué dans l’article </span><a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">lien</span></u></a><span style="color: #000000">. En effet, ce contrôleur devait lui aussi récupérer l’objet </span><strong><span style="color: #000000">[TaxAdminData]</span></strong><span style="color: #000000"> encapsulant les données de l’administration fiscale.</span></p>
 <p><span style="color: #000000">Lors des tests du client Javascript, la forme jSON de </span><strong><span style="color: #000000">[TaxAdminData]</span></strong><span style="color: #000000"> a posé problème lorsque cet objet était trouvé dans le cache </span><strong><span style="color: #000000">[redis]</span></strong><span style="color: #000000">. Pour le comprendre, examinons sous quelle forme cet objet est stocké dans </span><strong><span style="color: #000000">[redis]</span></strong><span style="color: #000000"> :</span></p>
-<p><img src="images/1000000000000425000002C5D5F37389.png" style="width:9.831cm;height:6.561cm;" alt="Image" /></p>
-<p><img src="images/1000000000000A29000002E9D4535C0C.png" style="width:17.2cm;height:4.931cm;" alt="Image" /></p>
+<p><img src="images/1000000000000425000002C5D5F37389.png" style="width:9.831cm;height:6.561cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000425000002C5D5F37389.png" /></p>
+<p><img src="images/1000000000000A29000002E9D4535C0C.png" style="width:17.2cm;height:4.931cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000A29000002E9D4535C0C.png" /></p>
 <ul>
 <li><span style="color: #000000">en </span><strong><span style="color: #000000">[5-7]</span></strong><span style="color: #000000">, on voit que des valeurs numériques ont été stockées sous forme de chaînes de caractères. PHP s’en est accommodé car l’opérateur + dans les calculs entre nombres et chaînes provoque implicitement un changement de type de la chaîne vers un nombre. Mais Javascript fait le contraire : l’opérateur + dans les calculs entre nombres et chaînes provoque implicitement un changement de type du nombre vers une chaîne de caractères. Les calculs de la classe Javascript </span><strong><span style="color: #000000">[Métier]</span></strong><span style="color: #000000"> sont alors erronés ;</span></li>
 </ul>
@@ -2414,17 +2414,17 @@
 <h3 id="1434-tests-postman-du-serveur">14.3.4. Tests [Postman] du serveur</h3>
 <p><strong>[Postman]</strong> a été présenté dans l’article <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">lien</span></u></a>.</p>
 <p>Nous utilisons les tests Postman suivants :</p>
-<p><img src="images/10000000000005E8000001099796212B.png" style="width:14.001cm;height:2.451cm;" alt="Image" /></p>
-<p><img src="images/100000000000054B000002C0732671AB.png" style="width:12.551cm;height:6.52cm;" alt="Image" /></p>
-<p><img src="images/10000000000004FB0000022E342B7EAE.png" style="width:11.801cm;height:5.171cm;" alt="Image" /></p>
+<p><img src="images/10000000000005E8000001099796212B.png" style="width:14.001cm;height:2.451cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005E8000001099796212B.png" /></p>
+<p><img src="images/100000000000054B000002C0732671AB.png" style="width:12.551cm;height:6.52cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000054B000002C0732671AB.png" /></p>
+<p><img src="images/10000000000004FB0000022E342B7EAE.png" style="width:11.801cm;height:5.171cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004FB0000022E342B7EAE.png" /></p>
 <p>Le résultat jSON de cette dernière requête est la suivante :</p>
-<p><img src="images/10000000000004040000059B948EE974.png" style="width:9.52cm;height:13.29cm;" alt="Image" /></p>
+<p><img src="images/10000000000004040000059B948EE974.png" style="width:9.52cm;height:13.29cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004040000059B948EE974.png" /></p>
 <ul>
 <li>en <strong>[5-8]</strong>, on peut remarquer que les attributs de la chaîne jSON ont bien des valeurs numériques (et non chaînes de caractères). Ce résultat va permettre à la classe Javascript <strong>[Métier]</strong> de s’exécuter normalement ;</li>
 </ul>
 <p><a id="refheadingtoc225436640539168"></a></p>
 <h3 id="1435-le-script-principal-main">14.3.5. Le script principal [main]</h3>
-<p><img src="images/10000000000005D7000001B131AB47B5.png" style="width:15.821cm;height:4.582cm;" alt="Image" /></p>
+<p><img src="images/10000000000005D7000001B131AB47B5.png" style="width:15.821cm;height:4.582cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D7000001B131AB47B5.png" /></p>
 <p>Le script principal <strong>[main]</strong> du client Javascript est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">// imports</span>
@@ -2602,18 +2602,18 @@
 
 <p><a id="refheadingtoc225438640539168"></a></p>
 <h2 id="144-client-http-3">14.4. Client HTTP 3</h2>
-<p><img src="images/10000000000001060000016C27BF8E2F.png" style="width:2.77cm;height:3.851cm;" alt="Image" /></p>
+<p><img src="images/10000000000001060000016C27BF8E2F.png" style="width:2.77cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001060000016C27BF8E2F.png" /></p>
 <p>Dans cette section, nous portons l’application <strong>[Client HTTP 2]</strong> dans un navigateur selon l’architecture suivane :</p>
-<p><img src="images/10000000000005CD000001A3E68297B7.png" style="width:15.721cm;height:4.432cm;" alt="Image" /></p>
+<p><img src="images/10000000000005CD000001A3E68297B7.png" style="width:15.721cm;height:4.432cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005CD000001A3E68297B7.png" /></p>
 <p>Le portage n’est pas immédiat. Si <strong>[node.js]</strong> sait exécuter du Javascript ES6, ce n’est pas le cas en général des navigateurs. Il faut alors utiliser des outils qui traduisent le code ES6 en code ES5 compris par les navigateurs récents. Heureusement ces outils sont à la fois puissants et plutôt simples d’utilisation.</p>
 <p>Nous avons ici suivi l’article <strong>[How to write ES6 code that’s safe to run in the browser - Web Developer&#x27;s Journal]</strong>.</p>
 <p>Dans le dossier <strong>[client HTTP 3/src]</strong>, on a mis les éléments <strong>[main.js, Métier.js, Dao2.js]</strong> de l’application <strong>[Client Http 2]</strong> que nous venons de développer.</p>
 <p><a id="refheadingtoc225440640539168"></a></p>
 <h3 id="1441-initialisation-du-projet">14.4.1. Initialisation du projet</h3>
 <p>Nous allons travailler dans le dossier <strong>[client http 3]</strong>. Nous ouvrons un terminal dans <strong>[VSCode]</strong> et nous nous positionnons sur ce dossier :</p>
-<p><img src="images/100000000000042E000000CBEF278D73.png" style="width:9.91cm;height:1.881cm;" alt="Image" /></p>
+<p><img src="images/100000000000042E000000CBEF278D73.png" style="width:9.91cm;height:1.881cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000042E000000CBEF278D73.png" /></p>
 <p>Nous initialisons ce projet avec la commande <strong>[npm init]</strong> et nous acceptons pour les questions posées les réponses proposées par défaut :</p>
-<p><img src="images/1000000000000619000001A8A2CEED91.png" style="width:16.521cm;height:4.492cm;" alt="Image" /></p>
+<p><img src="images/1000000000000619000001A8A2CEED91.png" style="width:16.521cm;height:4.492cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000619000001A8A2CEED91.png" /></p>
 <ul>
 <li>en <strong>[4-5]</strong>, le fichier de configuration du projet <strong>[package.json]</strong> généré à partir des différentes réponses données ;</li>
 </ul>
@@ -2632,7 +2632,7 @@
 </ul>
 <p>Les dépendances du projet sont installées de la façon suivante dans un terminal de <strong>[VSCode]</strong> :</p>
 <p>npm --save-dev install @babel/core @babel/preset-env babel-loader webpack webpack-cli webpack-dev-server @webpack-cli/init</p>
-<p><img src="images/10000000000008DC000000F377F51916.png" style="width:15.001cm;height:1.611cm;" alt="Image" /></p>
+<p><img src="images/10000000000008DC000000F377F51916.png" style="width:15.001cm;height:1.611cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008DC000000F377F51916.png" /></p>
 <p>Après l’installation des dépendances, le fichier <strong>[package.json]</strong> a évolué de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">{</span>
@@ -2667,7 +2667,7 @@
 <li><strong>[regenerator-runtime]</strong> : selon le site de la bibliothèque --&gt; <strong>[Source transformer enabling ECMAScript 6 generator functions in JavaScript-of-today]</strong> ;</li>
 </ul>
 <p>Ces deux dépendances remplacent, à partir de Babel 7, la dépendance <strong>[@babel/polyfill]</strong> qui jouait auparavant ce rôle et qui est maintenant (sept 2019) dépréciée. Elles sont installées de la façon suivante :</p>
-<p><img src="images/1000000000000688000000E16129B75A.png" style="width:15.491cm;height:2.08cm;" alt="Image" /></p>
+<p><img src="images/1000000000000688000000E16129B75A.png" style="width:15.491cm;height:2.08cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000688000000E16129B75A.png" /></p>
 <p>Le fichier <strong>[package.json]</strong> évolue alors de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">{</span>
@@ -2721,7 +2721,7 @@
 </ul>
 <p>Cet outil est piloté par un fichier de configuration <strong>[webpack.config.js]</strong> qui peut être généré grâce à une dépendance nommée <strong>[@webpack-cli/init]</strong> (sept 2019). Celle-ci a été installée avec les autres au paragraphe <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-14.docx#webpack"><u><span style="color: #0563c1">lien</span></u></a>.</p>
 <p>Nous exécutons la commande <strong>[npx webpack-cli init]</strong> dans un terminal <strong>[VSCode]</strong> :</p>
-<p><img src="images/10000000000005800000013B31577607.png" style="width:14.9cm;height:3.331cm;" alt="Image" /></p>
+<p><img src="images/10000000000005800000013B31577607.png" style="width:14.9cm;height:3.331cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005800000013B31577607.png" /></p>
 <p>Après avoir répondu aux différentes questions (dont on peut accepter la plupart des réponses proposées par défaut), un fichier <strong>[webpack.config.js]</strong> est généré à la racine du projet <strong>[4]</strong> :</p>
 <p>Le fichier <strong>[webpack.config.js]</strong> ressemble à ceci :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -2860,7 +2860,7 @@
 <li>ligne 19 : permet la génération d’un fichier <strong>[dist/index.html]</strong> embarquant automatiquement le script <strong>[dist/main.js]</strong> généré par <strong>[webpack]</strong> et c’est celui-ci qui est exploité lorsque le projet est exécuté ;</li>
 </ul>
 <p>Enfin la configuration de <strong>[webpack]</strong> a généré un fichier <strong>[src/index.js]</strong> :</p>
-<p><img src="images/100000000000014900000213A422A6BF.png" style="width:3.051cm;height:4.911cm;" alt="Image" /></p>
+<p><img src="images/100000000000014900000213A422A6BF.png" style="width:3.051cm;height:4.911cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000014900000213A422A6BF.png" /></p>
 <p>Le contenu de <strong>[index.js]</strong> est le suivant (sept 2019) :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;Hello World from your main file!&quot;</span><span style="color:#000000">);</span></span>
@@ -2878,7 +2878,7 @@
 </code></pre></div>
 
 <p>Ces tâches sont comprises par <strong>[VSCode]</strong> qui les propose à l’exécution :</p>
-<p><img src="images/10000000000006230000017F03E69FAC.png" style="width:16.631cm;height:4.051cm;" alt="Image" /></p>
+<p><img src="images/10000000000006230000017F03E69FAC.png" style="width:16.631cm;height:4.051cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006230000017F03E69FAC.png" /></p>
 <ul>
 <li>en <strong>[1-3]</strong>, on compile le projet ;</li>
 <li>en <strong>[4]</strong> : le projet est compilé dans <strong>[dist/main.hash.js]</strong> et une page <strong>[dist/index.html]</strong> est créée ;</li>
@@ -2898,9 +2898,9 @@
 
 <p>Cette page se contente donc d’encapsuler le fichier <strong>[main.hash.js]</strong> généré par <strong>[webpack]</strong>.</p>
 <p>Le projet est exécuté par la tâche <strong>[start]</strong> :</p>
-<p><img src="images/10000000000004A4000001B9D91B37E6.png" style="width:12.57cm;height:4.672cm;" alt="Image" /></p>
+<p><img src="images/10000000000004A4000001B9D91B37E6.png" style="width:12.57cm;height:4.672cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004A4000001B9D91B37E6.png" /></p>
 <p>La page <strong>[dist/index.html]</strong> est alors chargée sur un serveur, appartenant à la suite <strong>[webpack]</strong>, opérant sur le port 8080 de la machine locale et affichée par le navigateur par défaut de la machine :</p>
-<p><img src="images/1000000000000494000002B1B6C8309C.png" style="width:10.85cm;height:6.381cm;" alt="Image" /></p>
+<p><img src="images/1000000000000494000002B1B6C8309C.png" style="width:10.85cm;height:6.381cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000494000002B1B6C8309C.png" /></p>
 <ul>
 <li>en <strong>[2]</strong>, le port de service du serveur web de <strong>[webpack]</strong> ;</li>
 <li>en <strong>[3]</strong>, le corps de la page <strong>[dist/index.html]</strong> est vide ;</li>
@@ -2913,19 +2913,19 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Bonjour le monde&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Automatiquement (sans recompiler), de nouveaux fichiers <strong>[main.js, index.html]</strong> sont générés et le nouveau fichier <strong>[index.html]</strong> chargé dans le navigateur :</p>
-<p><img src="images/10000000000003C9000002EC78CFC868.png" style="width:8.981cm;height:6.931cm;" alt="Image" /></p>
+<p><img src="images/10000000000003C9000002EC78CFC868.png" style="width:8.981cm;height:6.931cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C9000002EC78CFC868.png" /></p>
 <p>Il n’est pas nécessaire d’exécuter la tâche <strong>[build]</strong> avant la tâche <strong>[start]</strong> : cette dernière fait d’abord la compilation du projet. Elle ne stocke pas les produits de cette compilation dans le dossier <strong>[dist]</strong>. Pour s’en apercevoir, il suffit de supprimer ce dossier. On verra alors que la tâche <strong>[start]</strong> compile et exécute le projet sans créer le dossier <strong>[dist]</strong>. Elle semble stocker ses produits <strong>[index.html, main.hash.js]</strong> dans un dossier propre à <strong>[webpackdev-server]</strong>. Ce comportement est suffisant pour nos tests.</p>
 <p>Lorsque le serveur de développement est lancé, toute modification sauvegardée d’un des fichiers du projet provoque une recompilation. Pour cette raison, nous inhibons le mode <strong>[Auto Save]</strong> de <strong>[VSCode]</strong>. En effet, nous ne voulons pas de recompilation dès qu’on tape des caractères dans un des fichiers du projet. Nous ne voulons de recompilation qu’au moment des sauvegardes des modifications :</p>
-<p><img src="images/100000000000022B000002F6F4291A79.png" style="width:4.4cm;height:6.01cm;" alt="Image" /></p>
+<p><img src="images/100000000000022B000002F6F4291A79.png" style="width:4.4cm;height:6.01cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000022B000002F6F4291A79.png" /></p>
 <ul>
 <li>en <strong>[2]</strong>, l’option <strong>[Auto Save]</strong> ne doit pas être cochée ;</li>
 </ul>
 <p><a id="refheadingtoc225124172732026"></a></p>
 <h3 id="1445-tests-du-client-javascript-du-serveur-de-calcul-de-limpot">14.4.5. Tests du client Javascript du serveur de calcul de l’impôt</h3>
 <p>Pour tester le client Javascript du serveur de calcul de l’impôt, il faut désigner <strong>[main.js]</strong> <strong>[1]</strong> comme le point d’entrée du projet dans le fichier <strong>[webpack.config.js]</strong> <strong>[2-3]</strong> :</p>
-<p><img src="images/10000000000003CD000001BDC8860154.png" style="width:10.3cm;height:4.71cm;" alt="Image" /></p>
+<p><img src="images/10000000000003CD000001BDC8860154.png" style="width:10.3cm;height:4.71cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003CD000001BDC8860154.png" /></p>
 <p>N’oublions pas que le script <strong>[main.js]</strong> doit inclure deux imports supplémentaires par rapport à sa version dans <strong>[Client http 2]</strong> :</p>
-<p><img src="images/100000000000053D0000019DC987F1CB.png" style="width:12.42cm;height:3.821cm;" alt="Image" /></p>
+<p><img src="images/100000000000053D0000019DC987F1CB.png" style="width:12.42cm;height:3.821cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053D0000019DC987F1CB.png" /></p>
 <p>Par ailleurs, nous avons légèrement modifié le code pour gérer les erreurs que peut envoyer le serveur :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">// imports</span>
@@ -3009,7 +3009,7 @@
 </ul>
 <p>Ceci fait, nous exécutons le projet <strong>[5-6]</strong>.</p>
 <p>La page <strong>[index.html]</strong> est alors générée et chargée dans le navigateur :</p>
-<p><img src="images/100000000000043C00000331B95B20C9.png" style="width:10.041cm;height:7.571cm;" alt="Image" /></p>
+<p><img src="images/100000000000043C00000331B95B20C9.png" style="width:10.041cm;height:7.571cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000043C00000331B95B20C9.png" /></p>
 <ul>
 <li>en <strong>[7]</strong>, on voit que l’action <strong>[init-session]</strong> n’a pu aller à son terme à cause d’un problème <strong>[CORS]</strong> (Cross-Origin Resource Sharing) ;</li>
 </ul>
@@ -3044,7 +3044,7 @@
 <li>ligne 4 : le client Javascript va envoyer des cookies de session. Le serveur les accepte avec l’entête de la ligne 4 ;</li>
 </ul>
 <p>Il nous faut donc modifier le serveur. Nous faisons cela dans <strong>[Netbeans]</strong>. Le problème des CORS est un problème rencontré uniquement en mode développement. En production, le client et le serveur travailleront dans le même domaine <strong>[http://localhost:80]</strong> et il n’y aura pas de problème CORS. Il nous faut donc un moyen d’autoriser ou pas les requêtes CORS par configuration du serveur.</p>
-<p><img src="images/10000000000005C40000024FB2CC2F86.png" style="width:15.62cm;height:6.25cm;" alt="Image" /></p>
+<p><img src="images/10000000000005C40000024FB2CC2F86.png" style="width:15.62cm;height:6.25cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C40000024FB2CC2F86.png" /></p>
 <p>Les modifications du serveur se font à trois endroits :</p>
 <ul>
 <li><strong>[1, 4]</strong> : dans le fichier de configuration <strong>[config.json]</strong> pour y mettre un booléen qui contrôlera l’acceptation ou non des requêtes inter-domaines ;</li>
@@ -3122,13 +3122,13 @@
 </li>
 </ul>
 <p>Une fois le serveur ainsi corrigé, le client Javascript s’exécute mieux mais fait apparaître une nouvelle erreur :</p>
-<p><img src="images/10000000000003FE0000047C70774234.png" style="width:8.12cm;height:9.111cm;" alt="Image" /></p>
+<p><img src="images/10000000000003FE0000047C70774234.png" style="width:8.12cm;height:9.111cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003FE0000047C70774234.png" /></p>
 <ul>
 <li>en <strong>[1]</strong>, la session jSON est correctement initialisée ;</li>
 <li>en <strong>[2]</strong>, l’action <strong>[authentifier-utilisateur]</strong> échoue : le serveur indique qu’il n’y a pas de session en cours. Cela signifie que le client Javascript ne lui pas renvoyé correctement le cookie de session qu’il a envoyé lors de l’action <strong>[init-session]</strong> ;</li>
 </ul>
 <p>Examinons les échanges réseau qui ont eu lieu :</p>
-<p><img src="images/1000000000000612000002355B56FFBF.png" style="width:16.451cm;height:5.98cm;" alt="Image" /></p>
+<p><img src="images/1000000000000612000002355B56FFBF.png" style="width:16.451cm;height:5.98cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000612000002355B56FFBF.png" /></p>
 <ul>
 <li>en <strong>[4]</strong>, la requête <strong>[init-session]</strong>. Elle s’est bien déroulée avec un code 200 pour le statut de la réponse ;</li>
 <li>en <strong>[5]</strong>, la requête <strong>[authentifier-utilisateur]</strong>. Celle-ci échoue avec un code 400 (Bad Request) <strong>[6]</strong> pour le statut de la réponse ;</li>
@@ -3160,8 +3160,8 @@
 
 <p>La ligne 15 demande à ce que les cookies soient inclus dans les entêtes HTTP de la requête <strong>[axios]</strong>. Remarquons que cela n’avait pas été nécessaire dans l’environnement <strong>[node.js]</strong>. Il y a donc des différences de code entre les deux environnements.</p>
 <p>Une fois cette erreur corrigée, le client Javascript se déroule normalement :</p>
-<p><img src="images/10000000000005A1000004A349F04AD8.png" style="width:15.251cm;height:12.561cm;" alt="Image" /></p>
-<p><img src="images/1000000000000220000003A5B333BDD4.png" style="width:4.32cm;height:7.4cm;" alt="Image" /></p>
+<p><img src="images/10000000000005A1000004A349F04AD8.png" style="width:15.251cm;height:12.561cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A1000004A349F04AD8.png" /></p>
+<p><img src="images/1000000000000220000003A5B333BDD4.png" style="width:4.32cm;height:7.4cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000220000003A5B333BDD4.png" /></p>
 <p><a id="refheadingtoc1252801348058621"></a></p>
 <h2 id="145-amelioration-du-client-http-3">14.5. Amélioration du client HTTP 3</h2>
 <p>Lorsque la classe [Dao2] précédente s’exécute au sein d’un navigateur, la gestion du cookie de session est inutile. En effet, c’est le navigateur qui héberge la couche [dao] qui gère le cookie de session : il renvoie automatiquement tout cookie que le serveur lui envoie. Du coup la classe [Dao2] peut être réécrite en la classe [Dao3] suivante :</p>
@@ -3256,7 +3256,7 @@
 
 <p>Tout ce qui avait trait à la gestion du cookie de gestion a disparu.</p>
 <p>Nous modifions le projet précédent de la façon suivante :</p>
-<p><img src="images/1000000000000186000001F9A222DDB4.png" style="width:3.601cm;height:4.68cm;" alt="Image" /></p>
+<p><img src="images/1000000000000186000001F9A222DDB4.png" style="width:3.601cm;height:4.68cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000186000001F9A222DDB4.png" /></p>
 <p>Dans le dossier [src], nous avons ajouté deux fichiers :</p>
 <ul>
 <li>la classe [Dao3] que nous venons de présenter ;</li>
@@ -3341,7 +3341,7 @@
 </code></pre></div>
 
 <p>Ceci fait, on exécute le projet après avoir lancé le serveur de calcul de l’impôt :</p>
-<p><img src="images/10000000000002FF00000115485FA6DB.png" style="width:7.1cm;height:2.56cm;" alt="Image" /></p>
+<p><img src="images/10000000000002FF00000115485FA6DB.png" style="width:7.1cm;height:2.56cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002FF00000115485FA6DB.png" /></p>
 <p>Les résultats obtenus dans la console du navigateur sont identiques à ceux de la version précédente.</p>
 <p><a id="refheadingtoc225448640539168"></a></p>
 <h2 id="146-conclusion">14.6. Conclusion</h2>

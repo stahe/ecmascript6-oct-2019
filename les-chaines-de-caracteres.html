@@ -810,7 +810,7 @@
 <p><a id="refheadingtoc2042253980233556"></a></p>
 <h1 id="6-les-chaines-de-caracteres">6. Les chaînes de caractères</h1>
 <p>Les chaînes de caractères de Javascript sont très semblables à celles de PHP.</p>
-<p><img src="images/10000000000000C9000001318D77205E.png" style="width:2.132cm;height:3.23cm;" alt="Image" /></p>
+<p><img src="images/10000000000000C9000001318D77205E.png" style="width:2.132cm;height:3.23cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000C9000001318D77205E.png" /></p>
 <p><a id="refheadingtoc2042273980233556"></a></p>
 <h2 id="61-script-str-01">6.1. script [str-01]</h2>
 <p>La première chose à comprendre est qu’une fois une chaîne créée, elle n’est plus modifiable. On dispose de nombreuses méthodes pour produire une nouvelle chaîne à partir de la chaîne initiale mais celle-ci reste toujours inchangée. Par ailleurs, une chaîne de caractères peut être de deux types :</p>
@@ -911,21 +911,21 @@
 <p><a id="refheadingtoc2042333980233556"></a></p>
 <h2 id="64-script-str-04">6.4. script [str-04]</h2>
 <p>La chaîne avec interpolation de variables reste insuffisante. Il n’est en effet pas possible de mettre une expression à la place de la variable dans l’expression ${variable}. Pour ceux qui ont programmé en C, il n’y a rien de tel que les fonctions <strong>[printf, sprintf]</strong> pour écrire ou construire des chaînes formatées. Des centaines de développeurs ont développé des milliers de packages Javascript formant un écosystème immense. Lorsqu’on a un besoin non satisfait nativement par Javascript, il est temps de chercher un package qui le satisfasse. Pour cela nous utilisons le gestionnaire de packages <strong>[npm]</strong>. Celui-ci dispose d’une option <strong>[search]</strong> qui permet de chercher une chaîne de caractères dans la description des packages. <strong>[npm]</strong> renvoie la liste des packages satisfaisant à la recherche. Nous allons donc chercher la chaîne <strong>[sprintf]</strong> dans la description des packages :</p>
-<p><img src="images/10000000000008B9000002C23DAD22B5.png" style="width:17.721cm;height:5.601cm;" alt="Image" /></p>
+<p><img src="images/10000000000008B9000002C23DAD22B5.png" style="width:17.721cm;height:5.601cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008B9000002C23DAD22B5.png" /></p>
 <ul>
 <li>dans la colonne <strong>[4]</strong>, les mots clés des packages de la colonne <strong>[3]</strong> ;</li>
 <li>dans la colonne <strong>[5]</strong>, la description des packages de la colonne <strong>[3]</strong> ;</li>
 </ul>
 <p>L’étape suivante est d’aller sur le site de l’outil <strong>[npm]</strong>, <strong>[https://www.npmjs.com/]</strong> et de lire la description des packages :</p>
-<p><img src="images/100000000000069700000427F84A598B.png" style="width:11.161cm;height:7.032cm;" alt="Image" /></p>
+<p><img src="images/100000000000069700000427F84A598B.png" style="width:11.161cm;height:7.032cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000069700000427F84A598B.png" /></p>
 <p>En <strong>[3]</strong>, on examine la liste des packages et on en choisit un.</p>
-<p><img src="images/1000000000000485000002026D3D5A42.png" style="width:9.18cm;height:4.081cm;" alt="Image" /></p>
+<p><img src="images/1000000000000485000002026D3D5A42.png" style="width:9.18cm;height:4.081cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000485000002026D3D5A42.png" /></p>
 <p>Dans la description du package, on trouve les informations pour l’installer et l’utiliser :</p>
-<p><img src="images/10000000000004970000034CF10EC898.png" style="width:7.771cm;height:5.58cm;" alt="Image" /></p>
+<p><img src="images/10000000000004970000034CF10EC898.png" style="width:7.771cm;height:5.58cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004970000034CF10EC898.png" /></p>
 <p>Nous installons le package <strong>[sprintf-js]</strong> dans un terminal de <strong>[VSCode]</strong> :</p>
-<p><img src="images/1000000000000558000001CE1C9B1593.png" style="width:10.861cm;height:3.671cm;" alt="Image" /></p>
+<p><img src="images/1000000000000558000001CE1C9B1593.png" style="width:10.861cm;height:3.671cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000558000001CE1C9B1593.png" /></p>
 <p>Cette installation va modifier le fichier <strong>[package.json]</strong> situé à la racine du dossier <strong>[javascript]</strong> <strong>[2]</strong> :</p>
-<p><img src="images/100000000000026B000001AB5E547E08.png" style="width:6.55cm;height:4.522cm;" alt="Image" /></p>
+<p><img src="images/100000000000026B000001AB5E547E08.png" style="width:6.55cm;height:4.522cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026B000001AB5E547E08.png" /></p>
 <p>On voit ci-dessus que le package a été installé dans les <strong>[dependencies]</strong>, ç-à-d dans les packages nécessaires à l’exécution du projet. On rappelle qu’on met dans <strong>[devDependencies]</strong> les packages nécessaires uniquement pendant le développement du projet. Ils ne sont pas utilisés pendant l’exécution. Cette différence est importante lorsqu’il faut créer la version finale du projet pour sa mise en production. Il existe des outils pour :</p>
 <ul>
 <li>rassembler tous les fichiers jS nécessaires à l’exécution dans un seul fichier. Les packages des <strong>[devDependencies]</strong> ne sont donc pas inclus dans ce fichier final ;</li>
@@ -946,7 +946,7 @@
 </code></pre></div>
 
 <p>Avec ECMAScript 6, on utilise le mot clé <strong>[import]</strong> pour <strong>importer</strong> un objet exporté par un package. Pour savoir ce qu’exporte le package, on peut aller voir son code :</p>
-<p><img src="images/100000000000060D0000015281E8D3FA.png" style="width:16.391cm;height:3.581cm;" alt="Image" /></p>
+<p><img src="images/100000000000060D0000015281E8D3FA.png" style="width:16.391cm;height:3.581cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060D0000015281E8D3FA.png" /></p>
 <ul>
 <li>en <strong>[1]</strong>, clic droit sur le package importé ;</li>
 <li>en <strong>[2]</strong>, on veut en voir la définition ;</li>
@@ -984,12 +984,12 @@
 
 <p>Ligne 3, l’instruction <strong>[import]</strong> n’est pas comprise. Cela vient du fait que la version 10.15.1 de <strong>[node.js]</strong> utilisée dans ce cours (sept 2019) n’observe pas encore la norme ECMAScript pour l’importation de packages appelés modules. En 2019, <strong>[node.js]</strong> observe une norme de modules appelée CommonJS. L’intégration des modules ECMAScript par <strong>[node.js]</strong> est prévue en 2020. Là encore des développeurs se sont mis à la tâche et ont produit des packages permettant l’utilisation de modules ES6 avec <strong>[node.js]</strong> dès maintenant (2019).</p>
 <p>Nous allons utiliser un package appelé <strong>[esm]</strong> (<strong>E</strong>CMA<strong>S</strong>cript <strong>M</strong>odules). Nous l’installons dans un terminal du projet <strong>[javascript]</strong> :</p>
-<p><img src="images/10000000000005560000017C3D85E466.png" style="width:14.461cm;height:4.021cm;" alt="Image" /></p>
+<p><img src="images/10000000000005560000017C3D85E466.png" style="width:14.461cm;height:4.021cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005560000017C3D85E466.png" /></p>
 <p>En <strong>[4]</strong>, on constate que l’installation du package <strong>[esm]</strong> <strong>[1-3]</strong> a modifié le fichier <strong>[javascript/package.json]</strong>.</p>
 <p>Nous n’avons pas fini. Pour que le module <strong>[esm]</strong> soit utilisé par <strong>[node.js]</strong>, il faut lancer celui-ci avec l’argument <strong>[-r esm]</strong>.</p>
 <p>Nous modifions dons la configuration de l’extension <strong>[Code Runner]</strong> de <strong>[VSCode]</strong> :</p>
-<p><img src="images/1000000000000623000003283CBE44C5.png" style="width:16.631cm;height:8.55cm;" alt="Image" /></p>
-<p><img src="images/1000000000000674000001DF96DD6E5D.png" style="width:15.29cm;height:4.43cm;" alt="Image" /></p>
+<p><img src="images/1000000000000623000003283CBE44C5.png" style="width:16.631cm;height:8.55cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000623000003283CBE44C5.png" /></p>
+<p><img src="images/1000000000000674000001DF96DD6E5D.png" style="width:15.29cm;height:4.43cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000674000001DF96DD6E5D.png" /></p>
 <p>En <strong>[11]</strong>, on ajoute l’argument <strong>[-r esm]</strong> et on sauvegarde (Ctrl-S) la configuration.</p>
 <p>Maintenant, nous pouvons exécuter le script <strong>[str-04]</strong> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -1002,7 +1002,7 @@
 <span class="odt-code-line"><span style="color:#000000">console.log(sprintf(</span><span style="color:#a31515">&quot;</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">.substr(3,2)=</span><span style="font-weight:bold;color:#a31515">[%s]</span><span style="color:#a31515">&quot;</span><span style="color:#000000">, chaîne, chaîne.substr(3, 2)));</span></span>
 </code></pre></div>
 
-<p><img src="images/10000000000007E30000010E2282F9EF.png" style="width:16.031cm;height:2.14cm;" alt="Image" /></p>
+<p><img src="images/10000000000007E30000010E2282F9EF.png" style="width:16.031cm;height:2.14cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007E30000010E2282F9EF.png" /></p>
 <p><a id="refheadingtoc2042353980233556"></a></p>
 <h2 id="65-script-str-05">6.5. script [str-05]</h2>
 <p>Voici ce que dit la documentation sur la fonction <strong>[sprintf]</strong> :</p>

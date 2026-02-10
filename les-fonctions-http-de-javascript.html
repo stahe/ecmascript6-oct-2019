@@ -860,7 +860,7 @@
 <p><a id="fontionshttp"></a>
 <a id="refheadingtoc2152541731793072"></a></p>
 <h1 id="12-les-fonctions-http-de-javascript">12. Les fonctions HTTP de Javascript</h1>
-<p><img src="images/10000000000000F90000014488334DE4.png" style="width:2.641cm;height:3.432cm;" alt="Image" /></p>
+<p><img src="images/10000000000000F90000014488334DE4.png" style="width:2.641cm;height:3.432cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F90000014488334DE4.png" /></p>
 <p><a id="refheadingtoc225388640539168"></a></p>
 <h2 id="121-choix-dune-bibliotheque-http">12.1. Choix d’une bibliothèque HTTP</h2>
 <p>Nous avons fait ici le choix de deux bibliothèques :</p>
@@ -872,7 +872,7 @@
 <p><a id="refheadingtoc225392640539168"></a></p>
 <h3 id="1221-installation-du-serveur-de-calcul-dimpot">12.2.1. Installation du serveur de calcul d’impôt</h3>
 <p>Ultimement, nous allons écrire une application web avec l’architecture suivante :</p>
-<p><img src="images/100000000000055A000001AFF8202431.png" style="width:14.5cm;height:4.56cm;" alt="Image" /></p>
+<p><img src="images/100000000000055A000001AFF8202431.png" style="width:14.5cm;height:4.56cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000055A000001AFF8202431.png" /></p>
 <p><strong>JS</strong> : Javascript</p>
 <p>Le code Javascript est client :</p>
 <ul>
@@ -881,7 +881,7 @@
 </ul>
 <p>Le code Javascript est donc un client jSON et à ce titre peut être organisé en couches <strong>[UI, métier, dao]</strong> (UI : User Interface) comme l’ont été nos clients jSON écrits en PHP.</p>
 <p>Le serveur sera celui du calcul de l’impôt dont nous avons déjà écrit 13 versions. Nous allons en écrire une 14ième. Nous commençons donc par dupliquer, sous Netbeans, le dossier de la version 13, dans le dossier de la version 14 :</p>
-<p><img src="images/1000000000000390000003D773DFC466.png" style="width:10.861cm;height:11.701cm;" alt="Image" /></p>
+<p><img src="images/1000000000000390000003D773DFC466.png" style="width:10.861cm;height:11.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000390000003D773DFC466.png" /></p>
 <ul>
 <li>en <strong>[6]</strong>, nous modifions le fichier <strong>[config.json]</strong> de la version 14 de la façon suivante :</li>
 </ul>
@@ -908,7 +908,7 @@
 </ul>
 <p>Pour accéder à ce serveur, il faut lancer les services <strong>[Laragon]</strong>.</p>
 <p>Ceci fait, nous pouvons tester avec <strong>[Postman]</strong> (cf. article <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">lien</span></u></a>), cette nouvelle version du serveur, identique pour l’instant à la version 13. Nous pouvons utiliser la collection de requêtes utilisées pour tester la version 12 du serveur de calcul d’impôt :</p>
-<p><img src="images/10000000000007FB000004EA33F975D1.png" style="width:16.221cm;height:9.991cm;" alt="Image" /></p>
+<p><img src="images/10000000000007FB000004EA33F975D1.png" style="width:16.221cm;height:9.991cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007FB000004EA33F975D1.png" /></p>
 <ul>
 <li>en <strong>[1-4]</strong>, utiliser la requête <strong>[init-session-700]</strong> pour initialiser une session jSON ;</li>
 <li>en <strong>[4-5]</strong>, mettre <strong>[version-14]</strong> au lieu de <strong>[version-12]</strong> pour tester la version 14 du projet ;</li>
@@ -920,15 +920,15 @@
 <p><a id="refheadingtoc225394640539168"></a></p>
 <h3 id="1222-installation-des-bibliotheques-http-du-client-javascript">12.2.2. Installation des bibliothèques HTTP du client Javascript</h3>
 <p>Dans un premier temps, nous travaillerons avec l’architecture suivante :</p>
-<p><img src="images/1000000000000548000001AC0F76E799.png" style="width:14.311cm;height:4.53cm;" alt="Image" /></p>
+<p><img src="images/1000000000000548000001AC0F76E799.png" style="width:14.311cm;height:4.53cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000548000001AC0F76E799.png" /></p>
 <ul>
 <li>en <strong>[1]</strong>, un script console <strong>[node.js]</strong> fait une requête HTTP vers le serveur jSON du calcul de l’impôt ;</li>
 <li>en <strong>[4]</strong>, il reçoit cette réponse et l’affiche sur la console ;</li>
 </ul>
 <p>Dans l’exemple n° 1, nous utiliserons les bibliothèques <strong>[node-fetch]</strong> et <strong>[axios]</strong> puis nous ne conserverons qu’<strong>[axios]</strong> pour les exemples suivants. Nous installons maintenant ces deux bibliothèques Javascript à partir du terminal de <strong>[VSCode]</strong> :</p>
-<p><img src="images/10000000000005A10000026CFFDAC34F.png" style="width:15.251cm;height:6.561cm;" alt="Image" /></p>
+<p><img src="images/10000000000005A10000026CFFDAC34F.png" style="width:15.251cm;height:6.561cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A10000026CFFDAC34F.png" /></p>
 <p>Nous utiliserons également la bibliothèque <strong>[qs]</strong> qui permet l’encodage URL d’une chaîne de caractères. On se rappelle que cet encodage est utilisé pour encoder les paramètres d’une requête HTTP GET ou POST.</p>
-<p><img src="images/10000000000005BC000002291894F579.png" style="width:15.541cm;height:5.852cm;" alt="Image" /></p>
+<p><img src="images/10000000000005BC000002291894F579.png" style="width:15.541cm;height:5.852cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005BC000002291894F579.png" /></p>
 <p><a id="refheadingtoc225396640539168"></a></p>
 <h2 id="123-script-fetch-01">12.3. script [fetch-01]</h2>
 <p>Le script <strong>[fetch-01]</strong> utilise la bibliothèque <strong>[node-fetch]</strong> pour initialiser une session jSON avec le serveur de calcul d’impôt. Son code est le suivant :</p>
@@ -1153,7 +1153,7 @@
 <li>lignes 42-44 : l’objet Javascript reçu par la fonction asynchrone <strong>[main]</strong> ;</li>
 </ul>
 <p><strong>Cas 3</strong> : le serveur Laragon est lancé mais on lui envoie une commande erronée :</p>
-<p><img src="images/100000000000044A00000111255483E0.png" style="width:10.171cm;height:2.53cm;" alt="Image" /></p>
+<p><img src="images/100000000000044A00000111255483E0.png" style="width:10.171cm;height:2.53cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044A00000111255483E0.png" /></p>
 <ul>
 <li>ci-dessus, ligne 26, on passe un type erroné de session au serveur ;</li>
 </ul>
@@ -1765,7 +1765,7 @@
 <li>lignes 205-207 : la réponse récupérée par la fonction asynchrone <strong>[main]</strong> ;</li>
 </ul>
 <p><strong>Cas 3</strong> : on fait une requête <strong>[init-session]</strong> erronée au serveur Laragon ;</p>
-<p><img src="images/10000000000002B3000001A03BB03E73.png" style="width:6.4cm;height:3.851cm;" alt="Image" /></p>
+<p><img src="images/10000000000002B3000001A03BB03E73.png" style="width:6.4cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B3000001A03BB03E73.png" /></p>
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span>

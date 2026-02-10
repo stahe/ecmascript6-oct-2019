@@ -810,7 +810,7 @@
 <p><a id="fontionsasync"></a>
 <a id="refheadingtoc2091462346209355"></a></p>
 <h1 id="11-programmation-evenementielle-et-fonctions-asynchrones">11. Programmation événementielle et fonctions asynchrones</h1>
-<p><img src="images/10000000000000E900000136448462DF.png" style="width:2.47cm;height:3.282cm;" alt="Image" /></p>
+<p><img src="images/10000000000000E900000136448462DF.png" style="width:2.47cm;height:3.282cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E900000136448462DF.png" /></p>
 <p>Une fonction asynchrone est une fonction dont l’exécution est lancée mais dont on n’attend pas le résultat. Lorsque l’exécution est terminée, la fonction asynchrone émet un événement et transmet son résultat via celui-ci.</p>
 <p>Ce mode de fonctionnement est bien adapté à l’exécution au sein d’un navigateur web. En effet, une application exécutée au sein d’un navigateur est une application à événements : l’application réagit à des événements, principalement provoqués par l’utilisateur (clics, déplacements de souris, frappe de texte, …). Les applications Javascript exécutées au sein d’un navigateur sont amenées à dialoguer avec des services externes via le protocole HTTP. Les fonctions natives HTTP de Javascript sont asynchrones : elles sont lancées et l’obtention de la réponse du service externe sollicité est signalé par un événement qui s’ajoute à l’ensemble des événements gérés par l’application.</p>
 <p>Les scripts suivants vont être exécutés par <strong>[node.js]</strong> et non par un navigateur. <strong>[node.js]</strong> a lui également un mode d’exécution par événement :</p>
@@ -917,7 +917,7 @@
 <h2 id="112-script-async-02">11.2. script [async-02]</h2>
 <p>Dans ce script, la fonction asynchrone <strong>[setTimeout]</strong> va émettre des événements pour communiquer des données aux codes qui se seront abonnés à ceux-ci.</p>
 <p>L’accès aux événements de <strong>[node.js]</strong> nécessite des bibliohèques supplémentaires. Nous choisissons la bibliothèque <strong>[events]</strong> que nous installons avec <strong>[npm]</strong> :</p>
-<p><img src="images/10000000000005850000019732E59DD8.png" style="width:14.951cm;height:4.31cm;" alt="Image" /></p>
+<p><img src="images/10000000000005850000019732E59DD8.png" style="width:14.951cm;height:4.31cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005850000019732E59DD8.png" /></p>
 <p>Le script <strong>[async-02]</strong> est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span>;</span>
