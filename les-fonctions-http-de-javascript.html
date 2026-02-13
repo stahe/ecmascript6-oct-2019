@@ -857,8 +857,8 @@
   
 
 
-<p><a id="fontionshttp"></a>
-<a id="refheadingtoc2152541731793072"></a></p>
+<p><a id="refheadingtoc2152541731793072"></a>
+<a id="fontionshttp"></a></p>
 <h1 id="12-les-fonctions-http-de-javascript">12. Les fonctions HTTP de Javascript</h1>
 <p><img src="images/10000000000000F90000014488334DE4.png" style="width:2.641cm;height:3.432cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F90000014488334DE4.png" /></p>
 <p><a id="refheadingtoc225388640539168"></a></p>
@@ -932,7 +932,7 @@
 <p><a id="refheadingtoc225396640539168"></a></p>
 <h2 id="123-script-fetch-01">12.3. script [fetch-01]</h2>
 <p>Le script <strong>[fetch-01]</strong> utilise la bibliothèque <strong>[node-fetch]</strong> pour initialiser une session jSON avec le serveur de calcul d’impôt. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span>;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// imports</span>
@@ -1214,7 +1214,7 @@
 <p><a id="refheadingtoc225398640539168"></a></p>
 <h2 id="124-script-fetch-02">12.4. script [fetch-02]</h2>
 <p>Le script suivant reprend le script <strong>[fetch-01]</strong> en le débarrassant de tous les détails inutiles :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// imports</span>
@@ -1537,7 +1537,7 @@
 <li>ligne 138 : le message d’erreur affiché par la fonction <strong>[main]</strong> ;</li>
 </ul>
 <p><strong>Cas 2</strong> : le serveur Laragon est lancé</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span>
 <span class="odt-code-line">requête HTTP vers le serveur en cours ---------------------------------------------</span>
 <span class="odt-code-line">réponse axios= { status: 200,</span>
@@ -2003,15 +2003,15 @@
 <ul>
 <li>lignes 9-12 : l’authentification utilisateur échoue : le serveur n’a pas retenu le fait qu’on avait initié une session jSON. Cela vient du fait qu’on n’a pas renvoyé le cookie de session envoyé en réponse à la 1ère requête <strong>[init-session]</strong> ;</li>
 </ul>
-<p><a id="axios04"></a>
-<a id="refheadingtoc2152561731793072"></a></p>
+<p><a id="refheadingtoc2152561731793072"></a>
+<a id="axios04"></a></p>
 <h2 id="128-script-axios-04">12.8. script [axios-04]</h2>
 <p>Le script <strong>[axios-04]</strong> amène deux améliorations au script <strong>[axios-03]</strong> :</p>
 <ul>
 <li>il gère le cookie de session ;</li>
 <li>il factorise dans une fonction <strong>[getRemoteData]</strong> ce qui est commun aux fonctions <strong>[initSession]</strong> et <strong>[authentifierUtilisateur]</strong> ;</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> qs </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;qs&#x27;</span></span>

@@ -983,7 +983,7 @@
 <p><a id="refheadingtoc225424640539168"></a></p>
 <h3 id="1421-la-couche-dao">14.2.1. La couche [dao]</h3>
 <p>La couche <strong>[dao]</strong> sera implémentée par la classe suivante <strong>[Dao1.js]</strong> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// imports</span>
@@ -1628,7 +1628,7 @@
 <li>lignes 197-122 : nous n’implémenterons pas la méthode <strong>[executeBatchImpots]</strong> dont le but final était d’enregistrer des résultats de simulations dans un fichier texte. Nous voulons un code qui fonctionne à la fois sous <strong>[node.js]</strong> et dans un navigateur. Or sauvegarder des données sur le système de fichiers de la machine exécutant le navigateur client n’est pas possible ;</li>
 </ul>
 <p>Avec ces restrictions, le code de la classe Javascript <strong>[Métier]</strong> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// classe Métier</span>
@@ -1826,7 +1826,7 @@
 <h3 id="1432-la-classe-javascript-dao2">14.3.2. La classe Javascript [Dao2]</h3>
 <p><img src="images/10000000000005DF000001A53E81FA2B.png" style="width:15.911cm;height:4.462cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DF000001A53E81FA2B.png" /></p>
 <p>La classe <strong>[Dao2]</strong> implémente la couche <strong>[dao]</strong> du client Javascript ci-dessus de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// imports</span>
@@ -2617,8 +2617,8 @@
 <ul>
 <li>en <strong>[4-5]</strong>, le fichier de configuration du projet <strong>[package.json]</strong> généré à partir des différentes réponses données ;</li>
 </ul>
-<p><a id="webpack"></a>
-<a id="refheadingtoc225442640539168"></a></p>
+<p><a id="refheadingtoc225442640539168"></a>
+<a id="webpack"></a></p>
 <h3 id="1442-installation-des-dependances-du-projet">14.4.2. Installation des dépendances du projet</h3>
 <p>Nous allons installer les dépendances suivantes :</p>
 <ul>
@@ -2910,7 +2910,7 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Hello World from your main file!&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p>Maintenant, changeons ce contenu en la ligne suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Bonjour le monde&quot;</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>console.log(&quot;Bonjour le monde&quot;);
 </code></pre></div></td></tr></table></div>
 <p>Automatiquement (sans recompiler), de nouveaux fichiers <strong>[main.js, index.html]</strong> sont générés et le nouveau fichier <strong>[index.html]</strong> chargé dans le navigateur :</p>
 <p><img src="images/10000000000003C9000002EC78CFC868.png" style="width:8.981cm;height:6.931cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003C9000002EC78CFC868.png" /></p>
@@ -3165,7 +3165,7 @@
 <p><a id="refheadingtoc1252801348058621"></a></p>
 <h2 id="145-amelioration-du-client-http-3">14.5. Amélioration du client HTTP 3</h2>
 <p>Lorsque la classe [Dao2] précédente s’exécute au sein d’un navigateur, la gestion du cookie de session est inutile. En effet, c’est le navigateur qui héberge la couche [dao] qui gère le cookie de session : il renvoie automatiquement tout cookie que le serveur lui envoie. Du coup la classe [Dao2] peut être réécrite en la classe [Dao3] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&quot;use strict&quot;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// imports</span>

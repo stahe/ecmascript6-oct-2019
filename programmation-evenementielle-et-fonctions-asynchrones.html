@@ -807,8 +807,8 @@
   
 
 
-<p><a id="fontionsasync"></a>
-<a id="refheadingtoc2091462346209355"></a></p>
+<p><a id="refheadingtoc2091462346209355"></a>
+<a id="fontionsasync"></a></p>
 <h1 id="11-programmation-evenementielle-et-fonctions-asynchrones">11. Programmation événementielle et fonctions asynchrones</h1>
 <p><img src="images/10000000000000E900000136448462DF.png" style="width:2.47cm;height:3.282cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000E900000136448462DF.png" /></p>
 <p>Une fonction asynchrone est une fonction dont l’exécution est lancée mais dont on n’attend pas le résultat. Lorsque l’exécution est terminée, la fonction asynchrone émet un événement et transmet son résultat via celui-ci.</p>
@@ -824,7 +824,7 @@
 <p><a id="refheadingtoc225376640539168"></a></p>
 <h2 id="111-script-async-01">11.1. script [async-01]</h2>
 <p>Le script suivant montre le comportement d’un script comportant une action asynchrone.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span>;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// imports</span>
@@ -889,7 +889,7 @@
 <li>ligne 34 : la durée est ajoutée à l’heure ;</li>
 </ul>
 <p><strong>Exécution</strong></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-01.js&quot;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold">[début du script]</span>, heure=09:26:40:238</span>
 <span class="odt-code-line"><span style="font-weight:bold">[fin du code principal du script]</span>, heure=09:26:40:246, durée= 0 seconde(s) et 11 millisecondes</span>
@@ -919,7 +919,7 @@
 <p>L’accès aux événements de <strong>[node.js]</strong> nécessite des bibliohèques supplémentaires. Nous choisissons la bibliothèque <strong>[events]</strong> que nous installons avec <strong>[npm]</strong> :</p>
 <p><img src="images/10000000000005850000019732E59DD8.png" style="width:14.951cm;height:4.31cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005850000019732E59DD8.png" /></p>
 <p>Le script <strong>[async-02]</strong> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span>;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// les fonctions asynchrones peuvent rendre un résultat en émettant un événement</span>
@@ -999,7 +999,7 @@
 <li>ligne 40 : le code principal du script est terminé mais pas le script lui-même puisque le code principal a lancé une tâche asynchrone. Le script global ne sera terminé qu’après la fin de cette tâche asynchrone ;</li>
 </ul>
 <p>C’est ce que montrent les résultats obtenus :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-02.js&quot;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold">[début du script]</span>, heure=09:34:58:909</span>
 <span class="odt-code-line"><span style="font-weight:bold">[fin du code principal du script]</span>, heure=09:34:58:916, durée= 0 seconde(s) et 10 millisecondes</span>
@@ -1026,7 +1026,7 @@
 <li>la boucle <strong>n’exécute qu’un événement à la fois</strong>. Le suivant n’est traité que lorsque le traitement du précédent est terminé. Dans un  système événementiel, il faut donc éviter d’écrire du code qui monopolise longtemps le processeur car alors les événements ne sont pas traités lorsqu’ils se produisent mais plus tard lorsque la boucle événementielle arrive à eux. On a alors une application peu « réactive » ;</li>
 </ul>
 <p>Le script <strong>[async-03]</strong> montre un exemple de ce phénomène :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// les fonctions asynchrones peuvent rendre un résultat en émettant un événement</span>
@@ -1090,7 +1090,7 @@
 <li>ligne 47 : fin du code principal du script. C’est après ce dernier affichage que l’événement de fin de timer va pouvoir être traité et la fonction asynchrone interne à <strong>[setTimeout]</strong> va pouvoir être exécutée ;</li>
 </ul>
 <p>Le script donne les résultats suivants :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-03.js&quot;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold">[début du script]</span>, heure=08:55:02:665</span>
 <span class="odt-code-line"><span style="font-weight:bold">[fin du code principal du script]</span>, heure=08:55:11:789, durée= 9 seconde(s) et 131 millisecondes</span>
@@ -1188,7 +1188,7 @@
 </ul>
 <p>Cette syntaxe cache complètement les événements auxquels on s’abonne. C’est pourtant un abonnement et comme celui de l’exemple précédent, il n’exécute pas immédiatement les fonctions <strong>[f1, f2, f3]</strong>. Celles-ci seront exécutées ou pas lorsque l’un des événements <strong>[resolved, rejected]</strong> auxquels on s’abonne va se produire.</p>
 <p>Le script <strong>[async-04]</strong> montre cette mécanique :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span>;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// il est possible d&#x27;obtenir les résultats (succes, failure) d&#x27;une fonction asynchrone</span>
@@ -1291,7 +1291,7 @@
 <li>puis il y aura retour à la boucle événementielle. Et là le second événement <strong>[resolved, rejected]</strong> des promesses <strong>[promise1, promise2]</strong> sera traité lorsqu’il se produira ;</li>
 </ul>
 <p><strong>Exécution</strong></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-04.js&quot;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold">[début du script]</span>, heure=09:39:05:950, durée= 0 seconde(s) et 3 millisecondes</span>
 <span class="odt-code-line"><span style="font-weight:bold">[début fonction asynchrone de promise1]</span>, heure=09:39:05:958, durée= 0 seconde(s) et 0 millisecondes</span>
@@ -1371,7 +1371,7 @@
 <li>définit deux fonctions asynchrones rendant une <strong>[Promise]</strong> ;</li>
 <li>lance leur exécution en parallèle et attend que les deux soient terminées pour faire un certain travail ;</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span>;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// on peut définir des fonctions asynchrones qui rendent un type <span style="font-weight:bold">[Promise]</span></span>
@@ -1483,7 +1483,7 @@
 </li>
 </ul>
 <p>L’exécution du code donne les résultats suivants :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-05.js&quot;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold">[début du script]</span>, heure=12:17:17:367</span>
 <span class="odt-code-line">[début de la tâche asynchrone async01]</span>
@@ -1515,7 +1515,7 @@
 <li>avant l’apparition des mots clés <strong>[async/await]</strong>, l’exécution séquentielle d’actions asynchrones se faisait à l’aide de <strong>[Promise]</strong> emboîtées les unes dans les autres. Dès qu’il y avait plusieurs actions asynchrones à exécuter ainsi, le nombre de promesses augmentait en conséquence et le code devenait moins lisible ;</li>
 <li>avec les mots clés <strong>[async/await]</strong>, l’exécution séquentielle de tâches asynchrones se fait avec une syntaxe à celle de l’exécution de tâches synchrones :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
 <span class="odt-code-line">// fonction asynchrone - utilisation async / await</span>
 <span class="odt-code-line"><span style="color:#0000ff">async</span><span style="color:#000000"> </span><span style="color:#0000ff">function</span><span style="color:#000000"> main() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// exécution séquentielle des tâches asynchrones</span></span>
@@ -1552,7 +1552,7 @@
 <li>on refait la même chose pour l’action asynchrone <strong>[async02]</strong>, ligne 9 et <strong>[async03]</strong>, ligne 12 ;</li>
 </ul>
 <p>Toujours avec les mots clés <strong>[async / await]</strong>, il est possible de faire l’exécution parallèle de tâches asynchrones avec la syntaxe suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// exécution parallèle des tâches asynchrones</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> result = </span><span style="color:#0000ff">await</span><span style="color:#000000"> Promise.all(</span><span style="font-weight:bold;color:#000000">[async01(...), async02(...), async03(...)]</span><span style="color:#000000">);</span></span>
@@ -1583,7 +1583,7 @@
 </ul>
 <p>En mixant ces deux syntaxes, on peut exécuter indifféremment des tâches asynchrones en séquentiel ou en parallèle, tout cela avec une syntaxe analogue à celle d’un code synchrone. Il faut donc privilégier cette syntaxe beaucoup plus lisible que les précédentes. Cette syntaxe <strong>[async / await]</strong> n’est disponible que depuis la version 6 d’ECMAScript. Il y a encore beaucoup de codes Javascript utilisant des promesses <strong>[Promise]</strong>. C’est pourquoi il est important de comprendre également le fonctionnement de celles-ci.</p>
 <p>Le code complet du script <strong>[async-06]</strong> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">// exécution parallèle ou séquentielle de plusieurs tâches asynchrones</span>
@@ -1718,7 +1718,7 @@
 </code></pre></div>
 
 <p>Les résultats de l’exécution sont les suivants :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\async\async-06.js&quot;</span></span>
 <span class="odt-code-line"><span style="font-weight:bold">[début du code principal du script]</span>, heure=15:02:00:152</span>
 <span class="odt-code-line">------------ exécution séquentielle des tâches asynchrones lancée ------------------------</span>
