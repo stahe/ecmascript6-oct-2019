@@ -795,11 +795,16 @@
 <p>Pour savoir comment écrire la ligne <strong>[import]</strong> de la ligne 4, on peut regarder la définition du module <strong>[moment]</strong> :</p>
 <p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <ul>
-<li>en <strong>[1-2]</strong>, on va à la définition du module ;</li>
-<li>en <strong>[3]</strong>, on a un fichier Typescript, pas Javascript. A l’exécution, ce fichier Typescript est compilé en fichier Javascript avant d’être utilisé ;</li>
-<li>en <strong>[4]</strong>, on cherche les instructions <strong>[export]</strong> (Ctrl-F) ;</li>
-<li>en <strong>[5]</strong>, l’instruction exporte l’objet <strong>[moment]</strong>. Celui-ci peut être importé en ES6 de la façon suivante :</li>
+  <li>en <b>[1-2]</b>, on va à la définition du module ;
+  </li>
+  <li>en <b>[3]</b>, on a un fichier Typescript, pas Javascript. A l’exécution, ce fichier Typescript est compilé en fichier Javascript avant d’être utilisé ;
+  </li>
+  <li>en <b>[4]</b>, on cherche les instructions <b>[export]</b> (Ctrl-F) ;
+  </li>
+  <li>en <b>[5]</b>, l’instruction exporte l’objet <b>[moment]</b>. Celui-ci peut être importé en ES6 de la façon suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
 </code></pre></div>
@@ -847,11 +852,16 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 4 : import de la bibliothèque <strong>[moment]</strong> ;</li>
-<li>le principe du script est de boucler 10 fois (ligne 7). A chaque tour de boucle, on récupère l’heure du moment sous la forme <strong>[heures:minutes:secondes:millisecondes]</strong> (lignes 8-13) ;</li>
-<li>si le nombre de millisecondes est pair, on lance un message d’erreur (lignes 19-22) ;</li>
-<li>il s’agit ici de comprendre le fonctionnement du try / catch / finally</li>
+  <li>ligne 4 : import de la bibliothèque <b>[moment]</b> ;
+  </li>
+  <li>le principe du script est de boucler 10 fois (ligne 7). A chaque tour de boucle, on récupère l’heure du moment sous la forme <b>[heures:minutes:secondes:millisecondes]</b> (lignes 8-13) ;
+  </li>
+  <li>si le nombre de millisecondes est pair, on lance un message d’erreur (lignes 19-22) ;
+  </li>
+  <li>il s’agit ici de comprendre le fonctionnement du try / catch / finally
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-01.js&quot;</span></span>
@@ -944,9 +954,12 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 35, 44 : <strong>[Error]</strong> est une classe Javascript dont le constructeur admet comme 1er paramètre facultatif un message d’erreur. Ce message peut être récupéré dans la propriété <strong>[Error.message]</strong> (ligne 47) ;</li>
-<li>il existe d’autres classes que <strong>[Error]</strong> pour signaler une erreur : [EvalError, InternalError, RangeError, ReferenceError, SyntaxError,  TypeError, URIError) ;</li>
+  <li>lignes 35, 44 : <b>[Error]</b> est une classe Javascript dont le constructeur admet comme 1er paramètre facultatif un message d’erreur. Ce message peut être récupéré dans la propriété <b>[Error.message]</b> (ligne 47) ;
+  </li>
+  <li>il existe d’autres classes que <b>[Error]</b> pour signaler une erreur : [EvalError, InternalError, RangeError, ReferenceError, SyntaxError,  TypeError, URIError) ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js&quot;</span></span>

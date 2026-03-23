@@ -816,9 +816,12 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>la ligne 2 des résultats montre que <strong>[tab1]</strong> et <strong>[tab2]</strong> sont deux entités égales, en fait deux pointeurs égaux ;</li>
-<li>les lignes 4 et 5 des résultats montrent que ces deux pointeurs pointent sur le même tableau ;</li>
+  <li>la ligne 2 des résultats montre que <b>[tab1]</b> et <b>[tab2]</b> sont deux entités égales, en fait deux pointeurs égaux ;
+  </li>
+  <li>les lignes 4 et 5 des résultats montrent que ces deux pointeurs pointent sur le même tableau ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc2042033980233556"></a></p>
 <h2 id="42-script-tab-02">4.2. script [tab-02]</h2>
 <p>Ce script montre que le tableau Javascript est différent des tableaux des langages compilés.</p>
@@ -850,10 +853,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : un tableau vide ;</li>
-<li>ligne 8 : un tableau n’a pas de taille fixe. C’est simplement une suite d’éléments indexée par un n°. On peut initialiser l’élément n° 3 même si les éléments <strong>[0, 1, 2]</strong> ne sont pas encore définis ;</li>
-<li>lignes 16-24 : un tableau Javascript a un comportement analogue à celui du tableau PHP ;</li>
+  <li>ligne 4 : un tableau vide ;
+  </li>
+  <li>ligne 8 : un tableau n’a pas de taille fixe. C’est simplement une suite d’éléments indexée par un n°. On peut initialiser l’élément n° 3 même si les éléments <b>[0, 1, 2]</b> ne sont pas encore définis ;
+  </li>
+  <li>lignes 16-24 : un tableau Javascript a un comportement analogue à celui du tableau PHP ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\tableaux\tab-02.js&quot;</span></span>
@@ -937,33 +944,48 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>la différence entre tableaux PHP et tableaux Javascript est illustrée par les lignes 3 et 24 :<ul>
-<li>la ligne 3 déclare la variable <strong>[tab]</strong> comme une constante ;</li>
-<li>la ligne 24 modifie l’élément tab<strong>[5]</strong> ;</li>
+  <li>la différence entre tableaux PHP et tableaux Javascript est illustrée par les lignes 3 et 24 :
+    <ul>
+      <li>la ligne 3 déclare la variable <b>[tab]</b> comme une constante ;
+      </li>
+      <li>la ligne 24 modifie l’élément tab<b>[5]</b> ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Ligne 3, c’est le pointeur qui pointe sur le tableau qui est déclaré constant, ce n’est pas le tableau lui-même. Celui-ci peut être modifié.</p>
 <ul>
-<li>lignes 14-16 : le tableau <strong>[tab]</strong> est parcouru à l’aide d’une méthode <strong>[forEach]</strong> du tableau <strong>[tab]</strong>. Cette méthode reçoit en paramètre la définition d’une fonction, qu’on pourrait appeler une fonction littérale. Cette fonction paramètre reçoit un paramètre : l’élément courant du tableau <strong>[tab]</strong>. La fonction est appelée pour chaque élément du tableau. Ce type d’écriture est courant en Javascript ;</li>
-<li>lignes 9-10 : on utilise une autre syntaxe pour définir la fonction paramètre. Au lieu d’écrire :<ul>
-<li><strong>function(p1, p2, …, pn){….}</strong></li>
+  <li>lignes 14-16 : le tableau <b>[tab]</b> est parcouru à l’aide d’une méthode <b>[forEach]</b> du tableau <b>[tab]</b>. Cette méthode reçoit en paramètre la définition d’une fonction, qu’on pourrait appeler une fonction littérale. Cette fonction paramètre reçoit un paramètre : l’élément courant du tableau <b>[tab]</b>. La fonction est appelée pour chaque élément du tableau. Ce type d’écriture est courant en Javascript ;
+  </li>
+  <li>lignes 9-10 : on utilise une autre syntaxe pour définir la fonction paramètre. Au lieu d’écrire :
+    <ul>
+      <li><b>function(p1, p2, …, pn){….}</b>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>on écrit :</p>
 <ul>
-<li>(suite)<ul>
-<li><strong>(p1,p2, ..,pn)=&gt;{.…}</strong>. On appelle cela, la notation « flèche » ou « arrow » ;</li>
+  <li>(suite)
+    <ul>
+      <li><b>(p1,p2, ..,pn)=&gt;{.…}</b>. On appelle cela, la notation « flèche » ou « arrow » ;
+      </li>
+    </ul>
+  </li>
+  <li>le reste du code est expliqué par les commentaires ;
+  </li>
 </ul>
-</li>
-<li>le reste du code est expliqué par les commentaires ;</li>
-</ul>
+
 <p>De ce script, on notera que :</p>
 <ul>
-<li>un tableau est un objet référencé par un pointeur ;</li>
-<li>que cet objet a des méthodes <strong>[forEach, pop, push, shift, unshift]</strong> ;</li>
+  <li>un tableau est un objet référencé par un pointeur ;
+  </li>
+  <li>que cet objet a des méthodes <b>[forEach, pop, push, shift, unshift]</b> ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc2042073980233556"></a></p>
 <h2 id="44-script-tab-04">4.4. script [tab-04]</h2>
 <p>Ce script présente d’autres méthodes des objets tableau.</p>
@@ -1032,8 +1054,10 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 13-15 : la méthode <strong>[map]</strong> admet une fonction de transformation comme paramètre. Celle-ci est appelée de façon répétée pour chaque élément du tableau. Elle est chargée de transformer celui-ci en autre chose, ici un objet avec les propriétés <strong>[prop1, prop2]</strong>. La méthode <strong>[map]</strong> rend un nouveau tableau. L’ancien n’est pas modifié :</li>
+  <li>lignes 13-15 : la méthode <b>[map]</b> admet une fonction de transformation comme paramètre. Celle-ci est appelée de façon répétée pour chaque élément du tableau. Elle est chargée de transformer celui-ci en autre chose, ici un objet avec les propriétés <b>[prop1, prop2]</b>. La méthode <b>[map]</b> rend un nouveau tableau. L’ancien n’est pas modifié :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">tab= <span style="font-weight:bold">[ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90 ]</span></span>
 <span class="odt-code-line">tab2= [ { prop1: 0, prop2: 0 },</span>
@@ -1049,32 +1073,52 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 20 : la méthode <strong>[reduce]</strong> admet pour paramètre une fonction à deux paramètres appelée de façon répétée pour chaque élément du tableau. Cette fonction admet deux paramètres :<ul>
-<li><strong>[currentValue]</strong> est l’élément courant du tableau ;</li>
-<li><strong>[accumulator]</strong> est le dernier résultat obtenu par la fonction. Si aucune valeur initiale n’est prévue pour cet accumulateur, alors celle-ci sera 0 ;</li>
-<li>la 1ère fois que la fonction d’accumulation est appelée, elle rend <strong>[0+tab[0]</strong>]. C’est cette valeur qui est affectée à l’accumulateur ;</li>
-<li>la seconde fois, elle rend accumulateur+tab<strong>[1]</strong>, donc tab<strong>[0]</strong>+tab<strong>[1]</strong> ;</li>
-<li>la troisème fois, elle rend accumulateur+tab<strong>[2]</strong>, donc tab<strong>[0]</strong>+tab<strong>[1]</strong>+tab<strong>[2]</strong> ;</li>
-<li>etc. Au final, l’accumulateur représentera la somme de tous les éléments du tableau <strong>[tab]</strong> ;</li>
+  <li>ligne 20 : la méthode <b>[reduce]</b> admet pour paramètre une fonction à deux paramètres appelée de façon répétée pour chaque élément du tableau. Cette fonction admet deux paramètres :
+    <ul>
+      <li><b>[currentValue]</b> est l’élément courant du tableau ;
+      </li>
+      <li><b>[accumulator]</b> est le dernier résultat obtenu par la fonction. Si aucune valeur initiale n’est prévue pour cet accumulateur, alors celle-ci sera 0 ;
+      </li>
+      <li>la 1ère fois que la fonction d’accumulation est appelée, elle rend <b>[0+tab[0]</b>]. C’est cette valeur qui est affectée à l’accumulateur ;
+      </li>
+      <li>la seconde fois, elle rend accumulateur+tab<b>[1]</b>, donc tab<b>[0]</b>+tab<b>[1]</b> ;
+      </li>
+      <li>la troisème fois, elle rend accumulateur+tab<b>[2]</b>, donc tab<b>[0]</b>+tab<b>[1]</b>+tab<b>[2]</b> ;
+      </li>
+      <li>etc. Au final, l’accumulateur représentera la somme de tous les éléments du tableau <b>[tab]</b> ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 26 : la méthode <b>[filter]</b> a pour paramètre une fonction de filtrage. Celle-ci est appelée de façon répétée pour chaque élément du tableau et reçoit celui-ci en paramètre. Elle doit rendre :
+    <ul>
+      <li><b>[true]</b> si l’élément doit être gardé ;
+      </li>
+      <li><b>[false]</b> sinon ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 33 : la méthode <b>[find]</b> a pour paramètre une fonction de recherche. Celle-ci est appelée de façon répétée pour chaque élément du tableau et reçoit celui-ci en paramètre. Elle doit rendre <b>[true]</b> si l’élément reçu satisfait le critère de recherche. Celle-ci s’arrête alors. La méthode <b>[find]</b> rend donc 0 ou 1 élément ;
+  </li>
+  <li>ligne 36 : la méthode <b>[findIndex]</b> fonctionne comme la méthode <b>[find]</b> mais au lieu de rendre l’élément trouvé, elle rend son index dans le tableau ;
+  </li>
+  <li>lignes 39, 41, la méthode <b>[indexOf(valeur)]</b> recherche <b>[valeur]</b> dans le tableau et rend son index, ou -1 s’il n’est pas trouvé ;
+  </li>
+  <li>ligne 44 : la méthode <b>[lastIndexOf(valeur)]</b> fonctionne comme la méthode <b>[indexOf(valeur)]</b> mais commence sa recherche par la fin du tableau ;
+  </li>
+  <li>ligne 47 : la méthode <b>[sort]</b> sans paramètres rend un tableau trié dans l’ordre naturel (nombres, chaînes) ;
+  </li>
+  <li>ligne 50 : lorsque l’ordre naturel ne convient pas, il faut passer à la méthode <b>[sort]</b> une fonction à deux paramètres (e1,e2) qui rend :
+    <ul>
+      <li>+1 si e1 doit être classé après e2 ;
+      </li>
+      <li>-1 si e1 doit être classé avant e2 ;
+      </li>
+      <li>0 si les deux éléments doivent avoir le même classement ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>ligne 26 : la méthode <strong>[filter]</strong> a pour paramètre une fonction de filtrage. Celle-ci est appelée de façon répétée pour chaque élément du tableau et reçoit celui-ci en paramètre. Elle doit rendre :<ul>
-<li><strong>[true]</strong> si l’élément doit être gardé ;</li>
-<li><strong>[false]</strong> sinon ;</li>
-</ul>
-</li>
-<li>ligne 33 : la méthode <strong>[find]</strong> a pour paramètre une fonction de recherche. Celle-ci est appelée de façon répétée pour chaque élément du tableau et reçoit celui-ci en paramètre. Elle doit rendre <strong>[true]</strong> si l’élément reçu satisfait le critère de recherche. Celle-ci s’arrête alors. La méthode <strong>[find]</strong> rend donc 0 ou 1 élément ;</li>
-<li>ligne 36 : la méthode <strong>[findIndex]</strong> fonctionne comme la méthode <strong>[find]</strong> mais au lieu de rendre l’élément trouvé, elle rend son index dans le tableau ;</li>
-<li>lignes 39, 41, la méthode <strong>[indexOf(valeur)]</strong> recherche <strong>[valeur]</strong> dans le tableau et rend son index, ou -1 s’il n’est pas trouvé ;</li>
-<li>ligne 44 : la méthode <strong>[lastIndexOf(valeur)]</strong> fonctionne comme la méthode <strong>[indexOf(valeur)]</strong> mais commence sa recherche par la fin du tableau ;</li>
-<li>ligne 47 : la méthode <strong>[sort]</strong> sans paramètres rend un tableau trié dans l’ordre naturel (nombres, chaînes) ;</li>
-<li>ligne 50 : lorsque l’ordre naturel ne convient pas, il faut passer à la méthode <strong>[sort]</strong> une fonction à deux paramètres (e1,e2) qui rend :<ul>
-<li>+1 si e1 doit être classé après e2 ;</li>
-<li>-1 si e1 doit être classé avant e2 ;</li>
-<li>0 si les deux éléments doivent avoir le même classement ;</li>
-</ul>
-</li>
-</ul>
+
 <p>La fonction passée en paramètre à la méthode <strong>[sort]</strong> est appelée de façon répétée par celle-ci pour comparer deux éléments du tableau ;</p>
 
 

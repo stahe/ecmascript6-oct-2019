@@ -1057,33 +1057,50 @@
 
 <p>Commentons les différences entre les codes PHP et ECMAScript 6 avec la déclaration <strong>[use strict]</strong> (ligne 1) :</p>
 <ul>
-<li>la 1ère différence est qu’en ECMAScript <strong>on déclare les variables</strong> avec les mots clés suivants :<ul>
-<li><strong>[let]</strong> pour déclarer une variable dont la valeur <strong>peut changer</strong> au cours de l’exécution du code ;</li>
-<li><strong>[const]</strong> pour déclarer une variable dont la valeur <strong>ne va pas changer</strong> (une constante donc) au cours de l’exécution du code ;</li>
-<li>on peut également utiliser le mot clé <strong>[var]</strong> à la place de <strong>[let]</strong>. C’était le mot clé utilisé avec ECMAScript 5. Nous ne l’utiliserons pas dans ce cours ;</li>
+  <li>la 1ère différence est qu’en ECMAScript <b>on déclare les variables</b> avec les mots clés suivants :
+    <ul>
+      <li><b>[let]</b> pour déclarer une variable dont la valeur <b>peut changer</b> au cours de l’exécution du code ;
+      </li>
+      <li><b>[const]</b> pour déclarer une variable dont la valeur <b>ne va pas changer</b> (une constante donc) au cours de l’exécution du code ;
+      </li>
+      <li>on peut également utiliser le mot clé <b>[var]</b> à la place de <b>[let]</b>. C’était le mot clé utilisé avec ECMAScript 5. Nous ne l’utiliserons pas dans ce cours ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 6 : la méthode d’affichage <b>[console.log]</b> peut afficher toutes sortes de données : chaînes, nombres, booléens, tableaux, objets. La méthode PHP <b>[print]</b> ne sait pas afficher nativement des tableaux et objets. Dans l’expression <b>[console.log]</b>, <b>[console]</b> est un objet et <b>[log]</b> une méthode de cet objet ;
+  </li>
+  <li>ligne 8 : les tableaux Javascript sont des <b>objets référencés par un pointeur</b>. Lorsqu’on écrit :
+  </li>
 </ul>
-</li>
-<li>ligne 6 : la méthode d’affichage <strong>[console.log]</strong> peut afficher toutes sortes de données : chaînes, nombres, booléens, tableaux, objets. La méthode PHP <strong>[print]</strong> ne sait pas afficher nativement des tableaux et objets. Dans l’expression <strong>[console.log]</strong>, <strong>[console]</strong> est un objet et <strong>[log]</strong> une méthode de cet objet ;</li>
-<li>ligne 8 : les tableaux Javascript sont des <strong>objets référencés par un pointeur</strong>. Lorsqu’on écrit :</li>
-</ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> tableau = </span><span style="font-weight:bold;color:#000000">[&quot;un&quot;, &quot;deux&quot;, 3, 4]</span><span style="color:#000000">;</span></span>
 </code></pre></div>
 
 <p>la variable <strong>[tableau]</strong> est un <strong>pointeur</strong> sur le tableau littéral <strong>[&quot;un&quot;, &quot;deux&quot;, 3, 4]</strong>. Modifier le contenu du tableau ne modifie pas son pointeur. Aussi un tableau sera-t-il le plus souvent déclaré avec le mot clé <strong>[const]</strong>. En PHP, un tableau n’est pas référencé par un pointeur. C’est une donnée littérale ;</p>
 <ul>
-<li>ligne 12 : la variable de boucle <strong>[i]</strong> est déclarée (let) dans la boucle. Le mot clé <strong>[let]</strong> respecte la portée de bloc (code entre accolades). Ainsi la variable <strong>[i]</strong> de la ligne 12 n’est-elle connue que dans la boucle ;</li>
-<li>ligne 18 : l’opérateur de concaténation de chaîne est l’opérateur + en Javascript, . en PHP. Une particularité de cet opérateur est qu’il a précédence sur l’opérateur + d’addition. Ainsi :<ul>
-<li>en PHP, ‘1’ +2 donne le nombre 3 ;</li>
-<li>en Javascript ‘1’+2 donne la chaîne ‘12’ ;</li>
+  <li>ligne 12 : la variable de boucle <b>[i]</b> est déclarée (let) dans la boucle. Le mot clé <b>[let]</b> respecte la portée de bloc (code entre accolades). Ainsi la variable <b>[i]</b> de la ligne 12 n’est-elle connue que dans la boucle ;
+  </li>
+  <li>ligne 18 : l’opérateur de concaténation de chaîne est l’opérateur + en Javascript, . en PHP. Une particularité de cet opérateur est qu’il a précédence sur l’opérateur + d’addition. Ainsi :
+    <ul>
+      <li>en PHP, ‘1’ +2 donne le nombre 3 ;
+      </li>
+      <li>en Javascript ‘1’+2 donne la chaîne ‘12’ ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 20 : <b>[console.log]</b> sait afficher des tableaux ;
+  </li>
+  <li>ligne 82 : en Javascript, il n’est pas possible d’indiquer le type des paramètres d’une fonction ;
+  </li>
+  <li>ligne 91 : l’opérateur <b>[typeof]</b> permet de connaître le type d’une donnée. Il y en a quatre : nombre, chaîne de caractères, booléen et objet. On notera qu’en Javascript on n’a pas de type <b>[integer]</b> ni de type <b>[tableau]</b>. Comme il a été dit, les tableaux sont manipulés via des pointeurs et tombe dans la catégorie des objets ;
+  </li>
+  <li>lignes 50-59 : comme en PHP, Javascript a deux opérateurs de comparaison, == et ‘===’ avec la même signification qu’en PHP. ESLint signale le plus souvent l’opérateur == comme une erreur possible. On utilisera systématiquement l’opérateur ‘===’ ;
+  </li>
+  <li>ligne 79 : on aurait pu mettre l’instruction <b>[return]</b> mais ESLint émet l’avertissement que <b>[return]</b> ne doit s’utiliser que dans une fonction ;
+  </li>
 </ul>
-</li>
-<li>ligne 20 : <strong>[console.log]</strong> sait afficher des tableaux ;</li>
-<li>ligne 82 : en Javascript, il n’est pas possible d’indiquer le type des paramètres d’une fonction ;</li>
-<li>ligne 91 : l’opérateur <strong>[typeof]</strong> permet de connaître le type d’une donnée. Il y en a quatre : nombre, chaîne de caractères, booléen et objet. On notera qu’en Javascript on n’a pas de type <strong>[integer]</strong> ni de type <strong>[tableau]</strong>. Comme il a été dit, les tableaux sont manipulés via des pointeurs et tombe dans la catégorie des objets ;</li>
-<li>lignes 50-59 : comme en PHP, Javascript a deux opérateurs de comparaison, == et ‘===’ avec la même signification qu’en PHP. ESLint signale le plus souvent l’opérateur == comme une erreur possible. On utilisera systématiquement l’opérateur ‘===’ ;</li>
-<li>ligne 79 : on aurait pu mettre l’instruction <strong>[return]</strong> mais ESLint émet l’avertissement que <strong>[return]</strong> ne doit s’utiliser que dans une fonction ;</li>
-</ul>
+
 <p>Exécutons ce code :</p>
 <p><img src="images/100000000000033C00000192E8D1CF4C.png" style="width:8.76cm;height:4.25cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000033C00000192E8D1CF4C.png" /></p>
 <p>Les résultats de l’exécution :</p>
@@ -1119,13 +1136,18 @@
 <p>Dans le code écrit, ESLINT signale deux erreurs :</p>
 <p><img src="images/10000000000005D50000015C686F68EF.png" style="width:15.8cm;height:3.68cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005D50000015C686F68EF.png" /></p>
 <ul>
-<li>en passant le curseur sur la ligne rouge de l’avertissement, on a le message d’erreur <strong>[3]</strong>. Ici ESLint ne comprend pas qu’on compare deux constantes. L’un des deux opérandes devrait être une variable ;</li>
-<li>en <strong>[4]</strong>, une option <strong>[Quick Fix]</strong> permet de lever l’avertissement si on décide de ne pas corriger l’erreur ;</li>
+  <li>en passant le curseur sur la ligne rouge de l’avertissement, on a le message d’erreur <b>[3]</b>. Ici ESLint ne comprend pas qu’on compare deux constantes. L’un des deux opérandes devrait être une variable ;
+  </li>
+  <li>en <b>[4]</b>, une option <b>[Quick Fix]</b> permet de lever l’avertissement si on décide de ne pas corriger l’erreur ;
+  </li>
 </ul>
+
 <p><img src="images/10000000000005DA0000010746915282.png" style="width:15.851cm;height:2.781cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DA0000010746915282.png" /></p>
 <ul>
-<li>en <strong>[5]</strong>, on a la possibilité de désactiver l’avertissement pour la ligne courante ou pour l’ensemble du fichier. C’est cette dernière option que nous choisissons ici . La ligne <strong>[6]</strong> est alors générée au début du fichier ;</li>
+  <li>en <b>[5]</b>, on a la possibilité de désactiver l’avertissement pour la ligne courante ou pour l’ensemble du fichier. C’est cette dernière option que nous choisissons ici . La ligne <b>[6]</b> est alors générée au début du fichier ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc2041853980233556"></a></p>
 <h2 id="32-script-bases-02">3.2. script [bases-02]</h2>
 <p>Le script <strong>[bases-02]</strong> montre l’utilisation des mots clés <strong>[let]</strong> et <strong>[const]</strong> :</p>
@@ -1144,8 +1166,10 @@
 </code></pre></div>
 
 <ul>
-<li>la ligne 11 provoque une erreur à l’exécution <strong>[1-2]</strong>. Elle est signalée par ESLint avant l’exécution <strong>[3]</strong> :</li>
+  <li>la ligne 11 provoque une erreur à l’exécution <b>[1-2]</b>. Elle est signalée par ESLint avant l’exécution <b>[3]</b> :
+  </li>
 </ul>
+
 <p><img src="images/100000000000056E000001566AC0ABC5.png" style="width:14.712cm;height:3.62cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000056E000001566AC0ABC5.png" /></p>
 <p><a id="refheadingtoc2041873980233556"></a></p>
 <h2 id="33-script-bases-03">3.3. script [bases-03]</h2>
@@ -1163,8 +1187,10 @@
 </code></pre></div>
 
 <ul>
-<li>la variable <strong>[count]</strong> déclarée en-dehors de la fonction <strong>[doSomething]</strong> est pourtant connue dans cette fonction. C’est une différence fondamentale avec PHP ;</li>
+  <li>la variable <b>[count]</b> déclarée en-dehors de la fonction <b>[doSomething]</b> est pourtant connue dans cette fonction. C’est une différence fondamentale avec PHP ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\bases\bases-03.js&quot;</span></span>
@@ -1253,10 +1279,14 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 5 : la variable <strong>[count]</strong> n’est connue que dans le bloc de code dans laquelle elle est déclarée (lignes 3-7) ;</li>
-<li>ligne 14 : la constante <strong>[count2]</strong> n’est connue que dans le bloc de code dans laquelle elle est déclarée (lignes 12-16) ;</li>
-<li>ligne 23 : la variable <strong>[count3]</strong> est connue en-dehors du bloc de code dans laquelle elle est déclarée (lignes 21-25) ;</li>
+  <li>ligne 5 : la variable <b>[count]</b> n’est connue que dans le bloc de code dans laquelle elle est déclarée (lignes 3-7) ;
+  </li>
+  <li>ligne 14 : la constante <b>[count2]</b> n’est connue que dans le bloc de code dans laquelle elle est déclarée (lignes 12-16) ;
+  </li>
+  <li>ligne 23 : la variable <b>[count3]</b> est connue en-dehors du bloc de code dans laquelle elle est déclarée (lignes 21-25) ;
+  </li>
 </ul>
+
 <p>ESLint déclare les erreurs suivantes :</p>
 <p><img src="images/100000000000053400000459582F975E.png" style="width:10.581cm;height:8.841cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000053400000459582F975E.png" /></p>
 <p>Pour ces raisons de portée de bloc, nous n’utiliserons par la suite que les mots clés <strong>[let]</strong> et <strong>[const]</strong>.</p>
@@ -1301,10 +1331,14 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 7 (code) : un tableau est un objet. A ce titre <strong>[var4]</strong> est un pointeur vers le tableau, pas le tableau lui-même ;</li>
-<li>ligne 8 (code) : <strong>[var5]</strong> est un pointeur vers un objet littéral. On verra que les objets littéraux de Javascript ressemblent fort aux instances de classe de PHP. Eux-aussi sont référencés via des pointeurs ;</li>
-<li>ligne 11 (code) : une variable peut être de type <strong>[fonction]</strong> (ligne 7 des résultats) ;</li>
+  <li>ligne 7 (code) : un tableau est un objet. A ce titre <b>[var4]</b> est un pointeur vers le tableau, pas le tableau lui-même ;
+  </li>
+  <li>ligne 8 (code) : <b>[var5]</b> est un pointeur vers un objet littéral. On verra que les objets littéraux de Javascript ressemblent fort aux instances de classe de PHP. Eux-aussi sont référencés via des pointeurs ;
+  </li>
+  <li>ligne 11 (code) : une variable peut être de type <b>[fonction]</b> (ligne 7 des résultats) ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc2041973980233556"></a></p>
 <h2 id="38-script-bases-08">3.8. script [bases-08]</h2>
 <p>Ce script montre les changements de type possibles en Javascript.</p>

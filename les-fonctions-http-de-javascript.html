@@ -857,8 +857,8 @@
   
 
 
-<p><a id="fontionshttp"></a>
-<a id="refheadingtoc2152541731793072"></a></p>
+<p><a id="refheadingtoc2152541731793072"></a>
+<a id="fontionshttp"></a></p>
 <h1 id="12-les-fonctions-http-de-javascript">12. Les fonctions HTTP de Javascript</h1>
 <p><img src="images/10000000000000F90000014488334DE4.png" style="width:2.641cm;height:3.432cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000F90000014488334DE4.png" /></p>
 <p><a id="refheadingtoc225388640539168"></a></p>
@@ -876,15 +876,20 @@
 <p><strong>JS</strong> : Javascript</p>
 <p>Le code Javascript est client :</p>
 <ul>
-<li>d’un service de pages ou fragments statiques ;</li>
-<li>d’un service jSON ;</li>
+  <li>d’un service de pages ou fragments statiques ;
+  </li>
+  <li>d’un service jSON ;
+  </li>
 </ul>
+
 <p>Le code Javascript est donc un client jSON et à ce titre peut être organisé en couches <strong>[UI, métier, dao]</strong> (UI : User Interface) comme l’ont été nos clients jSON écrits en PHP.</p>
 <p>Le serveur sera celui du calcul de l’impôt dont nous avons déjà écrit 13 versions. Nous allons en écrire une 14ième. Nous commençons donc par dupliquer, sous Netbeans, le dossier de la version 13, dans le dossier de la version 14 :</p>
 <p><img src="images/1000000000000390000003D773DFC466.png" style="width:10.861cm;height:11.701cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000390000003D773DFC466.png" /></p>
 <ul>
-<li>en <strong>[6]</strong>, nous modifions le fichier <strong>[config.json]</strong> de la version 14 de la façon suivante :</li>
+  <li>en <b>[6]</b>, nous modifions le fichier <b>[config.json]</b> de la version 14 de la façon suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">{</span>
 <span class="odt-code-line">    <span style="color:#7f007f">&quot;databaseFilename&quot;</span><span style="color:#000000">:</span> <span style="font-style:italic;color:#2a00ff">&quot;Config/database.json&quot;</span><span style="color:#000000">,</span></span>
@@ -904,27 +909,36 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3, nous changeons le dossier racine de l’application ;</li>
+  <li>ligne 3, nous changeons le dossier racine de l’application ;
+  </li>
 </ul>
+
 <p>Pour accéder à ce serveur, il faut lancer les services <strong>[Laragon]</strong>.</p>
 <p>Ceci fait, nous pouvons tester avec <strong>[Postman]</strong> (cf. article <a href="https://tahe.developpez.com/tutoriels-cours/php7/"><u><span style="color: #0563c1">lien</span></u></a>), cette nouvelle version du serveur, identique pour l’instant à la version 13. Nous pouvons utiliser la collection de requêtes utilisées pour tester la version 12 du serveur de calcul d’impôt :</p>
 <p><img src="images/10000000000007FB000004EA33F975D1.png" style="width:16.221cm;height:9.991cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007FB000004EA33F975D1.png" /></p>
 <ul>
-<li>en <strong>[1-4]</strong>, utiliser la requête <strong>[init-session-700]</strong> pour initialiser une session jSON ;</li>
-<li>en <strong>[4-5]</strong>, mettre <strong>[version-14]</strong> au lieu de <strong>[version-12]</strong> pour tester la version 14 du projet ;</li>
-<li>à l’exécution on doit recevoir la réponse jS0N <strong>[6]</strong> du serveur ;</li>
+  <li>en <b>[1-4]</b>, utiliser la requête <b>[init-session-700]</b> pour initialiser une session jSON ;
+  </li>
+  <li>en <b>[4-5]</b>, mettre <b>[version-14]</b> au lieu de <b>[version-12]</b> pour tester la version 14 du projet ;
+  </li>
+  <li>à l’exécution on doit recevoir la réponse jS0N <b>[6]</b> du serveur ;
+  </li>
 </ul>
+
 <p>La version 14 du serveur est désormais opérationnelle. Nous serons amenés à la modifier légèrement. Rappelons l’API de ce serveur :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Action</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Rôle</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Contexte d’exécution</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>init-session</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Sert à fixer le type (json, xml, html) des réponses souhaitées</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Requête <b>GET main.php?action=init-session&amp;type=x</b></p><p style="margin:0;">peut être émise à tout moment</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>authentifier-utilisateur</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Autorise ou non un utilisateur à se connecter</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Requête <b>POST main.php?action=authentifier-utilisateur</b></p><p style="margin:0;">La requête doit avoir deux paramètres postés <b>[user, password]</b></p><p style="margin:0;">Ne peut être émise que si le type de la session (json, xml, html) est connu</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>calculer-impot</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Fait une simulation de calcul d’impôt</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Requête <b>POST main.php?action=calculer-impot</b></p><p style="margin:0;">La requête doit avoir trois paramètres postés <b>[marié, enfants, salaire]</b></p><p style="margin:0;">Ne peut être émise que si le type de la session (json, xml, html) est connu et l’utilisateur authentifié</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>lister-simulations</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Demande à voir la liste des simulations opérées depuis le début de la session</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Requête <b>GET main.php?action=lister-simulations</b></p><p style="margin:0;">La requête n’accepte aucun autre paramètre</p><p style="margin:0;">Ne peut être émise que si le type de la session (json, xml, html) est connu et l’utilisateur authentifié</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>supprimer-simulation</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Supprime une simulation de la liste des simulations</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Requête <b>GET main.php?action=lister-simulations&amp;numéro=x</b></p><p style="margin:0;">La requête n’accepte aucun autre paramètre</p><p style="margin:0;">Ne peut être émise que si le type de la session (json, xml, html) est connu et l’utilisateur authentifié</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>fin-session</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Termine la session de simulations.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">Techniquement l’ancienne session web est supprimée et une nouvelle session est créée</p><p style="margin:0;">Ne peut être émise que si le type de la session (json, xml, html) est connu et l’utilisateur authentifié</p></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Action</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Rôle</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Contexte d’exécution</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>init-session</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Sert à fixer le type (json, xml, html) des réponses souhaitées</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Requête <b>GET main.php?action=init-session&amp;type=x</b></div><div style="margin:0 0 0.5em 0">peut être émise à tout moment</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>authentifier-utilisateur</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Autorise ou non un utilisateur à se connecter</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Requête <b>POST main.php?action=authentifier-utilisateur</b></div><div style="margin:0 0 0.5em 0">La requête doit avoir deux paramètres postés <b>[user, password]</b></div><div style="margin:0 0 0.5em 0">Ne peut être émise que si le type de la session (json, xml, html) est connu</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>calculer-impot</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Fait une simulation de calcul d’impôt</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Requête <b>POST main.php?action=calculer-impot</b></div><div style="margin:0 0 0.5em 0">La requête doit avoir trois paramètres postés <b>[marié, enfants, salaire]</b></div><div style="margin:0 0 0.5em 0">Ne peut être émise que si le type de la session (json, xml, html) est connu et l’utilisateur authentifié</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>lister-simulations</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Demande à voir la liste des simulations opérées depuis le début de la session</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Requête <b>GET main.php?action=lister-simulations</b></div><div style="margin:0 0 0.5em 0">La requête n’accepte aucun autre paramètre</div><div style="margin:0 0 0.5em 0">Ne peut être émise que si le type de la session (json, xml, html) est connu et l’utilisateur authentifié</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>supprimer-simulation</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Supprime une simulation de la liste des simulations</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Requête <b>GET main.php?action=lister-simulations&amp;numéro=x</b></div><div style="margin:0 0 0.5em 0">La requête n’accepte aucun autre paramètre</div><div style="margin:0 0 0.5em 0">Ne peut être émise que si le type de la session (json, xml, html) est connu et l’utilisateur authentifié</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>fin-session</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Termine la session de simulations.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">Techniquement l’ancienne session web est supprimée et une nouvelle session est créée</div><div style="margin:0 0 0.5em 0">Ne peut être émise que si le type de la session (json, xml, html) est connu et l’utilisateur authentifié</div></td></tr></table>
 
 <p><a id="refheadingtoc225394640539168"></a></p>
 <h3 id="1222-installation-des-bibliotheques-http-du-client-javascript">12.2.2. Installation des bibliothèques HTTP du client Javascript</h3>
 <p>Dans un premier temps, nous travaillerons avec l’architecture suivante :</p>
 <p><img src="images/1000000000000548000001AC0F76E799.png" style="width:14.311cm;height:4.53cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000548000001AC0F76E799.png" /></p>
 <ul>
-<li>en <strong>[1]</strong>, un script console <strong>[node.js]</strong> fait une requête HTTP vers le serveur jSON du calcul de l’impôt ;</li>
-<li>en <strong>[4]</strong>, il reçoit cette réponse et l’affiche sur la console ;</li>
+  <li>en <b>[1]</b>, un script console <b>[node.js]</b> fait une requête HTTP vers le serveur jSON du calcul de l’impôt ;
+  </li>
+  <li>en <b>[4]</b>, il reçoit cette réponse et l’affiche sur la console ;
+  </li>
 </ul>
+
 <p>Dans l’exemple n° 1, nous utiliserons les bibliothèques <strong>[node-fetch]</strong> et <strong>[axios]</strong> puis nous ne conserverons qu’<strong>[axios]</strong> pour les exemples suivants. Nous installons maintenant ces deux bibliothèques Javascript à partir du terminal de <strong>[VSCode]</strong> :</p>
 <p><img src="images/10000000000005A10000026CFFDAC34F.png" style="width:15.251cm;height:6.561cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005A10000026CFFDAC34F.png" /></p>
 <p>Nous utiliserons également la bibliothèque <strong>[qs]</strong> qui permet l’encodage URL d’une chaîne de caractères. On se rappelle que cet encodage est utilisé pour encoder les paramètres d’une requête HTTP GET ou POST.</p>
@@ -1027,36 +1041,62 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>les fonctions HTTP du Javascript sont des fonctions asynchrones. Nous utilisons ici ce que nous avons appris dans la section précédente (cf. <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-11.docx#fontions_async"><u><span style="color: #0563c1">lien</span></u></a>) ;</li>
-<li>ligne 24 : pour attendre que la réponse de la fonction asynchrone <strong>[fetch]</strong> soit publiée sur la boucle événementielle de <strong>[node.js]</strong>, nous utilisons le mot clé <strong>[await]</strong>. Nous savons qu’alors que cette instruction doit être dans un code préfixé par le mot clé <strong>[async]</strong> (ligne 13) ;</li>
-<li>lignes 13-56 : nous encapsulons le code HTTP dans la fonction asynchrone <strong>[initSession]</strong> ;</li>
-<li>lignes 59-69 : une seconde fonction asynchrone <strong>[main]</strong> est utilisée pour appeler de façon bloquante (async / await) la fonction asynchrone <strong>[initSession]</strong> ;</li>
-<li>ligne 72 : la fonction asynchrone <strong>[main]</strong> est appelée ;</li>
-<li>bien que l’ensemble du code ressemble à du code synchrone, ce sont bien des fonctions asynchrones qui sont exécutées, mais de façon bloquante ;</li>
-<li>ligne 19 : pour initialiser une session jSON avec le serveur de calcul d’impôt, il faut lui envoyer la commande HTTP <strong>[get /main.php?action=init-session&amp;type=json]</strong>. C’est ce que fait le code des lignes 24-27. La syntaxe de <strong>[fetch]</strong> est la suivante <strong>[fetch(URL, options)]</strong> avec :<ul>
-<li><strong>[URL]</strong> : l’URL interrogée ;</li>
-<li><strong>[options]</strong> : un objet définissant les options de la requête. C’est là notamment qu’on définit les entêtes HTTP qu’on veut envoyer à la machine cible ;</li>
+  <li>les fonctions HTTP du Javascript sont des fonctions asynchrones. Nous utilisons ici ce que nous avons appris dans la section précédente (cf. <a href="../../../../../st-2020/cours/ecmascript6/masters/02/chap-11.docx#fontions_async"><u><span style="color: #0563c1">lien</span></u></a>) ;
+  </li>
+  <li>ligne 24 : pour attendre que la réponse de la fonction asynchrone <b>[fetch]</b> soit publiée sur la boucle événementielle de <b>[node.js]</b>, nous utilisons le mot clé <b>[await]</b>. Nous savons qu’alors que cette instruction doit être dans un code préfixé par le mot clé <b>[async]</b> (ligne 13) ;
+  </li>
+  <li>lignes 13-56 : nous encapsulons le code HTTP dans la fonction asynchrone <b>[initSession]</b> ;
+  </li>
+  <li>lignes 59-69 : une seconde fonction asynchrone <b>[main]</b> est utilisée pour appeler de façon bloquante (async / await) la fonction asynchrone <b>[initSession]</b> ;
+  </li>
+  <li>ligne 72 : la fonction asynchrone <b>[main]</b> est appelée ;
+  </li>
+  <li>bien que l’ensemble du code ressemble à du code synchrone, ce sont bien des fonctions asynchrones qui sont exécutées, mais de façon bloquante ;
+  </li>
+  <li>ligne 19 : pour initialiser une session jSON avec le serveur de calcul d’impôt, il faut lui envoyer la commande HTTP <b>[get /main.php?action=init-session&amp;type=json]</b>. C’est ce que fait le code des lignes 24-27. La syntaxe de <b>[fetch]</b> est la suivante <b>[fetch(URL, options)]</b> avec :
+    <ul>
+      <li><b>[URL]</b> : l’URL interrogée ;
+      </li>
+      <li><b>[options]</b> : un objet définissant les options de la requête. C’est là notamment qu’on définit les entêtes HTTP qu’on veut envoyer à la machine cible ;
+      </li>
+    </ul>
+  </li>
+  <li>lignes 15-18 : on définit les options de la requête qu’on veut faire :
+    <ul>
+      <li><b>[method]</b> : on veut faire un GET ;
+      </li>
+      <li><b>[timeout]</b> : on veut que le client <b>[fetch]</b> n’attende pas plus de 2 secondes la réponse du serveur Si ce délai est dépassé, <b>[fetch]</b> lancera une exception ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 24 : pour obtenir l’URL <b>[/main.php?action=init-session&amp;type=json]</b>, on utilise la bibliohèque <b>[qs]</b> pour obtenir l’encodage URL des paramètres <b>[action,type]</b> du GET. La chaîne obtenue est <b>[init-session&amp;type=json]</b> qu’on aurait pu construire nous-mêmes. On voulait simplement montrer comment obtenir une chaîne URL encodée ;
+  </li>
+  <li>ligne 24 : le mot clé <b>[await]</b> montre que c’est une tâche asynchrone qui est lancée ici et qu’on attend qu’elle publie sa réponse sur la boucle événementielle de <b>[node.js]</b> ;
+  </li>
+  <li>ligne 24 : dans <b>[response]</b>, on obtient un objet complexe qui décrit la totalité de la réponse HTTP reçue (entêtes et document) ;
+  </li>
+  <li>lignes 30-31 : on affiche l’objet <b>[response]</b> pour voir sa structure, d’abord comme chaîne de caractères puis comme objet Javascript ;
+  </li>
+  <li>ligne 33 : on affiche les entêtes HTTP envoyés par le serveur ;
+  </li>
+  <li>ligne 38 : on sait que le serveur de calcul d’impôt va envoyer une chaîne jSON. Celle-ci est encapsulée dans l’objet <b>[response]</b>. On peut l’obtenir avec la méthode <b>[response.json()]</b>. Cependant cette méthode est asynchrone. On écrit donc <b>[await response.json()]</b> pour obtenir la chaîne jSON qui va être publiée sur la boucle événementielle de <b>[node.js]</b>. En fait ce n’est pas la chaîne jSON qu’on obtient mais l’objet Javascript représenté par celle-ci ;
+  </li>
+  <li>ligne 39 : affichage de la chaîne jSON reçue ;
+  </li>
+  <li>ligne 40 : on rend l’objet Javascript reçu ;
+  </li>
+  <li>ligne 47 : on intercepte une erreur éventuelle de l’instruction <b>[fetch]</b>. Celle-ci ne lance une exception que si l’opération HTTP n’a pu aboutir et qu’aucune réponse du serveur n’a été reçue. Si une réponse a été reçue, même avec un code HTTP différent de <b>[200 OK]</b>, <b>[fetch]</b> ne lance pas d’exception et la réponse du serveur sera disponible ligne 38 ;
+  </li>
+  <li>lignes 51-52 : on affiche l’objet <b>[error]</b> reçu par la clause <b>[catch]</b>, d’abord comme une chaîne jSON puis comme un objet Javascript ;
+  </li>
+  <li>ligne 54 : le message d’erreur de <b>[fetch]</b> se trouve dans <b>[error.message]</b> ;
+  </li>
+  <li>lignes 59-69 : la fonction asynchrone <b>[main]</b> lance la fonction asynchrone <b>[initSession]</b> de façon bloquante (await ligne 62) ;
+  </li>
+  <li>ligne 72 : la fonction asynchrone <b>[main]</b> est lancée et le code principal du script est alors terminé. Le script global lui sera terminé lorsque les tâches asynchrones lancées auront publié leurs résultats sur la boucle événementielle ;
+  </li>
 </ul>
-</li>
-<li>lignes 15-18 : on définit les options de la requête qu’on veut faire :<ul>
-<li><strong>[method]</strong> : on veut faire un GET ;</li>
-<li><strong>[timeout]</strong> : on veut que le client <strong>[fetch]</strong> n’attende pas plus de 2 secondes la réponse du serveur Si ce délai est dépassé, <strong>[fetch]</strong> lancera une exception ;</li>
-</ul>
-</li>
-<li>ligne 24 : pour obtenir l’URL <strong>[/main.php?action=init-session&amp;type=json]</strong>, on utilise la bibliohèque <strong>[qs]</strong> pour obtenir l’encodage URL des paramètres <strong>[action,type]</strong> du GET. La chaîne obtenue est <strong>[init-session&amp;type=json]</strong> qu’on aurait pu construire nous-mêmes. On voulait simplement montrer comment obtenir une chaîne URL encodée ;</li>
-<li>ligne 24 : le mot clé <strong>[await]</strong> montre que c’est une tâche asynchrone qui est lancée ici et qu’on attend qu’elle publie sa réponse sur la boucle événementielle de <strong>[node.js]</strong> ;</li>
-<li>ligne 24 : dans <strong>[response]</strong>, on obtient un objet complexe qui décrit la totalité de la réponse HTTP reçue (entêtes et document) ;</li>
-<li>lignes 30-31 : on affiche l’objet <strong>[response]</strong> pour voir sa structure, d’abord comme chaîne de caractères puis comme objet Javascript ;</li>
-<li>ligne 33 : on affiche les entêtes HTTP envoyés par le serveur ;</li>
-<li>ligne 38 : on sait que le serveur de calcul d’impôt va envoyer une chaîne jSON. Celle-ci est encapsulée dans l’objet <strong>[response]</strong>. On peut l’obtenir avec la méthode <strong>[response.json()]</strong>. Cependant cette méthode est asynchrone. On écrit donc <strong>[await response.json()]</strong> pour obtenir la chaîne jSON qui va être publiée sur la boucle événementielle de <strong>[node.js]</strong>. En fait ce n’est pas la chaîne jSON qu’on obtient mais l’objet Javascript représenté par celle-ci ;</li>
-<li>ligne 39 : affichage de la chaîne jSON reçue ;</li>
-<li>ligne 40 : on rend l’objet Javascript reçu ;</li>
-<li>ligne 47 : on intercepte une erreur éventuelle de l’instruction <strong>[fetch]</strong>. Celle-ci ne lance une exception que si l’opération HTTP n’a pu aboutir et qu’aucune réponse du serveur n’a été reçue. Si une réponse a été reçue, même avec un code HTTP différent de <strong>[200 OK]</strong>, <strong>[fetch]</strong> ne lance pas d’exception et la réponse du serveur sera disponible ligne 38 ;</li>
-<li>lignes 51-52 : on affiche l’objet <strong>[error]</strong> reçu par la clause <strong>[catch]</strong>, d’abord comme une chaîne jSON puis comme un objet Javascript ;</li>
-<li>ligne 54 : le message d’erreur de <strong>[fetch]</strong> se trouve dans <strong>[error.message]</strong> ;</li>
-<li>lignes 59-69 : la fonction asynchrone <strong>[main]</strong> lance la fonction asynchrone <strong>[initSession]</strong> de façon bloquante (await ligne 62) ;</li>
-<li>ligne 72 : la fonction asynchrone <strong>[main]</strong> est lancée et le code principal du script est alors terminé. Le script global lui sera terminé lorsque les tâches asynchrones lancées auront publié leurs résultats sur la boucle événementielle ;</li>
-</ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <p><strong>Cas 1</strong> : le serveur Laragon n’est pas lancé</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1080,14 +1120,20 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 3 : la requête HTTP échoue au bout de 2 secondes et 62 millisecondes à cause du timeout de 2 secondes qu’on avait imposé à la requête HTTP ;</li>
-<li>lignes 4-9 : l’objet Javascript <strong>[error]</strong> intercepté par la clause <strong>[catch(error)]</strong>. Cet objet a deux propriétés :<ul>
-<li><strong>[FetchError]</strong> : ligne 4 ;</li>
-<li><strong>[message]</strong> : lignes 10-12 ;</li>
+  <li>ligne 3 : la requête HTTP échoue au bout de 2 secondes et 62 millisecondes à cause du timeout de 2 secondes qu’on avait imposé à la requête HTTP ;
+  </li>
+  <li>lignes 4-9 : l’objet Javascript <b>[error]</b> intercepté par la clause <b>[catch(error)]</b>. Cet objet a deux propriétés :
+    <ul>
+      <li><b>[FetchError]</b> : ligne 4 ;
+      </li>
+      <li><b>[message]</b> : lignes 10-12 ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 14 : le message d’erreur reçu par la fonction asynchrone <b>[main]</b> ;
+  </li>
 </ul>
-</li>
-<li>ligne 14 : le message d’erreur reçu par la fonction asynchrone <strong>[main]</strong> ;</li>
-</ul>
+
 <p><strong>Cas 2</strong> : le serveur Laragon est lancé</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\fetch-01.js&quot;</span></span>
@@ -1140,23 +1186,35 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 3 : <strong>[fetch]</strong> reçoit la réponse du serveur au bout de 375 ms ;</li>
-<li>lignes 4-39 : la structure de l’objet Javascript <strong>[response]</strong> encapsulant la réponse du serveur. Parmi ses propriétés, certaines peuvent nous intéresser :<ul>
-<li><strong>[status]</strong> (ligne 25) : code HTTP de la réponse du serveur ;</li>
-<li><strong>[statusText]</strong> (ligne 26) : texte associé à ce code ;</li>
-<li><strong>[headers]</strong> (ligne 27) : les entêtes HTTP de la réponse du serveur ;</li>
-<li><strong>[body]</strong> (ligne 8) : représente le document envoyé par le serveur. L’instruction <strong>[fetch]</strong> offre des méthodes pour l’exploiter ;</li>
+  <li>ligne 3 : <b>[fetch]</b> reçoit la réponse du serveur au bout de 375 ms ;
+  </li>
+  <li>lignes 4-39 : la structure de l’objet Javascript <b>[response]</b> encapsulant la réponse du serveur. Parmi ses propriétés, certaines peuvent nous intéresser :
+    <ul>
+      <li><b>[status]</b> (ligne 25) : code HTTP de la réponse du serveur ;
+      </li>
+      <li><b>[statusText]</b> (ligne 26) : texte associé à ce code ;
+      </li>
+      <li><b>[headers]</b> (ligne 27) : les entêtes HTTP de la réponse du serveur ;
+      </li>
+      <li><b>[body]</b> (ligne 8) : représente le document envoyé par le serveur. L’instruction <b>[fetch]</b> offre des méthodes pour l’exploiter ;
+      </li>
+    </ul>
+  </li>
+  <li>lignes 29-39 : les entêtes HTTP de la réponse du serveur ;
+  </li>
+  <li>ligne 40 : la fonction asynchrone <b>[response.json()]</b> a publié sa réponse au bout d’1 milliseconde ;
+  </li>
+  <li>lignes 42-44 : l’objet Javascript reçu par la fonction asynchrone <b>[main]</b> ;
+  </li>
 </ul>
-</li>
-<li>lignes 29-39 : les entêtes HTTP de la réponse du serveur ;</li>
-<li>ligne 40 : la fonction asynchrone <strong>[response.json()]</strong> a publié sa réponse au bout d’1 milliseconde ;</li>
-<li>lignes 42-44 : l’objet Javascript reçu par la fonction asynchrone <strong>[main]</strong> ;</li>
-</ul>
+
 <p><strong>Cas 3</strong> : le serveur Laragon est lancé mais on lui envoie une commande erronée :</p>
 <p><img src="images/100000000000044A00000111255483E0.png" style="width:10.171cm;height:2.53cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000044A00000111255483E0.png" /></p>
 <ul>
-<li>ci-dessus, ligne 26, on passe un type erroné de session au serveur ;</li>
+  <li>ci-dessus, ligne 26, on passe un type erroné de session au serveur ;
+  </li>
 </ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">requête HTTP vers le serveur en cours ---------------------------------------------</span>
@@ -1207,10 +1265,14 @@
 </code></pre></div>
 
 <ul>
-<li>la réponse du serveur est reçue ligne 2 ;</li>
-<li>ligne 24 : on peut voir que le code HTTP de la réponse du serveur est 400, un code d’erreur. Néanmoins, <strong>[fetch]</strong> n’a pas lancé d’exception. Tant que <strong>[fetch]</strong> reçoit une réponse du serveur, il l’exploite et ne lance pas d’exception ;</li>
-<li>lignes 41-43 : la réponse obtenue par la fonction asynchrone <strong>[main]</strong> ;</li>
+  <li>la réponse du serveur est reçue ligne 2 ;
+  </li>
+  <li>ligne 24 : on peut voir que le code HTTP de la réponse du serveur est 400, un code d’erreur. Néanmoins, <b>[fetch]</b> n’a pas lancé d’exception. Tant que <b>[fetch]</b> reçoit une réponse du serveur, il l’exploite et ne lance pas d’exception ;
+  </li>
+  <li>lignes 41-43 : la réponse obtenue par la fonction asynchrone <b>[main]</b> ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc225398640539168"></a></p>
 <h2 id="124-script-fetch-02">12.4. script [fetch-02]</h2>
 <p>Le script suivant reprend le script <strong>[fetch-01]</strong> en le débarrassant de tous les détails inutiles :</p>
@@ -1282,9 +1344,12 @@
 <h2 id="125-script-axios-01">12.5. script [axios-01]</h2>
 <p>On reprend ici le script <strong>[fetch-01]</strong> que l’on réécrit avec la bibliothèque <strong>[axios]</strong>. On rappelle que notre intérêt pour cette bibliothèque est qu’elle soit portable entre l’environnement <strong>[node.js]</strong> et ceux des navigateurs usuels. Cela permet :</p>
 <ul>
-<li>dans une phase 1, de tester nos scripts dans un environnement <strong>[node.js]</strong> ;</li>
-<li>dans une phase 2, de les porter sur un navigateur ;</li>
+  <li>dans une phase 1, de tester nos scripts dans un environnement <b>[node.js]</b> ;
+  </li>
+  <li>dans une phase 2, de les porter sur un navigateur ;
+  </li>
 </ul>
+
 <p>Le script <strong>[axios-01]</strong> reprend la structure du script <strong>[fetch-01]</strong> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
@@ -1351,28 +1416,48 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 2 : on importe la bibliothèque <strong>[axios]</strong> ;</li>
-<li>lignes 5-6 : configuration par défaut des requêtes HTTP. Les options <strong>[axios.defaults]</strong> sont valables pour toutes les requêtes HTTP émises par l’objet <strong>[axios]</strong> sans qu’on ait besoin de les rappeler à chaque nouvelle requête ;</li>
-<li>ligne 5 : timeout de 2 secondes pour toutes les requêtes ;</li>
-<li>ligne 6 : toutes les URL seront exprimées relativement à l’URL de base ;</li>
-<li>ligne 9 : la fonction asynchrone <strong>[initSession]</strong> ;</li>
-<li>lignes 11-18 : les options de la requête HTTP qui va être émise (en plus des options par défaut déjà définies aux lignes 5-6) ;</li>
-<li>lignes 14-17 : les paramètres de l’URL <strong>[action=init-session&amp;type=json]</strong>. L’objet <strong>[params]</strong> sera automatiquement transformée en chaîne de caractères URL encodée ;</li>
-<li>ligne 22 : appel bloquant de la fonction asynchrone <strong>[axios.request]</strong>. Le 1er paramètre est l’URL cible construite comme <strong>[main.php]</strong> ajouté à l’URL de base définie ligne 6. Le second paramètre est l’objet <strong>[options]</strong> des lignes 11-18 ;</li>
-<li>ligne 25 : <strong>[response]</strong> est un objet Javascript encapsulant la totalité de la réponse HTTP du serveur (entêtes HTTP + document réponse). On l’affiche pour voir sa structure Javascript ;</li>
-<li>ligne 27 : si le serveur a envoyé un document, alors il est trouvé dans <strong>[response.data]</strong>. Ici nous savons que le serveur envoie une réponse jSON accompagnée de l’entête HTTP <strong>[Content-type : application/json]</strong>. La présence de cet entête fait que <strong>[axios]</strong> désérialise automatiquement <strong>[response.data]</strong> en un objet Javascript ;</li>
-<li>ligne 28 : la fonction <strong>[axios]</strong> peut lancer une exception. C’est là que <strong>[axios]</strong> diffère de <strong>[fetch]</strong>. Une exception est lancée dans les cas suivants :<ul>
-<li>la requête HTTP n’a pas pu être émise (erreur côté client) ;</li>
-<li>le serveur a envoyé un code HTTP d’erreur (400, 404, 500, …) (ce point est en fait configurable). On rappelle que si ce code HTTP est accompagné d’une réponse, <strong>[fetch]</strong> ne lançait pas d’exception alors qu’<strong>[axios]</strong> en lance une. Néanmoins, si le code HTTP d’erreur est accompagné d’un document, celui-ci est mis dans <strong>[error.response]</strong> ;</li>
+  <li>ligne 2 : on importe la bibliothèque <b>[axios]</b> ;
+  </li>
+  <li>lignes 5-6 : configuration par défaut des requêtes HTTP. Les options <b>[axios.defaults]</b> sont valables pour toutes les requêtes HTTP émises par l’objet <b>[axios]</b> sans qu’on ait besoin de les rappeler à chaque nouvelle requête ;
+  </li>
+  <li>ligne 5 : timeout de 2 secondes pour toutes les requêtes ;
+  </li>
+  <li>ligne 6 : toutes les URL seront exprimées relativement à l’URL de base ;
+  </li>
+  <li>ligne 9 : la fonction asynchrone <b>[initSession]</b> ;
+  </li>
+  <li>lignes 11-18 : les options de la requête HTTP qui va être émise (en plus des options par défaut déjà définies aux lignes 5-6) ;
+  </li>
+  <li>lignes 14-17 : les paramètres de l’URL <b>[action=init-session&amp;type=json]</b>. L’objet <b>[params]</b> sera automatiquement transformée en chaîne de caractères URL encodée ;
+  </li>
+  <li>ligne 22 : appel bloquant de la fonction asynchrone <b>[axios.request]</b>. Le 1er paramètre est l’URL cible construite comme <b>[main.php]</b> ajouté à l’URL de base définie ligne 6. Le second paramètre est l’objet <b>[options]</b> des lignes 11-18 ;
+  </li>
+  <li>ligne 25 : <b>[response]</b> est un objet Javascript encapsulant la totalité de la réponse HTTP du serveur (entêtes HTTP + document réponse). On l’affiche pour voir sa structure Javascript ;
+  </li>
+  <li>ligne 27 : si le serveur a envoyé un document, alors il est trouvé dans <b>[response.data]</b>. Ici nous savons que le serveur envoie une réponse jSON accompagnée de l’entête HTTP <b>[Content-type : application/json]</b>. La présence de cet entête fait que <b>[axios]</b> désérialise automatiquement <b>[response.data]</b> en un objet Javascript ;
+  </li>
+  <li>ligne 28 : la fonction <b>[axios]</b> peut lancer une exception. C’est là que <b>[axios]</b> diffère de <b>[fetch]</b>. Une exception est lancée dans les cas suivants :
+    <ul>
+      <li>la requête HTTP n’a pas pu être émise (erreur côté client) ;
+      </li>
+      <li>le serveur a envoyé un code HTTP d’erreur (400, 404, 500, …) (ce point est en fait configurable). On rappelle que si ce code HTTP est accompagné d’une réponse, <b>[fetch]</b> ne lançait pas d’exception alors qu’<b>[axios]</b> en lance une. Néanmoins, si le code HTTP d’erreur est accompagné d’un document, celui-ci est mis dans <b>[error.response]</b> ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 32 : on affiche la structure Javascript de l’objet <b>[error]</b> ;
+  </li>
+  <li>lignes 33-38 : si l’objet <b>[error]</b> contient un objet <b>[response]</b> alors c’est cette réponse qu’on rend au code appelant ;
+  </li>
+  <li>lignes 39-42 : dans les autres cas, on remonte l’objet <b>[error]</b> au code appelant ;
+  </li>
+  <li>lignes 47-57 : la fonction asynchrone <b>[main]</b> ;
+  </li>
+  <li>ligne 50 : appel bloquant à la fonction asynchrone <b>[initSession]</b>. On récupère la réponse jSON du serveur comme un objet Javascript ;
+  </li>
+  <li>lignes 53-56 : interception de l’erreur éventuelle. Le message d’erreur est dans <b>[error.message]</b> ;
+  </li>
 </ul>
-</li>
-<li>ligne 32 : on affiche la structure Javascript de l’objet <strong>[error]</strong> ;</li>
-<li>lignes 33-38 : si l’objet <strong>[error]</strong> contient un objet <strong>[response]</strong> alors c’est cette réponse qu’on rend au code appelant ;</li>
-<li>lignes 39-42 : dans les autres cas, on remonte l’objet <strong>[error]</strong> au code appelant ;</li>
-<li>lignes 47-57 : la fonction asynchrone <strong>[main]</strong> ;</li>
-<li>ligne 50 : appel bloquant à la fonction asynchrone <strong>[initSession]</strong>. On récupère la réponse jSON du serveur comme un objet Javascript ;</li>
-<li>lignes 53-56 : interception de l’erreur éventuelle. Le message d’erreur est dans <strong>[error.message]</strong> ;</li>
-</ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <p><strong>Cas 1</strong> : le serveur Laragon n’est pas lancé</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -1520,22 +1605,36 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 33-136 : l’objet <strong>[error]</strong> contient de nombreuses informations ;<ul>
-<li><strong>[Error]</strong>, lignes 3-9 : une description de l’erreur qui s’est produite ;</li>
-<li><strong>[config]</strong>, lignes 10-27 : la configuration de la requête HTTP qui a mené à cette erreur ;</li>
-<li><strong>[config.url]</strong>, lignes 11-12 : l’URL cible ;</li>
-<li><strong>[config.method]</strong>, ligne 13 : méthode de la requête ;</li>
-<li><strong>[config.params]</strong>, ligne 14 : les paramètres de l’URL ;</li>
-<li><strong>[config.headers]</strong>, lignes 16-17 : les entêtes HTTP de la requête ;</li>
-<li><strong>[config.baseURL]</strong>, ligne 18 : l’URL de base de l’URL cible ;</li>
-<li><strong>[config.timeout]</strong>, ligne 21 : le timeout de la requête ;</li>
-<li><strong>[code]</strong>, ligne 28 : un code d’erreur ;</li>
-<li><strong>[request]</strong>, lignes 29-133 : une description détaillée de la requête HTTP. On remarquera que la plupart des propriétés sont préfixées par l’underscore _ montrant par là que ce sont des propriétés internes à l’objet <strong>[request]</strong> pas destinées à être exploitées directement par le développeur ;</li>
-<li><strong>[response]</strong>, ligne 134 : la réponse du serveur, ici inexistante ;</li>
+  <li>lignes 33-136 : l’objet <b>[error]</b> contient de nombreuses informations ;
+    <ul>
+      <li><b>[Error]</b>, lignes 3-9 : une description de l’erreur qui s’est produite ;
+      </li>
+      <li><b>[config]</b>, lignes 10-27 : la configuration de la requête HTTP qui a mené à cette erreur ;
+      </li>
+      <li><b>[config.url]</b>, lignes 11-12 : l’URL cible ;
+      </li>
+      <li><b>[config.method]</b>, ligne 13 : méthode de la requête ;
+      </li>
+      <li><b>[config.params]</b>, ligne 14 : les paramètres de l’URL ;
+      </li>
+      <li><b>[config.headers]</b>, lignes 16-17 : les entêtes HTTP de la requête ;
+      </li>
+      <li><b>[config.baseURL]</b>, ligne 18 : l’URL de base de l’URL cible ;
+      </li>
+      <li><b>[config.timeout]</b>, ligne 21 : le timeout de la requête ;
+      </li>
+      <li><b>[code]</b>, ligne 28 : un code d’erreur ;
+      </li>
+      <li><b>[request]</b>, lignes 29-133 : une description détaillée de la requête HTTP. On remarquera que la plupart des propriétés sont préfixées par l’underscore _ montrant par là que ce sont des propriétés internes à l’objet <b>[request]</b> pas destinées à être exploitées directement par le développeur ;
+      </li>
+      <li><b>[response]</b>, ligne 134 : la réponse du serveur, ici inexistante ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 138 : le message d’erreur affiché par la fonction <b>[main]</b> ;
+  </li>
 </ul>
-</li>
-<li>ligne 138 : le message d’erreur affiché par la fonction <strong>[main]</strong> ;</li>
-</ul>
+
 <p><strong>Cas 2</strong> : le serveur Laragon est lancé</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-01.js&quot;</span></span>
@@ -1751,19 +1850,30 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 3-203 : l’objet Javascript <strong>[response]</strong> qui encapsule la réponse HTTP du serveur ;</li>
-<li>ligne 3, <strong>[status]</strong> : le code HTTP de la réponse ;</li>
-<li>ligne 4, <strong>[statusText]</strong> : le texte associé au code HTTP précédent ;</li>
-<li>lignes 5-13, <strong>[headers]</strong> : les entêtes HTTP de la réponse :<ul>
-<li>ligne 10, <strong>[Set-Cookie]</strong> : le cookie de session ;</li>
-<li>ligne 13, <strong>[Content-Type]</strong> : le type du document envoyé par le serveur ;</li>
+  <li>lignes 3-203 : l’objet Javascript <b>[response]</b> qui encapsule la réponse HTTP du serveur ;
+  </li>
+  <li>ligne 3, <b>[status]</b> : le code HTTP de la réponse ;
+  </li>
+  <li>ligne 4, <b>[statusText]</b> : le texte associé au code HTTP précédent ;
+  </li>
+  <li>lignes 5-13, <b>[headers]</b> : les entêtes HTTP de la réponse :
+    <ul>
+      <li>ligne 10, <b>[Set-Cookie]</b> : le cookie de session ;
+      </li>
+      <li>ligne 13, <b>[Content-Type]</b> : le type du document envoyé par le serveur ;
+      </li>
+    </ul>
+  </li>
+  <li>lignes 14-31, <b>[config]</b> : la configuration de la requête HTTP émise ;
+  </li>
+  <li>lignes 32-199, <b>[request]</b> : l’objet Javascript détaillant la requête HTTP émise ;
+  </li>
+  <li>lignes 200-203, <b>[request.data]</b> : l’objet Javascript encapsulant la réponse jSON du serveur ;
+  </li>
+  <li>lignes 205-207 : la réponse récupérée par la fonction asynchrone <b>[main]</b> ;
+  </li>
 </ul>
-</li>
-<li>lignes 14-31, <strong>[config]</strong> : la configuration de la requête HTTP émise ;</li>
-<li>lignes 32-199, <strong>[request]</strong> : l’objet Javascript détaillant la requête HTTP émise ;</li>
-<li>lignes 200-203, <strong>[request.data]</strong> : l’objet Javascript encapsulant la réponse jSON du serveur ;</li>
-<li>lignes 205-207 : la réponse récupérée par la fonction asynchrone <strong>[main]</strong> ;</li>
-</ul>
+
 <p><strong>Cas 3</strong> : on fait une requête <strong>[init-session]</strong> erronée au serveur Laragon ;</p>
 <p><img src="images/10000000000002B3000001A03BB03E73.png" style="width:6.4cm;height:3.851cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002B3000001A03BB03E73.png" /></p>
 <p>Les résultats de l’exécution sont les suivants :</p>
@@ -1972,16 +2082,26 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 38-70 : la fonction asynchrone <strong>[authentifierUtilisateur]</strong> ;</li>
-<li>ligne 39 : il faut faire la requête <strong>[POST /main.php?action=authentifier-utilisateur]</strong> ;</li>
-<li>lignes 40-54 : les options de la requête HTTP ;</li>
-<li>ligne 41 : c’est un POST ;</li>
-<li>lignes 42-44 : les paramètres du POST seront URL encodés dans un document que le client envoie avec sa requête ;</li>
-<li>lignes 46-49 : la propriété <strong>[data]</strong> doit contenir la chaîne du POST URL encodée. Pour cela, on utilise ici la bibliothèque <strong>[qs]</strong> importée ligne 3 ;</li>
-<li>lignes 55-69 : pour l’exécution de la requête, on retrouve le même code que dans la méthode <strong>[initSession]</strong> ;</li>
-<li>lignes 73-89 : la méthode <strong>[asynchrone]</strong> appelle successivement, de manière bloquante, les méthodes <strong>[initSession, authentifierUtilisateur]</strong>, lignes 77 et 82 ;</li>
-<li>ligne 82 : on utilise le couple (admin, admin) comme identifiants de connexion. On sait qu’ils sont reconnus par le serveur ;</li>
+  <li>lignes 38-70 : la fonction asynchrone <b>[authentifierUtilisateur]</b> ;
+  </li>
+  <li>ligne 39 : il faut faire la requête <b>[POST /main.php?action=authentifier-utilisateur]</b> ;
+  </li>
+  <li>lignes 40-54 : les options de la requête HTTP ;
+  </li>
+  <li>ligne 41 : c’est un POST ;
+  </li>
+  <li>lignes 42-44 : les paramètres du POST seront URL encodés dans un document que le client envoie avec sa requête ;
+  </li>
+  <li>lignes 46-49 : la propriété <b>[data]</b> doit contenir la chaîne du POST URL encodée. Pour cela, on utilise ici la bibliothèque <b>[qs]</b> importée ligne 3 ;
+  </li>
+  <li>lignes 55-69 : pour l’exécution de la requête, on retrouve le même code que dans la méthode <b>[initSession]</b> ;
+  </li>
+  <li>lignes 73-89 : la méthode <b>[asynchrone]</b> appelle successivement, de manière bloquante, les méthodes <b>[initSession, authentifierUtilisateur]</b>, lignes 77 et 82 ;
+  </li>
+  <li>ligne 82 : on utilise le couple (admin, admin) comme identifiants de connexion. On sait qu’ils sont reconnus par le serveur ;
+  </li>
 </ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-03.js&quot;</span></span>
@@ -2001,16 +2121,21 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 9-12 : l’authentification utilisateur échoue : le serveur n’a pas retenu le fait qu’on avait initié une session jSON. Cela vient du fait qu’on n’a pas renvoyé le cookie de session envoyé en réponse à la 1ère requête <strong>[init-session]</strong> ;</li>
+  <li>lignes 9-12 : l’authentification utilisateur échoue : le serveur n’a pas retenu le fait qu’on avait initié une session jSON. Cela vient du fait qu’on n’a pas renvoyé le cookie de session envoyé en réponse à la 1ère requête <b>[init-session]</b> ;
+  </li>
 </ul>
-<p><a id="axios04"></a>
-<a id="refheadingtoc2152561731793072"></a></p>
+
+<p><a id="refheadingtoc2152561731793072"></a>
+<a id="axios04"></a></p>
 <h2 id="128-script-axios-04">12.8. script [axios-04]</h2>
 <p>Le script <strong>[axios-04]</strong> amène deux améliorations au script <strong>[axios-03]</strong> :</p>
 <ul>
-<li>il gère le cookie de session ;</li>
-<li>il factorise dans une fonction <strong>[getRemoteData]</strong> ce qui est commun aux fonctions <strong>[initSession]</strong> et <strong>[authentifierUtilisateur]</strong> ;</li>
+  <li>il gère le cookie de session ;
+  </li>
+  <li>il factorise dans une fonction <b>[getRemoteData]</b> ce qui est commun aux fonctions <b>[initSession]</b> et <b>[authentifierUtilisateur]</b> ;
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> axios </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;axios&#x27;</span><span style="color:#000000">;</span></span>
@@ -2133,31 +2258,52 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 14-26 : la fonction <strong>[initSession]</strong>. Elle se contente désormais de préparer la requête HTTP à envoyer au serveur mais ne l’exécute pas. Elle confie ce rôle à la méthode <strong>[getRemoteDate]</strong> des lignes 49-95 ;</li>
-<li>lignes 28-47 : la fonction <strong>[authentifierUtilisateur]</strong> suit la même démarche ;</li>
-<li>ligne 49 : la fonction <strong>[getRemoteData]</strong> reçoit les deux informations qui lui permettent d’exécuter une requête HTTP:<ul>
-<li><strong>[axios]</strong>, l’objet qui va se charger d’envoyer la requête et de recevoir la réponse ;</li>
-<li><strong>[options]</strong>, les options de configuration de la requête à envoyer au serveur ;</li>
+  <li>lignes 14-26 : la fonction <b>[initSession]</b>. Elle se contente désormais de préparer la requête HTTP à envoyer au serveur mais ne l’exécute pas. Elle confie ce rôle à la méthode <b>[getRemoteDate]</b> des lignes 49-95 ;
+  </li>
+  <li>lignes 28-47 : la fonction <b>[authentifierUtilisateur]</b> suit la même démarche ;
+  </li>
+  <li>ligne 49 : la fonction <b>[getRemoteData]</b> reçoit les deux informations qui lui permettent d’exécuter une requête HTTP:
+    <ul>
+      <li><b>[axios]</b>, l’objet qui va se charger d’envoyer la requête et de recevoir la réponse ;
+      </li>
+      <li><b>[options]</b>, les options de configuration de la requête à envoyer au serveur ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 59 : exécution de la requête et attente bloquante de sa réponse jSON ;
+  </li>
+  <li>lignes 60-68 : gestion de l’éventuelle exception ;
+  </li>
+  <li>ligne 64 : on récupère la réponse qui peut être encapsulée dans l’objet d’erreur ;
+  </li>
+  <li>ligne 67 : si le serveur a lancé une exception sans y inclure la réponse du serveur, alors on remonte l’erreur reçue au code appelant ;
+  </li>
+  <li>la fonction <b>[getRemoteData]</b> gère le cookie de session :
+    <ul>
+      <li>il le mémorise dans la variable <b>[sessionCookie]</b> (ligne 11) lorsqu’il le reçoit la 1ère fois ;
+      </li>
+      <li>il le renvoie ensuite à chaque nouvelle requête HTTP ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 72-92 : <b>[getRemoteData]</b> analyse chaque réponse du serveur pour savoir s’il a envoyé l’entête HTTP <b>[Set-Cookie]</b>. On sait que le serveur envoie un cookie de session nommé <b>[PHPSESSID]</b> (ligne 10). C’est donc ce cookie que l’on recherche (ligne 10) ;
+  </li>
+  <li>ligne 72 : on récupère les entêtes HTTP <b>[Set-Cookie]</b> s’ils existent (la casse n’a pas d’importance). Il peut y avoir en effet plusieurs entêtes <b>[Set-Cookie]</b> et c’est donc un tableau que l’on récupère ;
+  </li>
+  <li>ligne 73 : si on a récupéré un tableau de cookies ;
+  </li>
+  <li>lignes 78-90 : on cherche le cookie de session parmi tous les cookies du tableau ;
+  </li>
+  <li>ligne 80 : l’expression relationnelle qui permet de chercher le cookie de session dans le cookie n° i ;
+  </li>
+  <li>ligne 81 : si la comparaison a ramené des résultats ;
+  </li>
+  <li>ligne 84 : on a dans results<b>[1]</b>, la 1ère parenthèse du modèle de l’expression relationnelle, ç-à-d (PHPSESSID=xxxx) jusqu’au ; (non inclus) qui termine le cookie de session ;
+  </li>
+  <li>lignes 50-54 : à chaque requête, le cookie de session est inclus dans les entêtes HTTP de la requête. La 1ère fois, ce cookie est vide et sera alors ignoré par le serveur ;
+  </li>
 </ul>
-</li>
-<li>ligne 59 : exécution de la requête et attente bloquante de sa réponse jSON ;</li>
-<li>lignes 60-68 : gestion de l’éventuelle exception ;</li>
-<li>ligne 64 : on récupère la réponse qui peut être encapsulée dans l’objet d’erreur ;</li>
-<li>ligne 67 : si le serveur a lancé une exception sans y inclure la réponse du serveur, alors on remonte l’erreur reçue au code appelant ;</li>
-<li>la fonction <strong>[getRemoteData]</strong> gère le cookie de session :<ul>
-<li>il le mémorise dans la variable <strong>[sessionCookie]</strong> (ligne 11) lorsqu’il le reçoit la 1ère fois ;</li>
-<li>il le renvoie ensuite à chaque nouvelle requête HTTP ;</li>
-</ul>
-</li>
-<li>ligne 72-92 : <strong>[getRemoteData]</strong> analyse chaque réponse du serveur pour savoir s’il a envoyé l’entête HTTP <strong>[Set-Cookie]</strong>. On sait que le serveur envoie un cookie de session nommé <strong>[PHPSESSID]</strong> (ligne 10). C’est donc ce cookie que l’on recherche (ligne 10) ;</li>
-<li>ligne 72 : on récupère les entêtes HTTP <strong>[Set-Cookie]</strong> s’ils existent (la casse n’a pas d’importance). Il peut y avoir en effet plusieurs entêtes <strong>[Set-Cookie]</strong> et c’est donc un tableau que l’on récupère ;</li>
-<li>ligne 73 : si on a récupéré un tableau de cookies ;</li>
-<li>lignes 78-90 : on cherche le cookie de session parmi tous les cookies du tableau ;</li>
-<li>ligne 80 : l’expression relationnelle qui permet de chercher le cookie de session dans le cookie n° i ;</li>
-<li>ligne 81 : si la comparaison a ramené des résultats ;</li>
-<li>ligne 84 : on a dans results<strong>[1]</strong>, la 1ère parenthèse du modèle de l’expression relationnelle, ç-à-d (PHPSESSID=xxxx) jusqu’au ; (non inclus) qui termine le cookie de session ;</li>
-<li>lignes 50-54 : à chaque requête, le cookie de session est inclus dans les entêtes HTTP de la requête. La 1ère fois, ce cookie est vide et sera alors ignoré par le serveur ;</li>
-</ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\http\axios-04.js&quot;</span></span>

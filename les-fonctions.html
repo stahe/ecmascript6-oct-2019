@@ -803,9 +803,12 @@
 <h2 id="81-script-func-01">8.1. script [func-01]</h2>
 <p>Le script s’intéresse au mode de passage des paramètres d’une fonction :</p>
 <ul>
-<li>passage par valeur pour nombres, chaînes et booléens ;</li>
-<li>passage par référence pour les tableaux, objets littéraux et fonctions ;</li>
+  <li>passage par valeur pour nombres, chaînes et booléens ;
+  </li>
+  <li>passage par référence pour les tableaux, objets littéraux et fonctions ;
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">// mode de passage des paramètres d&#x27;une fonction</span>
@@ -892,9 +895,12 @@
 <h2 id="82-script-func-02">8.2. script [func-02]</h2>
 <p>Le script suivant montre que le type <strong>[function]</strong> est un type de donnée comme un autre et qu’une variable peut avoir ce type. Il montre également deux façons de définir une fonction :</p>
 <ul>
-<li>l’une avec le mot clé <strong>[function]</strong> ;</li>
-<li>l’autre avec la notation « flèche » =&gt; ;</li>
+  <li>l’une avec le mot clé <b>[function]</b> ;
+  </li>
+  <li>l’autre avec la notation « flèche » =&gt; ;
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">&#x27;use strict&#x27;;</span>
 <span class="odt-code-line">// on peut affecter une fonction à une variable</span>
@@ -997,12 +1003,18 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 5-7 : le corps de la fonction f ne définit aucune propriété ;</li>
-<li>lignes 9-12 : on donne de l’extérieur des propriétés à la fonction f ;</li>
-<li>ligne 14 : utilisation de la function (objet) f. Notez qu’on n’écrit pas <strong>[f()]</strong> mais simplement <strong>[f]</strong>. On a là la notation d’un objet ;</li>
-<li>lignes 17-22 : on définit une fonction <strong>[g]</strong> comme si c’était une classe avec propriétés et méthodes ;</li>
-<li>ligne 24 : la fonction <strong>[g]</strong> est instanciée par <strong>[new g()]</strong> ;</li>
+  <li>lignes 5-7 : le corps de la fonction f ne définit aucune propriété ;
+  </li>
+  <li>lignes 9-12 : on donne de l’extérieur des propriétés à la fonction f ;
+  </li>
+  <li>ligne 14 : utilisation de la function (objet) f. Notez qu’on n’écrit pas <b>[f()]</b> mais simplement <b>[f]</b>. On a là la notation d’un objet ;
+  </li>
+  <li>lignes 17-22 : on définit une fonction <b>[g]</b> comme si c’était une classe avec propriétés et méthodes ;
+  </li>
+  <li>ligne 24 : la fonction <b>[g]</b> est instanciée par <b>[new g()]</b> ;
+  </li>
 </ul>
+
 <p><strong>Résultats de l’exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;</span></span>
@@ -1033,12 +1045,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : la notation [...otherArgs] fait qu’avec un appel de type f(param1, param2, param3) on aura ligne 3 :<ul>
-<li>arg1=param1</li>
-<li>otherArgs=[param2, param3]. [otherArgs] est donc un tableau qui rassemble tous les paramètres effectifs passés derrière [param1] ;</li>
+  <li>ligne 3 : la notation [...otherArgs] fait qu’avec un appel de type f(param1, param2, param3) on aura ligne 3 :
+    <ul>
+      <li>arg1=param1
+      </li>
+      <li>otherArgs=[param2, param3]. [otherArgs] est donc un tableau qui rassemble tous les paramètres effectifs passés derrière [param1] ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Les résultats de l’application sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>

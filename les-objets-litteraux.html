@@ -884,11 +884,16 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 3 du code : un objet est manipulé via un pointeur. Donc <strong>[obj1]</strong> est un pointeur. Modifier l’objet pointé ne modifie pas le pointeur <strong>[obj1]</strong>. C’est pourquoi, comme pour les tableaux, une référence d’objet est déclarée avec le mot clé <strong>[const]</strong> ;</li>
-<li>ligne 6 du code : comme pour les tableaux, <strong>[console.log]</strong> sait afficher des objets ;</li>
-<li>ligne 11 du code : obj1.prop3 peut être réécrit obj1.<strong>[‘prop3’]</strong>. Cette dernière notation est utile lorsque ‘prop3’ est en fait une variable (lignes 20-21) ;</li>
-<li>lignes 13-18 du code : montrent que l’instruction <strong>[obj2=obj1]</strong> est une copie de référence d’objet et non de l’objet lui-même ;</li>
+  <li>ligne 3 du code : un objet est manipulé via un pointeur. Donc <b>[obj1]</b> est un pointeur. Modifier l’objet pointé ne modifie pas le pointeur <b>[obj1]</b>. C’est pourquoi, comme pour les tableaux, une référence d’objet est déclarée avec le mot clé <b>[const]</b> ;
+  </li>
+  <li>ligne 6 du code : comme pour les tableaux, <b>[console.log]</b> sait afficher des objets ;
+  </li>
+  <li>ligne 11 du code : obj1.prop3 peut être réécrit obj1.<b>[‘prop3’]</b>. Cette dernière notation est utile lorsque ‘prop3’ est en fait une variable (lignes 20-21) ;
+  </li>
+  <li>lignes 13-18 du code : montrent que l’instruction <b>[obj2=obj1]</b> est une copie de référence d’objet et non de l’objet lui-même ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc2042133980233556"></a></p>
 <h2 id="52-script-obj-02">5.2. script [obj-02]</h2>
 <p>Ce script montre que les propriétés d’un objet peuvent avoir pour valeur un objet. On a alors des objets multi-niveaux. On introduit également l’objet global <strong>[JSON]</strong> qui permet de faire des conversions objet ↔ chaîne de caractères.</p>
@@ -925,9 +930,12 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 24 : transformation d’un objet Javascript en chaîne jSON ;</li>
-<li>ligne 27 : transformation d’une chaîne jSON en objet Javascript ;</li>
+  <li>ligne 24 : transformation d’un objet Javascript en chaîne jSON ;
+  </li>
+  <li>ligne 27 : transformation d’une chaîne jSON en objet Javascript ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-02.js&quot;</span></span>
@@ -945,8 +953,10 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 10 : dans une chaîne jSON, les propriétés sont obligatoirement entourées de guillemets ainsi que les valeurs de type chaîne de caractères ;</li>
+  <li>ligne 10 : dans une chaîne jSON, les propriétés sont obligatoirement entourées de guillemets ainsi que les valeurs de type chaîne de caractères ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc2042153980233556"></a></p>
 <h2 id="53-script-obj-03">5.3. script [obj-03]</h2>
 <p>Ce script introduit la notion de getter / setter d’une propriété d’un objet :</p>
@@ -978,13 +988,20 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 5-7 : définition d’un <strong>[getter]</strong>, une fonction qui rend généralement la valeur d’une propriété de l’objet mais qui en fait peut rendre n’importe quoi. Le mot clé <strong>[function]</strong> est remplacé par le mot clé <strong>[get]</strong> ;</li>
-<li>ligne 7 : le getter rend la propriété <strong>[_nom]</strong>. On voit que celle-ci n’a pas besoin d’être déclarée ;</li>
-<li>lignes 10-13 : définition d’un <strong>[setter]</strong>, une fonction qui affecte généralement la valeur reçue à une propriété de l’objet mais qui en fait peut faire n’importe quoi. Le mot clé <strong>[function]</strong> est remplacé par le mot clé <strong>[set]</strong>. Le <strong>[setter]</strong> peut être utilisé pour vérifier la validité de la valeur passée en paramètre au <strong>[setter]</strong> ;</li>
-<li>ligne 16 : la fonction <strong>[set nom]</strong> va être appelée implicitement ;</li>
-<li>ligne 18 : la fonction <strong>[get nom]</strong> va être appelée implicitement ;</li>
-<li>ligne 22 : montre que l’utilisation des getter / setter dépend de la bonne volonté du développeur. Si celui-ci connaît le nom de la propriété gérée par ceux-ci, il peut y accéder directement ;</li>
+  <li>lignes 5-7 : définition d’un <b>[getter]</b>, une fonction qui rend généralement la valeur d’une propriété de l’objet mais qui en fait peut rendre n’importe quoi. Le mot clé <b>[function]</b> est remplacé par le mot clé <b>[get]</b> ;
+  </li>
+  <li>ligne 7 : le getter rend la propriété <b>[_nom]</b>. On voit que celle-ci n’a pas besoin d’être déclarée ;
+  </li>
+  <li>lignes 10-13 : définition d’un <b>[setter]</b>, une fonction qui affecte généralement la valeur reçue à une propriété de l’objet mais qui en fait peut faire n’importe quoi. Le mot clé <b>[function]</b> est remplacé par le mot clé <b>[set]</b>. Le <b>[setter]</b> peut être utilisé pour vérifier la validité de la valeur passée en paramètre au <b>[setter]</b> ;
+  </li>
+  <li>ligne 16 : la fonction <b>[set nom]</b> va être appelée implicitement ;
+  </li>
+  <li>ligne 18 : la fonction <b>[get nom]</b> va être appelée implicitement ;
+  </li>
+  <li>ligne 22 : montre que l’utilisation des getter / setter dépend de la bonne volonté du développeur. Si celui-ci connaît le nom de la propriété gérée par ceux-ci, il peut y accéder directement ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-03.js&quot;</span></span>
@@ -1069,8 +1086,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 17-19 : une méthode interne à l’objet. Dans celle-ci, on accède aux propriétés de l’objet via le mot clé <strong>[this]</strong> (ligne 18). <strong>[this]</strong> désigne l’objet lui-même, <strong>[this.prénom]</strong>, la propriété <strong>[prénom]</strong> de celui-ci ;</li>
+  <li>lignes 17-19 : une méthode interne à l’objet. Dans celle-ci, on accède aux propriétés de l’objet via le mot clé <b>[this]</b> (ligne 18). <b>[this]</b> désigne l’objet lui-même, <b>[this.prénom]</b>, la propriété <b>[prénom]</b> de celui-ci ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\objets\obj-05.js&quot;</span></span>
@@ -1138,13 +1157,18 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 26-31 : le code qui permet d’avoir la liste des propriétés, sans les méthodes, d’un objet. Ce code fait l’objet d’un avertissement d’ESLint :</li>
+  <li>lignes 26-31 : le code qui permet d’avoir la liste des propriétés, sans les méthodes, d’un objet. Ce code fait l’objet d’un avertissement d’ESLint :
+  </li>
 </ul>
+
 <p><img src="images/1000000000000687000002662860A8EF.png" style="width:13.26cm;height:4.881cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000687000002662860A8EF.png" /></p>
 <ul>
-<li>lignes 32-39 : le code qui permet d’échapper à l’avertissement d’ESLint. On passe par le prototype de la classe <strong>[Object]</strong> ;</li>
-<li>lignes 41-47 : ou bien on se contente de désactiver l’avertissement (ligne 43) ;</li>
+  <li>lignes 32-39 : le code qui permet d’échapper à l’avertissement d’ESLint. On passe par le prototype de la classe <b>[Object]</b> ;
+  </li>
+  <li>lignes 41-47 : ou bien on se contente de désactiver l’avertissement (ligne 43) ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc5458631626043720"></a></p>
 <h2 id="57-script-obj-07">5.7. script [obj-07]</h2>
 <p>Le script [obj-07] montre la possibilité de déstructurer un objet :</p>
@@ -1184,8 +1208,10 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 11 : ce sont les accolades {} qui permettent la déstructuration. La syntaxe</li>
+  <li>ligne 11 : ce sont les accolades {} qui permettent la déstructuration. La syntaxe
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> { nom: n, prénom: p } = obj1</span></span>
 </code></pre></div>
@@ -1203,9 +1229,12 @@
 
 <p>pour rappeler que les valeurs des attributs [nom, prénom] vont dans les variables [n, p] ;</p>
 <ul>
-<li>l’opération de déstructuration se répète aux lignes 15, 21 et 28. A chaque fois, c’est la présence des accolades {} qui indique qu’il va y avoir déstructuration d’un objet dans des variables ;</li>
-<li>la ligne 28 peut être déconcertante. C’est un raccourci pour la notation :</li>
+  <li>l’opération de déstructuration se répète aux lignes 15, 21 et 28. A chaque fois, c’est la présence des accolades {} qui indique qu’il va y avoir déstructuration d’un objet dans des variables ;
+  </li>
+  <li>la ligne 28 peut être déconcertante. C’est un raccourci pour la notation :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-js">
 <span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> h({ nom : nom, prénom : prénom })</span></span>
 </code></pre></div>
@@ -1241,17 +1270,22 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 10 : l’opération de copie de l’objet [obj1]. L’opérateur ... est appelé opérateur de spread ;</li>
+  <li>ligne 10 : l’opération de copie de l’objet [obj1]. L’opérateur ... est appelé opérateur de spread ;
+  </li>
 </ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>obj2===obj1 : false
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>obj2= { nom: &#39;martin&#39;, &#39;prénom&#39;: &#39;jean&#39; }
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : montre que les références [obj1] et [obj2] ne pointent pas sur le même objet ;</li>
-<li>ligne 2 : montre que l’objet pointé par [obj2] est une copie de l’objet pointé par [obj1] ;</li>
+  <li>ligne 1 : montre que les références [obj1] et [obj2] ne pointent pas sur le même objet ;
+  </li>
+  <li>ligne 2 : montre que l’objet pointé par [obj2] est une copie de l’objet pointé par [obj1] ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc2042233980233556"></a></p>
 <h2 id="59-conclusion">5.9. Conclusion</h2>
 <p>Les scripts de cette section ont montré que l’objet littéral de Javascript est proche de l’objet instance de classe des langages à objets. On peut y définir propriétés, méthodes et getters / setters. C’est un objet dynamique dont on peut définir les propriétés à l’exécution. Il se comporte alors comme un dictionnaire dont les éléments peuvent être de tout type et notamment de type <strong>[fonction]</strong>.</p>

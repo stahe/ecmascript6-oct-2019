@@ -881,10 +881,14 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>les codes PHP et Javascript sont très proches l’un de l’autre ;</li>
-<li>ligne 7 : on notera qu’en Javascript l’expression régulière n’est pas une chaîne de caractères mais un objet. On ne met pas de guillemets ou d’apostrophes  autour de l’expression ;</li>
-<li>lignes 41 et 44 : il y a deux méthodes pour obtenir le même résultat ;</li>
+  <li>les codes PHP et Javascript sont très proches l’un de l’autre ;
+  </li>
+  <li>ligne 7 : on notera qu’en Javascript l’expression régulière n’est pas une chaîne de caractères mais un objet. On ne met pas de guillemets ou d’apostrophes  autour de l’expression ;
+  </li>
+  <li>lignes 41 et 44 : il y a deux méthodes pour obtenir le même résultat ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\regexp\regexp-01.js&quot;</span></span>
@@ -1004,16 +1008,24 @@
 
 <p>Les méthodes <strong>[regexp.exec]</strong> et <strong>[string.match]</strong> donnent les mêmes résultats :</p>
 <ul>
-<li><strong>[null]</strong> s’il n’y a pas de correspondances entre la chaîne et son modèle ;</li>
-<li>un tableau t, s’il y a correspondance avec :<ul>
-<li>t<strong>[0]</strong> : la chaîne correspondant au modèle ;</li>
-<li>t<strong>[1]</strong> : la chaîne correspondant à la 1ère parenthèse du modèle ;</li>
-<li>t<strong>[2]</strong> : la chaîne correspondant à la 2ième parenthèse du modèle ;</li>
-<li>…</li>
-<li>t<strong>[input]</strong> : la chaîne entière dans laquelle on a cherché le modèle ;</li>
+  <li><b>[null]</b> s’il n’y a pas de correspondances entre la chaîne et son modèle ;
+  </li>
+  <li>un tableau t, s’il y a correspondance avec :
+    <ul>
+      <li>t<b>[0]</b> : la chaîne correspondant au modèle ;
+      </li>
+      <li>t<b>[1]</b> : la chaîne correspondant à la 1ère parenthèse du modèle ;
+      </li>
+      <li>t<b>[2]</b> : la chaîne correspondant à la 2ième parenthèse du modèle ;
+      </li>
+      <li>…
+      </li>
+      <li>t<b>[input]</b> : la chaîne entière dans laquelle on a cherché le modèle ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><a id="refheadingtoc259301196815120"></a></p>
 <h2 id="72-script-regexp-02">7.2. script [regexp-02]</h2>
 <p>Parfois on ne souhaite pas récupérer des éléments de la chaîne testée mais seulement savoir si elle correspond au modèle :</p>
@@ -1065,12 +1077,16 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li><strong>[regexp-02]</strong> reprend le code de <strong>[regexp-01]</strong> avec les différences suivantes :<ul>
-<li>on ne souhaite pas récupérer des éléments de la chaîne testée. Aussi a-t-on enlevé les parenthèses dans les expression régulières utilisées ;</li>
-<li>ligne 40 : on utilise la méthode <strong>[Regexp.test]</strong> pour savoir si une chaîne de caractères vérifie une expression régulière ;</li>
+  <li><b>[regexp-02]</b> reprend le code de <b>[regexp-01]</b> avec les différences suivantes :
+    <ul>
+      <li>on ne souhaite pas récupérer des éléments de la chaîne testée. Aussi a-t-on enlevé les parenthèses dans les expression régulières utilisées ;
+      </li>
+      <li>ligne 40 : on utilise la méthode <b>[Regexp.test]</b> pour savoir si une chaîne de caractères vérifie une expression régulière ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\cours\regexp\regexp-02.js&quot;</span></span>

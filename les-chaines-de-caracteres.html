@@ -815,9 +815,12 @@
 <h2 id="61-script-str-01">6.1. script [str-01]</h2>
 <p>La première chose à comprendre est qu’une fois une chaîne créée, elle n’est plus modifiable. On dispose de nombreuses méthodes pour produire une nouvelle chaîne à partir de la chaîne initiale mais celle-ci reste toujours inchangée. Par ailleurs, une chaîne de caractères peut être de deux types :</p>
 <ul>
-<li><strong>[string]</strong> lorsqu’elle est initialisée avec une chaîne littérale ;</li>
-<li><strong>[object]</strong> lorsqu’elle est créée comme instance de la classe <strong>[String]</strong> ;</li>
+  <li><b>[string]</b> lorsqu’elle est initialisée avec une chaîne littérale ;
+  </li>
+  <li><b>[object]</b> lorsqu’elle est créée comme instance de la classe <b>[String]</b> ;
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"></span>
@@ -871,9 +874,12 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 6 : la méthode usuelle de définition d’une chaîne. <strong>[chaîne1]</strong> sera de type <strong>[string]</strong> ;</li>
-<li>ligne 10 : on peut construire une chaîne à l’aide du constructeur de la classe <strong>[String]</strong>. <strong>[chaîne2]</strong> sera de type <strong>[object]</strong> ;</li>
+  <li>ligne 6 : la méthode usuelle de définition d’une chaîne. <b>[chaîne1]</b> sera de type <b>[string]</b> ;
+  </li>
+  <li>ligne 10 : on peut construire une chaîne à l’aide du constructeur de la classe <b>[String]</b>. <b>[chaîne2]</b> sera de type <b>[object]</b> ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe &quot;c:\Temp\19-09-01\javascript\strings\str-02.js&quot;</span></span>
@@ -900,8 +906,10 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 6 : il est possible d’avoir des chaînes de caractères contenant des expression ${variable} qui sont remplacées par la valeur de la variable. On est là dans la même logique que les variables $ dans les chaînes de caractères PHP. On notera la notation d’une telle chaîne : elle est entourée de « backstick » ou apostrophe inverse (AltGr-7 sur un clavier français) ;</li>
+  <li>ligne 6 : il est possible d’avoir des chaînes de caractères contenant des expression ${variable} qui sont remplacées par la valeur de la variable. On est là dans la même logique que les variables $ dans les chaînes de caractères PHP. On notera la notation d’une telle chaîne : elle est entourée de « backstick » ou apostrophe inverse (AltGr-7 sur un clavier français) ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Temp\19-09-01\javascript\strings\tempCodeRunnerFile.js&quot;</span></span>
@@ -913,9 +921,12 @@
 <p>La chaîne avec interpolation de variables reste insuffisante. Il n’est en effet pas possible de mettre une expression à la place de la variable dans l’expression ${variable}. Pour ceux qui ont programmé en C, il n’y a rien de tel que les fonctions <strong>[printf, sprintf]</strong> pour écrire ou construire des chaînes formatées. Des centaines de développeurs ont développé des milliers de packages Javascript formant un écosystème immense. Lorsqu’on a un besoin non satisfait nativement par Javascript, il est temps de chercher un package qui le satisfasse. Pour cela nous utilisons le gestionnaire de packages <strong>[npm]</strong>. Celui-ci dispose d’une option <strong>[search]</strong> qui permet de chercher une chaîne de caractères dans la description des packages. <strong>[npm]</strong> renvoie la liste des packages satisfaisant à la recherche. Nous allons donc chercher la chaîne <strong>[sprintf]</strong> dans la description des packages :</p>
 <p><img src="images/10000000000008B9000002C23DAD22B5.png" style="width:17.721cm;height:5.601cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000008B9000002C23DAD22B5.png" /></p>
 <ul>
-<li>dans la colonne <strong>[4]</strong>, les mots clés des packages de la colonne <strong>[3]</strong> ;</li>
-<li>dans la colonne <strong>[5]</strong>, la description des packages de la colonne <strong>[3]</strong> ;</li>
+  <li>dans la colonne <b>[4]</b>, les mots clés des packages de la colonne <b>[3]</b> ;
+  </li>
+  <li>dans la colonne <b>[5]</b>, la description des packages de la colonne <b>[3]</b> ;
+  </li>
 </ul>
+
 <p>L’étape suivante est d’aller sur le site de l’outil <strong>[npm]</strong>, <strong>[https://www.npmjs.com/]</strong> et de lire la description des packages :</p>
 <p><img src="images/100000000000069700000427F84A598B.png" style="width:11.161cm;height:7.032cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000069700000427F84A598B.png" /></p>
 <p>En <strong>[3]</strong>, on examine la liste des packages et on en choisit un.</p>
@@ -928,11 +939,16 @@
 <p><img src="images/100000000000026B000001AB5E547E08.png" style="width:6.55cm;height:4.522cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000026B000001AB5E547E08.png" /></p>
 <p>On voit ci-dessus que le package a été installé dans les <strong>[dependencies]</strong>, ç-à-d dans les packages nécessaires à l’exécution du projet. On rappelle qu’on met dans <strong>[devDependencies]</strong> les packages nécessaires uniquement pendant le développement du projet. Ils ne sont pas utilisés pendant l’exécution. Cette différence est importante lorsqu’il faut créer la version finale du projet pour sa mise en production. Il existe des outils pour :</p>
 <ul>
-<li>rassembler tous les fichiers jS nécessaires à l’exécution dans un seul fichier. Les packages des <strong>[devDependencies]</strong> ne sont donc pas inclus dans ce fichier final ;</li>
-<li>minifier celui-ci, ç-à-d rendre sa taille la plus petite possible. Pour cela par exemple, tous les commentaires sont éliminés ;</li>
-<li>« obscurcir » le code pour le rendre difficilement compréhensible. Par exemple, les variables taux, salaire, impôt vont être remplacées par des variables a, b, c ;</li>
-<li>faire d’autres optimisations ;</li>
+  <li>rassembler tous les fichiers jS nécessaires à l’exécution dans un seul fichier. Les packages des <b>[devDependencies]</b> ne sont donc pas inclus dans ce fichier final ;
+  </li>
+  <li>minifier celui-ci, ç-à-d rendre sa taille la plus petite possible. Pour cela par exemple, tous les commentaires sont éliminés ;
+  </li>
+  <li>« obscurcir » le code pour le rendre difficilement compréhensible. Par exemple, les variables taux, salaire, impôt vont être remplacées par des variables a, b, c ;
+  </li>
+  <li>faire d’autres optimisations ;
+  </li>
 </ul>
+
 <p>Cette optimisation du fichier final d’un projet jS est utilisée en programmation web. Une application web peut dépendre de très nombreux fichiers Javascript. Le chargement de ceux-ci par un navigateur peut ralentir l’affichage de la première page de l’application. L’optimisation précédente vise à améliorer ce temps de chargement. Si le temps de chargement est jugé trop long par les utilisateurs, l’application ne sera pas utilisée.</p>
 <p>Maintenant que nous disposons du package <strong>[sprintf-js]</strong>, il nous faut l’utiliser. C’est le script <strong>[str-04]</strong> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -948,10 +964,14 @@
 <p>Avec ECMAScript 6, on utilise le mot clé <strong>[import]</strong> pour <strong>importer</strong> un objet exporté par un package. Pour savoir ce qu’exporte le package, on peut aller voir son code :</p>
 <p><img src="images/100000000000060D0000015281E8D3FA.png" style="width:16.391cm;height:3.581cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000060D0000015281E8D3FA.png" /></p>
 <ul>
-<li>en <strong>[1]</strong>, clic droit sur le package importé ;</li>
-<li>en <strong>[2]</strong>, on veut en voir la définition ;</li>
-<li>en <strong>[3-4]</strong>, on voit que le package exporte une fonction appelée <strong>[sprintf]</strong> ;</li>
+  <li>en <b>[1]</b>, clic droit sur le package importé ;
+  </li>
+  <li>en <b>[2]</b>, on veut en voir la définition ;
+  </li>
+  <li>en <b>[3-4]</b>, on voit que le package exporte une fonction appelée <b>[sprintf]</b> ;
+  </li>
 </ul>
+
 <p>La fonction <strong>[sprintf]</strong> du package <strong>[sprintf-js]</strong> est importée avec l’instruction :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> { sprintf } </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;sprintf-js&#x27;</span><span style="color:#000000">;</span></span>
@@ -1006,34 +1026,58 @@
 <p><a id="refheadingtoc2042353980233556"></a></p>
 <h2 id="65-script-str-05">6.5. script [str-05]</h2>
 <p>Voici ce que dit la documentation sur la fonction <strong>[sprintf]</strong> :</p>
-<p><em>The placeholders in the format string are marked by </em><em>%</em><em> and are followed by one or more of these elements, in this order:</em></p>
+<p><em>The placeholders in the format string are marked by</em> <em>%</em> <em>and are followed by one or more of these elements, in this order:</em></p>
 <ul>
-<li><em>An optional number followed by a </em><em>$</em><em> sign that selects which argument index to use for the value. If not specified, arguments will be placed in the same order as the placeholders in the input string.</em></li>
-<li><em>An optional </em><em>+</em><em> sign that forces to preceed the result with a plus or minus sign on numeric values. By default, only the </em><em>-</em><em> sign is used on negative numbers.</em></li>
-<li><em>An optional padding specifier that says what character to use for padding (if specified). Possible values are </em><em>0</em><em> or any other character precedeed by a </em><em>&#x27;</em><em> (single quote). The default is to pad with </em><em>spaces</em><em>.</em></li>
-<li><em>An optional </em><em>-</em><em> sign, that causes </em><em>sprintf</em><em> to left-align the result of this placeholder. The default is to right-align the result.</em></li>
-<li><em>An optional number, that says how many characters the result should have. If the value to be returned is shorter than this number, the result will be padded. When used with the </em><em>j</em><em> (JSON) type specifier, the padding length specifies the tab size used for indentation.</em></li>
-<li><em>An optional precision modifier, consisting of a </em><em>.</em><em> (dot) followed by a number, that says how many digits should be displayed for floating point numbers. When used with the </em><em>g</em><em> type specifier, it specifies the number of significant digits. When used on a string, it causes the result to be truncated.</em></li>
-<li><em>A type specifier that can be any of:</em><ul>
-<li><em>%</em><em> — yields a literal </em><em>%</em><em> character</em></li>
-<li><em>b</em><em> — yields an integer as a binary number</em></li>
-<li><em>c</em><em> — yields an integer as the character with that ASCII value</em></li>
-<li><em>d</em><em> or </em><em>i</em><em> — yields an integer as a signed decimal number</em></li>
-<li><em>e</em><em> — yields a float using scientific notation</em></li>
-<li><em>u</em><em> — yields an integer as an unsigned decimal number</em></li>
-<li><em>f</em><em> — yields a float as is; see notes on precision above</em></li>
-<li><em>g</em><em> — yields a float as is; see notes on precision above</em></li>
-<li><em>o</em><em> — yields an integer as an octal number</em></li>
-<li><em>s</em><em> — yields a string as is</em></li>
-<li><em>t</em><em> — yields </em><em>true</em><em> or </em><em>false</em></li>
-<li><em>T</em><em> — yields the type of the argument</em><a href="https://www.npmjs.com/package/sprintf-js#fn-1"><em>1</em></a></li>
-<li><em>v</em><em> — yields the primitive value of the specified argument</em></li>
-<li><em>x</em><em> — yields an integer as a hexadecimal number (lower-case)</em></li>
-<li><em>X</em><em> — yields an integer as a hexadecimal number (upper-case)</em></li>
-<li><em>j</em><em> — yields a JavaScript object or array as a JSON encoded string</em></li>
+  <li><i>An optional number followed by a </i><i>$</i><i> sign that selects which argument index to use for the value. If not specified, arguments will be placed in the same order as the placeholders in the input string.</i>
+  </li>
+  <li><i>An optional </i><i>+</i><i> sign that forces to preceed the result with a plus or minus sign on numeric values. By default, only the </i><i>-</i><i> sign is used on negative numbers.</i>
+  </li>
+  <li><i>An optional padding specifier that says what character to use for padding (if specified). Possible values are </i><i>0</i><i> or any other character precedeed by a </i><i>&#x27;</i><i> (single quote). The default is to pad with </i><i>spaces</i><i>.</i>
+  </li>
+  <li><i>An optional </i><i>-</i><i> sign, that causes </i><i>sprintf</i><i> to left-align the result of this placeholder. The default is to right-align the result.</i>
+  </li>
+  <li><i>An optional number, that says how many characters the result should have. If the value to be returned is shorter than this number, the result will be padded. When used with the </i><i>j</i><i> (JSON) type specifier, the padding length specifies the tab size used for indentation.</i>
+  </li>
+  <li><i>An optional precision modifier, consisting of a </i><i>.</i><i> (dot) followed by a number, that says how many digits should be displayed for floating point numbers. When used with the </i><i>g</i><i> type specifier, it specifies the number of significant digits. When used on a string, it causes the result to be truncated.</i>
+  </li>
+  <li><i>A type specifier that can be any of:</i>
+    <ul>
+      <li><i>%</i><i> — yields a literal </i><i>%</i><i> character</i>
+      </li>
+      <li><i>b</i><i> — yields an integer as a binary number</i>
+      </li>
+      <li><i>c</i><i> — yields an integer as the character with that ASCII value</i>
+      </li>
+      <li><i>d</i><i> or </i><i>i</i><i> — yields an integer as a signed decimal number</i>
+      </li>
+      <li><i>e</i><i> — yields a float using scientific notation</i>
+      </li>
+      <li><i>u</i><i> — yields an integer as an unsigned decimal number</i>
+      </li>
+      <li><i>f</i><i> — yields a float as is; see notes on precision above</i>
+      </li>
+      <li><i>g</i><i> — yields a float as is; see notes on precision above</i>
+      </li>
+      <li><i>o</i><i> — yields an integer as an octal number</i>
+      </li>
+      <li><i>s</i><i> — yields a string as is</i>
+      </li>
+      <li><i>t</i><i> — yields </i><i>true</i><i> or </i><i>false</i>
+      </li>
+      <li><i>T</i><i> — yields the type of the argument</i><a href="https://www.npmjs.com/package/sprintf-js#fn-1"><i>1</i></a>
+      </li>
+      <li><i>v</i><i> — yields the primitive value of the specified argument</i>
+      </li>
+      <li><i>x</i><i> — yields an integer as a hexadecimal number (lower-case)</i>
+      </li>
+      <li><i>X</i><i> — yields an integer as a hexadecimal number (upper-case)</i>
+      </li>
+      <li><i>j</i><i> — yields a JavaScript object or array as a JSON encoded string</i>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Le script <strong>[script-05]</strong> met en œuvre quelques-uns de ces formats :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>

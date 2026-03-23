@@ -832,12 +832,18 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 5-7 : le corps de la fonction f ne définit aucune propriété ;</li>
-<li>lignes 9-12 : on donne de l’extérieur des propriétés à la fonction f ;</li>
-<li>ligne 14 : utilisation de la function (objet) f. Notez qu’on n’écrit pas <strong>[f()]</strong> mais simplement <strong>[f]</strong>. On a là la notation d’un objet ;</li>
-<li>lignes 17-22 : on définit une fonction <strong>[g]</strong> comme si c’était une classe avec propriétés et méthodes ;</li>
-<li>ligne 24 : la fonction <strong>[g]</strong> est instanciée par <strong>[new g()]</strong> ;</li>
+  <li>lignes 5-7 : le corps de la fonction f ne définit aucune propriété ;
+  </li>
+  <li>lignes 9-12 : on donne de l’extérieur des propriétés à la fonction f ;
+  </li>
+  <li>ligne 14 : utilisation de la function (objet) f. Notez qu’on n’écrit pas <b>[f()]</b> mais simplement <b>[f]</b>. On a là la notation d’un objet ;
+  </li>
+  <li>lignes 17-22 : on définit une fonction <b>[g]</b> comme si c’était une classe avec propriétés et méthodes ;
+  </li>
+  <li>ligne 24 : la fonction <b>[g]</b> est instanciée par <b>[new g()]</b> ;
+  </li>
 </ul>
+
 <p><strong>Résultats de l’exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-00.js&quot;</span></span>
@@ -900,11 +906,16 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 2 : le mot clé <strong>[class]</strong> désigne une classe ;</li>
-<li>lignes 5-9 : le mot clé <strong>[constructor]</strong> désigne le constructeur de la classe. Il ne peut y en avoir qu’un au plus. Il sert à construire et initialiser une instance de la classe. Notez qu’il n’y a pas de déclaration des propriétés <strong>[nom, prénom, âge]</strong> ;</li>
-<li>lignes 11-36 : propriétés de la classe. On retrouve ici des choses déjà vues dans le paragraphe des objets 4, page <a href="les-objets-litteraux.html#refheadingtoc2042093980233556">44</a>. Seule la syntaxe diffère ;</li>
-<li>ligne 41 : création d’un objet de type <strong>[Personne]</strong>. A partir de maintenant l’objet <strong>[personne]</strong> s’utilise comme un objet littéral. <strong>[typeof (personne)]</strong> vaut « object » et l’expression <strong>[personne instanceof (Personne)]</strong> est vraie. Il est donc possible de connaître le type exact d’une instance de classe ;</li>
+  <li>ligne 2 : le mot clé <b>[class]</b> désigne une classe ;
+  </li>
+  <li>lignes 5-9 : le mot clé <b>[constructor]</b> désigne le constructeur de la classe. Il ne peut y en avoir qu’un au plus. Il sert à construire et initialiser une instance de la classe. Notez qu’il n’y a pas de déclaration des propriétés <b>[nom, prénom, âge]</b> ;
+  </li>
+  <li>lignes 11-36 : propriétés de la classe. On retrouve ici des choses déjà vues dans le paragraphe des objets 4, page <a href="les-objets-litteraux.html#refheadingtoc2042093980233556">44</a>. Seule la syntaxe diffère ;
+  </li>
+  <li>ligne 41 : création d’un objet de type <b>[Personne]</b>. A partir de maintenant l’objet <b>[personne]</b> s’utilise comme un objet littéral. <b>[typeof (personne)]</b> vaut « object » et l’expression <b>[personne instanceof (Personne)]</b> est vraie. Il est donc possible de connaître le type exact d’une instance de classe ;
+  </li>
 </ul>
+
 <p><strong>Résultats de l’exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-01.js&quot;</span></span>
@@ -958,8 +969,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 39 : nous exportons la classe <strong>[Personne]</strong> pour que des scripts puissent l’importer ;</li>
+  <li>ligne 39 : nous exportons la classe <b>[Personne]</b> pour que des scripts puissent l’importer ;
+  </li>
 </ul>
+
 <p>Le script <strong>[class-02]</strong> crée une classe <strong>[Enseignant]</strong> dérivée de la classe <strong>[Personne]</strong> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">// imports</span>
@@ -996,15 +1009,24 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>ligne 2 : on importe la classe <strong>[Personne]</strong> à partir du module <strong>[Personne.js]</strong> qui se trouve dans le même dossier que <strong>[class-02]</strong> ;</li>
-<li>ligne 5 : la classe <strong>[Enseignant]</strong> étend (hérite de) la classe <strong>[Personne]</strong> avec le mot clé <strong>[extends]</strong> : elle lui ajoute une propriété <strong>[_discipline]</strong> avec les getter / setter qui vont avec ;</li>
-<li>lignes 8-11 : le constructeur de la classe <strong>[Enseignant]</strong> reçoit quatre valeurs pour initialiser les quatre propriétés de la classe ;</li>
-<li>ligne 9 : le mot clé <strong>[super]</strong> appelle le constructeur de la classe parent <strong>[Personne]</strong> qui va donc initialiser les propriétés <strong>[_nom, _prénom, _âge]</strong> ;</li>
-<li>ligne 10 : on initialise la propriété <strong>[_discipline]</strong> qui lui appartient à la classe <strong>[Enseignant]</strong> ;</li>
-<li>lignes 14-19 : le getter et le setter de la propriété <strong>[_discipline]</strong> ;</li>
-<li>ligne 25 : on crée un objet de type <strong>[Enseignant]</strong> ;</li>
-<li>ligne 26 : on utilise la méthode <strong>[enseignant.toString()]</strong>. La classe <strong>[Enseignant]</strong> n’a pas cette méthode. C’est alors celle de sa classe parent qui est automatiquement utilisée. Cette méthode rend l’expression <strong>[JSON.stringify(this)]</strong> où <strong>[this]</strong> va être ici un objet <strong>[Enseignant]</strong> et non un objet <strong>[Personne]</strong>. C’est qu’on appelle en programmation objet, le polymorphisme des classes. Un grand mot pour Javascript qui n’est pas un langage orienté objets. Néanmoins, Javascript fait ici ce qu’on attend de lui : il affiche bien un enseignant ;</li>
+  <li>ligne 2 : on importe la classe <b>[Personne]</b> à partir du module <b>[Personne.js]</b> qui se trouve dans le même dossier que <b>[class-02]</b> ;
+  </li>
+  <li>ligne 5 : la classe <b>[Enseignant]</b> étend (hérite de) la classe <b>[Personne]</b> avec le mot clé <b>[extends]</b> : elle lui ajoute une propriété <b>[_discipline]</b> avec les getter / setter qui vont avec ;
+  </li>
+  <li>lignes 8-11 : le constructeur de la classe <b>[Enseignant]</b> reçoit quatre valeurs pour initialiser les quatre propriétés de la classe ;
+  </li>
+  <li>ligne 9 : le mot clé <b>[super]</b> appelle le constructeur de la classe parent <b>[Personne]</b> qui va donc initialiser les propriétés <b>[_nom, _prénom, _âge]</b> ;
+  </li>
+  <li>ligne 10 : on initialise la propriété <b>[_discipline]</b> qui lui appartient à la classe <b>[Enseignant]</b> ;
+  </li>
+  <li>lignes 14-19 : le getter et le setter de la propriété <b>[_discipline]</b> ;
+  </li>
+  <li>ligne 25 : on crée un objet de type <b>[Enseignant]</b> ;
+  </li>
+  <li>ligne 26 : on utilise la méthode <b>[enseignant.toString()]</b>. La classe <b>[Enseignant]</b> n’a pas cette méthode. C’est alors celle de sa classe parent qui est automatiquement utilisée. Cette méthode rend l’expression <b>[JSON.stringify(this)]</b> où <b>[this]</b> va être ici un objet <b>[Enseignant]</b> et non un objet <b>[Personne]</b>. C’est qu’on appelle en programmation objet, le polymorphisme des classes. Un grand mot pour Javascript qui n’est pas un langage orienté objets. Néanmoins, Javascript fait ici ce qu’on attend de lui : il affiche bien un enseignant ;
+  </li>
 </ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-02.js&quot;</span></span>
@@ -1012,8 +1034,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : Javascript reconnaît bien que la variable <strong>[enseignant]</strong> est de type <strong>[Enseignant]</strong> ;</li>
+  <li>ligne 2 : Javascript reconnaît bien que la variable <b>[enseignant]</b> est de type <b>[Enseignant]</b> ;
+  </li>
 </ul>
+
 <p><a id="refheadingtoc225414640539168"></a></p>
 <h2 id="134-script-class-03">13.4. script [class-03]</h2>
 <p>Le script <strong>[class-03]</strong> montre qu’une classe fille peut redéfinir propriétés et méthodes de sa classe parent. Ici, nous redéfinissons la méthode <strong>[toString]</strong> de la classe parent :</p>
@@ -1092,8 +1116,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 24 : la classe <strong>[Enseignant]</strong> est exportée pour que d’autres scripts puissent l’importer ;</li>
+  <li>ligne 24 : la classe <b>[Enseignant]</b> est exportée pour que d’autres scripts puissent l’importer ;
+  </li>
 </ul>
+
 <p>Le script <strong>[class-04]</strong> est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line">// imports</span>
@@ -1120,10 +1146,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la fonction <strong>[show]</strong> attend un type <strong>[Personne]</strong> ou dérivé ;</li>
-<li>ligne 8 : on affiche la chaîne du paramètre et son type. On va trouver <strong>[object]</strong> ;</li>
-<li>lignes 10-16 : on est capable de savoir si c’est un type <strong>[Personne]</strong> ou un type <strong>[Enseignant]</strong>. Le code peut donc être adapté au type réel du paramètre ;</li>
+  <li>ligne 6 : la fonction <b>[show]</b> attend un type <b>[Personne]</b> ou dérivé ;
+  </li>
+  <li>ligne 8 : on affiche la chaîne du paramètre et son type. On va trouver <b>[object]</b> ;
+  </li>
+  <li>lignes 10-16 : on est capable de savoir si c’est un type <b>[Personne]</b> ou un type <b>[Enseignant]</b>. Le code peut donc être adapté au type réel du paramètre ;
+  </li>
 </ul>
+
 <p>Les résultats de l’exécution sont les suivants :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\classes\class-04.js&quot;</span></span>
@@ -1135,7 +1165,8 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4 et 6 : Javascript connaît correctement le type des instances de classe ;</li>
+  <li>lignes 4 et 6 : Javascript connaît correctement le type des instances de classe ;
+  </li>
 </ul>
 
 

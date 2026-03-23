@@ -793,9 +793,12 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>les lignes <strong>[2-7]</strong> définissent un objet non nommé avec les propriétés <strong>[data, do]</strong> ;</li>
-<li>ligne 2 : l’instruction <strong>[export default]</strong> exporte cet objet. Celui-ci pourra donc être importé ;</li>
+  <li>les lignes <b>[2-7]</b> définissent un objet non nommé avec les propriétés <b>[data, do]</b> ;
+  </li>
+  <li>ligne 2 : l’instruction <b>[export default]</b> exporte cet objet. Celui-ci pourra donc être importé ;
+  </li>
 </ul>
+
 <p>Le module <strong>[export-01]</strong> est utilisé par le script <strong>[import-01]</strong> de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
@@ -810,9 +813,12 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>les lignes 3 et 7 importent l’objet exporté par défaut du module <strong>[export-01]</strong> sous deux noms différents ;</li>
-<li>une fois un objet importé, on peut l’utiliser comme s’il avait été défini localement dans le script ;</li>
+  <li>les lignes 3 et 7 importent l’objet exporté par défaut du module <b>[export-01]</b> sous deux noms différents ;
+  </li>
+  <li>une fois un objet importé, on peut l’utiliser comme s’il avait été défini localement dans le script ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span></span>
@@ -837,8 +843,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : on exporte l’objet <strong>[data]</strong> ;</li>
+  <li>ligne 9 : on exporte l’objet <b>[data]</b> ;
+  </li>
 </ul>
+
 <p>Que l’objet exporté soit nommé ou non ne change rien à l’opération d’import. Le script <strong>[import-02]</strong> est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
@@ -881,8 +889,10 @@
 
 <p><strong>Commentaires</strong></p>
 <ul>
-<li>lignes 10 et 14 : export de deux éléments. L’export d’un élément se fait avec la syntaxe <strong>[export {élément}]</strong> ;</li>
+  <li>lignes 10 et 14 : export de deux éléments. L’export d’un élément se fait avec la syntaxe <b>[export {élément}]</b> ;
+  </li>
 </ul>
+
 <p>Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</strong> de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
@@ -899,9 +909,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : les <strong>[imports]</strong> se font avec les noms exacts des objets exportés ;</li>
-<li>ligne 8 : on peut importer tous les objets exportés dans un objet nommé (ici <strong>[module]</strong>) ;</li>
+  <li>ligne 3 : les <b>[imports]</b> se font avec les noms exacts des objets exportés ;
+  </li>
+  <li>ligne 8 : on peut importer tous les objets exportés dans un objet nommé (ici <b>[module]</b>) ;
+  </li>
 </ul>
+
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;</span></span>
