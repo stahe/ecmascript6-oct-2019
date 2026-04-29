@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Introduction au langage ECMASCRIPT6 par l'exemple">
+        <meta name="description" content="Introduction au langage ECMASCRIPT 6 par l’exemple">
       
       
         <meta name="author" content="Serge Tahé">
@@ -29,7 +29,7 @@
     
     
       
-        <title>9. Les erreurs et exceptions - Introduction au langage ECMASCRIPT6 par l'exemple</title>
+        <title>9. Les erreurs et exceptions - Introduction au langage ECMASCRIPT 6 par l’exemple</title>
       
     
     
@@ -65,7 +65,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    var siteName = "Introduction au langage ECMASCRIPT6 par l'exemple";
+    var siteName = "Introduction au langage ECMASCRIPT 6 par l’exemple";
     gtag('config', 'G-EBZC3JVJNR', {
         'page_title': siteName
     });
@@ -83,7 +83,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -108,7 +108,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Introduction au langage ECMASCRIPT6 par l&#39;exemple" class="md-header__button md-logo" aria-label="Introduction au langage ECMASCRIPT6 par l'exemple" data-md-component="logo">
+    <a href="index.html" title="Introduction au langage ECMASCRIPT 6 par l’exemple" class="md-header__button md-logo" aria-label="Introduction au langage ECMASCRIPT 6 par l’exemple" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -122,7 +122,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Introduction au langage ECMASCRIPT6 par l'exemple
+            Introduction au langage ECMASCRIPT 6 par l’exemple
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -141,9 +141,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -151,9 +151,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -208,7 +208,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://stahe.github.io/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -246,17 +246,17 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Introduction au langage ECMASCRIPT6 par l&#39;exemple" class="md-nav__button md-logo" aria-label="Introduction au langage ECMASCRIPT6 par l'exemple" data-md-component="logo">
+    <a href="index.html" title="Introduction au langage ECMASCRIPT 6 par l’exemple" class="md-nav__button md-logo" aria-label="Introduction au langage ECMASCRIPT 6 par l’exemple" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Introduction au langage ECMASCRIPT6 par l'exemple
+    Introduction au langage ECMASCRIPT 6 par l’exemple
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://stahe.github.io/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -770,30 +770,27 @@
                   
 
 
-  
-  
-
 
 <p><a id="refheadingtoc2042493980233556"></a></p>
 <h1 id="9-les-erreurs-et-exceptions">9. Les erreurs et exceptions</h1>
-<p><img src="images/10000000000000ED000000BDBBC75AB1.png" style="width:2.511cm;height:2.001cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000ED000000BDBBC75AB1.png" /></p>
+<p><img src="images/10000000000000ED000000BDBBC75AB1.png" width="95" height="76" style="width:2.511cm;height:2.001cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000ED000000BDBBC75AB1.png" /></p>
 <p>Javascript n’a pas un système d’exceptions très évolué. Il offre néanmoins l’instruction <strong>[throw]</strong> qui permet de signaler une erreur ainsi que la structure try / catch / finally qui permet d’intercepter ces erreurs.</p>
 <p><a id="refheadingtoc2042513980233556"></a></p>
 <h2 id="91-script-excep-01">9.1. script [excep-01]</h2>
 <p>Dans le script qui suit, nous allons afficher la date du moment sous la forme <strong>[heures:minutes:secondes:millisecondes]</strong>. Pour ce faire, nous allons utiliser une bibliothèques jS appelée <strong>[moment.js]</strong>. Nous l’installons, comme d’habitude, avec l’outil <strong>[npm]</strong> :</p>
-<p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
+<p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.691cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <p>Le code du script est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// package moment</span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">...</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">...</span></span>
 </code></pre></div>
 
 <p>Pour savoir comment écrire la ligne <strong>[import]</strong> de la ligne 4, on peut regarder la définition du module <strong>[moment]</strong> :</p>
-<p><img src="images/1000000000000580000001BB195119DB.png" style="width:14.9cm;height:4.691cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
+<p><img src="images/1000000000000580000001BB195119DB.png" width="563" height="177" style="width:14.9cm;height:4.691cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000580000001BB195119DB.png" /></p>
 <ul>
   <li>en <b>[1-2]</b>, on va à la définition du module ;
   </li>
@@ -806,48 +803,48 @@
 </ul>
 
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
 <p>On peut utiliser n’importe quel nom pour importer l’objet <strong>[moment]</strong>, par exemple :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> m </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> m </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
 </code></pre></div>
 
 <p>Revenons au code du script :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// package moment</span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// principe du try / catch / finally</span>
-<span class="odt-code-line"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// date - heure du moment courant</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// formatage heure pour avoir les millisecondes</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> time = moment(now).format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// les millisecondes</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> milli = Number(time.substr(time.length - 3));</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// affichage</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;à&quot;</span><span style="color:#000000">, time);</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// nbre </span><span style="color:#008000">variant selon l’heure du moment</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 2;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (nbre === 0) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#008000">// lancer un msg d&#x27;erreur</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;erreur&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// si on arrive ici c&#x27;est qu&#x27;il n&#x27;y a pas eu d&#x27;erreur</span></span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;pas d&#x27;erreur&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// si on arrive ici, c&#x27;est qu&#x27;il y a eu erreur</span></span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur1=&quot;</span><span style="color:#000000">, error);</span></span>
-<span class="odt-code-line"><span style="color:#000000">  } </span><span style="color:#0000ff">finally</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// exécuté dans tous les cas erreur ou pas</span></span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;finally&quot;</span><span style="color:#000000">)</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// principe du try / catch / finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// date - heure du moment courant</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// formatage heure pour avoir les millisecondes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> time = moment(now).format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// les millisecondes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> milli = Number(time.substr(time.length - 3));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// affichage</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i, </span><span style="color:#a31515">&quot;à&quot;</span><span style="color:#000000">, time);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// nbre variant selon l’heure du moment</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 2;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (nbre === 0) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#000000">// lancer un msg d&#x27;erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;erreur&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// si on arrive ici c&#x27;est qu&#x27;il n&#x27;y a pas eu d&#x27;erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;pas d&#x27;erreur&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// si on arrive ici, c&#x27;est qu&#x27;il y a eu erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;erreur1=&quot;</span><span style="color:#000000">, error);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">finally</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// exécuté dans tous les cas erreur ou pas</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#a31515">&quot;finally&quot;</span><span style="color:#000000">)</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>Commentaires</strong></p>
@@ -864,92 +861,92 @@
 
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-01.js&quot;</span></span>
-<span class="odt-code-line">--------------------itération n° 0 à 17:57:04:440</span>
-<span class="odt-code-line">erreur1= erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 1 à 17:57:04:447</span>
-<span class="odt-code-line">pas d&#x27;erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 2 à 17:57:04:448</span>
-<span class="odt-code-line">erreur1= erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 3 à 17:57:04:448</span>
-<span class="odt-code-line">erreur1= erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 4 à 17:57:04:448</span>
-<span class="odt-code-line">erreur1= erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 5 à 17:57:04:448</span>
-<span class="odt-code-line">erreur1= erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 6 à 17:57:04:448</span>
-<span class="odt-code-line">erreur1= erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 7 à 17:57:04:448</span>
-<span class="odt-code-line">erreur1= erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 8 à 17:57:04:449</span>
-<span class="odt-code-line">pas d&#x27;erreur</span>
-<span class="odt-code-line">finally</span>
-<span class="odt-code-line">--------------------itération n° 9 à 17:57:04:449</span>
-<span class="odt-code-line">pas d&#x27;erreur</span>
-<span class="odt-code-line">finally</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-01.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 0 à 17:57:04:440</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 1 à 17:57:04:447</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 2 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 3 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 4 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 5 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 6 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 7 à 17:57:04:448</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur1= erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 8 à 17:57:04:449</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 9 à 17:57:04:449</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">pas d&#x27;erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">finally</span></span>
 </code></pre></div>
 
 <p>On voit que la clause <strong>[finally]</strong> est toujours exécutée qu’il y ait erreur ou pas.</p>
 <p><a id="refheadingtoc225364640539168"></a></p>
 <h2 id="92-script-excep-02">9.2. script [excep-02]</h2>
 <p>Ce script que l’instruction <strong>[throw]</strong> peut lancer n’importe quel type de donnée et que cette donnée est récupérée intégralement par la clause <strong>[catch]</strong>.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// on peut &quot;lancer&quot; (throw) à peu près n&#x27;importe quoi pour signaler une erreur</span>
-<span class="odt-code-line"><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
-<span class="odt-code-line">// lancer une chaîne de caractères</span>
-<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;msg d&#x27;erreur&quot;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">// lancer un tableau</span>
-<span class="odt-code-line">i++;</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span></span>
-<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">// lancer un objet littéral</span>
-<span class="odt-code-line">i++;</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> { nom: </span><span style="color:#a31515">&quot;hercule&quot;</span><span style="color:#000000">, pays: </span><span style="color:#a31515">&quot;grèce antique&quot;</span><span style="color:#000000"> }</span></span>
-<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">// lancer un type Error</span>
-<span class="odt-code-line">i++;</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Error(</span><span style="color:#a31515">&quot;erreur de connexion au réseau&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line">// lancer un type Error</span>
-<span class="odt-code-line">i++;</span>
-<span class="odt-code-line"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Error(</span><span style="color:#a31515">&quot;erreur de connexion au réseau&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// il y a eu erreur - le message est dans </span><span style="font-weight:bold;color:#008000">[error.message]</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur.message=</span><span style="font-weight:bold;color:#a31515">[&quot;, error.message, &quot;]</span><span style="color:#a31515">, type(error)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span>
-<span class="odt-code-line">}</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// on peut &quot;lancer&quot; (throw) à peu près n&#x27;importe quoi pour signaler une erreur</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// lancer une chaîne de caractères</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#a31515">&quot;msg d&#x27;erreur&quot;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// il y a eu erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// lancer un tableau</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#000000">[1, 2, 3]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// il y a eu erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// lancer un objet littéral</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> { nom: </span><span style="color:#a31515">&quot;hercule&quot;</span><span style="color:#000000">, pays: </span><span style="color:#a31515">&quot;grèce antique&quot;</span><span style="color:#000000"> }</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// il y a eu erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// lancer un type Error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Error(</span><span style="color:#a31515">&quot;erreur de connexion au réseau&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// il y a eu erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur=</span><span style="font-weight:bold;color:#a31515">[&quot;, error, &quot;]</span><span style="color:#a31515">, type=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// lancer un type Error</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">i++;</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">console.log(</span><span style="color:#a31515">&quot;--------------------essai n° &quot;</span><span style="color:#000000">, i);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> Error(</span><span style="color:#a31515">&quot;erreur de connexion au réseau&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">} </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// il y a eu erreur - le message est dans [error.message]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;erreur.message=</span><span style="font-weight:bold;color:#a31515">[&quot;, error.message, &quot;]</span><span style="color:#a31515">, type(error)=&quot;</span><span style="color:#000000">, </span><span style="color:#0000ff">typeof</span><span style="color:#000000"> (error));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>Commentaires</strong></p>
@@ -962,99 +959,99 @@
 
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js&quot;</span></span>
-<span class="odt-code-line">--------------------essai n° 0</span>
-<span class="odt-code-line">erreur=<span style="font-weight:bold">[ msg d&#x27;erreur ]</span>, type= string</span>
-<span class="odt-code-line">--------------------essai n° 1</span>
-<span class="odt-code-line">erreur=<span style="font-weight:bold">[ [ 1, 2, 3 ]</span> ], type= object</span>
-<span class="odt-code-line">--------------------essai n° 2</span>
-<span class="odt-code-line">erreur=<span style="font-weight:bold">[ { nom: &#x27;hercule&#x27;, pays: &#x27;grèce antique&#x27; } ]</span>, type= object</span>
-<span class="odt-code-line">--------------------essai n° 3</span>
-<span class="odt-code-line">erreur=[ Error: erreur de connexion au réseau</span>
-<span class="odt-code-line">at Object.&lt;anonymous&gt; (c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js:35:9)</span>
-<span class="odt-code-line">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:251206)</span>
-<span class="odt-code-line">at c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:245054</span>
-<span class="odt-code-line">at Generator.next (&lt;anonymous&gt;)</span>
-<span class="odt-code-line">at bl (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:245412)</span>
-<span class="odt-code-line">at kl (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:247659)</span>
-<span class="odt-code-line">at Object.u (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287740)</span>
-<span class="odt-code-line">at Object.o (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287137)</span>
-<span class="odt-code-line">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:284879)</span>
-<span class="odt-code-line">at Object.apply (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:199341) ], type= object</span>
-<span class="odt-code-line">--------------------essai n° 4</span>
-<span class="odt-code-line">erreur.message=<span style="font-weight:bold">[ erreur de connexion au réseau ]</span>, type(error)= object</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur=<span style="font-weight:bold">[ msg d&#x27;erreur ]</span>, type= string</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur=<span style="font-weight:bold">[ [ 1, 2, 3 ]</span> ], type= object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur=<span style="font-weight:bold">[ { nom: &#x27;hercule&#x27;, pays: &#x27;grèce antique&#x27; } ]</span>, type= object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur=[ Error: erreur de connexion au réseau</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Object.&lt;anonymous&gt; (c:\Data\st-2019\dev\es6\javascript\exceptions\excep-02.js:35:9)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:251206)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:245054</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Generator.next (&lt;anonymous&gt;)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at bl (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:245412)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at kl (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:247659)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Object.u (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287740)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Object.o (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:287137)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Object.&lt;anonymous&gt; (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:284879)</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">at Object.apply (c:\Temp\19-09-01\javascript\node_modules\esm\esm.js:1:199341) ], type= object</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------essai n° 4</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">erreur.message=<span style="font-weight:bold">[ erreur de connexion au réseau ]</span>, type(error)= object</span></span>
 </code></pre></div>
 
 <p><a id="refheadingtoc225366640539168"></a></p>
 <h2 id="93-script-excep-03">9.3. script [excep-03]</h2>
 <p>Ce script montre qu’on peut, dans un <strong>[catch]</strong>, différentier le type d’instance <strong>[Error]</strong> interceptée par le <strong>[catch]</strong> :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// package moment</span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line"></span>
-<span class="odt-code-line">// différencier l&#x27;instance d&#x27;Error reçue dans un <span style="font-weight:bold">[catch]</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// date - heure du moment courant</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// formatage heure pour avoir les millisecondes</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> time = moment(now).format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#008000">// les millisecondes</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> milli = Number(time.substr(time.length - 3));</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i);</span></span>
-<span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// nbre </span><span style="font-weight:bold;color:#008000">[0, 1, 2]</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 3;</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">switch</span><span style="color:#000000"> (nbre) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">case</span><span style="color:#000000"> 0:</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> ReferenceError(</span><span style="color:#a31515">&quot;erreur 1&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">case</span><span style="color:#000000"> 1:</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> RangeError(</span><span style="color:#a31515">&quot;erreur 2&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">default</span><span style="color:#000000">:</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> EvalError(</span><span style="color:#a31515">&quot;erreur 3&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008000">// il y a eu erreur</span></span>
-<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> ReferenceError) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;ReferenceError :&quot;</span><span style="color:#000000">, error.message);</span></span>
-<span class="odt-code-line"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> RangeError) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        console.log(</span><span style="color:#a31515">&quot;RangeError :&quot;</span><span style="color:#000000">, error.message);</span></span>
-<span class="odt-code-line">      }</span>
-<span class="odt-code-line"><span style="color:#000000">      </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> EvalError) {</span></span>
-<span class="odt-code-line"><span style="color:#000000">          console.log(</span><span style="color:#a31515">&quot;EvalError :&quot;</span><span style="color:#000000">, error.message);</span></span>
-<span class="odt-code-line">        }</span>
-<span class="odt-code-line">      }</span>
-<span class="odt-code-line">    }</span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">}</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// package moment</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> moment </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;moment&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// différencier l&#x27;instance d&#x27;Error reçue dans un [catch]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">for</span><span style="color:#000000"> (</span><span style="color:#0000ff">let</span><span style="color:#000000"> i = 0; i &lt; 10; i++) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// date - heure du moment courant</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> now = Date.now();</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// formatage heure pour avoir les millisecondes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> time = moment(now).format(</span><span style="color:#a31515">&quot;HH:mm:ss:SSS&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// les millisecondes</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">const</span><span style="color:#000000"> milli = Number(time.substr(time.length - 3));</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;--------------------itération n° &quot;</span><span style="color:#000000">, i);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="color:#0000ff">try</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// nbre [0, 1, 2]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">const</span><span style="color:#000000"> nbre = milli % 3;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">switch</span><span style="color:#000000"> (nbre) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">case</span><span style="color:#000000"> 0:</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> ReferenceError(</span><span style="color:#a31515">&quot;erreur 1&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">case</span><span style="color:#000000"> 1:</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> RangeError(</span><span style="color:#a31515">&quot;erreur 2&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">default</span><span style="color:#000000">:</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">throw</span><span style="color:#000000"> </span><span style="color:#0000ff">new</span><span style="color:#000000"> EvalError(</span><span style="color:#a31515">&quot;erreur 3&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  } </span><span style="color:#0000ff">catch</span><span style="color:#000000"> (error) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// il y a eu erreur</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> ReferenceError) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      console.log(</span><span style="color:#a31515">&quot;ReferenceError :&quot;</span><span style="color:#000000">, error.message);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    } </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> RangeError) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        console.log(</span><span style="color:#a31515">&quot;RangeError :&quot;</span><span style="color:#000000">, error.message);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">      </span><span style="color:#0000ff">else</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">        </span><span style="color:#0000ff">if</span><span style="color:#000000"> (error </span><span style="color:#0000ff">instanceof</span><span style="color:#000000"> EvalError) {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">          console.log(</span><span style="color:#a31515">&quot;EvalError :&quot;</span><span style="color:#000000">, error.message);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">        }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
 
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-03.js&quot;</span></span>
-<span class="odt-code-line">--------------------itération n° 0</span>
-<span class="odt-code-line">ReferenceError : erreur 1</span>
-<span class="odt-code-line">--------------------itération n° 1</span>
-<span class="odt-code-line">RangeError : erreur 2</span>
-<span class="odt-code-line">--------------------itération n° 2</span>
-<span class="odt-code-line">RangeError : erreur 2</span>
-<span class="odt-code-line">--------------------itération n° 3</span>
-<span class="odt-code-line">RangeError : erreur 2</span>
-<span class="odt-code-line">--------------------itération n° 4</span>
-<span class="odt-code-line">RangeError : erreur 2</span>
-<span class="odt-code-line">--------------------itération n° 5</span>
-<span class="odt-code-line">RangeError : erreur 2</span>
-<span class="odt-code-line">--------------------itération n° 6</span>
-<span class="odt-code-line">EvalError : erreur 3</span>
-<span class="odt-code-line">--------------------itération n° 7</span>
-<span class="odt-code-line">EvalError : erreur 3</span>
-<span class="odt-code-line">--------------------itération n° 8</span>
-<span class="odt-code-line">EvalError : erreur 3</span>
-<span class="odt-code-line">--------------------itération n° 9</span>
-<span class="odt-code-line">EvalError : erreur 3</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\exceptions\excep-03.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 0</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">ReferenceError : erreur 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 1</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 4</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 5</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">RangeError : erreur 2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 6</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EvalError : erreur 3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 7</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EvalError : erreur 3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 8</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EvalError : erreur 3</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">--------------------itération n° 9</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">EvalError : erreur 3</span></span>
 </code></pre></div>
 
 
@@ -1091,13 +1088,14 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
-        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
-        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
-        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+        Ce cours-tutoriel rédigé par <strong>Serge Tahé</strong> est mis à la disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d'utilisation commerciale –
+        Partage dans les mêmes conditions 3.0 non modifiée</em>.
+
       </div>
 
     </div>

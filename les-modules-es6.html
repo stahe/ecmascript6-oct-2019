@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Introduction au langage ECMASCRIPT6 par l'exemple">
+        <meta name="description" content="Introduction au langage ECMASCRIPT 6 par l’exemple">
       
       
         <meta name="author" content="Serge Tahé">
@@ -29,7 +29,7 @@
     
     
       
-        <title>10. Les modules ES6 - Introduction au langage ECMASCRIPT6 par l'exemple</title>
+        <title>10. Les modules ES6 - Introduction au langage ECMASCRIPT 6 par l’exemple</title>
       
     
     
@@ -65,7 +65,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    var siteName = "Introduction au langage ECMASCRIPT6 par l'exemple";
+    var siteName = "Introduction au langage ECMASCRIPT 6 par l’exemple";
     gtag('config', 'G-EBZC3JVJNR', {
         'page_title': siteName
     });
@@ -83,7 +83,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -108,7 +108,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Introduction au langage ECMASCRIPT6 par l&#39;exemple" class="md-header__button md-logo" aria-label="Introduction au langage ECMASCRIPT6 par l'exemple" data-md-component="logo">
+    <a href="index.html" title="Introduction au langage ECMASCRIPT 6 par l’exemple" class="md-header__button md-logo" aria-label="Introduction au langage ECMASCRIPT 6 par l’exemple" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -122,7 +122,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Introduction au langage ECMASCRIPT6 par l'exemple
+            Introduction au langage ECMASCRIPT 6 par l’exemple
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -141,9 +141,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode sombre"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Passer en mode sombre"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Passer au mode sombre" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Passer en mode sombre" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -151,9 +151,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Passer au mode clair"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="purple"  aria-label="Passer en mode clair"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Passer au mode clair" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Passer en mode clair" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -208,7 +208,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://stahe.github.io/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -246,17 +246,17 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Introduction au langage ECMASCRIPT6 par l&#39;exemple" class="md-nav__button md-logo" aria-label="Introduction au langage ECMASCRIPT6 par l'exemple" data-md-component="logo">
+    <a href="index.html" title="Introduction au langage ECMASCRIPT 6 par l’exemple" class="md-nav__button md-logo" aria-label="Introduction au langage ECMASCRIPT 6 par l’exemple" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Introduction au langage ECMASCRIPT6 par l'exemple
+    Introduction au langage ECMASCRIPT 6 par l’exemple
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/stahe/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://stahe.github.io/ecmascript6-oct-2019" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
@@ -770,25 +770,22 @@
                   
 
 
-  
-  
-
 
 <p><a id="refheadingtoc225368640539168"></a></p>
 <h1 id="10-les-modules-es6">10. Les modules ES6</h1>
-<p><img src="images/10000000000000FC0000013E566BAA86.png" style="width:2.671cm;height:3.372cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000013E566BAA86.png" /></p>
+<p><img src="images/10000000000000FC0000013E566BAA86.png" width="101" height="127" style="width:2.671cm;height:3.372cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000FC0000013E566BAA86.png" /></p>
 <p>Les modules ES6 permettent de construire des applications Javascript structurées en modules indépendants et réutilisables.</p>
 <p><a id="refheadingtoc225370640539168"></a></p>
 <h2 id="101-scripts-import-01-export-01">10.1. scripts [import-01, export-01]</h2>
 <p>Le script <strong>[import-01]</strong> va utiliser le module <strong>[export-01]</strong>. Celui-ci est défini de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">// export par défaut d&#x27;un objet non nommé</span>
-<span class="odt-code-line"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span>
-<span class="odt-code-line">  data: 2,</span>
-<span class="odt-code-line">  do() {</span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">};</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content">// export par défaut d&#x27;un objet non nommé</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  data: 2,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  do() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
 </code></pre></div>
 
 <p><strong>Commentaires</strong></p>
@@ -800,15 +797,15 @@
 </ul>
 
 <p>Le module <strong>[export-01]</strong> est utilisé par le script <strong>[import-01]</strong> de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// import d&#x27;un objet exporté par défaut</span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> export01 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// utilisation de cet objet</span>
-<span class="odt-code-line">export01.do();</span>
-<span class="odt-code-line">// on peut importer un export par défaut sous n&#x27;importe quel nom</span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> data </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">console.log(data.data);</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// import d&#x27;un objet exporté par défaut</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> export01 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// utilisation de cet objet</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">export01.do();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// on peut importer un export par défaut sous n&#x27;importe quel nom</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> data </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-01&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">console.log(data.data);</span></span>
 </code></pre></div>
 
 <p><strong>Commentaires</strong></p>
@@ -821,25 +818,25 @@
 
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span></span>
-<span class="odt-code-line">2</span>
-<span class="odt-code-line">2</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-01.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">2</span></span>
 </code></pre></div>
 
 <p><a id="refheadingtoc225372640539168"></a></p>
 <h2 id="102-scripts-import-02-export-02">10.2. scripts [import-02, export-02]</h2>
 <p>Ces scripts montrent un export d’un objet nommé.</p>
 <p>Le script <strong>[export-02]</strong> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line">// export par défaut d&#x27;un objet nommé</span>
-<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span>
-<span class="odt-code-line">  data: 2,</span>
-<span class="odt-code-line">  do() {</span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">};</span>
-<span class="odt-code-line">// export</span>
-<span class="odt-code-line"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> data;</span></span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content">// export par défaut d&#x27;un objet nommé</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  data: 2,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  do() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// export</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> </span><span style="color:#0000ff">default</span><span style="color:#000000"> data;</span></span></span>
 </code></pre></div>
 
 <ul>
@@ -848,43 +845,43 @@
 </ul>
 
 <p>Que l’objet exporté soit nommé ou non ne change rien à l’opération d’import. Le script <strong>[import-02]</strong> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// import d&#x27;un objet exporté par défaut</span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> module1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// utilisation de cet objet</span>
-<span class="odt-code-line">module1.do();</span>
-<span class="odt-code-line">// on peut importer un export par défaut sous n&#x27;importe quel nom</span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> module2 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">console.log(module2.data);</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// import d&#x27;un objet exporté par défaut</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> module1 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// utilisation de cet objet</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">module1.do();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// on peut importer un export par défaut sous n&#x27;importe quel nom</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> module2 </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-02&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">console.log(module2.data);</span></span>
 </code></pre></div>
 
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-02.js&quot;</span></span>
-<span class="odt-code-line">2</span>
-<span class="odt-code-line">2</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-02.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">2</span></span>
 </code></pre></div>
 
 <p><a id="refheadingtoc225374640539168"></a></p>
 <h2 id="103-scripts-import-03-export-03">10.3. scripts [import-03, export-03]</h2>
 <p>Un module peut exporter plusieurs éléments.</p>
 <p>Le script <strong>[export-03]</strong> est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-js">
-<span class="odt-code-line">// multi-exports</span>
-<span class="odt-code-line">// export objet</span>
-<span class="odt-code-line"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span>
-<span class="odt-code-line">  data: 2,</span>
-<span class="odt-code-line">  do() {</span>
-<span class="odt-code-line"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span>
-<span class="odt-code-line">  }</span>
-<span class="odt-code-line">};</span>
-<span class="odt-code-line">// export fonction</span>
-<span class="odt-code-line"><span style="color:#0000ff">export</span><span style="color:#000000"> { data };</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomething() {</span></span>
-<span class="odt-code-line"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;doSomething&quot;</span><span style="color:#000000">);</span></span>
-<span class="odt-code-line">}</span>
-<span class="odt-code-line"><span style="color:#0000ff">export</span><span style="color:#000000"> { doSomething };</span></span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content">// multi-exports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// export objet</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">const</span><span style="color:#000000"> data = {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  data: 2,</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  do() {</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">    console.log(</span><span style="color:#0000ff">this</span><span style="color:#000000">.data);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">};</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// export fonction</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> { data };</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">function</span><span style="color:#000000"> doSomething() {</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  console.log(</span><span style="color:#a31515">&quot;doSomething&quot;</span><span style="color:#000000">);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">export</span><span style="color:#000000"> { doSomething };</span></span></span>
 </code></pre></div>
 
 <p><strong>Commentaires</strong></p>
@@ -894,18 +891,18 @@
 </ul>
 
 <p>Le script <strong>[import-03]</strong> utilise le module <strong>[export-03]</strong> de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="color:#a31515">&#x27;use strict&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// import d&#x27;un module <span style="font-weight:bold">[export03]</span></span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> {data, doSomething} </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// utilisation des imports</span>
-<span class="odt-code-line">data.do();</span>
-<span class="odt-code-line">doSomething();</span>
-<span class="odt-code-line">// autre écriture</span>
-<span class="odt-code-line"><span style="color:#0000ff">import</span><span style="color:#000000"> * </span><span style="color:#0000ff">as</span><span style="color:#000000"> module </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span>
-<span class="odt-code-line">// utilisation de l&#x27;import</span>
-<span class="odt-code-line">console.log(module.data);</span>
-<span class="odt-code-line">module.doSomething();</span>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#a31515">&#x27;use strict&#x27;;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">// import d&#x27;un module [export03]</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> {data, doSomething} </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// utilisation des imports</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">data.do();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">doSomething();</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// autre écriture</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">import</span><span style="color:#000000"> * </span><span style="color:#0000ff">as</span><span style="color:#000000"> module </span><span style="color:#0000ff">from</span><span style="color:#000000"> </span><span style="color:#a31515">&#x27;./export-03&#x27;</span><span style="color:#000000">;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// utilisation de l&#x27;import</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">console.log(module.data);</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">module.doSomething();</span></span>
 </code></pre></div>
 
 <ul>
@@ -917,11 +914,11 @@
 
 <p><strong>Exécution</strong></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
-<span class="odt-code-line"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;</span></span>
-<span class="odt-code-line">2</span>
-<span class="odt-code-line">doSomething</span>
-<span class="odt-code-line">{ data: 2, do: <span style="font-weight:bold">[Function: do]</span> }</span>
-<span class="odt-code-line">doSomething</span>
+<span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#316bcd">[Running]</span><span style="color:#a31515"> C:\myprograms\laragon-lite\bin\nodejs\node-v10\node.exe -r esm &quot;c:\Data\st-2019\dev\es6\javascript\modules\import-03.js&quot;</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">doSomething</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">{ data: 2, do: <span style="font-weight:bold">[Function: do]</span> }</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">doSomething</span></span>
 </code></pre></div>
 
 
@@ -958,13 +955,14 @@
     <div class="md-footer-meta__inner">
 
       <div>
-        <a href="https://tahe.developpez.com" target="_blank">
-          https://tahe.developpez.com
+        <a href="https://stahe.github.io" target="_blank">
+          https://stahe.github.io
         </a>
         <br>
-        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
-        <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
-        Partage dans les Mêmes Conditions 3.0 non transposé</em>.
+        Ce cours-tutoriel rédigé par <strong>Serge Tahé</strong> est mis à la disposition du public selon les termes de la
+        <em>Licence Creative Commons Attribution – Pas d'utilisation commerciale –
+        Partage dans les mêmes conditions 3.0 non modifiée</em>.
+
       </div>
 
     </div>
